@@ -1,0 +1,67 @@
+# Default configuration for the integrity engine.
+# Every tunable threshold in the codebase resolves from this file (spec §4.12);
+# CLI --config may override any key. Unknown keys are ignored with a warning.
+# NOTE: fixed constants only — corpus-relative sigma calibration was removed
+# by spec de-scope rule R2.
+
+[chunking]
+max_chunk_tokens = 200
+min_chunk_tokens = 40
+overlap_sentences = 2
+mp4_target_tokens = 120
+mp4_max_seconds = 45
+
+[embedding]
+model_name = "sentence-transformers/all-MiniLM-L6-v2"
+device = "cpu"
+batch_size = 32
+
+[pairwise]
+chunk_query_topk = 10
+chunk_min_cos = 0.55
+doc_flag_threshold = 0.70
+doc_report_floor = 0.40
+min_pair_score_floor = 0.05      # small-source exclusion floor (below: listed only)
+duplicate_similarity = 1.0       # byte-identical duplicate pair score (E11)
+
+[alignment]
+template_min_docs = 3            # simhash cluster spanning >=3 docs => boilerplate
+template_hamming_max = 3
+template_min_tokens = 40
+verbatim_template_min_tokens = 20
+min_evidence_chars = 60          # noise floor: below => counted, not reported
+sentence_align_cos_floor = 0.65
+sentence_lcs_token_ratio = 0.60
+mp4_template_voice_a = "en+f2"   # doc 08 TTS voice (dataset generation only)
+mp4_template_voice_b = "en+M2"   # doc 09 TTS voice (dataset generation only)
+
+[ai]
+classifier_model = "wasitaigeneratedcom/ai-text-detector-small"
+gpt2_model = "openai-community/gpt2"
+perplexity_mu = 22.0             # gpt2 ppl on human text ~25-60; LLM text ~5-20
+perplexity_k = 9.5
+burst_mu = 0.55
+burst_k = 0.14
+p_text_perp_weight = 0.75        # p_text = 0.75*p_perp + 0.25*p_burst
+p_final_model_weight = 0.60      # p_ai = 0.60*p_cls + 0.40*p_text
+band_human_max = 35.0
+band_unsure_max = 65.0
+min_length_tokens = 50           # below => INSUFFICIENT_TEXT (Copyleaks-style gate)
+max_chars = 20000
+max_tokens_per_window = 1024
+
+[external]
+local_kb_min_cos = 0.72
+web_budget_per_doc = 2
+query_topk = 3
+request_timeout_s = 6
+allow_external_web = true
+web_sleep_s = 0.6
+web_min_query_words = 12
+web_jaccard_min = 0.35
+ddg_backend = "duckduckgo_fallback"
+
+[runtime]
+log_level = "INFO"
+seed = 42
+max_ingest_seconds_per_file = 120

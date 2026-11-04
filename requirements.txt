@@ -1,0 +1,24 @@
+# Core inference stack (CPU).
+# Install torch FIRST from the CPU wheel index (see scripts/setup_env.sh) so no CUDA
+# runtime is pulled; then this file installs the rest (pin equality enforced).
+#
+# All versions below are the exact versions installed and verified on the build box
+# (`pip check` clean). The spec §9 pin for transformers was 4.49.0; the build box
+# resolves 5.22.1 (wheel-ecosystem-matched to torch 2.15.0 / tokenizers 0.23.3 / ST 6.2.0),
+# so per spec §9 fallback rule (1) that single pin was bumped to the newest compatible
+# release and is recorded in README §Assumptions / further notes.
+numpy==2.2.6
+faiss-cpu==1.15.1
+sentence-transformers==6.2.0
+torch==2.15.0                  # CPU wheel from download.pytorch.org/whl/cpu (setup_env.sh)
+transformers==5.22.1           # gpt2 perplexity + wasitaigeneratedcom/ai-text-detector-small classifier
+faster-whisper==1.1.0          # ctranslate2-backed ASR; voice activity filter; segment timestamps
+pypdf==5.4.0
+python-docx==1.1.2
+fpdf2==2.8.2                   # only for dataset_generator (synthetic PDF authoring); unused at runtime
+ddgs==9.6.1                    # optional Tier-2 web search; every call is try/except, never required
+requests==2.34.2               # secondary DDG-instant-answer fallback transport (external_check)
+
+# Dev / test toolchain (spec §10 runs pytest + ruff as part of the verified workflow)
+pytest==9.2.0
+ruff==0.17.3

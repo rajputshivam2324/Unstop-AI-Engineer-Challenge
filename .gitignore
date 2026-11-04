@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environment
+.venv/
+
+# Runtime artifacts (created per run; never committed)
+reports/
+logs/
+cache/
+
+# Local scratch
+*.log
+*.wav
