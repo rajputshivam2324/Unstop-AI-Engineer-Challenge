@@ -51,7 +51,7 @@ max_chars = 20000
 max_tokens_per_window = 1024
 
 [external]
-local_kb_min_cos = 0.72
+local_kb_min_cos = 0.70    # sentence-to-sentence vs KB source sentences (measured separation: doc-04 verbatim quotes 0.65-1.00; next doc 0.674)
 web_budget_per_doc = 2
 query_topk = 3
 request_timeout_s = 6

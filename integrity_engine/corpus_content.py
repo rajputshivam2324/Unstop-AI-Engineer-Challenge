@@ -1,16 +1,22 @@
 """<MODULE PURPOSE>
 All author-owned corpus content for the 14 sample submissions (§4.10 content
-plan). Doc 06's body is the verbatim LLM constant below; every other document is
-synthetic human-authored text stored as literals here.
+plan). Doc 06's body is the verbatim LLM constant below (the deliberate
+"LLM-generated submission"). Every other document is synthetic text stored as
+literals here; HONESTY NOTE: those literals were drafted inside an AI coding
+assistant session (not typed by a human), so they are "synthetic originals", not
+verified human writing. EVALUATION.md therefore does not use them as human
+ground truth for the AI detector; see benchmarks/ for the human-text control set.
 
 <PUBLIC API> DOC01_PAGES, DOC03_SENTENCES, DOC04_SENTENCES, DOC05_PAGES,
-DOC07_PAGES, PITCH_PASSAGE, DOC09_TEXT, DOC12_BODY..., CASE_PROMPT,
+DOC07_PAGES, PITCH_PASSAGE, PITCH_SPOKEN_PASSAGE, DOC09_TEXT, DOC12_BODY..., CASE_PROMPT,
 PARAPHRASE_TABLE, LLM_GENERATED_TEXT, build_doc04_text, build_doc03_text
 
 <DEPENDS ON> reference_kb.kb_texts (the declared KB-derived paragraph only).
 """
 
 from __future__ import annotations
+
+import re
 
 from reference_kb.kb_texts import KB_SUPPLY_CHAIN
 
@@ -308,6 +314,13 @@ PITCH_PASSAGE = (
     "season. We expect Q4 operating margin to recover to 12.8 percent if carton volume "
     "holds above 340 thousand and the western swap beds in by mid-November."
 )
+
+# The MP4 narrator reads the FIRST THREE sentences of PITCH_PASSAGE aloud (78 words,
+# ~25 s at natural pace). Reading a whole 103-word paragraph would need either >30 s
+# of audio (assignment bound) or sped-up TTS, which measurably destroyed ASR quality
+# (see EVALUATION.md failure study 1).
+PITCH_SPOKEN_PASSAGE = " ".join(
+    re.split(r"(?<=[.!?])\s+", PITCH_PASSAGE)[:3])
 
 DOC07_PAGES = [
     "Q3 Margins Review (Operating Deep Dive)\n\n"

@@ -16,3 +16,7 @@ cache/
 # Local scratch
 *.log
 *.wav
+
+# Scratch / benchmark downloads (re-fetchable)
+.scratch/
+benchmarks/data/

@@ -35,7 +35,6 @@ _EXPLANATION_TEMPLATE = (
     "Overlap types: {cross_modal} cross-modal, {exact_copy} exact-copy, "
     "{paraphrase} paraphrase, {template} discounted common-source.")
 
-_EXACT_COPY_THRESHOLD = 0.95  # chunk cosine of a verbatim-grade match
 
 
 def compute_integrity_signals(doc: Any, peer_result: dict[str, Any],
@@ -92,7 +91,8 @@ def build_explanation(cfg: Config, peer_pct: float, listed_sources: list[str],
     if matches:
         top = matches[0]
         top_kind = ("common-source, discounted" if top.match_type == "common_source"
-                    else ("cross-modal" if top.matched_timestamp else "overlap"))
+                    else ("cross-modal" if (top.matched_timestamp or top.query_timestamp)
+                          else "overlap"))
         top_summary = f"top: {top.matched_file} @ {top.similarity_score:.2f}; {top_kind}"
     else:
         top_summary = "no substantive peer overlap"
@@ -119,14 +119,14 @@ def build_explanation(cfg: Config, peer_pct: float, listed_sources: list[str],
 def count_match_types(matches: list[Any], multimodal: list[Any]) -> dict[str, int]:
     """Deterministic overlap-type counts for the explanation tail.
 
-    exact-copy = overlap matches with chunk cosine >= 0.95; paraphrase = the
-    remaining overlap matches (>= 0.55 floor from the sieve); common-source
-    matches are discounted institutional text.
+    exact-copy = verbatim passages (token-LCS ratio >= 0.90); paraphrase = the
+    remaining same-modality overlaps; common-source = discounted template text.
     """
-    exact = sum(1 for m in matches
-                if m.match_type == "overlap" and m.similarity_score >= _EXACT_COPY_THRESHOLD)
-    common = sum(1 for m in matches if m.match_type == "common_source")
-    paraphrase = sum(1 for m in matches if m.match_type == "overlap") - exact
+    multimodal_ids = {id(m) for m in multimodal}
+    text_matches = [m for m in matches if id(m) not in multimodal_ids]
+    exact = sum(1 for m in text_matches if m.overlap_kind == "verbatim")
+    common = sum(1 for m in text_matches if m.match_type == "common_source")
+    paraphrase = sum(1 for m in text_matches if m.overlap_kind == "paraphrase")
     cross_modal = len(multimodal)
     return {"cross_modal": cross_modal, "exact_copy": exact,
             "paraphrase": paraphrase, "template": common}

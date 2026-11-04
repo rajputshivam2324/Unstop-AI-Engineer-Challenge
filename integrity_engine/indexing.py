@@ -14,6 +14,7 @@ faiss, numpy, types (Chunk, PairCandidate), config (PairwiseConfig).
 from __future__ import annotations
 
 import logging
+from collections.abc import Callable
 
 import faiss
 import numpy as np
@@ -97,7 +98,8 @@ def search_neighbors(index: faiss.IndexFlatIP, query_vec: np.ndarray, top_k: int
 def pairwise_doc_similarity(all_chunks: list[Chunk],
                             chunk_sims: dict[int, list[tuple[int, float]]],
                             cfg: PairwiseConfig,
-                            duplicates: dict[str, str] | None = None) \
+                            duplicates: dict[str, str] | None = None,
+                            verify: Callable[[int, int], bool] | None = None) \
         -> list[PairCandidate]:
     """Coverage-weighted mean-max doc-pair scores (exact aggregation math §4.4).
 
@@ -108,6 +110,7 @@ def pairwise_doc_similarity(all_chunks: list[Chunk],
     discount). Byte-identical duplicate relations are excluded from the math and
     appended as synthetic 1.0 candidates (reported, never double-counted, A2).
     """
+    duplicates = dict(duplicates or {})
     exclude = SelfMatchExclusion([c.document_id for c in all_chunks], duplicates)
     docs = sorted({c.document_id for c in all_chunks})
     chunks_of: dict[str, list[int]] = {}
@@ -142,18 +145,30 @@ def pairwise_doc_similarity(all_chunks: list[Chunk],
             if not q_idx or not m_idx:
                 continue
             forward, f_shared = _coverage(all_chunks, q_idx, m_idx, match_doc,
-                                          chunk_sims, exclude, cfg)
-            reverse, _ = _coverage(all_chunks, m_idx, q_idx, query_doc,
-                                   chunk_sims, exclude, cfg)
+                                          chunk_sims, exclude, cfg, verify)
+            reverse, r_shared = _coverage(
+                all_chunks, m_idx, q_idx, query_doc, chunk_sims, exclude, cfg,
+                (lambda i, j: verify(j, i)) if verify is not None else None)
+            # Evidence = forward pairs + reverse pairs re-oriented to (query, match)
+            # so a small source fully contained in a long query still yields
+            # evidence on the query's side.
+            shared = list(f_shared)
+            known = {(q, m) for q, m, _ in shared}
+            for m_id, q_id, sim in r_shared:
+                if (q_id, m_id) not in known:
+                    shared.append((q_id, m_id, sim))
+                    known.add((q_id, m_id))
             score = max(forward, reverse)
-            add_pair(query_doc, match_doc, score, f_shared, forward, reverse)
+            add_pair(query_doc, match_doc, score, shared, forward, reverse)
 
     for dup, canonical in sorted(duplicates.items()):
-        first_chunk = next((c for c in all_chunks if c.document_id == dup), None)
-        first_id = first_chunk.chunk_id if first_chunk else ""
-        shared = [(first_id, first_id, cfg.duplicate_similarity)] if first_id else []
-        add_pair(dup, canonical, cfg.duplicate_similarity, shared, 1.0, 1.0)
-        add_pair(canonical, dup, cfg.duplicate_similarity, shared, 1.0, 1.0)
+        dup_chunks = [c.chunk_id for c in all_chunks if c.document_id == dup]
+        can_chunks = [c.chunk_id for c in all_chunks if c.document_id == canonical]
+        sim = cfg.duplicate_similarity
+        add_pair(dup, canonical, sim,
+                 [(a, b, sim) for a, b in zip(dup_chunks, can_chunks)], 1.0, 1.0)
+        add_pair(canonical, dup, sim,
+                 [(b, a, sim) for a, b in zip(dup_chunks, can_chunks)], 1.0, 1.0)
 
     pairs = list(grouped.values())
     pairs.sort(key=lambda p: (-p.score, p.query_document_id, p.match_document_id))
@@ -162,20 +177,28 @@ def pairwise_doc_similarity(all_chunks: list[Chunk],
 
 def _coverage(all_chunks: list[Chunk], q_idx: list[int], m_idx: list[int],
               match_doc: str, chunk_sims: dict[int, list[tuple[int, float]]],
-              exclude: SelfMatchExclusion, cfg: PairwiseConfig) \
+              exclude: SelfMatchExclusion, cfg: PairwiseConfig,
+              verify: Callable[[int, int], bool] | None = None) \
         -> tuple[float, list[tuple[str, str, float]]]:
-    """S(Q,M): mean over Q chunks of their best ≥floor cosine into M, plus shared pairs."""
+    """S(Q,M): mean over Q chunks of their best >=floor, evidence-verified cosine into M.
+
+    `verify(i, j)` (evidence gate) returns True only when the two chunks share at
+    least one aligned sentence pair; a high chunk cosine produced by topic
+    similarity alone (no alignable sentence) contributes 0 to coverage.
+    """
     m_set = set(m_idx)
     numerator = 0.0
     shared: list[tuple[str, str, float]] = []
     for qi in q_idx:
         best_sim, best_j = 0.0, -1
-        for j, sim in chunk_sims.get(qi, []):
-            if j not in m_set or exclude.is_excluded(qi, j):
+        for j, sim in sorted(chunk_sims.get(qi, []), key=lambda t: -t[1]):
+            if j not in m_set or exclude.is_excluded(qi, j) or sim < cfg.chunk_min_cos:
                 continue
-            if sim > best_sim:
-                best_sim, best_j = sim, j
-        if best_sim >= cfg.chunk_min_cos and best_j >= 0:
+            if verify is not None and not verify(qi, j):
+                continue
+            best_sim, best_j = sim, j
+            break
+        if best_j >= 0:
             numerator += best_sim
             shared.append((all_chunks[qi].chunk_id, all_chunks[best_j].chunk_id,
                            best_sim))

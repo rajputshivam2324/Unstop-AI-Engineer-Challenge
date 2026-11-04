@@ -91,7 +91,7 @@ class AIDetectionConfig:
 class ExternalCheckConfig:
     """Local KB + optional DDG web tier (§4.7)."""
 
-    local_kb_min_cos: float = 0.72
+    local_kb_min_cos: float = 0.70
     web_budget_per_doc: int = 2
     query_topk: int = 3
     request_timeout_s: int = 6

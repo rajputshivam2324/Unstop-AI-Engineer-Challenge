@@ -100,10 +100,14 @@ class MatchedPassage:
     matched_passage: str
     query_page: int | None = None
     matched_page: int | None = None
-    matched_timestamp: str | None = None  # "00:00:24 - 00:00:36"
+    matched_timestamp: str | None = None  # "00:00:24 - 00:00:36" (matched side is mp4)
+    query_timestamp: str | None = None  # same format, when the query side is mp4
     match_type: Literal["overlap", "common_source"] = "overlap"
     evidence_sentence_scores: list[float] = field(default_factory=list)
     note: str | None = None
+    overlap_kind: str = "paraphrase"  # verbatim | paraphrase | cross_modal | common_source
+    lexical_jaccard: float | None = None  # token-set Jaccard of the two passages
+    token_lcs_ratio: float | None = None  # token LCS / max(len) of the two passages
 
 
 @dataclass

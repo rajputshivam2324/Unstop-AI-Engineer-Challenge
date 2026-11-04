@@ -15,6 +15,7 @@ embeddings.
 
 from __future__ import annotations
 
+import bisect
 import hashlib
 import logging
 import re
@@ -70,6 +71,15 @@ def hamming(a: int, b: int) -> int:
     return bin(a ^ b).count("1")
 
 
+_MIN_TEMPLATE_SENTENCE_TOKENS = 6
+
+
+def _sentence_key(text: str) -> str:
+    """Normalized lowercase token string; '' when too short to be distinctive."""
+    tokens = _TOKEN_RE.findall(text.lower())
+    return " ".join(tokens) if len(tokens) >= _MIN_TEMPLATE_SENTENCE_TOKENS else ""
+
+
 class TemplateRegistry:
     """Chunks whose simhash fingerprint recurs in >= min_docs distinct documents
     (or whose exact normalized text repeats across >= 3 docs, 20-token floor)
@@ -85,6 +95,7 @@ class TemplateRegistry:
         self._clusters: list[dict[str, object]] = []  # {fp, members: list[(chunk, fp)]}
         self._chunks: list[Chunk] = []
         self._template_ids: set[str] = set()
+        self.template_sentences: set[str] = set()
 
     def register_all_chunks(self, chunks: list[Chunk]) -> None:
         """Pass 1 of the pipeline: pure text pass BEFORE embeddings (research D6)."""
@@ -146,7 +157,61 @@ class TemplateRegistry:
                 self._template_ids.add(chunk.chunk_id)
         if all_template_chunks:
             logger.info("template registry: %d boilerplate chunk(s) in %d cluster(s)",
-                        len(all_template_chunks), len(ordered))
+                        len(all_template_chunks), len({c.template_cluster_id
+                                                       for c in all_template_chunks}))
+        self._mark_template_sentences(chunks)
+
+    def _mark_template_sentences(self, chunks: list[Chunk]) -> None:
+        """Sentence-level boilerplate rule (spec R1 shingle fallback, sentence grain).
+
+        A normalized sentence of >= 6 tokens that occurs verbatim in >= min_docs
+        distinct documents is template text. Non-template chunks then have leading
+        / trailing template sentences trimmed (chunk overlap otherwise carries the
+        tail of a case prompt into the first answer chunk), and a chunk whose
+        tokens are >= 50% template sentences is itself marked template.
+        """
+        docs_by_sentence: dict[str, set[str]] = {}
+        split_cache: dict[str, list] = {}
+        for chunk in chunks:
+            sentences = split_sentences(chunk.text)
+            split_cache[chunk.chunk_id] = sentences
+            for sentence in sentences:
+                key = _sentence_key(sentence.text)
+                if key:
+                    docs_by_sentence.setdefault(key, set()).add(chunk.document_id)
+        self.template_sentences = {k for k, docs in docs_by_sentence.items()
+                                   if len(docs) >= self.min_docs}
+        if not self.template_sentences:
+            return
+        for chunk in chunks:
+            if chunk.is_template:
+                continue
+            sentences = split_cache[chunk.chunk_id]
+            flags = [_sentence_key(s.text) in self.template_sentences for s in sentences]
+            if not any(flags):
+                continue
+            total = sum(token_count(s.text) for s in sentences) or 1
+            templ = sum(token_count(s.text) for s, f in zip(sentences, flags) if f)
+            if templ / total >= 0.5:
+                chunk.is_template = True
+                chunk.template_cluster_id = "tmpl_sentences"
+                self._template_ids.add(chunk.chunk_id)
+                continue
+            lo, hi = 0, len(sentences)
+            while lo < hi and flags[lo]:
+                lo += 1
+            while hi > lo and flags[hi - 1]:
+                hi -= 1
+            if lo == 0 and hi == len(sentences):
+                continue  # template sentence only in the middle: keep, alignment shows it
+            new_start = sentences[lo].char_start
+            new_end = sentences[hi - 1].char_end
+            logger.debug("template registry: trimmed %d template sentence(s) from %s",
+                         len(sentences) - (hi - lo), chunk.chunk_id)
+            chunk.text = chunk.text[new_start:new_end]
+            chunk.start_char += new_start
+            chunk.end_char = chunk.start_char + len(chunk.text)
+            chunk.token_count = token_count(chunk.text)
 
     def is_template(self, chunk: Chunk) -> bool:
         """True when the chunk was assigned to a template cluster."""
@@ -155,6 +220,45 @@ class TemplateRegistry:
     def template_fingerprints(self) -> list[int]:
         """Anchors of all registered (not only template) clusters — debug/EVAL use."""
         return [int(cluster["anchor"]) for cluster in self._clusters]  # type: ignore[arg-type]
+
+
+class EvidenceGate:
+    """Callable (i, j) -> bool: do chunks i and j share >= 1 aligned sentence pair?
+
+    Applied inside doc-pair aggregation so peer % only counts chunk pairs a
+    reviewer could verify sentence-by-sentence; topic-level chunk similarity
+    without any alignable sentence is not evidence of copying. Sentence
+    embeddings are computed once per chunk and cached.
+    """
+
+    def __init__(self, chunks: list[Chunk], embedder: Embedder, cfg: Config) -> None:
+        self.chunks = chunks
+        self.embedder = embedder
+        self.cfg = cfg
+        self._sent_cache: dict[int, tuple[list[str], object]] = {}
+        self._result_cache: dict[tuple[int, int], bool] = {}
+
+    def _sentences(self, i: int) -> tuple[list[str], object]:
+        if i not in self._sent_cache:
+            texts = [s.text for s in split_sentences(self.chunks[i].text)]
+            self._sent_cache[i] = (texts, self.embedder.encode_corpus(texts))
+        return self._sent_cache[i]
+
+    def __call__(self, i: int, j: int) -> bool:
+        key = (i, j)
+        if key not in self._result_cache:
+            q_texts, q_vecs = self._sentences(i)
+            m_texts, m_vecs = self._sentences(j)
+            if not q_texts or not m_texts:
+                self._result_cache[key] = False
+            else:
+                matrix = (q_vecs @ m_vecs.T).tolist()  # type: ignore[union-attr]
+                aligned = sentence_lcs_alignment(
+                    q_texts, m_texts, matrix,
+                    cos_floor=self.cfg.alignment.sentence_align_cos_floor,
+                    lcs_ratio_floor=self.cfg.alignment.sentence_lcs_token_ratio)
+                self._result_cache[key] = bool(aligned)
+        return self._result_cache[key]
 
 
 def sentence_lcs_alignment(q_sents: list[str], m_sents: list[str],
@@ -181,21 +285,26 @@ def sentence_lcs_alignment(q_sents: list[str], m_sents: list[str],
                                             ratio >= lcs_ratio_floor)
             if included:
                 candidates.append((cos, qi, mi))
-    candidates.sort(key=lambda t: (-t[0], t[1], t[2]))
+    candidates.sort(key=lambda t: (-round(t[0], 4), t[1], t[2]))
     used_q: set[int] = set()
     used_m: set[int] = set()
-    order_q: list[int] = []
-    order_m: list[int] = []
+    accepted: list[tuple[int, int]] = []  # kept sorted by query index
     pairs: list[tuple[int, int, float]] = []
     for cos, qi, mi in candidates:
         if qi in used_q or mi in used_m:
             continue
-        if order_q and (qi <= order_q[-1] or mi <= order_m[-1]):
-            continue  # monotonic: preserve relative order on both sides
+        # Monotonic (order-preserving) mapping: the new pair must not CROSS any
+        # accepted pair, i.e. its neighbours by query index must bracket it on the
+        # match side too. (Checking only the last accepted pair is wrong: with
+        # near-tied cosines it rejects most of an exact copy.)
+        pos = bisect.bisect_left(accepted, (qi, mi))
+        if pos > 0 and accepted[pos - 1][1] >= mi:
+            continue
+        if pos < len(accepted) and accepted[pos][1] <= mi:
+            continue
+        accepted.insert(pos, (qi, mi))
         used_q.add(qi)
         used_m.add(mi)
-        order_q.append(qi)
-        order_m.append(mi)
         pairs.append((qi, mi, cos))
     pairs.sort(key=lambda t: t[0])
     return pairs
@@ -231,6 +340,7 @@ def align_pair(query_doc: ProcessedDocument, match_doc: ProcessedDocument,
     (discounted_noise_matches) but never silently dropped (§4.5).
     """
     matches: list[MatchedPassage] = []
+    seen: set[tuple[str, str]] = set()
     discounted = 0
     for query_chunk_id, match_chunk_id, chunk_cos in chunk_pairs:
         q_chunk = chunks_by_id.get(query_chunk_id)
@@ -253,61 +363,115 @@ def align_pair(query_doc: ProcessedDocument, match_doc: ProcessedDocument,
                       q_sents[aligned[-1][0]].char_end)
             m_span = (m_sents[aligned[0][1]].char_start,
                       m_sents[aligned[-1][1]].char_end)
-            q_passage = q_chunk.text[q_span[0]:q_span[1]]
-            m_passage = m_chunk.text[m_span[0]:m_span[1]]
             scores = [cos for _, _, cos in aligned]
-            evidence_chars = len(q_passage) + len(m_passage)
         else:  # passage-level fallback: whole chunks stay fully auditable
-            q_passage, m_passage = q_chunk.text, m_chunk.text
+            q_span = (0, len(q_chunk.text))
+            m_span = (0, len(m_chunk.text))
             scores = []
-            evidence_chars = len(q_passage) + len(m_passage)
+        q_passage = q_chunk.text[q_span[0]:q_span[1]]
+        m_passage = m_chunk.text[m_span[0]:m_span[1]]
+        evidence_chars = len(q_passage) + len(m_passage)
         if evidence_chars < cfg.alignment.min_evidence_chars:
             discounted += 1
             logger.debug("alignment: evidence below %d chars discounted (%s vs %s)",
                          cfg.alignment.min_evidence_chars, q_chunk.chunk_id,
                          m_chunk.chunk_id)
             continue
-        note = _passage_note(q_chunk, m_chunk, chunk_cos)
+        if (q_passage, m_passage) in seen:  # chunk overlap can repeat evidence
+            continue
+        seen.add((q_passage, m_passage))
+        # Provenance of the ALIGNED span (not just the chunk start): absolute
+        # char offsets -> owning PDF page, or covered ASR segment time range.
+        q_abs = (q_chunk.start_char + q_span[0], q_chunk.start_char + q_span[1])
+        m_abs = (m_chunk.start_char + m_span[0], m_chunk.start_char + m_span[1])
+        jaccard = round(token_jaccard(q_passage, m_passage), 4)
+        lcs_ratio = round(_lcs_token_ratio(q_passage, m_passage), 4)
+        kind = _overlap_kind(query_doc, match_doc, match_type, lcs_ratio)
+        note = _passage_note(q_chunk, m_chunk, chunk_cos, kind, jaccard, lcs_ratio)
         matches.append(MatchedPassage(
-            matched_file=match_chunk.document_id,
+            matched_file=m_chunk.document_id,
             similarity_score=round(chunk_cos, 4),
             query_passage=q_passage,
             matched_passage=m_passage,
-            query_page=q_chunk.page_start,
-            matched_page=m_chunk.page_start,
-            matched_timestamp=_timestamp_pair(q_chunk, m_chunk),
+            query_page=page_at(query_doc, q_abs[0]),
+            matched_page=page_at(match_doc, m_abs[0]),
+            matched_timestamp=time_span(match_doc, *m_abs),
+            query_timestamp=time_span(query_doc, *q_abs),
             match_type=match_type,  # type: ignore[arg-type]
             evidence_sentence_scores=[round(s, 4) for s in scores],
             note=note,
+            overlap_kind=kind,
+            lexical_jaccard=jaccard,
+            token_lcs_ratio=lcs_ratio,
         ))
     return matches, discounted
 
 
-def _passage_note(q_chunk: Chunk, m_chunk: Chunk, chunk_cos: float) -> str | None:
-    duplicate_note = (f"byte-identical duplicate of "
-                      f"{_canonical_hint(q_chunk, m_chunk)}"
-                      if q_chunk.is_duplicate or m_chunk.is_duplicate else None)
-    if duplicate_note:
-        return duplicate_note
-    if q_chunk.is_template and m_chunk.is_template:
+def page_at(doc: ProcessedDocument, abs_char: int) -> int | None:
+    """1-based PDF page that owns an absolute char offset (None for docx/mp4)."""
+    if doc.modality != "pdf":
+        return None
+    for page in doc.pages:
+        if page.char_start <= abs_char <= page.char_end:
+            return page.page
+    return doc.pages[-1].page if doc.pages else None
+
+
+def time_span(doc: ProcessedDocument, abs_start: int, abs_end: int) -> str | None:
+    """"hh:mm:ss - hh:mm:ss" of the ASR segments overlapping [abs_start, abs_end)."""
+    if doc.modality != "mp4":
+        return None
+    segments: list[tuple[float, float]] = doc.metadata.get("segments", [])
+    covered = [segments[i] for i, page in enumerate(doc.pages)
+               if i < len(segments) and page.char_start < abs_end
+               and page.char_end > abs_start]
+    if not covered:
+        return None
+    return (f"{format_timestamp(covered[0][0])} - "
+            f"{format_timestamp(covered[-1][1])}")
+
+
+VERBATIM_LCS_RATIO = 0.90  # token-LCS ratio at/above which a passage is a verbatim copy
+
+
+def token_jaccard(a_text: str, b_text: str) -> float:
+    """Token-set Jaccard (the naive lexical metric Scenario 2 contrasts against)."""
+    a = set(_TOKEN_RE.findall(a_text.lower()))
+    b = set(_TOKEN_RE.findall(b_text.lower()))
+    return len(a & b) / len(a | b) if a and b else 0.0
+
+
+def _overlap_kind(query_doc: ProcessedDocument, match_doc: ProcessedDocument,
+                  match_type: str, lcs_ratio: float) -> str:
+    """common_source | cross_modal | verbatim | paraphrase (report + eval label)."""
+    if match_type == "common_source":
+        return "common_source"
+    if (query_doc.modality == "mp4") != (match_doc.modality == "mp4"):
+        return "cross_modal"
+    if lcs_ratio >= VERBATIM_LCS_RATIO:
+        return "verbatim"
+    return "paraphrase"
+
+
+def _passage_note(q_chunk: Chunk, m_chunk: Chunk, chunk_cos: float, kind: str,
+                  jaccard: float, lcs_ratio: float) -> str | None:
+    """One human-readable line telling the reviewer what kind of overlap this is."""
+    if q_chunk.is_duplicate or m_chunk.is_duplicate:
+        return f"byte-identical duplicate of {_canonical_hint(q_chunk, m_chunk)}"
+    if kind == "common_source":
         return "shared institutional text (discounted)"
-    if chunk_cos >= 0.80:
-        return _PARAPHRASE_BAND_LABEL
-    return None
+    lexical = f"lexical Jaccard {jaccard:.2f}, token-LCS {lcs_ratio:.2f}"
+    if kind == "verbatim":
+        return f"verbatim copy ({lexical})"
+    if kind == "cross_modal":
+        return f"spoken/written cross-modal match ({lexical}; ASR noise expected)"
+    band = f" {_PARAPHRASE_BAND_LABEL}" if chunk_cos >= 0.80 else ""
+    return f"semantic paraphrase{band}: meaning matches while wording differs ({lexical})"
 
 
 def _canonical_hint(q_chunk: Chunk, m_chunk: Chunk) -> str:
     doc = m_chunk.document_id if m_chunk.is_duplicate else q_chunk.document_id
     return doc
-
-
-def _timestamp_pair(q_chunk: Chunk, m_chunk: Chunk) -> str | None:
-    """The MP4 side's "hh:mm:ss - hh:mm:ss" span (either direction)."""
-    for chunk in (m_chunk, q_chunk):  # matched (mp4) side first per assignment shape
-        if chunk.timestamp_start is not None and chunk.timestamp_end is not None:
-            return (f"{format_timestamp(chunk.timestamp_start)} - "
-                    f"{format_timestamp(chunk.timestamp_end)}")
-    return None
 
 
 def _cosine_matrix(embedder: Embedder, q_texts: list[str],
@@ -327,3 +491,128 @@ def _cos(a, b) -> float:
     """Cosine of two numpy vectors with zero-norm safety."""
     norm = (float((a * a).sum()) ** 0.5) * (float((b * b).sum()) ** 0.5)
     return float((a * b).sum()) / norm if norm > 0 else 0.0
+
+
+
+# --------------------------------------------------------------------------
+# Document-level evidence: sentence alignment across the WHOLE pair of documents
+# --------------------------------------------------------------------------
+_RUN_MAX_GAP = 2  # aligned sentences within 2 positions on both sides form one passage
+
+
+class DocumentAligner:
+    """Sentence-level evidence extraction for a flagged document pair.
+
+    Chunk retrieval decides WHICH document pairs are suspicious; this class
+    decides WHAT a reviewer sees. Every non-template sentence of the query is
+    aligned against every non-template sentence of the source (cosine matrix +
+    the same monotonic cosine/LCS inclusion rule), and consecutive aligned
+    sentences are grouped into passages. Chunk boundaries therefore never hide
+    evidence (e.g. a copied sentence that sits in a chunk dominated by other text).
+    Sentence vectors are cached per document.
+    """
+
+    def __init__(self, embedder: Embedder, registry: TemplateRegistry, cfg: Config,
+                 chunks: list[Chunk]) -> None:
+        self.embedder = embedder
+        self.registry = registry
+        self.cfg = cfg
+        self._template_spans: dict[str, list[tuple[int, int]]] = {}
+        for chunk in chunks:
+            if chunk.is_template:
+                self._template_spans.setdefault(chunk.document_id, []).append(
+                    (chunk.start_char, chunk.end_char))
+        self._cache: dict[str, tuple[list, object]] = {}
+
+    def _doc_sentences(self, doc: ProcessedDocument) -> tuple[list, object]:
+        if doc.document_id not in self._cache:
+            from integrity_engine.text_processing import sentence_char_spans_by_pages
+
+            spans = self._template_spans.get(doc.document_id, [])
+            kept = []
+            for sentence in sentence_char_spans_by_pages(doc.pages):
+                if _sentence_key(sentence.text) in self.registry.template_sentences:
+                    continue
+                if any(a <= sentence.char_start and sentence.char_end <= b
+                       for a, b in spans):
+                    continue
+                kept.append(sentence)
+            vecs = self.embedder.encode_corpus([s.text for s in kept])
+            self._cache[doc.document_id] = (kept, vecs)
+        return self._cache[doc.document_id]
+
+    def align(self, query_doc: ProcessedDocument, match_doc: ProcessedDocument,
+              chunk_cosine: float) -> tuple[list[MatchedPassage], int]:
+        """Return (passages, discounted_noise_count) for one document pair."""
+        q_sents, q_vecs = self._doc_sentences(query_doc)
+        m_sents, m_vecs = self._doc_sentences(match_doc)
+        if not q_sents or not m_sents:
+            return [], 0
+        matrix = (q_vecs @ m_vecs.T).tolist()  # type: ignore[union-attr]
+        aligned = sentence_lcs_alignment(
+            [s.text for s in q_sents], [s.text for s in m_sents], matrix,
+            cos_floor=self.cfg.alignment.sentence_align_cos_floor,
+            lcs_ratio_floor=self.cfg.alignment.sentence_lcs_token_ratio)
+        runs: list[list[tuple[int, int, float]]] = []
+        for triple in aligned:
+            if runs:
+                prev = runs[-1][-1]
+                same_pages = (q_sents[prev[0]].page == q_sents[triple[0]].page and
+                              m_sents[prev[1]].page == m_sents[triple[1]].page)
+                if (same_pages and triple[0] - prev[0] <= _RUN_MAX_GAP
+                        and 0 < triple[1] - prev[1] <= _RUN_MAX_GAP):
+                    runs[-1].append(triple)
+                    continue
+            runs.append([triple])  # new passage: gap, or a PDF page boundary
+        passages: list[MatchedPassage] = []
+        discounted = 0
+        for run in runs:
+            q_first, q_last = q_sents[run[0][0]], q_sents[run[-1][0]]
+            m_first, m_last = m_sents[run[0][1]], m_sents[run[-1][1]]
+            q_passage = query_doc.full_text[q_first.char_start:q_last.char_end]
+            m_passage = match_doc.full_text[m_first.char_start:m_last.char_end]
+            if len(q_passage) + len(m_passage) < self.cfg.alignment.min_evidence_chars:
+                discounted += 1
+                continue
+            pv = self.embedder.encode_corpus([q_passage, m_passage])
+            passage_cos = float(pv[0] @ pv[1])
+            jaccard = round(token_jaccard(q_passage, m_passage), 4)
+            lcs_ratio = round(_lcs_token_ratio(q_passage, m_passage), 4)
+            kind = _overlap_kind(query_doc, match_doc, "overlap", lcs_ratio)
+            note = _doc_passage_note(kind, passage_cos, jaccard, lcs_ratio,
+                                     query_doc, match_doc)
+            passages.append(MatchedPassage(
+                matched_file=match_doc.document_id,
+                similarity_score=round(passage_cos, 4),
+                query_passage=q_passage,
+                matched_passage=m_passage,
+                query_page=page_at(query_doc, q_first.char_start),
+                matched_page=page_at(match_doc, m_first.char_start),
+                matched_timestamp=time_span(match_doc, m_first.char_start,
+                                            m_last.char_end),
+                query_timestamp=time_span(query_doc, q_first.char_start,
+                                          q_last.char_end),
+                match_type="overlap",
+                evidence_sentence_scores=[round(c, 4) for _, _, c in run],
+                note=note,
+                overlap_kind=kind,
+                lexical_jaccard=jaccard,
+                token_lcs_ratio=lcs_ratio,
+            ))
+        passages.sort(key=lambda m: (-m.similarity_score, m.query_passage))
+        _ = chunk_cosine  # retained in the caller's doc_pair_scores for transparency
+        return passages, discounted
+
+
+def _doc_passage_note(kind: str, passage_cos: float, jaccard: float, lcs_ratio: float,
+                      query_doc: ProcessedDocument, match_doc: ProcessedDocument) -> str:
+    if query_doc.metadata.get("duplicate_of") == match_doc.document_id or \
+            match_doc.metadata.get("duplicate_of") == query_doc.document_id:
+        return "byte-identical duplicate file"
+    lexical = f"lexical Jaccard {jaccard:.2f}, token-LCS {lcs_ratio:.2f}"
+    if kind == "verbatim":
+        return f"verbatim copy ({lexical})"
+    if kind == "cross_modal":
+        return f"spoken/written cross-modal match ({lexical}; ASR noise expected)"
+    band = f" {_PARAPHRASE_BAND_LABEL}" if passage_cos >= 0.80 else ""
+    return f"semantic paraphrase{band}: meaning matches while wording differs ({lexical})"

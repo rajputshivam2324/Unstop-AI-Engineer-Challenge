@@ -29,6 +29,7 @@ from integrity_engine.corpus_content import (CASE_PROMPT, DOC01_PAGES, DOC02_TEX
                                              DOC05_PAGES, DOC07_PAGES, DOC09_TEXT,
                                              DOC12_BODY, DOC13_BODY, DOC14_BODY,
                                              LLM_GENERATED_TEXT, PITCH_PASSAGE,
+                                             PITCH_SPOKEN_PASSAGE,
                                              build_doc03_text, build_doc04_text)
 from integrity_engine.text_processing import normalize_text, token_count
 
@@ -101,6 +102,26 @@ def build_docx_from_text(text: str, path: Path) -> None:
             document.add_paragraph(paragraph)
     path.parent.mkdir(parents=True, exist_ok=True)
     document.save(str(path))
+    _normalize_zip_timestamps(path)
+
+
+_FIXED_ZIP_TIME = (2026, 11, 4, 9, 0, 0)
+
+
+def _normalize_zip_timestamps(path: Path) -> None:
+    """Rewrite a .docx zip with fixed entry timestamps -> byte-deterministic output."""
+    import zipfile
+
+    with zipfile.ZipFile(path) as src:
+        entries = [(info.filename, src.read(info.filename)) for info in src.infolist()]
+    tmp = path.with_suffix(".tmp")
+    with zipfile.ZipFile(tmp, "w", compression=zipfile.ZIP_DEFLATED) as dst:
+        for name, data in entries:
+            info = zipfile.ZipInfo(name, date_time=_FIXED_ZIP_TIME)
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o644 << 16
+            dst.writestr(info, data)
+    tmp.replace(path)
 
 
 def _espeak_to_wav(text: str, wav_path: Path, voice: str, rate: int) -> bool:
@@ -128,22 +149,42 @@ def _ffprobe_duration(path: Path) -> float | None:
         return None
 
 
-def build_mp4_from_text(text: str, path: Path, espeak_voice: str = "en+f2",
-                        espeak_rate: int = 155) -> None:
-    """TTS narration over a solid-color video track; duration-fit keeps audio 10-30 s.
+def _flite_to_wav(text: str, wav_path: Path, voice: str, stretch: float) -> bool:
+    """flite TTS (preferred: clearer than espeak-ng for whisper-tiny, measured)."""
+    flite = shutil.which("flite")
+    if flite is None:
+        return False
+    proc = _run([flite, "-voice", voice, "--setf", f"duration_stretch={stretch}",
+                 "-t", text, "-o", str(wav_path)])
+    return proc.returncode == 0 and wav_path.is_file()
 
-    Spec pins the start rate at 155 wpm (§4.10); the assignment's 10-30 s audio
-    bound wins on conflict, so the rate steps up deterministically (155->190->230
-    ->270 wpm) until the probe-measured audio is <= 28 s. Same inputs -> same rate.
+
+def build_mp4_from_text(text: str, path: Path, espeak_voice: str = "en+f2",
+                        espeak_rate: int = 155, flite_voice: str | None = None,
+                        flite_stretch: float = 0.85) -> None:
+    """TTS narration over a solid-color video track; audio must stay 10-30 s.
+
+    Preferred engine: flite (natural pace, whisper-tiny WER 0.07-0.14 on our clips).
+    Fallback: espeak-ng with a deterministic rate search (155->190->230->270 wpm)
+    until the audio is <= 28 s. Sped-up espeak audio is a documented failure mode
+    (WER 0.66 at 270 wpm, EVALUATION.md failure study 1).
     """
     ffmpeg = shutil.which("ffmpeg") or "/usr/bin/ffmpeg"
     with tempfile.TemporaryDirectory() as tmp:
         tmp_dir = Path(tmp)
-        candidates = [espeak_rate] + [r for r in _SPEAKING_WPM_ORDER
-                                      if r != espeak_rate]
         chosen_rate: int | None = None
         chosen_wav: Path | None = None
-        for rate in candidates:
+        engine = "espeak-ng"
+        flite_wav = tmp_dir / "voice_flite.wav"
+        if flite_voice and _flite_to_wav(text, flite_wav, flite_voice, flite_stretch):
+            duration = _ffprobe_duration(flite_wav)
+            if duration is not None and duration <= MAX_SPEECH_SECONDS:
+                chosen_wav, engine = flite_wav, f"flite:{flite_voice}"
+                logger.info("dataset: %s spoken by flite %s (%.1f s)", path.name,
+                            flite_voice, duration)
+        candidates = [espeak_rate] + [r for r in _SPEAKING_WPM_ORDER
+                                      if r != espeak_rate]
+        for rate in ([] if chosen_wav else candidates):
             rate = int(rate)
             wav_path = tmp_dir / f"voice_{rate}.wav"
             if not _espeak_to_wav(text, wav_path, espeak_voice, rate):
@@ -159,16 +200,19 @@ def build_mp4_from_text(text: str, path: Path, espeak_voice: str = "en+f2",
                             rate, duration)
                 break
         if chosen_wav is None:
-            raise RuntimeError(f"espeak-ng TTS failed for {path.name}")
+            raise RuntimeError(f"TTS failed for {path.name}")
         path.parent.mkdir(parents=True, exist_ok=True)
-        logger.info("dataset: compose %s (voice=%s, rate=%d wpm)", path.name,
-                    espeak_voice, chosen_rate or espeak_rate)
-        proc = _run([
+        logger.info("dataset: compose %s (engine=%s, rate=%s)", path.name, engine,
+                    chosen_rate or "natural")
+        audio_s = _ffprobe_duration(chosen_wav) or MAX_SPEECH_SECONDS
+        proc = _run([  # explicit -t: "-shortest" overshoots by ~4 s with lavfi video
             ffmpeg, "-y", "-threads", "1",
             "-f", "lavfi", "-i", "color=c=0x1F3B5C:s=640x360:r=15",
-            "-i", str(chosen_wav),
-            "-shortest", "-c:v", "libx264", "-pix_fmt", "yuv420p",
-            "-c:a", "aac", "-ar", "16000", "-ac", "1", str(path),
+            "-i", str(chosen_wav), "-t", f"{audio_s:.3f}",
+            "-c:v", "libx264", "-pix_fmt", "yuv420p",
+            "-c:a", "aac", "-ar", "16000", "-ac", "1",
+            "-fflags", "+bitexact", "-flags:v", "+bitexact", "-flags:a", "+bitexact",
+            "-map_metadata", "-1", str(path),
         ])
     if proc.returncode != 0:
         raise RuntimeError(f"ffmpeg composite failed for {path.name}: "
@@ -228,7 +272,10 @@ def write_manifest(target_dir: Path) -> None:
             "14_case_template_C.docx": "LOW",
         },
         "ground_truth_flags": {
-            "03_paraphrased_strategy.docx": {"external_expected_min": 20.0},
+            "03_paraphrased_strategy.docx": {
+                "external_expected_min": 20.0,
+                "note": ("second-generation KB paraphrase: 03 rewords 04, whose 2nd "
+                         "paragraph rewords reference_kb KB_SUPPLY_CHAIN")},
             "04_original_strategy.docx": {"external_expected_min": 20.0},
             "06_llm_generated_summary.pdf": {"ai_expected_min_probability": 55.0},
             "05_original_market_pdf.pdf": {"expected_peer_matches": 0},
@@ -339,11 +386,12 @@ def generate_dataset(target_dir: Path, seed: int = 42,
         build_docx_from_text(text, target_dir / name)
     names.extend(docx_jobs)
 
-    build_mp4_from_text(PITCH_PASSAGE, target_dir / "08_pitch_crossmodal_video.mp4",
-                        espeak_voice=voice_a)
+    build_mp4_from_text(PITCH_SPOKEN_PASSAGE,
+                        target_dir / "08_pitch_crossmodal_video.mp4",
+                        espeak_voice=voice_a, flite_voice="slt")
     names.append("08_pitch_crossmodal_video.mp4")
     build_mp4_from_text(DOC09_TEXT, target_dir / "09_third_pitch_video.mp4",
-                        espeak_voice=voice_b)
+                        espeak_voice=voice_b, flite_voice="rms")
     names.append("09_third_pitch_video.mp4")
     build_silent_video(target_dir / "11_silent_video.mp4", seconds=12.0)
     names.append("11_silent_video.mp4")

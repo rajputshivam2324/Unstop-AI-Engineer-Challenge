@@ -42,7 +42,8 @@
   },
   "ground_truth_flags": {
     "03_paraphrased_strategy.docx": {
-      "external_expected_min": 20.0
+      "external_expected_min": 20.0,
+      "note": "second-generation KB paraphrase: 03 rewords 04, whose 2nd paragraph rewords reference_kb KB_SUPPLY_CHAIN"
     },
     "04_original_strategy.docx": {
       "external_expected_min": 20.0

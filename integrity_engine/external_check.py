@@ -7,6 +7,9 @@ fallback (the assignment explicitly allows a documented mock when offline;
 DuckDuckGo is non-commercial, respects robots, and returns snippets).
 External % = coverage-style share: tokens of matched query sentences over all
 document tokens, with overlapping spans merged so they count once (A6 honesty).
+Tier 1 matches sentence-to-sentence: each KB passage is pre-split into source
+sentences so short paraphrases of source material match cleanly instead of
+being diluted against a whole 60-word passage.
 
 <PUBLIC API>
 LocalReferenceKB, pick_query_strings, pick_query_strings_index, ddg_query, MockDDG
@@ -24,7 +27,6 @@ from collections import Counter
 
 from integrity_engine.config import Config
 from integrity_engine.embeddings import Embedder
-from integrity_engine.indexing import build_index
 from integrity_engine.types import (ExternalEvidence, ExternalHit,
                                     ProcessedDocument)
 from reference_kb import kb_texts
@@ -32,6 +34,7 @@ from reference_kb import kb_texts
 logger = logging.getLogger("integrity_engine.external_check")
 
 _TOKEN_RE = re.compile(r"\w+", re.UNICODE)
+_SENTENCE_RE = re.compile(r"(?<=[.!?])\s+")
 # Noun phrases: Capitalized or >=4-letter lowercase words chained 2-3 deep —
 # cheap, dependency-free "distinctive keyword" queries for the web tier.
 _NOUN_PHRASE_RE = re.compile(
@@ -147,50 +150,66 @@ def _query_spans(sentences, queries: list[str]) -> list[tuple[int, int]]:
 
 
 class LocalReferenceKB:
-    """Tier 1: always-on offline knowledge base; Tier 2: budgeted web + mock."""
+    """Tier 1: always-on offline knowledge base; Tier 2: budgeted web + mock.
+
+    Tier-1 design: each KB passage is split into source sentences (>= 5 tokens,
+    34 units); every input-document sentence (>= 6 tokens) is compared against
+    all KB source sentences in one exact cosine matmul (vectors are L2-normed,
+    so matmul == FAISS inner product here; FAISS is reserved for the peer
+    chunk index) and the best unit per sentence fires at cos >= 0.70.
+    Sentence-to-sentence is what makes genuinely paraphrased doc content match:
+    a 60-word passage dilutes a sentence's topic signal to ~0.65.
+    """
+
+    _KB_MIN_UNIT_TOKENS = 5
+    _DOC_MIN_QUERY_TOKENS = 6
 
     def __init__(self, embedder: Embedder, cfg: Config, skip_web: bool = False) -> None:
         self.embedder = embedder
         self.cfg = cfg
         self.skip_web = skip_web
         self._passages = kb_texts.all_passages()  # [(kb_id, text), ...]
-        self._index = None
+        self._units: list[tuple[str, str]] = []  # (passage_id, source sentence)
+        self._matrix = None
         self.mock_engaged = False  # last search_doc disclosed the mock fallback
 
     def build(self) -> None:
-        """Embed KB passages once at startup; reused by every query document."""
-        texts = [text for _, text in self._passages]
-        self._matrix = self.embedder.encode_corpus(texts)
-        self._index = build_index(self._matrix)
-        logger.info("external: local KB built (%d passages, dim=%d)",
-                    len(texts), self.embedder.dim)
+        """Split passages into source sentences and embed them once (startup)."""
+        units: list[tuple[str, str]] = []
+        for passage_id, text in self._passages:
+            for sentence in _SENTENCE_RE.split(text.strip()):
+                sentence = sentence.strip()
+                if len(_tokens(sentence)) >= self._KB_MIN_UNIT_TOKENS:
+                    units.append((passage_id, sentence))
+        self._units = units
+        self._matrix = self.embedder.encode_corpus([s for _, s in units])
+        logger.info("external: local KB built (%d source sentences from %d passages)",
+                    len(units), len(self._passages))
 
     def search_doc(self, doc: ProcessedDocument) -> ExternalEvidence:
-        """Search one document; evidence = best KB passage per query sentence."""
-        if self._index is None:
-            self.build()
+        """Search one document; evidence = best KB source sentence per doc sentence."""
+        self.mock_engaged = False
         sentences = doc_sentences(doc)
-        top_indexes = pick_query_strings_index(
-            [s.text for s in sentences],
-            k=self.cfg.external.query_topk, min_words=12)
-        covered_spans: list[tuple[int, int]] = []  # spans of sentences that hit
+        usable = [s for s in sentences
+                  if len(_tokens(s.text)) >= self._DOC_MIN_QUERY_TOKENS]
+        covered_spans: list[tuple[int, int]] = []
         hits: list[ExternalHit] = []
-        kb_floor = self.cfg.external.local_kb_min_cos
-        for i in top_indexes:
-            sentence = sentences[i]
-            q_vec = self.embedder.encode_query(sentence.text)
-            sims, ids = self._index.search(q_vec, 2)
-            for sim, passage_idx in zip(sims[0], ids[0], strict=True):
-                if int(passage_idx) == -1 or float(sim) < kb_floor:
+        if self._matrix is None:
+            self.build()
+        if usable and self._matrix.shape[0]:
+            q_matrix = self.embedder.encode_corpus([s.text for s in usable])
+            sims = q_matrix @ self._matrix.T  # both sides L2-normed => exact cosine
+            floor = self.cfg.external.local_kb_min_cos
+            for row, sentence in zip(sims, usable, strict=True):
+                best = float(row.max())
+                if best < floor:
                     continue
-                kb_id, passage = self._passages[int(passage_idx)]
-                aligned = min(len(_tokens(sentence.text)), len(_tokens(passage)))
+                passage_id, kb_sentence = self._units[int(row.argmax())]
                 hits.append(ExternalHit(
-                    source_title=kb_id, source_url=None, similarity=float(sim),
-                    query_passage=sentence.text, matched_passage=passage,
-                    source="local_kb", aligned_tokens=aligned))
+                    source_title=passage_id, source_url=None, similarity=best,
+                    query_passage=sentence.text, matched_passage=kb_sentence,
+                    source="local_kb", aligned_tokens=len(_tokens(sentence.text))))
                 covered_spans.append((sentence.char_start, sentence.char_end))
-                break  # one best KB passage per query sentence
 
         queries = pick_query_strings([s.text for s in sentences],
                                      k=self.cfg.external.query_topk,

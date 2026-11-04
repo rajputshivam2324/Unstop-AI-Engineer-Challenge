@@ -171,16 +171,19 @@ def _split_long(body: str, offset: int) -> list[tuple[int, int]]:
 
 
 def sentence_char_spans_by_pages(pages: list[Page]) -> list[Sentence]:
-    """Sentences of pages joined "\\n\\n", keeping page attribution per sentence.
+    """Sentences of all pages with absolute char spans + page attribution.
 
-    The join math mirrors ingestion.base.finish_document so char offsets land in
-    the document's joined full_text.
+    Uses each Page's own char_start (set by ingestion.base.finish_document) so
+    the spans are exact for every modality — "\\n\\n"-joined PDF/DOCX pages and
+    single-space-joined MP4 ASR segments alike. Pages built by hand without
+    offsets fall back to a "\\n\\n" join cursor.
     """
     sentences: list[Sentence] = []
     cursor = 0
     sep_len = len("\n\n")
     for page in pages:
-        page_start = cursor
+        has_offsets = page.char_end - page.char_start == len(page.text)
+        page_start = page.char_start if has_offsets else cursor
         for sentence in split_sentences(page.text):
             sentences.append(Sentence(
                 text=sentence.text,
@@ -188,7 +191,7 @@ def sentence_char_spans_by_pages(pages: list[Page]) -> list[Sentence]:
                 char_end=page_start + sentence.char_end,
                 page=page.page,
             ))
-        cursor += len(page.text) + sep_len
+        cursor = page_start + len(page.text) + sep_len
     return sentences
 
 
