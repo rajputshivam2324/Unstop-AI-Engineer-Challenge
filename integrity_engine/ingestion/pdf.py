@@ -36,13 +36,17 @@ def _header_footer_lines(lines_by_page: list[list[str]]) -> set[str]:
     for lines in lines_by_page:
         if not lines:
             continue
-        edge[" ".join(lines[0].split())] += 1
-        edge[" ".join(lines[-1].split())] += 1
+        # a set: a one-line page must not count its single line twice
+        edge.update({" ".join(lines[0].split()), " ".join(lines[-1].split())})
     half = len(lines_by_page) / 2
-    return {line for line, count in edge.items() if line and count >= half}
+    # a header/footer must REPEAT: >= 2 pages AND >= 50% of pages. (Without the
+    # ">= 2" floor, on a 2-page PDF every first/last line of each page matched
+    # "50% of pages" and real body text was silently deleted.)
+    floor = max(2.0, half)
+    return {line for line, count in edge.items() if line and count >= floor}
 
 
-def extract(path: Path, config: Config) -> ProcessedDocument:  # noqa: ARG001 - contract signature
+def extract(path: Path, config: Config) -> ProcessedDocument:
     """Extract a PDF to a ProcessedDocument; never raises on file content."""
     try:
         size = path.stat().st_size

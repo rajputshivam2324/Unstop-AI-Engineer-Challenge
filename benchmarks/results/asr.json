@@ -1,0 +1,124 @@
+{
+  "rows": [
+    {
+      "clip": "08_pitch",
+      "tts": "shipped MP4 (flite slt)",
+      "audio_s": 25.152,
+      "model": "tiny",
+      "wer": 0.06097560975609756,
+      "asr_s": 1.8142919540405273,
+      "rtf": 0.07213310885975378,
+      "hypothesis": "Operating margins contracted by 4.2% over Q3 because inbound freight per carton rose 19% and the prepaid fuel surcharge stuck at $9. We held list prices flat through the quarter, so the squeeze showed up almost entirely in gross margin rather than in demand. Two countermeasures shipped in October, the regional carriers up on the western lanes cuts per carton freight by a projected 11% and volume tier surcharge caps lock our effective rate through peak season."
+    },
+    {
+      "clip": "08_pitch",
+      "tts": "espeak-ng 155 wpm",
+      "audio_s": 31.672971,
+      "model": "tiny",
+      "wer": 0.0975609756097561,
+      "asr_s": 2.154188871383667,
+      "rtf": 0.06801347658177273,
+      "hypothesis": "Operating markings contracted by 4.2% over Q3 because inbound freight per carton rose 19% and the prepaid fuel surcharge took at $9. We held list prices that through the quarter, so the squeeze showed up almost entirely in gross margin rather than in demand. Two countermeasures shipped in October, a regional carrier swap on the western lanes cuts per carton freight are connected 11% and volume tier surcharge caps lock our effective rate through peak season."
+    },
+    {
+      "clip": "08_pitch",
+      "tts": "espeak-ng 270 wpm",
+      "audio_s": 18.373832,
+      "model": "tiny",
+      "wer": 0.4878048780487805,
+      "asr_s": 1.6055054664611816,
+      "rtf": 0.0873800014314478,
+      "hypothesis": "The operating margins contracted by 4.2% of recovery became in unbreakable cotton rose 19% and the return fuel charge starts at $1. We held these prices that through the water, so the sweet showable most entirely in gross margin rather than in demand. 2.2 million shit in October, a regional communist war on the Western Lens cuts the cotton freight iron at $1.11%. And more U.D. also charge cuts like our effective rate through peak season."
+    },
+    {
+      "clip": "09_pitch",
+      "tts": "shipped MP4 (flite rms)",
+      "audio_s": 26.176,
+      "model": "tiny",
+      "wer": 0.1375,
+      "asr_s": 1.65171480178833,
+      "rtf": 0.06310035153531213,
+      "hypothesis": "Carbon tracking for city logistics, our pilot puts a small sensor node on every delivery cart and logs kilograms of CO2 per route, per stop, dispatch software orders drops to cut idling, and the dashboard gives planners a daily carbon budget that resets at 6am. In the six-week trial across 2D posts, brearuted mornings trimmed idle time 22% and diesel used 13%. Next step is a 3-city roll out funded by the airline offset pool."
+    },
+    {
+      "clip": "09_pitch",
+      "tts": "espeak-ng 155 wpm",
+      "audio_s": 30.616417,
+      "model": "tiny",
+      "wer": 0.275,
+      "asr_s": 2.0738608837127686,
+      "rtf": 0.06773689043080282,
+      "hypothesis": "Common tracking for city logistics. Our pilot puts a small sensor node on every delivery cart and logs kilogram of CO2 per route, first stop. This patch software orders drops to cut idling, and the dashboard gives plan on a daily common budget at 6am. In the six week trial across two depots, routed mornings trim night or time 22% and diesel use 13%. Next step in a free city rout funded by the airline offset doorwall."
+    },
+    {
+      "clip": "09_pitch",
+      "tts": "espeak-ng 270 wpm",
+      "audio_s": 17.336553,
+      "model": "tiny",
+      "wer": 0.4875,
+      "asr_s": 1.5008890628814697,
+      "rtf": 0.08657367256809759,
+      "hypothesis": "common tracking for city logistics. Our pilot puts a small sensor on every delivery cart and locks kilograms of CO2 per route. The stop, this patch software me all that stops the cart cycling, and the laptop gives it another daily common target with a set set 10. In the six week trial across two netbers, route it more needs, drink that all time 22% and deal use 13%. Next step is a reset in our app funded by the Rang Offset tool."
+    },
+    {
+      "clip": "08_pitch",
+      "tts": "shipped MP4 (flite slt)",
+      "audio_s": 25.152,
+      "model": "base",
+      "wer": 0.08536585365853659,
+      "asr_s": 3.1868255138397217,
+      "rtf": 0.1267026683301416,
+      "hypothesis": "Operating margins contracted by 4.2% over Q3 because inbound freight per carton rose 19% and the prepaid fuel surcharge stuck at $9, we held list prices flat through the quarter. So the squeeze showed up almost entirely in gross margin rather than in demand. Due countermeasures shipped in October, the regional carrier swap on the western lane's cuts per carton freight by a projected 11% and volume tier surcharge caps lock hour effective rate through peak season."
+    },
+    {
+      "clip": "08_pitch",
+      "tts": "espeak-ng 155 wpm",
+      "audio_s": 31.672971,
+      "model": "base",
+      "wer": 0.18292682926829268,
+      "asr_s": 4.207960367202759,
+      "rtf": 0.1328565093310242,
+      "hypothesis": "Operating margins contracted by 4.2% over Q3, because inbound freight per cart and rose 19% and the prepaid fuel surcharge took at $9. We held list prices flat through the quarter, so the squeeze showed up almost entirely in rose margin rather than in demand. Two countermeasurens shipped in October, a regional carrier swap on the western lanes cut per cart and freight are projected 11% and more new tier surcharge caps lock are effective rate through peak season."
+    },
+    {
+      "clip": "08_pitch",
+      "tts": "espeak-ng 270 wpm",
+      "audio_s": 18.373832,
+      "model": "base",
+      "wer": 0.43902439024390244,
+      "asr_s": 2.7327167987823486,
+      "rtf": 0.14872873545280857,
+      "hypothesis": "Operating mines contracted by 4.2% over Q3, becoming a threat per cut and rose 19% and the revenge fuel so charged to cut handles. We failed this process that through the quarter, so the queen showed up almost entirely and rose money rather than in demand. To countermeasure the shit in October, a regional career swap on the western lanes cuts per cut and threat are projected 11% and volume tier so charged cuts are affected right through peak season."
+    },
+    {
+      "clip": "09_pitch",
+      "tts": "shipped MP4 (flite rms)",
+      "audio_s": 26.176,
+      "model": "base",
+      "wer": 0.125,
+      "asr_s": 2.882619857788086,
+      "rtf": 0.11012453613187982,
+      "hypothesis": "Carbon tracking for city logistics, our pilot puts a small sensor node on every delivery cart and logs kilograms of go-to-per-root. Perst up, dispatch software orders drops to cut idling, and the dashboard gives planners a daily carbon budget that resets at 6 a.m. In the six week trial across two depots, re-rooted mornings trim idle time 22% and diesel use 13%. Next step is a 3-city rollout funded by the airline offset pool."
+    },
+    {
+      "clip": "09_pitch",
+      "tts": "espeak-ng 155 wpm",
+      "audio_s": 30.616417,
+      "model": "base",
+      "wer": 0.2875,
+      "asr_s": 3.5358047485351562,
+      "rtf": 0.11548721552019482,
+      "hypothesis": "Carbon tracking for city logistics. Our pilot puts a small sensor known on every delivery card, and logs kill a ram on CO2 per route, per stop. This patch software orders drops to cut idling, and the dashboard gives plan on an early carbon budget at reset at 6 a.m. In the six week trial across two depots, routed mornings trim idle time 22% and deal use 13% Next step in a reset row out funded by the airline offset rule."
+    },
+    {
+      "clip": "09_pitch",
+      "tts": "espeak-ng 270 wpm",
+      "audio_s": 17.336553,
+      "model": "base",
+      "wer": 0.5375,
+      "asr_s": 2.8171191215515137,
+      "rtf": 0.1624959195493772,
+      "hypothesis": "Common tracking for city logistics, our pilot puts a small sensor no one ever leave a cut and dogs kill a gram of CO2 per root to the stop. The patch softwere organ blocks the cut timing, and the mash-off gives them another may carbon-bucket and reset at 6am, in the six-week trial across to their post-rooted mornings during a double-time 22% and below use 13%, next step in a three-city route funded by the RAN offset pool."
+    }
+  ]
+}

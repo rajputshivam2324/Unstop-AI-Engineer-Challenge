@@ -37,13 +37,21 @@ sys.path.insert(0, str(ROOT))
 os.environ.setdefault("HF_HUB_CACHE", str(ROOT / "cache" / "hf"))
 os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
 
-from integrity_engine.ai_detection import (AIDetector, _logistic_low_is_ai,  # noqa: E402
-                                           band_label, fuse_probabilities)
-from integrity_engine.config import load_config  # noqa: E402
-from integrity_engine.metrics import (best_f1_threshold, confusion_matrix,  # noqa: E402
-                                      fit_logistic_low_is_ai, roc_auc,
-                                      threshold_metrics)
-from integrity_engine.text_processing import token_count  # noqa: E402
+from integrity_engine.ai_detection import (
+    AIDetector,
+    _logistic_low_is_ai,
+    band_label,
+    fuse_probabilities,
+)
+from integrity_engine.config import load_config
+from integrity_engine.metrics import (
+    best_f1_threshold,
+    confusion_matrix,
+    fit_logistic_low_is_ai,
+    roc_auc,
+    threshold_metrics,
+)
+from integrity_engine.text_processing import token_count
 
 DATA = ROOT / "benchmarks" / "data"
 RESULTS = ROOT / "benchmarks" / "results"

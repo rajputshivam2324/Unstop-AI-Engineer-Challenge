@@ -123,3 +123,22 @@ def test_markdown_written_for_degraded(tmp_path):
              "--log-level", "ERROR"])
     md = Path(out / "per_doc" / "zero.pdf.md").read_text()
     assert "file is empty (0 bytes)" in md
+
+
+
+def test_header_footer_strip_only_removes_repeated_lines(tmp_path):
+    from fpdf import FPDF
+
+    pdf = FPDF()
+    for body in ("First page body line one.\nFirst page closing line.",
+                 "Second page opening line.\nSecond page closing line."):
+        pdf.add_page()
+        pdf.set_font("Helvetica", size=11)
+        pdf.multi_cell(0, 6, "ACME Case Report\n" + body + "\nConfidential draft")
+    path = tmp_path / "two_pages.pdf"
+    pdf.output(str(path))
+    doc = extract_any(path, CFG)
+    assert "ACME Case Report" not in doc.full_text      # repeated header removed
+    assert "Confidential draft" not in doc.full_text    # repeated footer removed
+    assert "First page closing line." in doc.full_text  # unique body lines kept
+    assert "Second page opening line." in doc.full_text

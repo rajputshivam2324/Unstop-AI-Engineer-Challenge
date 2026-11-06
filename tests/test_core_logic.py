@@ -8,13 +8,20 @@ import math
 
 import numpy as np
 
-from integrity_engine.ai_detection import (AIDetector, band_label,
-                                           feature_heuristic_ai_score,
-                                           fuse_probabilities)
+from integrity_engine.ai_detection import (
+    AIDetector,
+    band_label,
+    feature_heuristic_ai_score,
+    fuse_probabilities,
+)
 from integrity_engine.alignment import TemplateRegistry, sentence_lcs_alignment
 from integrity_engine.config import Config, PairwiseConfig
-from integrity_engine.indexing import (SelfMatchExclusion, build_index,
-                                       pairwise_doc_similarity, search_neighbors)
+from integrity_engine.indexing import (
+    SelfMatchExclusion,
+    build_index,
+    pairwise_doc_similarity,
+    search_neighbors,
+)
 from integrity_engine.metrics import prf, roc_auc
 from integrity_engine.scoring import verdict_from_signals
 from integrity_engine.types import Chunk
@@ -121,6 +128,8 @@ def test_risk_rule_peer_dominant():
     assert verdict_from_signals(70, 0, "HUMAN", 10, False) == "HIGH"
     assert verdict_from_signals(45, 31, "HUMAN", 10, False) == "HIGH"
     assert verdict_from_signals(45, 0, "HUMAN", 10, False) == "MEDIUM"
+    assert verdict_from_signals(20, 0, "HUMAN", 10, False) == "MEDIUM"
+    assert verdict_from_signals(19.9, 0, "HUMAN", 10, False) == "LOW"
     assert verdict_from_signals(0, 0, "AI_LIKELY", 80, False) == "MEDIUM"
     assert verdict_from_signals(0, 0, "HUMAN", 10, False) == "LOW"
 

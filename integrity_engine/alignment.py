@@ -22,10 +22,17 @@ import re
 
 from integrity_engine.config import Config
 from integrity_engine.embeddings import Embedder
-from integrity_engine.text_processing import (normalize_text, split_sentences,
-                                              token_count)
-from integrity_engine.types import (Chunk, MatchedPassage, PairCandidate,
-                                    ProcessedDocument)
+from integrity_engine.text_processing import (
+    normalize_text,
+    split_sentences,
+    token_count,
+)
+from integrity_engine.types import (
+    Chunk,
+    MatchedPassage,
+    PairCandidate,
+    ProcessedDocument,
+)
 
 logger = logging.getLogger("integrity_engine.alignment")
 
@@ -280,7 +287,6 @@ def sentence_lcs_alignment(q_sents: list[str], m_sents: list[str],
     for qi in range(len(q_sents)):
         for mi in range(len(m_sents)):
             cos = score_matrix[qi][mi]
-            q_tokens, m_tokens = token_count(q_sents[qi]), token_count(m_sents[mi])
             ratio = _lcs_token_ratio(q_sents[qi], m_sents[mi])
             included = cos >= cos_floor or (0.45 <= cos < cos_floor and
                                             ratio >= lcs_ratio_floor)
@@ -606,6 +612,9 @@ class DocumentAligner:
         if not total:
             return 0.0
         runs, _ = self.accepted_runs(query_doc, match_doc)
+        # only sentences that actually aligned count (Turnitin convention: matched
+        # text, not the gaps between matches). Counting whole run spans was also
+        # measured: it inflated topical false positives (see EVALUATION.md).
         covered = sum(token_count(q_sents[qi].text) for run in runs for qi, _, _ in run)
         return covered / total
 

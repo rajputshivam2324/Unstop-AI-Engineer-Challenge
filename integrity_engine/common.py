@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import hashlib
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 SUPPORTED_EXTENSIONS: tuple[str, ...] = (".pdf", ".docx", ".mp4")
@@ -77,9 +77,9 @@ def sha256_file(path: Path) -> str:
 
 def utc_now_iso() -> str:
     """UTC timestamp, ISO-8601 with seconds resolution (report field)."""
-    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def utc_now_compact() -> str:
     """UTC timestamp, compact YYYYMMDD_HHMMSS (filename-safe, per-run suffix)."""
-    return datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    return datetime.now(UTC).strftime("%Y%m%d_%H%M%S")

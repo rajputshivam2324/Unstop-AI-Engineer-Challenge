@@ -28,7 +28,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from integrity_engine.corpus_content import DOC09_TEXT, PITCH_SPOKEN_PASSAGE  # noqa: E402
+from integrity_engine.corpus_content import DOC09_TEXT, PITCH_SPOKEN_PASSAGE
 
 RESULTS = ROOT / "benchmarks" / "results"
 

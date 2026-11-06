@@ -1,0 +1,17 @@
+line-length = 100
+target-version = "py311"
+extend-exclude = [".venv", "cache", "benchmarks/data"]
+
+[lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
+ignore = ["SIM108", "B905"]  # ternaries not always clearer; zip strict= adds noise
+
+[lint.isort]
+known-first-party = ["integrity_engine", "reference_kb", "conftest"]
+
+[lint.per-file-ignores]
+# these set HF cache env vars / sys.path before importing model libraries
+"benchmarks/*" = ["E402"]
+"integrity_engine/cli.py" = ["E402"]
+# verbatim corpus strings (doc 06 is a byte-exact LLM output; must not be re-wrapped)
+"integrity_engine/corpus_content.py" = ["E501"]

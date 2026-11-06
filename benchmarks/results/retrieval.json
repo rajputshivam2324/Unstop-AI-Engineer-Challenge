@@ -250,17 +250,104 @@
     0.111,
     0.102
   ],
+  "worst_negatives_evidence": [
+    {
+      "pair": [
+        "116_doc",
+        "292_doc"
+      ],
+      "score": 0.33,
+      "evidence": [
+        {
+          "query": "Computational science, also known as scientific computing or scientific computation (SC), is a field in mathematics that uses advanced computing capabilities to understand and solve complex problems. It is an area of science that spans many disciplines[which?], but at its core, it involves the development of models and simulations to understand natural systems. In practical use, it is typically th",
+          "matched": "Aerospace engineering, particularly the astronautics branch, is often colloquially referred to as \"rocket science\".[a]\n\nIn mathematics and computer science, computer algebra, also called symbolic computation or algebraic computation, is a scientific area that refers to the study and development of algorithms and software for manipulating mathematical expressions and other mathematical objects. Alt",
+          "sentence_cos": [
+            0.6686,
+            0.6627
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "019_doc",
+        "023_doc"
+      ],
+      "score": 0.257,
+      "evidence": [
+        {
+          "query": "The data stored in the warehouse are uploaded from the operational systems (such as marketing, sales etc., shown in the figure to the right). The data may pass through an operational data store for additional operations before they are used in the DW for reporting.",
+          "matched": "The data stored in the warehouse is uploaded from the operational systems (such as marketing or sales). The data may pass through an operational data store and may require data cleansing for additional operations to ensure data quality before it is used in the DW for reporting.",
+          "sentence_cos": [
+            0.9647,
+            0.8703
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "017_doc",
+        "218_doc"
+      ],
+      "score": 0.214,
+      "evidence": [
+        {
+          "query": "In decision analysis, a decision tree can be used to visually and explicitly represent decisions and decision making. In data mining, a decision tree describes data (but the resulting classification tree can be an input for decision making).",
+          "matched": "A decision tree is a decision support tool that uses a tree-like model of decisions and their possible consequences, including chance event outcomes, resource costs, and utility. It is one way to display an algorithm that only contains conditional control statements. Decision trees are commonly used in operations research, specifically in decision analysis, to help identify a strategy most likely ",
+          "sentence_cos": [
+            0.7791,
+            0.707
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "026_doc",
+        "132_doc"
+      ],
+      "score": 0.197,
+      "evidence": [
+        {
+          "query": "Punched tape was used throughout the 19th and for much of the 20th centuries for programmable looms, teleprinter communication, for input to computers of the 1950s and 1960s, and later as a storage medium for minicomputers and CNC machine tools. During the Second World War, high-speed punched tape systems using optical readout methods were used in code breaking systems. Punched tape was used to tr",
+          "matched": "Punched cards were widely used through much of the 20th century in the data processing industry, where specialized and increasingly complex unit record machines, organized into semiautomatic data processing systems, used punched cards for data input, output, and storage. The IBM 12-row/80-column punched card format came to dominate the industry. Many early digital computers used punched cards as t",
+          "sentence_cos": [
+            0.7173,
+            0.6573
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "014_doc",
+        "298_doc"
+      ],
+      "score": 0.179,
+      "evidence": [
+        {
+          "query": "It is a part of the ethics of artificial intelligence and is closely related to machine ethics. While machine ethics is concerned with how an artificially intelligent agent should behave, friendly artificial intelligence research is focused on how to practically bring about this behaviour and ensuring it is adequately constrained.",
+          "matched": "Machine ethics (or machine morality, computational morality, or computational ethics) is a part of the ethics of artificial intelligence concerned with adding or ensuring moral behaviors of man-made machines that use artificial intelligence, otherwise known as artificial intelligent agents. Machine ethics differs from other ethical fields related to engineering and technology.",
+          "sentence_cos": [
+            0.8329,
+            0.6585
+          ]
+        }
+      ]
+    }
+  ],
   "template": {
     "n_docs": 12,
     "max_pair_score": 0.0
   },
   "timing": {
-    "chunk+template_s": 2.29,
-    "model_load_s": 7.72,
-    "embed_s": 32.6,
-    "chunks_per_s": 28.9,
-    "faiss_search_s": 0.25,
-    "chunk_evidence_gate_s": 18.09,
-    "sentence_index+alignment_s": 106.56
+    "chunk+template_s": 2.27,
+    "model_load_s": 6.52,
+    "embed_s": 31.93,
+    "chunks_per_s": 29.5,
+    "faiss_search_s": 0.2,
+    "chunk_evidence_gate_s": 16.83,
+    "sentence_index+alignment_s": 108.94
   }
 }

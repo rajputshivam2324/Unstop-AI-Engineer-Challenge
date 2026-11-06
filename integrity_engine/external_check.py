@@ -27,8 +27,7 @@ from collections import Counter
 
 from integrity_engine.config import Config
 from integrity_engine.embeddings import Embedder
-from integrity_engine.types import (ExternalEvidence, ExternalHit,
-                                    ProcessedDocument)
+from integrity_engine.types import ExternalEvidence, ExternalHit, ProcessedDocument
 from reference_kb import kb_texts
 
 logger = logging.getLogger("integrity_engine.external_check")

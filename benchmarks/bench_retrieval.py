@@ -36,15 +36,23 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 os.environ.setdefault("HF_HUB_CACHE", str(ROOT / "cache" / "hf"))
 
-from integrity_engine.alignment import (DocumentAligner, EvidenceGate,  # noqa: E402
-                                        TemplateRegistry, evidence_pair_scores)
-from integrity_engine.config import load_config  # noqa: E402
-from integrity_engine.embeddings import Embedder  # noqa: E402
-from integrity_engine.indexing import (SelfMatchExclusion, build_index,  # noqa: E402
-                                       pairwise_doc_similarity, search_neighbors)
-from integrity_engine.metrics import prf, roc_auc  # noqa: E402
-from integrity_engine.text_processing import build_chunks, token_count  # noqa: E402
-from integrity_engine.types import Page, ProcessedDocument  # noqa: E402
+from integrity_engine.alignment import (
+    DocumentAligner,
+    EvidenceGate,
+    TemplateRegistry,
+    evidence_pair_scores,
+)
+from integrity_engine.config import load_config
+from integrity_engine.embeddings import Embedder
+from integrity_engine.indexing import (
+    SelfMatchExclusion,
+    build_index,
+    pairwise_doc_similarity,
+    search_neighbors,
+)
+from integrity_engine.metrics import prf, roc_auc
+from integrity_engine.text_processing import build_chunks, token_count
+from integrity_engine.types import Page, ProcessedDocument
 
 DATA = ROOT / "benchmarks" / "data"
 RESULTS = ROOT / "benchmarks" / "results"
@@ -200,6 +208,17 @@ def main() -> int:
     rel_scores = {rel: sorted(round(score.get(k, 0.0), 3) for k, v in truth.items()
                               if v == rel) for rel in ("exact_copy", "paraphrase")}
     negatives = sorted((v for k, v in score.items() if k not in truth), reverse=True)
+    worst_negatives = []
+    for key, value in sorted(((k, v) for k, v in score.items() if k not in truth),
+                             key=lambda kv: -kv[1])[:5]:
+        a, b = sorted(key)
+        passages, _ = aligner.align(docs[a], docs[b])
+        worst_negatives.append({"pair": [docs[a].document_id, docs[b].document_id],
+                                "score": round(value, 3),
+                                "evidence": [{"query": p.query_passage[:400],
+                                              "matched": p.matched_passage[:400],
+                                              "sentence_cos": p.evidence_sentence_scores}
+                                             for p in passages[:2]]})
     result = {
         "corpus": f"{N_DOCS} docs from HC3 human answers + MRPC paraphrases "
                   f"({N_COPY} exact-copy pairs, {N_PARA} paraphrase pairs, {N_TEMPLATE} "
@@ -212,6 +231,7 @@ def main() -> int:
         "sweep": sweep,
         "truth_pair_scores": rel_scores,
         "top_negative_scores": [round(v, 3) for v in negatives[:10]],
+        "worst_negatives_evidence": worst_negatives,
         "template": {"n_docs": N_TEMPLATE, "max_pair_score": max(tmpl_pairs or [0.0])},
         "timing": {"chunk+template_s": round(t1 - t0, 2), "model_load_s": round(t2 - t1, 2),
                    "embed_s": round(t3 - t2, 2),

@@ -35,9 +35,12 @@ os.environ.setdefault("HF_HUB_CACHE", str(CACHE_DIR))
 os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
 os.environ.setdefault("HF_HUB_DISABLE_PROGRESS_BARS", "1")
 
-from integrity_engine.common import (get_trimmed_logger, list_input_files,  # noqa: E402
-                                     utc_now_compact)
-from integrity_engine.config import Config, load_config  # noqa: E402
+from integrity_engine.common import (
+    get_trimmed_logger,
+    list_input_files,
+    utc_now_compact,
+)
+from integrity_engine.config import Config, load_config
 
 logger = logging.getLogger("integrity_engine.cli")
 
@@ -124,17 +127,29 @@ def run_pipeline(input_dir: Path, output_dir: Path, cfg: Config,
                  skip_web: bool = False) -> dict[str, Any]:
     """Run S1-S7 and return the run summary dict (also written to disk)."""
     from integrity_engine.ai_detection import AIDetector
-    from integrity_engine.alignment import (DocumentAligner, EvidenceGate,
-                                            TemplateRegistry, align_pair,
-                                            evidence_pair_scores)
+    from integrity_engine.alignment import (
+        DocumentAligner,
+        EvidenceGate,
+        TemplateRegistry,
+        align_pair,
+        evidence_pair_scores,
+    )
     from integrity_engine.embeddings import build_embedder
     from integrity_engine.external_check import LocalReferenceKB
-    from integrity_engine.indexing import (SelfMatchExclusion, build_index,
-                                           pairwise_doc_similarity, search_neighbors)
+    from integrity_engine.indexing import (
+        SelfMatchExclusion,
+        build_index,
+        pairwise_doc_similarity,
+        search_neighbors,
+    )
     from integrity_engine.ingestion.mp4 import release_asr
-    from integrity_engine.reporting import (build_report_dict, write_json_report,
-                                            write_markdown_report, write_summary_markdown,
-                                            write_summary_report)
+    from integrity_engine.reporting import (
+        build_report_dict,
+        write_json_report,
+        write_markdown_report,
+        write_summary_markdown,
+        write_summary_report,
+    )
     from integrity_engine.scoring import compute_integrity_signals
     from integrity_engine.text_processing import build_chunks
     from integrity_engine.types import AIDetectionResult, ExternalEvidence
@@ -185,7 +200,7 @@ def run_pipeline(input_dir: Path, output_dir: Path, cfg: Config,
 
     try:
         embedder = build_embedder(cfg.embedding, str(CACHE_DIR))
-    except Exception as exc:  # noqa: BLE001 - E16: the one fatal model
+    except Exception as exc:
         logger.error("core model unavailable (offline and not cached): %s (%s)",
                      cfg.embedding.model_name, exc)
         raise RuntimeError("embedding model unavailable") from exc

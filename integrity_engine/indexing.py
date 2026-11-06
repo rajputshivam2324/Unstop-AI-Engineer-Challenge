@@ -64,9 +64,7 @@ class SelfMatchExclusion:
             return True
         if self.chunk_docs[i] == self.chunk_docs[j]:
             return True
-        if self.canonical_of(self.chunk_docs[i]) == self.canonical_of(self.chunk_docs[j]):
-            return True
-        return False
+        return self.canonical_of(self.chunk_docs[i]) == self.canonical_of(self.chunk_docs[j])
 
     def is_duplicate_pair(self, doc_a: str, doc_b: str) -> bool:
         """True when one doc is a byte-duplicate of the other's canonical file."""

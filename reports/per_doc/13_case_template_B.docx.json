@@ -1,0 +1,118 @@
+{
+  "document_id": "13_case_template_B.docx",
+  "total_integrity_risk": "LOW",
+  "scores": {
+    "peer_similarity_percentage": 0.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": 64.8
+  },
+  "peer_matches": [
+    {
+      "matched_file": "12_case_template_A.docx",
+      "similarity_score": 1.0,
+      "query_passage": "Unit Economics Case Prompt (shared template block).\nYou are advising the operations committee of a mid-sized logistics firm. The case concerns a delivery network serving 12 cities from 3 depots. Depots differ in size and automation. Orders arrive in two waves, morning and evening, and the fleet is a mix of owned vans and contracted riders. Your brief contains monthly cost and volume data for the last 9 months.\nQuestion instructions. Answer both questions. Question 1: estimate the contribution margin per delivered order for each depot and identify which cost line explains the difference between the strongest and weakest depot. Question 2: propose two operational interventions with quantified estimates of their effect on the break-even volume of the weakest depot. Support every estimate with arithmetic shown line by line, and state the assumption behind each number you cite.\nCitations. Reference the operations handbook sections 4 and 7 for cost-line definitions, and the depot p&l template for the monthly data. Do not consult external market reports; the case is self-contained. Submit the analysis as a two-page memo addressed to the committee, and attach the arithmetic appendix as a separate exhibit labeled with your candidate code.",
+      "matched_passage": "Unit Economics Case Prompt (shared template block).\nYou are advising the operations committee of a mid-sized logistics firm. The case concerns a delivery network serving 12 cities from 3 depots. Depots differ in size and automation. Orders arrive in two waves, morning and evening, and the fleet is a mix of owned vans and contracted riders. Your brief contains monthly cost and volume data for the last 9 months.\nQuestion instructions. Answer both questions. Question 1: estimate the contribution margin per delivered order for each depot and identify which cost line explains the difference between the strongest and weakest depot. Question 2: propose two operational interventions with quantified estimates of their effect on the break-even volume of the weakest depot. Support every estimate with arithmetic shown line by line, and state the assumption behind each number you cite.\nCitations. Reference the operations handbook sections 4 and 7 for cost-line definitions, and the depot p&l template for the monthly data. Do not consult external market reports; the case is self-contained. Submit the analysis as a two-page memo addressed to the committee, and attach the arithmetic appendix as a separate exhibit labeled with your candidate code.",
+      "location": {
+        "query_page": null,
+        "matched_page": null
+      },
+      "match_type": "common_source",
+      "overlap_kind": "common_source",
+      "evidence_sentence_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lexical_jaccard": 1.0,
+      "token_lcs_ratio": 1.0,
+      "note": "shared institutional text (discounted)"
+    },
+    {
+      "matched_file": "14_case_template_C.docx",
+      "similarity_score": 1.0,
+      "query_passage": "Unit Economics Case Prompt (shared template block).\nYou are advising the operations committee of a mid-sized logistics firm. The case concerns a delivery network serving 12 cities from 3 depots. Depots differ in size and automation. Orders arrive in two waves, morning and evening, and the fleet is a mix of owned vans and contracted riders. Your brief contains monthly cost and volume data for the last 9 months.\nQuestion instructions. Answer both questions. Question 1: estimate the contribution margin per delivered order for each depot and identify which cost line explains the difference between the strongest and weakest depot. Question 2: propose two operational interventions with quantified estimates of their effect on the break-even volume of the weakest depot. Support every estimate with arithmetic shown line by line, and state the assumption behind each number you cite.\nCitations. Reference the operations handbook sections 4 and 7 for cost-line definitions, and the depot p&l template for the monthly data. Do not consult external market reports; the case is self-contained. Submit the analysis as a two-page memo addressed to the committee, and attach the arithmetic appendix as a separate exhibit labeled with your candidate code.",
+      "matched_passage": "Unit Economics Case Prompt (shared template block).\nYou are advising the operations committee of a mid-sized logistics firm. The case concerns a delivery network serving 12 cities from 3 depots. Depots differ in size and automation. Orders arrive in two waves, morning and evening, and the fleet is a mix of owned vans and contracted riders. Your brief contains monthly cost and volume data for the last 9 months.\nQuestion instructions. Answer both questions. Question 1: estimate the contribution margin per delivered order for each depot and identify which cost line explains the difference between the strongest and weakest depot. Question 2: propose two operational interventions with quantified estimates of their effect on the break-even volume of the weakest depot. Support every estimate with arithmetic shown line by line, and state the assumption behind each number you cite.\nCitations. Reference the operations handbook sections 4 and 7 for cost-line definitions, and the depot p&l template for the monthly data. Do not consult external market reports; the case is self-contained. Submit the analysis as a two-page memo addressed to the committee, and attach the arithmetic appendix as a separate exhibit labeled with your candidate code.",
+      "location": {
+        "query_page": null,
+        "matched_page": null
+      },
+      "match_type": "common_source",
+      "overlap_kind": "common_source",
+      "evidence_sentence_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lexical_jaccard": 1.0,
+      "token_lcs_ratio": 1.0,
+      "note": "shared institutional text (discounted)"
+    }
+  ],
+  "multimodal_matches": [],
+  "explanations": "Peer similarity: 0.0% across 2 listed source(s) (top: 12_case_template_A.docx @ 1.00; common-source, discounted). External: 0.0% (none). AI: UNSURE at 64.8%. Overlap types: 0 cross-modal, 0 exact-copy, 0 paraphrase, 2 discounted common-source.",
+  "status": "ok",
+  "modality": "docx",
+  "warnings": [],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": 64.8,
+    "label": "UNSURE",
+    "p_classifier": 0.9999,
+    "p_perplexity": 0.0,
+    "p_burstiness": 0.476,
+    "perplexity": 100.762,
+    "burstiness": 0.2413,
+    "length_gate_triggered": false,
+    "ai_detector_source": "model",
+    "caveat": "Note: AI detectors are unreliable on non-native-English and polished human text (Stanford 2023: up to 61% false-positive rate on ESL essays); treat this as a lead for human review, not proof."
+  },
+  "template_registry_hits": [
+    {
+      "template_cluster_id": "tmpl_00",
+      "chunk_ids": [
+        "13:000"
+      ],
+      "note": "repeated block in >=3 documents (discounted)"
+    }
+  ],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {},
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 37360,
+    "sha256": "fd8af709ffdd86d99c7ac45146d677aeed6db563f5176929cea1ac536a20b7ad",
+    "page_count": null,
+    "duration_s": null,
+    "asr_model": null,
+    "asr_language": null,
+    "chunk_count": 2,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T11:58:52Z"
+}

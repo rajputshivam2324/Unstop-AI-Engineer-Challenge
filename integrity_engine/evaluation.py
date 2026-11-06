@@ -120,7 +120,7 @@ def evaluate(output_dir: Path, manifest: dict[str, Any], cfg: Config) -> dict[st
         cross = bool(r["multimodal_matches"])
         y_plag.append(verdict_from_signals(s["peer_similarity_percentage"],
                                            s["external_similarity_percentage"],
-                                           "HUMAN", None, cross))
+                                           "HUMAN", None, cross, cfg.scoring))
 
     def cm_block(pred: list[str]) -> dict[str, Any]:
         cm = confusion_matrix(y_true, pred, LABELS)
@@ -198,7 +198,8 @@ def evaluate(output_dir: Path, manifest: dict[str, Any], cfg: Config) -> dict[st
         "runtime": summary.get("runtime", {}),
         "thresholds": {"chunk_min_cos": cfg.pairwise.chunk_min_cos,
                        "doc_report_floor": cfg.pairwise.doc_report_floor,
-                       "doc_flag_threshold(HIGH peer%)": 70,
+                       "peer_high_pct": cfg.scoring.peer_high_pct,
+                       "peer_medium_pct": cfg.scoring.peer_medium_pct,
                        "sentence_align_cos_floor": cfg.alignment.sentence_align_cos_floor,
                        "sentence_lcs_token_ratio": cfg.alignment.sentence_lcs_token_ratio,
                        "template_min_docs": cfg.alignment.template_min_docs,
@@ -219,7 +220,7 @@ def _scenario_checks(reports: dict[str, dict], manifest: dict, summary: dict) ->
     ok = bool(mm) and all(m["location"].get("matched_timestamp") and
                           m["location"].get("query_page") for m in mm)
     out.append({"scenario": "S1 cross-modal duplication (07 PDF <-> 08 MP4)", "pass": ok,
-                "evidence": f"per_doc/07_pitch_crossmodal.pdf.json multimodal_matches[0]: "
+                "evidence": "per_doc/07_pitch_crossmodal.pdf.json multimodal_matches[0]: "
                             + (f"page {mm[0]['location']['query_page']} <-> "
                                f"{mm[0]['location']['matched_timestamp']}, cos "
                                f"{mm[0]['similarity_score']}" if mm else "none")})
@@ -292,14 +293,16 @@ def render_corpus_blocks(m: dict[str, Any]) -> dict[str, str]:
     blocks: dict[str, str] = {}
     pr = m["pair_retrieval"]
     o = pr["overall"]
-    lines = ["| relation | TP | FP | FN | precision | recall | F1 |", "|---|---|---|---|---|---|---|",
+    lines = ["| relation | TP | FP | FN | precision | recall | F1 |",
+             "|---|---|---|---|---|---|---|",
              f"| **any (pair-level)** | {o['tp']} | {o['fp']} | {o['fn']} | "
              f"{o['precision']:.2f} | {o['recall']:.2f} | {o['f1']:.2f} |"]
     for rel, r in pr["per_relation"].items():
         lines.append(f"| {rel} | {r['tp']} | {r['fp']} | {r['fn']} | {r['precision']:.2f} | "
                      f"{r['recall']:.2f} | {r['f1']:.2f} |")
-    lines += ["", "Ground-truth pairs and their document-pair scores (coverage-weighted "
-              "mean-max cosine):", "", "| pair | relation | doc-pair score | expected ≥ | "
+    lines += ["", "Ground-truth pairs and their document-pair scores (share of the document "
+              "covered by aligned evidence, max of both directions):", "",
+              "| pair | relation | doc-pair score | expected ≥ | "
               "engine relation label | pass |", "|---|---|---|---|---|---|"]
     for p in pr["truth_pair_scores"]:
         lines.append(f"| `{p['pair'][0]}` ↔ `{p['pair'][1]}` | {p['relation']} | "
@@ -417,8 +420,8 @@ def render_benchmark_block(results_dir: Path) -> str:
     if para.exists():
         d = json.loads(para.read_text())
         lines += [f"**Paraphrase signal — {d['model']}.**", "",
-                  "| dataset | pairs | AUC cosine | AUC Jaccard | AUC token-LCS | cos≥0.80 P / R / FPR "
-                  "| cos≥0.65 P / R / FPR | best-F1 cos threshold (F1) |",
+                  "| dataset | pairs | AUC cosine | AUC Jaccard | AUC token-LCS "
+                  "| cos≥0.80 P / R / FPR | cos≥0.65 P / R / FPR | best-F1 cos threshold (F1) |",
                   "|---|---|---|---|---|---|---|---|"]
         for name in ("mrpc_test", "paws_test_first2000"):
             r = d[name]
@@ -452,8 +455,8 @@ def render_benchmark_block(results_dir: Path) -> str:
     if idx.exists():
         d = json.loads(idx.read_text())
         lines += [f"**Vector index scaling — {d['vectors']}.**", "",
-                  "| N vectors | index | build s | query ms (1 query) | batch q/s | recall@10 vs Flat | "
-                  "memory MB |", "|---|---|---|---|---|---|---|"]
+                  "| N vectors | index | build s | query ms (1 query) | batch q/s "
+                  "| recall@10 vs Flat | memory MB |", "|---|---|---|---|---|---|---|"]
         for row in d["rows"]:
             lines.append(f"| {row['n']:,} | {row['index']} | {row['build_s']:.2f} | "
                          f"{row['single_query_ms']:.3f} | {row['batch_qps']:,.0f} | "
@@ -463,7 +466,8 @@ def render_benchmark_block(results_dir: Path) -> str:
     if asr.exists():
         d = json.loads(asr.read_text())
         lines += ["**ASR on the TTS pitch clips (word error rate vs the script).**", "",
-                  "| clip | TTS engine | audio s | whisper model | WER | ASR s | real-time factor |",
+                  "| clip | TTS engine | audio s | whisper model | WER | ASR s "
+                  "| real-time factor |",
                   "|---|---|---|---|---|---|---|"]
         for row in d["rows"]:
             lines.append(f"| {row['clip']} | {row['tts']} | {row['audio_s']:.1f} | "
@@ -512,7 +516,7 @@ def update_auto_blocks(path: Path, blocks: dict[str, str]) -> None:
                              re.DOTALL)
         replacement = f"<!-- AUTO:BEGIN {name} -->\n{body.strip()}\n<!-- AUTO:END {name} -->"
         if pattern.search(text):
-            text = pattern.sub(lambda _m: replacement, text)
+            text = pattern.sub(lambda _m, r=replacement: r, text)
         else:
             text += f"\n{replacement}\n"
     path.write_text(text, encoding="utf-8")

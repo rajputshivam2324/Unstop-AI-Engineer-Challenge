@@ -14,7 +14,6 @@ import importlib
 import resource
 import sys
 
-
 REQUIRED_MODULES: list[tuple[str, str]] = [
     ("numpy", "numpy"),
     ("faiss", "faiss-cpu"),
@@ -54,7 +53,7 @@ def main(argv: list[str] | None = None) -> int:
         rows.append(f"{package:<24} {version}")
         print(f"{package:<24} {version}")
     print(f"{'ffmpeg_test':<24} see README (external binary, not a python module)")
-    print("peak RSS: %.0f MiB" % peak_rss_mb())
+    print(f"peak RSS: {peak_rss_mb():.0f} MiB")
     if args.rss:
         budget_mb = 2048.0
         status = "OK" if peak_rss_mb() <= budget_mb else "OVER BUDGET"

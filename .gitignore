@@ -8,8 +8,9 @@ __pycache__/
 # Virtual environment
 .venv/
 
-# Runtime artifacts (created per run; never committed)
-reports/
+# Runtime artifacts. reports/ IS committed: it holds the reports from the final
+# cold-start run over sample_submissions/ so reviewers can read them without
+# installing anything (regenerate with the command in README).
 logs/
 cache/
 
@@ -20,3 +21,4 @@ cache/
 # Scratch / benchmark downloads (re-fetchable)
 .scratch/
 benchmarks/data/
+benchmarks/results/*.npy

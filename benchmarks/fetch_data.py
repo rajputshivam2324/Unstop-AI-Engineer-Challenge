@@ -32,9 +32,9 @@ ROWS_API = "https://datasets-server.huggingface.co/rows"
 def _get(url: str, timeout: int = 120) -> bytes:
     for attempt in range(4):
         try:
-            with urllib.request.urlopen(url, timeout=timeout) as resp:  # noqa: S310
+            with urllib.request.urlopen(url, timeout=timeout) as resp:
                 return resp.read()
-        except Exception as exc:  # noqa: BLE001 - retry transient network errors
+        except Exception as exc:
             if attempt == 3:
                 raise
             print(f"  retry {attempt + 1} after {type(exc).__name__}", file=sys.stderr)

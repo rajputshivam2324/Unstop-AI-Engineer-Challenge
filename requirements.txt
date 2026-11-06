@@ -17,6 +17,7 @@ pypdf==5.4.0
 python-docx==1.1.2
 fpdf2==2.8.2                   # only for dataset_generator (synthetic PDF authoring); unused at runtime
 ddgs==9.6.1                    # optional Tier-2 web search; every call is try/except, never required
+primp==0.15.0                  # ddgs transport; primp 2.x breaks ddgs 9.6.1 ("Invalid impersonate")
 requests==2.34.2               # secondary DDG-instant-answer fallback transport (external_check)
 
 # Dev / test toolchain (spec §10 runs pytest + ruff as part of the verified workflow)

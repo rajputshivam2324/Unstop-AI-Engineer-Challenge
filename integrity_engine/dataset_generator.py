@@ -21,16 +21,25 @@ import logging
 import shutil
 import subprocess
 import tempfile
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from integrity_engine.config import Config
-from integrity_engine.corpus_content import (CASE_PROMPT, DOC01_PAGES, DOC02_TEXT,
-                                             DOC05_PAGES, DOC07_PAGES, DOC09_TEXT,
-                                             DOC12_BODY, DOC13_BODY, DOC14_BODY,
-                                             LLM_GENERATED_TEXT, PITCH_PASSAGE,
-                                             PITCH_SPOKEN_PASSAGE,
-                                             build_doc03_text, build_doc04_text)
+from integrity_engine.corpus_content import (
+    CASE_PROMPT,
+    DOC01_PAGES,
+    DOC02_TEXT,
+    DOC05_PAGES,
+    DOC07_PAGES,
+    DOC09_TEXT,
+    DOC12_BODY,
+    DOC13_BODY,
+    DOC14_BODY,
+    LLM_GENERATED_TEXT,
+    PITCH_SPOKEN_PASSAGE,
+    build_doc03_text,
+    build_doc04_text,
+)
 from integrity_engine.text_processing import normalize_text, token_count
 
 logger = logging.getLogger("integrity_engine.dataset_generator")
@@ -83,7 +92,7 @@ def build_pdf_from_text(text: str, path: Path) -> None:
     text = _pdf_safe(text)
     pdf = FPDF()
     pdf.set_auto_page_break(auto=True, margin=12.0)
-    pdf.set_creation_date(datetime(2026, 11, 4, 9, 0, 0, tzinfo=timezone.utc))
+    pdf.set_creation_date(datetime(2026, 11, 4, 9, 0, 0, tzinfo=UTC))
     for page_text in text.split("\f\f"):
         pdf.add_page()
         pdf.set_font("Helvetica", size=11)

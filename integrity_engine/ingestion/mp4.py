@@ -68,7 +68,7 @@ def _run(cmd: list[str], timeout_s: int) -> subprocess.CompletedProcess[str]:
 
 
 def _ffprobe_audio(path: Path, timeout_s: int) -> dict | None:
-    """Return the first audio-stream metadata dict, or {} when none exists, or None on probe failure."""
+    """First audio-stream metadata dict; {} when there is none; None on probe failure."""
     ffmpeg = shutil.which("ffprobe") or "/usr/bin/ffprobe"
     try:
         proc = _run([

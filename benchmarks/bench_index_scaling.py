@@ -26,11 +26,11 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 os.environ.setdefault("HF_HUB_CACHE", str(ROOT / "cache" / "hf"))
 
-import faiss  # noqa: E402
-import numpy as np  # noqa: E402
+import faiss
+import numpy as np
 
-from integrity_engine.config import load_config  # noqa: E402
-from integrity_engine.embeddings import Embedder  # noqa: E402
+from integrity_engine.config import load_config
+from integrity_engine.embeddings import Embedder
 
 DATA = ROOT / "benchmarks" / "data"
 RESULTS = ROOT / "benchmarks" / "results"

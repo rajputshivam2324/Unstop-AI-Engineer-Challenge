@@ -62,11 +62,9 @@ def collapse_ws(text: str) -> str:
     """
     lines = [re.sub(r"[ ]+", " ", line).strip() for line in text.split("\n")]
     out: list[str] = []
-    prev_blank = False
     for line in lines:
         if line:
             out.append(line)
-        prev_blank = not line
         if not line:
             out.append("")  # candidate paragraph break
             continue

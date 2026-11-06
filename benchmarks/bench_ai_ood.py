@@ -34,11 +34,15 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 os.environ.setdefault("HF_HUB_CACHE", str(ROOT / "cache" / "hf"))
 
-from integrity_engine.ai_detection import (AIDetector, _logistic_low_is_ai,  # noqa: E402
-                                           band_label, fuse_probabilities)
-from integrity_engine.config import load_config  # noqa: E402
-from integrity_engine.ingestion import extract_any  # noqa: E402
-from integrity_engine.metrics import roc_auc, threshold_metrics  # noqa: E402
+from integrity_engine.ai_detection import (
+    AIDetector,
+    _logistic_low_is_ai,
+    band_label,
+    fuse_probabilities,
+)
+from integrity_engine.config import load_config
+from integrity_engine.ingestion import extract_any
+from integrity_engine.metrics import roc_auc, threshold_metrics
 
 DATA = ROOT / "benchmarks" / "data"
 RESULTS = ROOT / "benchmarks" / "results"

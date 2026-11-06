@@ -234,7 +234,12 @@ class AIDetector:
         try:
             import torch
             from torch import nn
-            from transformers import AutoConfig, AutoModel, AutoTokenizer, PreTrainedModel
+            from transformers import (
+                AutoConfig,
+                AutoModel,
+                AutoTokenizer,
+                PreTrainedModel,
+            )
 
             class _DetectorModel(PreTrainedModel):  # architecture from the model card
                 config_class = AutoConfig

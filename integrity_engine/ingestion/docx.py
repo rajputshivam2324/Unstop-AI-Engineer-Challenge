@@ -17,13 +17,13 @@ from zipfile import BadZipFile
 
 from docx import Document
 from docx.document import Document as DocumentObject
+from docx.opc.exceptions import PackageNotFoundError
 from docx.oxml.ns import qn
 from docx.table import Table
 from docx.text.paragraph import Paragraph
-from docx.opc.exceptions import PackageNotFoundError
 
 from integrity_engine.config import Config
-from integrity_engine.ingestion.base import EMPTY_TEXT_THRESHOLD_CH, finish_document
+from integrity_engine.ingestion.base import finish_document
 from integrity_engine.text_processing import normalize_text
 from integrity_engine.types import Page, ProcessedDocument
 
@@ -49,7 +49,7 @@ def _is_heading(paragraph: Paragraph) -> bool:
         return False
 
 
-def extract(path: Path, config: Config) -> ProcessedDocument:  # noqa: ARG001 - contract
+def extract(path: Path, config: Config) -> ProcessedDocument:
     """Extract a DOCX to a ProcessedDocument; never raises on file content."""
     try:
         size = path.stat().st_size

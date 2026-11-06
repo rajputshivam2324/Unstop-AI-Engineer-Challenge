@@ -21,8 +21,13 @@ from pathlib import Path
 from typing import Any
 
 from integrity_engine.common import utc_now_compact, utc_now_iso
-from integrity_engine.types import (AIDetectionResult, ExternalEvidence,
-                                    MatchedPassage, ProcessedDocument, Scores)
+from integrity_engine.types import (
+    AIDetectionResult,
+    ExternalEvidence,
+    MatchedPassage,
+    ProcessedDocument,
+    Scores,
+)
 
 logger = logging.getLogger("integrity_engine.reporting")
 
@@ -225,9 +230,10 @@ def write_markdown_report(report: dict[str, Any], human_sentence: str,
         for entry in report["minor_peer_overlaps"]:
             lines.append(f"- {entry['matched_file']}: doc-pair score "
                          f"{entry['pair_score']:.2f}")
+    fused = ai["ai_generated_probability"]
     lines += ["", "## AI-generated text analysis",
               f"- Label **{ai['label']}** · fused score "
-              f"{ai['ai_generated_probability'] if ai['ai_generated_probability'] is not None else 'n/a'}"
+              f"{fused if fused is not None else 'n/a'}"
               f"/100 · detector source `{ai['ai_detector_source']}`",
               f"- Components: classifier {ai['p_classifier']} · perplexity signal "
               f"{ai['p_perplexity']} (raw ppl {ai['perplexity']}) · burstiness signal "

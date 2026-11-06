@@ -28,10 +28,10 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 os.environ.setdefault("HF_HUB_CACHE", str(ROOT / "cache" / "hf"))
 
-from integrity_engine.alignment import _lcs_token_ratio, token_jaccard  # noqa: E402
-from integrity_engine.config import load_config  # noqa: E402
-from integrity_engine.embeddings import Embedder  # noqa: E402
-from integrity_engine.metrics import best_f1_threshold, roc_auc, threshold_metrics  # noqa: E402
+from integrity_engine.alignment import _lcs_token_ratio, token_jaccard
+from integrity_engine.config import load_config
+from integrity_engine.embeddings import Embedder
+from integrity_engine.metrics import best_f1_threshold, roc_auc, threshold_metrics
 
 DATA = ROOT / "benchmarks" / "data"
 RESULTS = ROOT / "benchmarks" / "results"

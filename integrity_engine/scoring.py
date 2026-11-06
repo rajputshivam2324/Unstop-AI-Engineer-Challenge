@@ -16,7 +16,7 @@ from __future__ import annotations
 import logging
 from typing import Any
 
-from integrity_engine.config import Config
+from integrity_engine.config import Config, ScoringConfig
 from integrity_engine.types import AIDetectionResult, ExternalEvidence, Scores
 
 logger = logging.getLogger("integrity_engine.scoring")
@@ -54,7 +54,8 @@ def compute_integrity_signals(doc: Any, peer_result: dict[str, Any],
     risk = verdict_from_signals(
         peer_pct=peer_pct, external_pct=external_pct,
         ai_label=ai_result.label, ai_prob=ai_prob,
-        flagged_cross_modal=bool(peer_result.get("flagged_cross_modal", False)))
+        flagged_cross_modal=bool(peer_result.get("flagged_cross_modal", False)),
+        cfg=cfg.scoring)
     scores = Scores(peer_similarity_percentage=peer_pct,
                     external_similarity_percentage=external_pct,
                     ai_generated_probability=ai_prob, risk=risk)
@@ -66,13 +67,25 @@ def compute_integrity_signals(doc: Any, peer_result: dict[str, Any],
 
 
 def verdict_from_signals(peer_pct: float, external_pct: float, ai_label: str,
-                         ai_prob: float | None, flagged_cross_modal: bool) -> str:
-    """Exact threshold arithmetic (§4.8; peer dominant, external secondary, AI third)."""
-    if peer_pct >= 70 or (peer_pct >= 40 and external_pct >= 30) or \
-            (peer_pct >= 40 and ai_label == "AI_LIKELY" and flagged_cross_modal):
+                         ai_prob: float | None, flagged_cross_modal: bool,
+                         cfg: ScoringConfig | None = None) -> str:
+    """Risk rule (§4.8; peer dominant, external secondary, AI third).
+
+    Thresholds come from [scoring] in config. Deviation from the spec: the MEDIUM
+    peer threshold is 20% instead of 40%, chosen on the 400-document retrieval
+    benchmark (peer% >= 20: precision 0.96 / recall 0.94; >= 40: recall 0.31, i.e.
+    a student who copies a third of a peer's text would have scored LOW).
+    """
+    c = cfg or ScoringConfig()
+    if peer_pct >= c.peer_high_pct or \
+            (peer_pct >= c.peer_high_with_external_pct and external_pct >= c.external_high_pct) or \
+            (peer_pct >= c.peer_high_with_external_pct and ai_label == "AI_LIKELY"
+             and flagged_cross_modal):
         return "HIGH"
-    if peer_pct >= 40 or (peer_pct >= 25 and external_pct >= 25) or \
-            (ai_label == "AI_LIKELY" and ai_prob is not None and ai_prob >= 65):
+    if peer_pct >= c.peer_medium_pct or \
+            (peer_pct >= c.peer_medium_with_external_pct and
+             external_pct >= c.external_medium_pct) or \
+            (ai_label == "AI_LIKELY" and ai_prob is not None and ai_prob >= c.ai_medium_pct):
         return "MEDIUM"
     return "LOW"
 

@@ -1,0 +1,96 @@
+{
+  "vectors": "60,000 MiniLM-L6 (384-d) HC3 sentence embeddings, 1000 held-out queries, top-10, 6 threads",
+  "encode_sentences_per_s": 159.72329241365236,
+  "rows": [
+    {
+      "index": "Flat (exact IP)",
+      "n": 10000,
+      "build_s": 0.009131908416748047,
+      "single_query_ms": 1.291879415512085,
+      "batch_qps": 29282.06202264762,
+      "recall_at_10": 1.0,
+      "memory_mb": 15.360045
+    },
+    {
+      "index": "IVFFlat nlist=400 nprobe=8",
+      "n": 10000,
+      "build_s": 0.24382996559143066,
+      "single_query_ms": 0.12168288230895996,
+      "batch_qps": 60630.605105669434,
+      "recall_at_10": 0.83,
+      "memory_mb": 16.057739
+    },
+    {
+      "index": "IVFFlat nlist=400 nprobe=32",
+      "n": 10000,
+      "build_s": 0.22719430923461914,
+      "single_query_ms": 0.130079984664917,
+      "batch_qps": 24433.503046684764,
+      "recall_at_10": 0.9559000000000001,
+      "memory_mb": 16.057739
+    },
+    {
+      "index": "HNSWFlat M=32 efSearch=32",
+      "n": 10000,
+      "build_s": 0.5686907768249512,
+      "single_query_ms": 0.09016275405883789,
+      "batch_qps": 36397.198816352386,
+      "recall_at_10": 0.9759000000000001,
+      "memory_mb": 18.077858
+    },
+    {
+      "index": "HNSWFlat M=32 efSearch=128",
+      "n": 10000,
+      "build_s": 0.6190850734710693,
+      "single_query_ms": 0.23308992385864258,
+      "batch_qps": 9208.475398642759,
+      "recall_at_10": 0.9983,
+      "memory_mb": 18.077858
+    },
+    {
+      "index": "Flat (exact IP)",
+      "n": 60000,
+      "build_s": 0.061960697174072266,
+      "single_query_ms": 7.698864936828613,
+      "batch_qps": 4774.387280151075,
+      "recall_at_10": 1.0,
+      "memory_mb": 92.160045
+    },
+    {
+      "index": "IVFFlat nlist=979 nprobe=8",
+      "n": 60000,
+      "build_s": 2.869795322418213,
+      "single_query_ms": 0.1446831226348877,
+      "batch_qps": 25711.105117328298,
+      "recall_at_10": 0.8427,
+      "memory_mb": 94.151715
+    },
+    {
+      "index": "IVFFlat nlist=979 nprobe=32",
+      "n": 60000,
+      "build_s": 2.7687742710113525,
+      "single_query_ms": 0.4705226421356201,
+      "batch_qps": 4541.988692415732,
+      "recall_at_10": 0.9435,
+      "memory_mb": 94.151715
+    },
+    {
+      "index": "HNSWFlat M=32 efSearch=32",
+      "n": 60000,
+      "build_s": 7.4800145626068115,
+      "single_query_ms": 0.12086987495422363,
+      "batch_qps": 20309.432500484214,
+      "recall_at_10": 0.9597,
+      "memory_mb": 108.491618
+    },
+    {
+      "index": "HNSWFlat M=32 efSearch=128",
+      "n": 60000,
+      "build_s": 7.326330900192261,
+      "single_query_ms": 0.41159629821777344,
+      "batch_qps": 6663.410929807309,
+      "recall_at_10": 0.9932000000000001,
+      "memory_mb": 108.491618
+    }
+  ]
+}

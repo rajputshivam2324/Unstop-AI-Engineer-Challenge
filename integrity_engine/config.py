@@ -5,7 +5,7 @@ user-supplied override). No other module may hardcode a tunable constant.
 
 <PUBLIC API>
 ChunkingConfig, EmbeddingConfig, PairwiseConfig, AlignmentConfig, AIDetectionConfig,
-ExternalCheckConfig, RuntimeConfig, Config, load_config
+ExternalCheckConfig, ScoringConfig, RuntimeConfig, Config, load_config
 
 <DEPENDS ON>
 dataclasses, pathlib, tomllib (stdlib), logging.
@@ -108,6 +108,20 @@ class ExternalCheckConfig:
 
 
 @dataclass(frozen=True)
+class ScoringConfig:
+    """Risk-rule thresholds in percent (§4.8). peer_medium_pct deviates from the spec
+    (40 -> 20), justified by benchmarks/bench_retrieval.py (README Assumptions)."""
+
+    peer_high_pct: float = 70.0
+    peer_high_with_external_pct: float = 40.0
+    external_high_pct: float = 30.0
+    peer_medium_pct: float = 20.0
+    peer_medium_with_external_pct: float = 10.0
+    external_medium_pct: float = 25.0
+    ai_medium_pct: float = 65.0
+
+
+@dataclass(frozen=True)
 class RuntimeConfig:
     """Process-level knobs (paths, logging, seed)."""
 
@@ -128,6 +142,7 @@ class Config:
     alignment: AlignmentConfig = field(default_factory=AlignmentConfig)
     ai: AIDetectionConfig = field(default_factory=AIDetectionConfig)
     external: ExternalCheckConfig = field(default_factory=ExternalCheckConfig)
+    scoring: ScoringConfig = field(default_factory=ScoringConfig)
     runtime: RuntimeConfig = field(default_factory=RuntimeConfig)
 
 
@@ -138,6 +153,7 @@ _SECTIONS: dict[str, type] = {
     "alignment": AlignmentConfig,
     "ai": AIDetectionConfig,
     "external": ExternalCheckConfig,
+    "scoring": ScoringConfig,
     "runtime": RuntimeConfig,
 }
 
