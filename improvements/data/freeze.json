@@ -1,0 +1,11 @@
+{
+  "utc": "2026-11-06T13:38:47.541186+00:00",
+  "rule": "Development may select method and thresholds. Heldout is not scored or inspected until method/config/code are frozen; no changes based on heldout outcomes. Not blinded to an external evaluator; publicly labelled heldout test. Original validation corpus is development/regression.",
+  "public_source": "https://datasets-server.huggingface.co/rows?dataset=google-research-datasets%2Fpaws&config=labeled_final&split=test&offset=2000&length=100",
+  "public_license": "https://github.com/google-research-datasets/paws/blob/master/LICENSE",
+  "hashes": {
+    "development.json": "f6df5d05dfa9e509cb58cea7428df726bd7fe3aa033dddcaa53aad4753b1ded4",
+    "paws_holdout_raw.json": "be7dbb4d54e9bac33070939bc3cc53d396d0c62506b4e573b431ceaf22ac241a",
+    "heldout.json": "4215a31b900a6a35c0ddcd7127588c9113ed8c923451c4e6330cd0476bfefda9"
+  }
+}

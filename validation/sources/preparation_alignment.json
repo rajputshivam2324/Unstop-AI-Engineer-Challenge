@@ -1,0 +1,1819 @@
+[
+  {
+    "start": 0.0,
+    "end": 8.6,
+    "text": " Vice President Johnson, Mr. Speaker, Mr. Chief Justice, President Eisenhower,",
+    "words": [
+      {
+        "start": 0.0,
+        "end": 0.86,
+        "word": " Vice"
+      },
+      {
+        "start": 0.86,
+        "end": 1.2,
+        "word": " President"
+      },
+      {
+        "start": 1.2,
+        "end": 1.7,
+        "word": " Johnson,"
+      },
+      {
+        "start": 2.16,
+        "end": 3.3,
+        "word": " Mr."
+      },
+      {
+        "start": 3.38,
+        "end": 3.7,
+        "word": " Speaker,"
+      },
+      {
+        "start": 5.2,
+        "end": 5.4,
+        "word": " Mr."
+      },
+      {
+        "start": 5.52,
+        "end": 5.7,
+        "word": " Chief"
+      },
+      {
+        "start": 5.7,
+        "end": 6.06,
+        "word": " Justice,"
+      },
+      {
+        "start": 7.84,
+        "end": 8.06,
+        "word": " President"
+      },
+      {
+        "start": 8.06,
+        "end": 8.6,
+        "word": " Eisenhower,"
+      }
+    ]
+  },
+  {
+    "start": 9.76,
+    "end": 16.68,
+    "text": " Vice President Nixon, President Truman, Reverend clergy, fellow citizens.",
+    "words": [
+      {
+        "start": 9.76,
+        "end": 10.52,
+        "word": " Vice"
+      },
+      {
+        "start": 10.52,
+        "end": 10.86,
+        "word": " President"
+      },
+      {
+        "start": 10.86,
+        "end": 11.2,
+        "word": " Nixon,"
+      },
+      {
+        "start": 12.58,
+        "end": 12.9,
+        "word": " President"
+      },
+      {
+        "start": 12.9,
+        "end": 13.28,
+        "word": " Truman,"
+      },
+      {
+        "start": 14.52,
+        "end": 14.8,
+        "word": " Reverend"
+      },
+      {
+        "start": 14.8,
+        "end": 15.28,
+        "word": " clergy,"
+      },
+      {
+        "start": 15.98,
+        "end": 16.26,
+        "word": " fellow"
+      },
+      {
+        "start": 16.26,
+        "end": 16.68,
+        "word": " citizens."
+      }
+    ]
+  },
+  {
+    "start": 18.2,
+    "end": 25.92,
+    "text": " We observe today not a victory of party, but a celebration of freedom,",
+    "words": [
+      {
+        "start": 18.2,
+        "end": 19.0,
+        "word": " We"
+      },
+      {
+        "start": 19.0,
+        "end": 19.3,
+        "word": " observe"
+      },
+      {
+        "start": 19.3,
+        "end": 19.78,
+        "word": " today"
+      },
+      {
+        "start": 19.78,
+        "end": 21.8,
+        "word": " not"
+      },
+      {
+        "start": 21.8,
+        "end": 22.08,
+        "word": " a"
+      },
+      {
+        "start": 22.08,
+        "end": 22.46,
+        "word": " victory"
+      },
+      {
+        "start": 22.46,
+        "end": 22.72,
+        "word": " of"
+      },
+      {
+        "start": 22.72,
+        "end": 23.1,
+        "word": " party,"
+      },
+      {
+        "start": 23.98,
+        "end": 24.62,
+        "word": " but"
+      },
+      {
+        "start": 24.62,
+        "end": 24.78,
+        "word": " a"
+      },
+      {
+        "start": 24.78,
+        "end": 25.4,
+        "word": " celebration"
+      },
+      {
+        "start": 25.4,
+        "end": 25.58,
+        "word": " of"
+      },
+      {
+        "start": 25.58,
+        "end": 25.92,
+        "word": " freedom,"
+      }
+    ]
+  },
+  {
+    "start": 27.08,
+    "end": 35.6,
+    "text": " symbolizing an end as well as a beginning, signifying renewal as well as change.",
+    "words": [
+      {
+        "start": 27.08,
+        "end": 27.94,
+        "word": " symbolizing"
+      },
+      {
+        "start": 27.94,
+        "end": 28.24,
+        "word": " an"
+      },
+      {
+        "start": 28.24,
+        "end": 28.64,
+        "word": " end"
+      },
+      {
+        "start": 28.64,
+        "end": 29.94,
+        "word": " as"
+      },
+      {
+        "start": 29.94,
+        "end": 30.12,
+        "word": " well"
+      },
+      {
+        "start": 30.12,
+        "end": 30.34,
+        "word": " as"
+      },
+      {
+        "start": 30.34,
+        "end": 30.42,
+        "word": " a"
+      },
+      {
+        "start": 30.42,
+        "end": 30.8,
+        "word": " beginning,"
+      },
+      {
+        "start": 32.16,
+        "end": 32.82,
+        "word": " signifying"
+      },
+      {
+        "start": 32.82,
+        "end": 33.38,
+        "word": " renewal"
+      },
+      {
+        "start": 33.38,
+        "end": 34.78,
+        "word": " as"
+      },
+      {
+        "start": 34.78,
+        "end": 34.94,
+        "word": " well"
+      },
+      {
+        "start": 34.94,
+        "end": 35.14,
+        "word": " as"
+      },
+      {
+        "start": 35.14,
+        "end": 35.6,
+        "word": " change."
+      }
+    ]
+  },
+  {
+    "start": 36.82,
+    "end": 43.78,
+    "text": " For I have sworn before you, and Almighty God, the same solemn oath,",
+    "words": [
+      {
+        "start": 36.82,
+        "end": 37.06,
+        "word": " For"
+      },
+      {
+        "start": 37.06,
+        "end": 37.32,
+        "word": " I"
+      },
+      {
+        "start": 37.32,
+        "end": 37.48,
+        "word": " have"
+      },
+      {
+        "start": 37.48,
+        "end": 37.82,
+        "word": " sworn"
+      },
+      {
+        "start": 37.82,
+        "end": 38.3,
+        "word": " before"
+      },
+      {
+        "start": 38.3,
+        "end": 38.82,
+        "word": " you,"
+      },
+      {
+        "start": 39.7,
+        "end": 39.84,
+        "word": " and"
+      },
+      {
+        "start": 39.84,
+        "end": 40.3,
+        "word": " Almighty"
+      },
+      {
+        "start": 40.3,
+        "end": 40.7,
+        "word": " God,"
+      },
+      {
+        "start": 41.88,
+        "end": 41.98,
+        "word": " the"
+      },
+      {
+        "start": 41.98,
+        "end": 42.62,
+        "word": " same"
+      },
+      {
+        "start": 42.62,
+        "end": 43.24,
+        "word": " solemn"
+      },
+      {
+        "start": 43.24,
+        "end": 43.78,
+        "word": " oath,"
+      }
+    ]
+  },
+  {
+    "start": 44.86,
+    "end": 49.92,
+    "text": " are for theirs prescribed nearly a century and three quarters ago.",
+    "words": [
+      {
+        "start": 44.86,
+        "end": 45.0,
+        "word": " are"
+      },
+      {
+        "start": 45.0,
+        "end": 45.32,
+        "word": " for"
+      },
+      {
+        "start": 45.32,
+        "end": 45.74,
+        "word": " theirs"
+      },
+      {
+        "start": 45.74,
+        "end": 46.42,
+        "word": " prescribed"
+      },
+      {
+        "start": 46.42,
+        "end": 47.8,
+        "word": " nearly"
+      },
+      {
+        "start": 47.8,
+        "end": 48.12,
+        "word": " a"
+      },
+      {
+        "start": 48.12,
+        "end": 48.6,
+        "word": " century"
+      },
+      {
+        "start": 48.6,
+        "end": 48.88,
+        "word": " and"
+      },
+      {
+        "start": 48.88,
+        "end": 49.16,
+        "word": " three"
+      },
+      {
+        "start": 49.16,
+        "end": 49.6,
+        "word": " quarters"
+      },
+      {
+        "start": 49.6,
+        "end": 49.92,
+        "word": " ago."
+      }
+    ]
+  },
+  {
+    "start": 50.81999999999999,
+    "end": 57.28,
+    "text": " The world is very different now, for man holds in his mortal hands,",
+    "words": [
+      {
+        "start": 50.81999999999999,
+        "end": 51.64,
+        "word": " The"
+      },
+      {
+        "start": 51.64,
+        "end": 51.98,
+        "word": " world"
+      },
+      {
+        "start": 51.98,
+        "end": 52.28,
+        "word": " is"
+      },
+      {
+        "start": 52.28,
+        "end": 52.54,
+        "word": " very"
+      },
+      {
+        "start": 52.54,
+        "end": 52.86,
+        "word": " different"
+      },
+      {
+        "start": 52.86,
+        "end": 53.32,
+        "word": " now,"
+      },
+      {
+        "start": 54.5,
+        "end": 55.02,
+        "word": " for"
+      },
+      {
+        "start": 55.02,
+        "end": 55.36,
+        "word": " man"
+      },
+      {
+        "start": 55.36,
+        "end": 55.98,
+        "word": " holds"
+      },
+      {
+        "start": 55.98,
+        "end": 56.16,
+        "word": " in"
+      },
+      {
+        "start": 56.16,
+        "end": 56.34,
+        "word": " his"
+      },
+      {
+        "start": 56.34,
+        "end": 56.66,
+        "word": " mortal"
+      },
+      {
+        "start": 56.66,
+        "end": 57.28,
+        "word": " hands,"
+      }
+    ]
+  },
+  {
+    "start": 57.82,
+    "end": 66.04,
+    "text": " the power to abolish all forms of human poverty and all forms of human life,",
+    "words": [
+      {
+        "start": 57.82,
+        "end": 58.6,
+        "word": " the"
+      },
+      {
+        "start": 58.6,
+        "end": 59.04,
+        "word": " power"
+      },
+      {
+        "start": 59.04,
+        "end": 59.36,
+        "word": " to"
+      },
+      {
+        "start": 59.36,
+        "end": 60.0,
+        "word": " abolish"
+      },
+      {
+        "start": 60.0,
+        "end": 61.38,
+        "word": " all"
+      },
+      {
+        "start": 61.38,
+        "end": 62.04,
+        "word": " forms"
+      },
+      {
+        "start": 62.04,
+        "end": 62.18,
+        "word": " of"
+      },
+      {
+        "start": 62.18,
+        "end": 62.52,
+        "word": " human"
+      },
+      {
+        "start": 62.52,
+        "end": 63.0,
+        "word": " poverty"
+      },
+      {
+        "start": 63.0,
+        "end": 64.44,
+        "word": " and"
+      },
+      {
+        "start": 64.44,
+        "end": 64.7,
+        "word": " all"
+      },
+      {
+        "start": 64.7,
+        "end": 65.26,
+        "word": " forms"
+      },
+      {
+        "start": 65.26,
+        "end": 65.38,
+        "word": " of"
+      },
+      {
+        "start": 65.38,
+        "end": 65.68,
+        "word": " human"
+      },
+      {
+        "start": 65.68,
+        "end": 66.04,
+        "word": " life,"
+      }
+    ]
+  },
+  {
+    "start": 66.99999999999999,
+    "end": 76.92,
+    "text": " and yet the same revolutionary belief for which our forebears fought are still at issue around the globe.",
+    "words": [
+      {
+        "start": 66.99999999999999,
+        "end": 67.82,
+        "word": " and"
+      },
+      {
+        "start": 67.82,
+        "end": 68.04,
+        "word": " yet"
+      },
+      {
+        "start": 68.04,
+        "end": 68.3,
+        "word": " the"
+      },
+      {
+        "start": 68.3,
+        "end": 68.76,
+        "word": " same"
+      },
+      {
+        "start": 68.76,
+        "end": 69.72,
+        "word": " revolutionary"
+      },
+      {
+        "start": 69.72,
+        "end": 70.58,
+        "word": " belief"
+      },
+      {
+        "start": 70.58,
+        "end": 72.16,
+        "word": " for"
+      },
+      {
+        "start": 72.16,
+        "end": 72.44,
+        "word": " which"
+      },
+      {
+        "start": 72.44,
+        "end": 72.74,
+        "word": " our"
+      },
+      {
+        "start": 72.74,
+        "end": 73.46,
+        "word": " forebears"
+      },
+      {
+        "start": 73.46,
+        "end": 73.86,
+        "word": " fought"
+      },
+      {
+        "start": 73.86,
+        "end": 75.18,
+        "word": " are"
+      },
+      {
+        "start": 75.18,
+        "end": 75.52,
+        "word": " still"
+      },
+      {
+        "start": 75.52,
+        "end": 75.7,
+        "word": " at"
+      },
+      {
+        "start": 75.7,
+        "end": 75.96,
+        "word": " issue"
+      },
+      {
+        "start": 75.96,
+        "end": 76.38,
+        "word": " around"
+      },
+      {
+        "start": 76.38,
+        "end": 76.6,
+        "word": " the"
+      },
+      {
+        "start": 76.6,
+        "end": 76.92,
+        "word": " globe."
+      }
+    ]
+  },
+  {
+    "start": 77.62,
+    "end": 83.52,
+    "text": " The belief that the rights of man come not from the generosity of the state,",
+    "words": [
+      {
+        "start": 77.62,
+        "end": 78.3,
+        "word": " The"
+      },
+      {
+        "start": 78.3,
+        "end": 78.62,
+        "word": " belief"
+      },
+      {
+        "start": 78.62,
+        "end": 78.96,
+        "word": " that"
+      },
+      {
+        "start": 78.96,
+        "end": 79.12,
+        "word": " the"
+      },
+      {
+        "start": 79.12,
+        "end": 79.34,
+        "word": " rights"
+      },
+      {
+        "start": 79.34,
+        "end": 79.58,
+        "word": " of"
+      },
+      {
+        "start": 79.58,
+        "end": 79.96,
+        "word": " man"
+      },
+      {
+        "start": 79.96,
+        "end": 81.4,
+        "word": " come"
+      },
+      {
+        "start": 81.4,
+        "end": 81.76,
+        "word": " not"
+      },
+      {
+        "start": 81.76,
+        "end": 82.04,
+        "word": " from"
+      },
+      {
+        "start": 82.04,
+        "end": 82.18,
+        "word": " the"
+      },
+      {
+        "start": 82.18,
+        "end": 82.8,
+        "word": " generosity"
+      },
+      {
+        "start": 82.8,
+        "end": 83.04,
+        "word": " of"
+      },
+      {
+        "start": 83.04,
+        "end": 83.18,
+        "word": " the"
+      },
+      {
+        "start": 83.18,
+        "end": 83.52,
+        "word": " state,"
+      }
+    ]
+  },
+  {
+    "start": 84.08,
+    "end": 85.86,
+    "text": " but from the hand of God.",
+    "words": [
+      {
+        "start": 84.08,
+        "end": 84.7,
+        "word": " but"
+      },
+      {
+        "start": 84.7,
+        "end": 84.96,
+        "word": " from"
+      },
+      {
+        "start": 84.96,
+        "end": 85.12,
+        "word": " the"
+      },
+      {
+        "start": 85.12,
+        "end": 85.36,
+        "word": " hand"
+      },
+      {
+        "start": 85.36,
+        "end": 85.52,
+        "word": " of"
+      },
+      {
+        "start": 85.52,
+        "end": 85.86,
+        "word": " God."
+      }
+    ]
+  },
+  {
+    "start": 87.06,
+    "end": 93.28,
+    "text": " We dare not forget today that we are the ears of that first revolution.",
+    "words": [
+      {
+        "start": 87.06,
+        "end": 87.74,
+        "word": " We"
+      },
+      {
+        "start": 87.74,
+        "end": 88.1,
+        "word": " dare"
+      },
+      {
+        "start": 88.1,
+        "end": 88.32,
+        "word": " not"
+      },
+      {
+        "start": 88.32,
+        "end": 88.68,
+        "word": " forget"
+      },
+      {
+        "start": 88.68,
+        "end": 89.14,
+        "word": " today"
+      },
+      {
+        "start": 89.14,
+        "end": 90.5,
+        "word": " that"
+      },
+      {
+        "start": 90.5,
+        "end": 90.86,
+        "word": " we"
+      },
+      {
+        "start": 90.86,
+        "end": 91.12,
+        "word": " are"
+      },
+      {
+        "start": 91.12,
+        "end": 91.3,
+        "word": " the"
+      },
+      {
+        "start": 91.3,
+        "end": 91.72,
+        "word": " ears"
+      },
+      {
+        "start": 91.72,
+        "end": 91.88,
+        "word": " of"
+      },
+      {
+        "start": 91.88,
+        "end": 92.06,
+        "word": " that"
+      },
+      {
+        "start": 92.06,
+        "end": 92.58,
+        "word": " first"
+      },
+      {
+        "start": 92.58,
+        "end": 93.28,
+        "word": " revolution."
+      }
+    ]
+  },
+  {
+    "start": 94.6,
+    "end": 101.0,
+    "text": " Let the word go forth from this time and place to friend and foe alike,",
+    "words": [
+      {
+        "start": 94.6,
+        "end": 94.88,
+        "word": " Let"
+      },
+      {
+        "start": 94.88,
+        "end": 95.08,
+        "word": " the"
+      },
+      {
+        "start": 95.08,
+        "end": 95.34,
+        "word": " word"
+      },
+      {
+        "start": 95.34,
+        "end": 95.66,
+        "word": " go"
+      },
+      {
+        "start": 95.66,
+        "end": 96.2,
+        "word": " forth"
+      },
+      {
+        "start": 96.2,
+        "end": 97.12,
+        "word": " from"
+      },
+      {
+        "start": 97.12,
+        "end": 97.44,
+        "word": " this"
+      },
+      {
+        "start": 97.44,
+        "end": 97.78,
+        "word": " time"
+      },
+      {
+        "start": 97.78,
+        "end": 98.0,
+        "word": " and"
+      },
+      {
+        "start": 98.0,
+        "end": 98.4,
+        "word": " place"
+      },
+      {
+        "start": 98.4,
+        "end": 99.6,
+        "word": " to"
+      },
+      {
+        "start": 99.6,
+        "end": 100.06,
+        "word": " friend"
+      },
+      {
+        "start": 100.06,
+        "end": 100.34,
+        "word": " and"
+      },
+      {
+        "start": 100.34,
+        "end": 100.72,
+        "word": " foe"
+      },
+      {
+        "start": 100.72,
+        "end": 101.0,
+        "word": " alike,"
+      }
+    ]
+  },
+  {
+    "start": 102.0,
+    "end": 109.94,
+    "text": " that the torch has been passed to a new generation of Americans born in this century,",
+    "words": [
+      {
+        "start": 102.0,
+        "end": 102.62,
+        "word": " that"
+      },
+      {
+        "start": 102.62,
+        "end": 102.82,
+        "word": " the"
+      },
+      {
+        "start": 102.82,
+        "end": 103.22,
+        "word": " torch"
+      },
+      {
+        "start": 103.22,
+        "end": 103.58,
+        "word": " has"
+      },
+      {
+        "start": 103.58,
+        "end": 103.76,
+        "word": " been"
+      },
+      {
+        "start": 103.76,
+        "end": 104.24,
+        "word": " passed"
+      },
+      {
+        "start": 104.24,
+        "end": 105.36,
+        "word": " to"
+      },
+      {
+        "start": 105.36,
+        "end": 105.56,
+        "word": " a"
+      },
+      {
+        "start": 105.56,
+        "end": 105.78,
+        "word": " new"
+      },
+      {
+        "start": 105.78,
+        "end": 106.44,
+        "word": " generation"
+      },
+      {
+        "start": 106.44,
+        "end": 106.66,
+        "word": " of"
+      },
+      {
+        "start": 106.66,
+        "end": 107.14,
+        "word": " Americans"
+      },
+      {
+        "start": 107.14,
+        "end": 108.74,
+        "word": " born"
+      },
+      {
+        "start": 108.74,
+        "end": 109.2,
+        "word": " in"
+      },
+      {
+        "start": 109.2,
+        "end": 109.4,
+        "word": " this"
+      },
+      {
+        "start": 109.4,
+        "end": 109.94,
+        "word": " century,"
+      }
+    ]
+  },
+  {
+    "start": 111.44,
+    "end": 119.76,
+    "text": " tempered by war, disciplined by a hard and bitter piece, proud of our ancient heritage,",
+    "words": [
+      {
+        "start": 111.44,
+        "end": 111.82,
+        "word": " tempered"
+      },
+      {
+        "start": 111.82,
+        "end": 112.0,
+        "word": " by"
+      },
+      {
+        "start": 112.0,
+        "end": 112.54,
+        "word": " war,"
+      },
+      {
+        "start": 113.68,
+        "end": 114.44,
+        "word": " disciplined"
+      },
+      {
+        "start": 114.44,
+        "end": 114.96,
+        "word": " by"
+      },
+      {
+        "start": 114.96,
+        "end": 115.14,
+        "word": " a"
+      },
+      {
+        "start": 115.14,
+        "end": 115.64,
+        "word": " hard"
+      },
+      {
+        "start": 115.64,
+        "end": 115.98,
+        "word": " and"
+      },
+      {
+        "start": 115.98,
+        "end": 116.22,
+        "word": " bitter"
+      },
+      {
+        "start": 116.22,
+        "end": 116.64,
+        "word": " piece,"
+      },
+      {
+        "start": 118.28,
+        "end": 118.56,
+        "word": " proud"
+      },
+      {
+        "start": 118.56,
+        "end": 118.76,
+        "word": " of"
+      },
+      {
+        "start": 118.76,
+        "end": 118.94,
+        "word": " our"
+      },
+      {
+        "start": 118.94,
+        "end": 119.26,
+        "word": " ancient"
+      },
+      {
+        "start": 119.26,
+        "end": 119.76,
+        "word": " heritage,"
+      }
+    ]
+  },
+  {
+    "start": 120.88,
+    "end": 129.74,
+    "text": " and unwilling to witness or permit the slow undoing of those human rights,",
+    "words": [
+      {
+        "start": 120.88,
+        "end": 121.12,
+        "word": " and"
+      },
+      {
+        "start": 121.12,
+        "end": 121.64,
+        "word": " unwilling"
+      },
+      {
+        "start": 121.64,
+        "end": 122.08,
+        "word": " to"
+      },
+      {
+        "start": 122.08,
+        "end": 122.54,
+        "word": " witness"
+      },
+      {
+        "start": 122.54,
+        "end": 123.46,
+        "word": " or"
+      },
+      {
+        "start": 123.46,
+        "end": 123.96,
+        "word": " permit"
+      },
+      {
+        "start": 123.96,
+        "end": 125.78,
+        "word": " the"
+      },
+      {
+        "start": 125.78,
+        "end": 126.22,
+        "word": " slow"
+      },
+      {
+        "start": 126.22,
+        "end": 127.08,
+        "word": " undoing"
+      },
+      {
+        "start": 127.08,
+        "end": 128.38,
+        "word": " of"
+      },
+      {
+        "start": 128.38,
+        "end": 128.74,
+        "word": " those"
+      },
+      {
+        "start": 128.74,
+        "end": 129.3,
+        "word": " human"
+      },
+      {
+        "start": 129.3,
+        "end": 129.74,
+        "word": " rights,"
+      }
+    ]
+  },
+  {
+    "start": 129.74,
+    "end": 139.92,
+    "text": " to which this nation has always been committed, and to which we are committed today at home and around the world.",
+    "words": [
+      {
+        "start": 129.74,
+        "end": 131.08,
+        "word": " to"
+      },
+      {
+        "start": 131.08,
+        "end": 131.36,
+        "word": " which"
+      },
+      {
+        "start": 131.36,
+        "end": 131.72,
+        "word": " this"
+      },
+      {
+        "start": 131.72,
+        "end": 132.16,
+        "word": " nation"
+      },
+      {
+        "start": 132.16,
+        "end": 132.48,
+        "word": " has"
+      },
+      {
+        "start": 132.48,
+        "end": 132.9,
+        "word": " always"
+      },
+      {
+        "start": 132.9,
+        "end": 133.22,
+        "word": " been"
+      },
+      {
+        "start": 133.22,
+        "end": 133.66,
+        "word": " committed,"
+      },
+      {
+        "start": 134.12,
+        "end": 134.98,
+        "word": " and"
+      },
+      {
+        "start": 134.98,
+        "end": 135.16,
+        "word": " to"
+      },
+      {
+        "start": 135.16,
+        "end": 135.4,
+        "word": " which"
+      },
+      {
+        "start": 135.4,
+        "end": 135.66,
+        "word": " we"
+      },
+      {
+        "start": 135.66,
+        "end": 135.86,
+        "word": " are"
+      },
+      {
+        "start": 135.86,
+        "end": 136.24,
+        "word": " committed"
+      },
+      {
+        "start": 136.24,
+        "end": 136.7,
+        "word": " today"
+      },
+      {
+        "start": 136.7,
+        "end": 137.74,
+        "word": " at"
+      },
+      {
+        "start": 137.74,
+        "end": 138.22,
+        "word": " home"
+      },
+      {
+        "start": 138.22,
+        "end": 139.06,
+        "word": " and"
+      },
+      {
+        "start": 139.06,
+        "end": 139.4,
+        "word": " around"
+      },
+      {
+        "start": 139.4,
+        "end": 139.6,
+        "word": " the"
+      },
+      {
+        "start": 139.6,
+        "end": 139.92,
+        "word": " world."
+      }
+    ]
+  },
+  {
+    "start": 146.74,
+    "end": 153.82,
+    "text": " Let every nation know whether it wishes us well or ill,",
+    "words": [
+      {
+        "start": 146.74,
+        "end": 147.62,
+        "word": " Let"
+      },
+      {
+        "start": 147.62,
+        "end": 148.2,
+        "word": " every"
+      },
+      {
+        "start": 148.2,
+        "end": 148.64,
+        "word": " nation"
+      },
+      {
+        "start": 148.64,
+        "end": 149.08,
+        "word": " know"
+      },
+      {
+        "start": 149.08,
+        "end": 151.24,
+        "word": " whether"
+      },
+      {
+        "start": 151.24,
+        "end": 151.46,
+        "word": " it"
+      },
+      {
+        "start": 151.46,
+        "end": 151.82,
+        "word": " wishes"
+      },
+      {
+        "start": 151.82,
+        "end": 152.24,
+        "word": " us"
+      },
+      {
+        "start": 152.24,
+        "end": 152.9,
+        "word": " well"
+      },
+      {
+        "start": 152.9,
+        "end": 153.42,
+        "word": " or"
+      },
+      {
+        "start": 153.42,
+        "end": 153.82,
+        "word": " ill,"
+      }
+    ]
+  },
+  {
+    "start": 154.82,
+    "end": 165.44,
+    "text": " that we shall pay any price, bear any burden, meet any hardship, support any friend,",
+    "words": [
+      {
+        "start": 154.82,
+        "end": 155.32,
+        "word": " that"
+      },
+      {
+        "start": 155.32,
+        "end": 155.64,
+        "word": " we"
+      },
+      {
+        "start": 155.64,
+        "end": 156.0,
+        "word": " shall"
+      },
+      {
+        "start": 156.0,
+        "end": 156.42,
+        "word": " pay"
+      },
+      {
+        "start": 156.42,
+        "end": 156.92,
+        "word": " any"
+      },
+      {
+        "start": 156.92,
+        "end": 157.4,
+        "word": " price,"
+      },
+      {
+        "start": 157.94,
+        "end": 159.06,
+        "word": " bear"
+      },
+      {
+        "start": 159.06,
+        "end": 159.56,
+        "word": " any"
+      },
+      {
+        "start": 159.56,
+        "end": 160.04,
+        "word": " burden,"
+      },
+      {
+        "start": 161.5,
+        "end": 161.6,
+        "word": " meet"
+      },
+      {
+        "start": 161.6,
+        "end": 162.04,
+        "word": " any"
+      },
+      {
+        "start": 162.04,
+        "end": 162.64,
+        "word": " hardship,"
+      },
+      {
+        "start": 163.92,
+        "end": 164.3,
+        "word": " support"
+      },
+      {
+        "start": 164.3,
+        "end": 164.78,
+        "word": " any"
+      },
+      {
+        "start": 164.78,
+        "end": 165.44,
+        "word": " friend,"
+      }
+    ]
+  },
+  {
+    "start": 166.44,
+    "end": 171.98,
+    "text": " oppose any foe to assure the survival and the success of liberty.",
+    "words": [
+      {
+        "start": 166.44,
+        "end": 166.82,
+        "word": " oppose"
+      },
+      {
+        "start": 166.82,
+        "end": 167.52,
+        "word": " any"
+      },
+      {
+        "start": 167.52,
+        "end": 168.6,
+        "word": " foe"
+      },
+      {
+        "start": 168.6,
+        "end": 169.24,
+        "word": " to"
+      },
+      {
+        "start": 169.24,
+        "end": 169.54,
+        "word": " assure"
+      },
+      {
+        "start": 169.54,
+        "end": 169.88,
+        "word": " the"
+      },
+      {
+        "start": 169.88,
+        "end": 170.44,
+        "word": " survival"
+      },
+      {
+        "start": 170.44,
+        "end": 170.9,
+        "word": " and"
+      },
+      {
+        "start": 170.9,
+        "end": 171.02,
+        "word": " the"
+      },
+      {
+        "start": 171.02,
+        "end": 171.32,
+        "word": " success"
+      },
+      {
+        "start": 171.32,
+        "end": 171.68,
+        "word": " of"
+      },
+      {
+        "start": 171.68,
+        "end": 171.98,
+        "word": " liberty."
+      }
+    ]
+  },
+  {
+    "start": 177.7,
+    "end": 180.3,
+    "text": " This much we pledge and more.",
+    "words": [
+      {
+        "start": 177.7,
+        "end": 178.66,
+        "word": " This"
+      },
+      {
+        "start": 178.66,
+        "end": 179.0,
+        "word": " much"
+      },
+      {
+        "start": 179.0,
+        "end": 179.24,
+        "word": " we"
+      },
+      {
+        "start": 179.24,
+        "end": 179.7,
+        "word": " pledge"
+      },
+      {
+        "start": 179.7,
+        "end": 180.02,
+        "word": " and"
+      },
+      {
+        "start": 180.02,
+        "end": 180.3,
+        "word": " more."
+      }
+    ]
+  },
+  {
+    "start": 181.17999999999998,
+    "end": 188.48,
+    "text": " To those old allies whose cultural and spiritual origins we share,",
+    "words": [
+      {
+        "start": 181.17999999999998,
+        "end": 181.98,
+        "word": " To"
+      },
+      {
+        "start": 181.98,
+        "end": 182.22,
+        "word": " those"
+      },
+      {
+        "start": 182.22,
+        "end": 182.64,
+        "word": " old"
+      },
+      {
+        "start": 182.64,
+        "end": 183.04,
+        "word": " allies"
+      },
+      {
+        "start": 183.04,
+        "end": 184.76,
+        "word": " whose"
+      },
+      {
+        "start": 184.76,
+        "end": 185.28,
+        "word": " cultural"
+      },
+      {
+        "start": 185.28,
+        "end": 186.3,
+        "word": " and"
+      },
+      {
+        "start": 186.3,
+        "end": 186.88,
+        "word": " spiritual"
+      },
+      {
+        "start": 186.88,
+        "end": 187.44,
+        "word": " origins"
+      },
+      {
+        "start": 187.44,
+        "end": 188.12,
+        "word": " we"
+      },
+      {
+        "start": 188.12,
+        "end": 188.48,
+        "word": " share,"
+      }
+    ]
+  },
+  {
+    "start": 189.22,
+    "end": 192.1,
+    "text": " we pledge the loyalty of faithful friends.",
+    "words": [
+      {
+        "start": 189.22,
+        "end": 189.8,
+        "word": " we"
+      },
+      {
+        "start": 189.8,
+        "end": 190.18,
+        "word": " pledge"
+      },
+      {
+        "start": 190.18,
+        "end": 190.44,
+        "word": " the"
+      },
+      {
+        "start": 190.44,
+        "end": 190.72,
+        "word": " loyalty"
+      },
+      {
+        "start": 190.72,
+        "end": 191.16,
+        "word": " of"
+      },
+      {
+        "start": 191.16,
+        "end": 191.56,
+        "word": " faithful"
+      },
+      {
+        "start": 191.56,
+        "end": 192.1,
+        "word": " friends."
+      }
+    ]
+  },
+  {
+    "start": 193.38,
+    "end": 198.42,
+    "text": " United there is little we cannot do in a host of corporate adventures,",
+    "words": [
+      {
+        "start": 193.38,
+        "end": 193.8,
+        "word": " United"
+      },
+      {
+        "start": 193.8,
+        "end": 194.2,
+        "word": " there"
+      },
+      {
+        "start": 194.2,
+        "end": 194.4,
+        "word": " is"
+      },
+      {
+        "start": 194.4,
+        "end": 194.56,
+        "word": " little"
+      },
+      {
+        "start": 194.56,
+        "end": 194.84,
+        "word": " we"
+      },
+      {
+        "start": 194.84,
+        "end": 195.16,
+        "word": " cannot"
+      },
+      {
+        "start": 195.16,
+        "end": 195.54,
+        "word": " do"
+      },
+      {
+        "start": 195.54,
+        "end": 196.7,
+        "word": " in"
+      },
+      {
+        "start": 196.7,
+        "end": 196.88,
+        "word": " a"
+      },
+      {
+        "start": 196.88,
+        "end": 197.28,
+        "word": " host"
+      },
+      {
+        "start": 197.28,
+        "end": 197.46,
+        "word": " of"
+      },
+      {
+        "start": 197.46,
+        "end": 197.9,
+        "word": " corporate"
+      },
+      {
+        "start": 197.9,
+        "end": 198.42,
+        "word": " adventures,"
+      }
+    ]
+  },
+  {
+    "start": 199.56,
+    "end": 201.78,
+    "text": " divided there is little we can do.",
+    "words": [
+      {
+        "start": 199.56,
+        "end": 200.06,
+        "word": " divided"
+      },
+      {
+        "start": 200.06,
+        "end": 200.4,
+        "word": " there"
+      },
+      {
+        "start": 200.4,
+        "end": 200.64,
+        "word": " is"
+      },
+      {
+        "start": 200.64,
+        "end": 200.82,
+        "word": " little"
+      },
+      {
+        "start": 200.82,
+        "end": 201.1,
+        "word": " we"
+      },
+      {
+        "start": 201.1,
+        "end": 201.42,
+        "word": " can"
+      },
+      {
+        "start": 201.42,
+        "end": 201.78,
+        "word": " do."
+      }
+    ]
+  },
+  {
+    "start": 202.78,
+    "end": 208.72,
+    "text": " For we dare not meet a powerful challenge at all and split us under.",
+    "words": [
+      {
+        "start": 202.78,
+        "end": 203.08,
+        "word": " For"
+      },
+      {
+        "start": 203.08,
+        "end": 203.32,
+        "word": " we"
+      },
+      {
+        "start": 203.32,
+        "end": 203.58,
+        "word": " dare"
+      },
+      {
+        "start": 203.58,
+        "end": 203.8,
+        "word": " not"
+      },
+      {
+        "start": 203.8,
+        "end": 204.18,
+        "word": " meet"
+      },
+      {
+        "start": 204.18,
+        "end": 204.52,
+        "word": " a"
+      },
+      {
+        "start": 204.52,
+        "end": 205.08,
+        "word": " powerful"
+      },
+      {
+        "start": 205.08,
+        "end": 205.74,
+        "word": " challenge"
+      },
+      {
+        "start": 205.74,
+        "end": 206.64,
+        "word": " at"
+      },
+      {
+        "start": 206.64,
+        "end": 206.94,
+        "word": " all"
+      },
+      {
+        "start": 206.94,
+        "end": 207.98,
+        "word": " and"
+      },
+      {
+        "start": 207.98,
+        "end": 208.28,
+        "word": " split"
+      },
+      {
+        "start": 208.28,
+        "end": 208.48,
+        "word": " us"
+      },
+      {
+        "start": 208.48,
+        "end": 208.72,
+        "word": " under."
+      }
+    ]
+  }
+]

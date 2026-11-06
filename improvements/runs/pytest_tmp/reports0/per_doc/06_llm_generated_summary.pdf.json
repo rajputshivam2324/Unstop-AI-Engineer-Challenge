@@ -1,0 +1,45 @@
+{
+  "document_id": "06_llm_generated_summary.pdf",
+  "total_integrity_risk": "MEDIUM",
+  "scores": {
+    "peer_similarity_percentage": 0.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": 65.3
+  },
+  "peer_matches": [],
+  "multimodal_matches": [],
+  "explanations": "Peer similarity: 0.0% across 0 listed source(s) (no substantive peer overlap). External: 0.0% (none). AI: AI_LIKELY at 65.3%. Overlap types: 0 cross-modal, 0 exact-copy, 0 paraphrase, 0 discounted common-source.",
+  "status": "ok",
+  "modality": "pdf",
+  "warnings": [],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": 65.3,
+    "label": "AI_LIKELY",
+    "p_classifier": 1.0,
+    "p_perplexity": 0.0,
+    "p_burstiness": 0.5324,
+    "perplexity": 33.226,
+    "burstiness": 0.1852,
+    "length_gate_triggered": false,
+    "ai_detector_source": "model",
+    "caveat": "Note: AI detectors are unreliable on non-native-English and polished human text (Stanford 2023: up to 61% false-positive rate on ESL essays); treat this as a lead for human review, not proof."
+  },
+  "template_registry_hits": [],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {},
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 4089,
+    "sha256": "36adc451585c9fc01a72bd3633fd579606ce3529af63a6ae9e9a4a81dfa0924b",
+    "page_count": 3,
+    "duration_s": null,
+    "asr_model": null,
+    "asr_language": null,
+    "chunk_count": 4,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T13:54:52Z"
+}

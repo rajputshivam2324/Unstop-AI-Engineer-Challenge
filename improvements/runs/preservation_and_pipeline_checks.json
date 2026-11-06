@@ -1,0 +1,124 @@
+{
+  "utc": "2026-11-06T14:05:50.739114+00:00",
+  "pipeline_metrics": {
+    "baseline": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 2,
+      "tn": 75,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "runtime": {
+        "elapsed_s": 38.17,
+        "stage_seconds": {
+          "ingestion": 6.66,
+          "chunking_and_templates": 0.03,
+          "embedding_and_search": 5.55,
+          "pair_scoring": 0.33,
+          "alignment": 2.16,
+          "external_check": 0.73,
+          "ai_detection": 22.71,
+          "scoring_and_reports": 0.01
+        },
+        "peak_rss_mb": 2026.8,
+        "n_chunks": 18,
+        "cpu_count": 12,
+        "ai_detector_missing_models": []
+      },
+      "output_count_json": 13,
+      "output_count_md": 13,
+      "schema_issues": []
+    },
+    "boundary": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 1,
+      "tn": 75,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "runtime": {
+        "elapsed_s": 41.58,
+        "stage_seconds": {
+          "ingestion": 7.56,
+          "chunking_and_templates": 0.03,
+          "embedding_and_search": 9.82,
+          "pair_scoring": 1.42,
+          "alignment": 2.31,
+          "external_check": 0.75,
+          "ai_detection": 19.69,
+          "scoring_and_reports": 0.01
+        },
+        "peak_rss_mb": 2062.5,
+        "n_chunks": 18,
+        "cpu_count": 12,
+        "ai_detector_missing_models": []
+      },
+      "output_count_json": 13,
+      "output_count_md": 13,
+      "schema_issues": []
+    },
+    "semantic_nli": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 75,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "runtime": {
+        "elapsed_s": 75.71,
+        "stage_seconds": {
+          "ingestion": 7.43,
+          "chunking_and_templates": 0.03,
+          "embedding_and_search": 9.4,
+          "pair_scoring": 35.14,
+          "alignment": 2.6,
+          "external_check": 0.97,
+          "ai_detection": 20.14,
+          "scoring_and_reports": 0.01
+        },
+        "peak_rss_mb": 2022.8,
+        "n_chunks": 18,
+        "cpu_count": 12,
+        "ai_detector_missing_models": []
+      },
+      "output_count_json": 13,
+      "output_count_md": 13,
+      "schema_issues": []
+    },
+    "semantic_hybrid": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 75,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "runtime": {
+        "elapsed_s": 96.37,
+        "stage_seconds": {
+          "ingestion": 7.05,
+          "chunking_and_templates": 0.03,
+          "embedding_and_search": 10.1,
+          "pair_scoring": 50.33,
+          "alignment": 4.24,
+          "external_check": 1.34,
+          "ai_detection": 23.27,
+          "scoring_and_reports": 0.01
+        },
+        "peak_rss_mb": 1936.3,
+        "n_chunks": 18,
+        "cpu_count": 12,
+        "ai_detector_missing_models": []
+      },
+      "output_count_json": 13,
+      "output_count_md": 13,
+      "schema_issues": []
+    }
+  },
+  "baseline_substantive_report_mismatches": [],
+  "changed_prior_result_files": [],
+  "changed_final_method_files": []
+}

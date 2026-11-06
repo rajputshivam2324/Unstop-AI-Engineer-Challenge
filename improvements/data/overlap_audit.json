@@ -1,0 +1,6 @@
+{
+  "old_pairs": 2000,
+  "new_pairs": 100,
+  "exact_normalized_sentence_overlap_count": 76,
+  "note": "Index ranges disjoint. Text overlap checked without scoring labels or models; no source-level or model-pretraining disjointness guaranteed."
+}

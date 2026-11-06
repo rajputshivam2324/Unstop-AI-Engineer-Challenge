@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/home/shivam/assignment/unstopchallenge/.venv/bin/python",
+    "/home/shivam/assignment/unstopchallenge/run_integrity_check.py",
+    "--input_dir",
+    "/home/shivam/assignment/unstopchallenge/validation/corpus",
+    "--output_dir",
+    "/home/shivam/assignment/unstopchallenge/improvements/runs/pipeline_semantic_hybrid",
+    "--skip-web",
+    "--matching-mode",
+    "semantic_hybrid"
+  ],
+  "start_utc": "2026-11-06T13:59:33.712425+00:00",
+  "exit_code": 0,
+  "subprocess_s": 98.46644350600036
+}

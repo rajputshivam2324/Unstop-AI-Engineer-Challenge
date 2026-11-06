@@ -1,0 +1,45 @@
+{
+  "document_id": "05_original_market_pdf.pdf",
+  "total_integrity_risk": "MEDIUM",
+  "scores": {
+    "peer_similarity_percentage": 0.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": 66.2
+  },
+  "peer_matches": [],
+  "multimodal_matches": [],
+  "explanations": "Peer similarity: 0.0% across 0 listed source(s) (no substantive peer overlap). External: 0.0% (none). AI: AI_LIKELY at 66.2%. Overlap types: 0 cross-modal, 0 exact-copy, 0 paraphrase, 0 discounted common-source.",
+  "status": "ok",
+  "modality": "pdf",
+  "warnings": [],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": 66.2,
+    "label": "AI_LIKELY",
+    "p_classifier": 0.9999,
+    "p_perplexity": 0.0,
+    "p_burstiness": 0.6213,
+    "perplexity": 167.628,
+    "burstiness": 0.0944,
+    "length_gate_triggered": false,
+    "ai_detector_source": "model",
+    "caveat": "Note: AI detectors are unreliable on non-native-English and polished human text (Stanford 2023: up to 61% false-positive rate on ESL essays); treat this as a lead for human review, not proof."
+  },
+  "template_registry_hits": [],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {},
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 2870,
+    "sha256": "85ba0ab0cbbca64bc2ba11e7f636f4a0294fae0cb43a669b801b77feba44c06c",
+    "page_count": 3,
+    "duration_s": null,
+    "asr_model": null,
+    "asr_language": null,
+    "chunk_count": 2,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T12:55:39Z"
+}

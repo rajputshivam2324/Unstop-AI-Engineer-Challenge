@@ -1,0 +1,66 @@
+{
+  "document_id": "01_human_speech.pdf",
+  "total_integrity_risk": "HIGH",
+  "scores": {
+    "peer_similarity_percentage": 100.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": 64.6
+  },
+  "peer_matches": [],
+  "multimodal_matches": [
+    {
+      "matched_file": "11_human_crossmodal.mp4",
+      "similarity_score": 0.9805,
+      "query_passage": "The world is very different now, for man holds in his mortal hands the power to abolish all forms of\nhuman poverty and all forms of human life.",
+      "matched_passage": "The world is very different now for man holds it is mortal hands the power to abolish all forms of human poverty and all forms of human life",
+      "location": {
+        "query_page": 2,
+        "matched_timestamp": "00:00:00 - 00:00:15"
+      },
+      "match_type": "overlap",
+      "overlap_kind": "cross_modal",
+      "evidence_sentence_scores": [
+        0.9805
+      ],
+      "lexical_jaccard": 0.875,
+      "token_lcs_ratio": 0.9286,
+      "note": "spoken/written cross-modal match (lexical Jaccard 0.88, token-LCS 0.93; ASR noise expected)"
+    }
+  ],
+  "explanations": "Peer similarity: 100.0% across 1 listed source(s) (top: 11_human_crossmodal.mp4 @ 0.98; cross-modal). External: 0.0% (none). AI: UNSURE at 64.6%. Overlap types: 1 cross-modal, 0 exact-copy, 0 paraphrase, 0 discounted common-source.",
+  "status": "ok",
+  "modality": "pdf",
+  "warnings": [],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": 64.6,
+    "label": "UNSURE",
+    "p_classifier": 0.9929,
+    "p_perplexity": 0.0,
+    "p_burstiness": 0.5034,
+    "perplexity": 105.014,
+    "burstiness": 0.214,
+    "length_gate_triggered": false,
+    "ai_detector_source": "model",
+    "caveat": "Note: AI detectors are unreliable on non-native-English and polished human text (Stanford 2023: up to 61% false-positive rate on ESL essays); treat this as a lead for human review, not proof."
+  },
+  "template_registry_hits": [],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {
+    "11_human_crossmodal.mp4": 1.0
+  },
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 1789,
+    "sha256": "5f365b232f84cabc470c65b6e98467f4c8b3eb713f64da5987760cdb8a18f70e",
+    "page_count": 2,
+    "duration_s": null,
+    "asr_model": null,
+    "asr_language": null,
+    "chunk_count": 1,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T13:58:15Z"
+}

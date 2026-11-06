@@ -1,0 +1,47 @@
+{
+  "document_id": "bad_2.mp4",
+  "total_integrity_risk": "LOW",
+  "scores": {
+    "peer_similarity_percentage": 0.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": null
+  },
+  "peer_matches": [],
+  "multimodal_matches": [],
+  "explanations": "Document could not be analyzed (status=error): unreadable media container. It is reported for reviewer follow-up, not scored as plagiarism. Peer similarity: 0.0% across 0 listed source(s) (no substantive peer overlap). External: 0.0% (none). AI: INSUFFICIENT_TEXT. Overlap types: 0 cross-modal, 0 exact-copy, 0 paraphrase, 0 discounted common-source.",
+  "status": "error",
+  "modality": "mp4",
+  "warnings": [
+    "unreadable media container"
+  ],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": null,
+    "label": "INSUFFICIENT_TEXT",
+    "p_classifier": null,
+    "p_perplexity": null,
+    "p_burstiness": null,
+    "perplexity": null,
+    "burstiness": null,
+    "length_gate_triggered": true,
+    "ai_detector_source": "model",
+    "caveat": ""
+  },
+  "template_registry_hits": [],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {},
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 2048,
+    "sha256": "724033d6780caec264a4bc455f58044173704e4dc03c4b545e642d15fa65bd35",
+    "page_count": null,
+    "duration_s": null,
+    "asr_model": null,
+    "asr_language": null,
+    "chunk_count": 0,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T13:52:49Z"
+}

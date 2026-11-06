@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/shivam/assignment/unstopchallenge/.venv/bin/python",
+    "/home/shivam/assignment/unstopchallenge/improvements/scripts/benchmark_matching.py",
+    "--split",
+    "heldout",
+    "--mode",
+    "semantic_hybrid",
+    "--out",
+    "/home/shivam/assignment/unstopchallenge/improvements/runs/heldout_semantic_hybrid_final.json"
+  ],
+  "start_utc": "2026-11-06T14:03:04.449428+00:00",
+  "wall_s": 54.06838711400269,
+  "exit_code": 0
+}

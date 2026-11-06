@@ -1,0 +1,92 @@
+{
+  "document_id": "03_paraphrased_strategy.docx",
+  "total_integrity_risk": "MEDIUM",
+  "scores": {
+    "peer_similarity_percentage": 62.3,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": 65.3
+  },
+  "peer_matches": [
+    {
+      "matched_file": "04_original_strategy.docx",
+      "similarity_score": 0.8482,
+      "query_passage": "Three safeguards follow for appliances: split compressor and control-board supply across two vendors, and hold a 21-day reserve on the 12 quickest-turning SKUs so short shocks do not force panic purchases.\nMath on routes says the hybrid channel wins. Only 60 products ride the D2C storefront, picked for straightforward installation and dense delivery pockets, while dealer-owned floor-stock lines remain off the site.\nWhere a buyer sits within 40 kilometers of a store, the order hands over to that store, dragging the last-mile cost down to 7.2 percent of order value rather than the 11.8 percent that a courier-only alternative pays.\nKeeping dealers inside the plan matters most politically. Stores that fulfill routed orders collect a 4.5 percent fulfillment fee and also retain the installation income, and the trial run lifted their approval to 74 percent.",
+      "matched_passage": "Applying those findings to appliances, we recommend a two-supplier cushion on compressors and control boards, plus a 21-day reserve on the 12 fastest-moving SKUs.\nRoute economics favor a hybrid model. The D2C storefront carries only 60 SKUs, picked for installation simplicity and delivery density, and omits dealer-exclusive floor-stock lines.\nOrder routing assigns orders to stores when delivery is within 40 kilometers of a dealer, cutting the last-mile cost to 7.2 percent of order value versus 11.8 percent for the courier-only path.\nDealer participation is the political keystone. Dealers capturing a share of routed orders earn a fulfillment fee of 4.5 percent and keep the installation revenue, which our pilot showed lifts dealer approval to 74 percent.",
+      "location": {
+        "query_page": null,
+        "matched_page": null
+      },
+      "match_type": "overlap",
+      "overlap_kind": "paraphrase",
+      "evidence_sentence_scores": [
+        0.687,
+        0.7474,
+        0.7766,
+        0.6865,
+        0.7959
+      ],
+      "lexical_jaccard": 0.329,
+      "token_lcs_ratio": 0.4069,
+      "note": "semantic paraphrase paraphrase-band (>0.80): meaning matches while wording differs (lexical Jaccard 0.33, token-LCS 0.41)"
+    },
+    {
+      "matched_file": "04_original_strategy.docx",
+      "similarity_score": 0.8351,
+      "query_passage": "Volume modeling expects 34 thousand incremental units in year one, roughly 7 percent of the total, and additive to dealer business because the catalog leans toward spares-adjacent buyer needs.\nWorking-capital timing helps as well: direct orders clear in 2 days instead of the 29-day dealer credit cycle, so the reserve inventory funds itself without new credit lines.\nOwnership goes to three known dangers: dealers defecting in three metro areas, technician capacity outside big cities, and bulky-goods warehouse space in three states.\nLaunch tracking watches four gauges week by week: dealer approval, last-mile cost share, install-attempt success, and reserve coverage on core SKUs.\nWhat we ask of the committee is a two-state, 9-month pilot costing 3.4 million, with a quarterly checkpoint empowered to kill it early.",
+      "matched_passage": "Forecasts put first-year D2C volume at 34 thousand units, or 7 percent of total, incremental to dealer demand because the catalog skews to spare-parts-adjacent segments.\nCash conversion improves: direct orders settle in 2 days against 29 days for dealer credit terms, funding the reserve inventory without new credit lines.\nThree risks need owners: dealer defection in three metro clusters, service capacity in tier-2 cities, and warehouse slots for bulky goods in three states.\nWe steer launch readiness on four metrics: dealer approval, last-mile cost share, install-attempt success rate, and weekly reserve coverage of the core SKUs.\nThe committee decision requested is a 9-month pilot across two states with a budget of 3.4 million and a quarterly kill review.",
+      "location": {
+        "query_page": null,
+        "matched_page": null
+      },
+      "match_type": "overlap",
+      "overlap_kind": "paraphrase",
+      "evidence_sentence_scores": [
+        0.7061,
+        0.6564,
+        0.8519,
+        0.6241,
+        0.8139
+      ],
+      "lexical_jaccard": 0.4333,
+      "token_lcs_ratio": 0.5224,
+      "note": "semantic paraphrase paraphrase-band (>0.80): meaning matches while wording differs (lexical Jaccard 0.43, token-LCS 0.52)"
+    }
+  ],
+  "multimodal_matches": [],
+  "explanations": "Peer similarity: 62.3% across 1 listed source(s) (top: 04_original_strategy.docx @ 0.85; overlap). External: 0.0% (none). AI: AI_LIKELY at 65.3%. Overlap types: 0 cross-modal, 0 exact-copy, 2 paraphrase, 0 discounted common-source.",
+  "status": "ok",
+  "modality": "docx",
+  "warnings": [],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": 65.3,
+    "label": "AI_LIKELY",
+    "p_classifier": 0.9917,
+    "p_perplexity": 0.0,
+    "p_burstiness": 0.5749,
+    "perplexity": 147.623,
+    "burstiness": 0.1424,
+    "length_gate_triggered": false,
+    "ai_detector_source": "model",
+    "caveat": "Note: AI detectors are unreliable on non-native-English and polished human text (Stanford 2023: up to 61% false-positive rate on ESL essays); treat this as a lead for human review, not proof."
+  },
+  "template_registry_hits": [],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {
+    "04_original_strategy.docx": 0.623
+  },
+  "discounted_noise_matches": 1,
+  "provenance": {
+    "size_bytes": 37768,
+    "sha256": "6caa160627344d124f567e79b4dae6368b74fb8ce7c68436d57954ce2b81c0cf",
+    "page_count": null,
+    "duration_s": null,
+    "asr_model": null,
+    "asr_language": null,
+    "chunk_count": 3,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T12:55:39Z"
+}

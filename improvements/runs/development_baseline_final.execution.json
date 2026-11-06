@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/shivam/assignment/unstopchallenge/.venv/bin/python",
+    "/home/shivam/assignment/unstopchallenge/improvements/scripts/benchmark_matching.py",
+    "--split",
+    "development",
+    "--mode",
+    "baseline",
+    "--out",
+    "/home/shivam/assignment/unstopchallenge/improvements/runs/development_baseline_final.json"
+  ],
+  "start_utc": "2026-11-06T13:48:25.085782+00:00",
+  "wall_s": 10.941640487999393,
+  "exit_code": 0
+}

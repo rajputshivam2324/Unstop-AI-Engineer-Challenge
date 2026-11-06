@@ -1,0 +1,106 @@
+{
+  "split": "regression",
+  "mode": "boundary",
+  "config": {
+    "mode": "boundary",
+    "asr_max_gap_s": 1.5,
+    "boundary_max_units": 3,
+    "window_max_tokens": 120,
+    "retrieval_min_cos": 0.35,
+    "retrieval_topk": 5,
+    "verifier_topk": 3,
+    "max_verifications_per_pair": 48,
+    "nli_entailment_min": 0.7,
+    "nli_contradiction_max": 0.1,
+    "sts_min": 0.5
+  },
+  "metrics": {
+    "tp": 1,
+    "fp": 1,
+    "fn": 1,
+    "tn": 0,
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1": 0.5
+  },
+  "timing": {
+    "embedding_load_s": 7.609615727998971,
+    "verifier_load_s": 0.0,
+    "cases_total_s": 1.1636019270008546,
+    "median_case_s": 0.3465193800002453,
+    "p95_case_s": 0.5986918580001657,
+    "wall_s": 8.773870172999523
+  },
+  "peak_rss_mb": 569.13671875,
+  "verifier_pairs_scored": 0,
+  "truncated_pairs": 0,
+  "cases": [
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.3465193800002453,
+      "passages": [
+        {
+          "matched_file": "11_human_crossmodal.mp4",
+          "similarity_score": 0.9805,
+          "query_passage": "The world is very different now, for man holds in his mortal hands the power to abolish all forms of\nhuman poverty and all forms of human life.",
+          "matched_passage": "The world is very different now for man holds it is mortal hands the power to abolish all forms of human poverty and all forms of human life",
+          "query_page": 2,
+          "matched_page": null,
+          "matched_timestamp": "00:00:00 - 00:00:15",
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.9805
+          ],
+          "note": "spoken/written cross-modal match (lexical Jaccard 0.88, token-LCS 0.93; ASR noise expected)",
+          "overlap_kind": "cross_modal",
+          "lexical_jaccard": 0.875,
+          "token_lcs_ratio": 0.9286
+        }
+      ],
+      "id": "01_human_speech.pdf + 11_human_crossmodal.mp4",
+      "kind": "cross_modal",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.5986918580001657,
+      "passages": [],
+      "id": "06_policy_argument.docx + 07_policy_rewording.docx",
+      "kind": "paraphrase",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.21839068900044367,
+      "passages": [
+        {
+          "matched_file": "31_negation.pdf",
+          "similarity_score": 0.9624,
+          "query_passage": "The blue filter removed arsenic from the river water during the controlled trial. The treatment\nreduced contamination below the laboratory reporting limit. Investigators recommended deploying\nthe filter in every village before the rainy season.",
+          "matched_passage": "The blue filter did not remove arsenic from the river water during the controlled trial. The\ntreatment did not reduce contamination below the laboratory reporting limit. Investigators did not\nrecommend deploying the filter in every village before the rainy season.",
+          "query_page": 1,
+          "matched_page": 1,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.8909,
+            0.8464,
+            0.7218
+          ],
+          "note": "semantic paraphrase paraphrase-band (>0.80): meaning matches while wording differs (lexical Jaccard 0.75, token-LCS 0.78)",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.75,
+          "token_lcs_ratio": 0.775
+        }
+      ],
+      "id": "30_assertion.pdf + 31_negation.pdf",
+      "kind": "contradiction",
+      "label": 0
+    }
+  ]
+}

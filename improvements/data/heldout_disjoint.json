@@ -1,0 +1,802 @@
+[
+  {
+    "id": "paws-validation:0",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Bradd Crellin represented BARLA Cumbria on a tour of Australia with 6 other players representing Britain , also on a tour of Australia .",
+    "right": "Bradd Crellin also represented BARLA Great Britain on a tour through Australia on a tour through Australia with 6 other players representing Cumbria .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:1",
+    "kind": "positive",
+    "label": 1,
+    "left": "They were there to enjoy us and they were there to pray for us .",
+    "right": "They were there for us to enjoy and they were there for us to pray .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:2",
+    "kind": "positive",
+    "label": 1,
+    "left": "After the end of the war in June 1902 , Higgins left Southampton in the `` SSBavarian '' in August , returning to Cape Town the following month .",
+    "right": "In August , after the end of the war in June 1902 , Higgins Southampton left the `` SSBavarian '' and returned to Cape Town the following month .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:3",
+    "kind": "positive",
+    "label": 1,
+    "left": "From the merger of the Four Rivers Council and the Audubon Council , the Shawnee Trails Council was born .",
+    "right": "Shawnee Trails Council was formed from the merger of the Four Rivers Council and the Audubon Council .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:4",
+    "kind": "positive",
+    "label": 1,
+    "left": "The group toured extensively and became famous in Israel , and even played in New York City in 2007 .",
+    "right": "The group toured extensively and was famous in Israel and even played in New York City in 2007 .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:5",
+    "kind": "positive",
+    "label": 1,
+    "left": "Kathy and her husband Pete Beale ( Peter Dean ) are stable financially .",
+    "right": "Kathy and her husband Peter Dean ( Pete Beale ) are financially stable .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:6",
+    "kind": "positive",
+    "label": 1,
+    "left": "Timora diarhoda is a species of moth of the Noctuidae family . It is found in Africa , including South Africa .",
+    "right": "Diarhoda is a kind of moth of the Noctuidae family . It is found in South Africa including Africa .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:7",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Most of these hotels were built along Biddle Avenue from Oak Street to Pine Street .",
+    "right": "Most of these homes were built along Biddle Avenue from Oak Street to Pine Street .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:8",
+    "kind": "positive",
+    "label": 1,
+    "left": "Joe R. Campa Jr. is a former sailor of the United States Navy , who served as the eleventh Master Chief Petty Officer of the U.S. Navy .",
+    "right": "Joe R. Campa Jr. is a former U.S. Navy Matrose who served as the 11th Master Chief Petty Officer of the United States Navy .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:9",
+    "kind": "positive",
+    "label": 1,
+    "left": "The exception was between late 2005 and 2009 when he played in Sweden with Carlstad United BK , Serbia with FK Borac \u010ca\u010dak and Russian FC Terek Grozny .",
+    "right": "The exception was between late 2005 and 2009 , when he played in Sweden with Carlstad United BK , Serbia with FK Borac \u010ca\u010dak and the Russian FC Terek Grozny .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:10",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The river Valea Sterminoas\u0103 is a tributary of the River Boia Mic\u0103a in Romania .",
+    "right": "The River Boia Mic\u0103 is a tributary of the River Valea Sterminoas\u0103 in Romania .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:11",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The Tabaci River is a tributary of the River Leurda in Romania .",
+    "right": "The Leurda River is a tributary of the River Tabaci in Romania .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:12",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Cook Pond , also known as the South Watuppa Pond , is located south east of Laurel Lake and west of the Taunton River .",
+    "right": "Cook Pond , also formerly known as Laurel Lake , is located south east of the Taunton River and west of the South Watuppa Pond .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:13",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "`` Taunton Castle '' was on August 1 in Rio de Janeiro and on October 31 in Penang .",
+    "right": "`` Taunton Castle '' was at Penang on 1 August and Rio de Janeiro on 31 October .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:14",
+    "kind": "positive",
+    "label": 1,
+    "left": "The family moved to Camp Hill in 1972 , where he attended Trinity High School in Harrisburg , Pennsylvania .",
+    "right": "In 1972 , the family moved to Camp Hill , where he visited the Trinity High School in Harrisburg , Pennsylvania .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:15",
+    "kind": "positive",
+    "label": 1,
+    "left": "A recording of folk songs done for the Columbia society in 1942 was largely arranged by Pjet\u00ebr Dungu .",
+    "right": "A recording of folk songs made for the Columbia society in 1942 was largely arranged by Pjet\u00ebr Dungu .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:16",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Madiun is situated on the main road to Yogyakarta and Jakarta .",
+    "right": "Yogyakarta and Jakarta is situated on the main road to Madiun .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:17",
+    "kind": "positive",
+    "label": 1,
+    "left": "Components of elastic potential systems store mechanical energy if they are deformed when forces are applied to the system .",
+    "right": "Components of elastic potential systems store mechanical energy if they are deformed to the system when applied to forces .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:18",
+    "kind": "positive",
+    "label": 1,
+    "left": "Earl St Vincent was a British ship that was captured in 1803 and became a French trade man .",
+    "right": "Earl St Vincent was a British ship that was captured and became a French merchantman in 1803 .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:19",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "He played with the A-level Kane County Cougars in 1993 and the AA Portland Sea Dogs .",
+    "right": "He played in 1993 with the A - Level Portland Sea Dogs and the AA Kane County Cougars .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:20",
+    "kind": "positive",
+    "label": 1,
+    "left": "Steam can also be used , and does not need to be pumped .",
+    "right": "Also steam can be used and need not be pumped .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:21",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "They are overlaid with sparse live orchestral music and consist of vague , almost deliberately colorless sounds .",
+    "right": "They are overlaid with colourless , live played music and consist of vague , almost consciously sparse orchestral sounds .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:22",
+    "kind": "positive",
+    "label": 1,
+    "left": "In mathematical astronomy , his fame is due to the introduction of the astronomical globe , and his early contributions to understanding the movement of the planets .",
+    "right": "His fame is due in mathematical astronomy to the introduction of the astronomical globe and to his early contributions to the understanding of the movement of the planets .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:23",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "She was only a few months in French service when she met some British frigates in 1809 .",
+    "right": "She was only in British service for a few months , when in 1809 , she encountered some French frigates .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:24",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The Hudson County , New Jersey , also spelled as `` Macpelah Cemetery '' , or `` Macphelah Cemetery '' , is a cemetery in Machpelah Cemetery .",
+    "right": "The Machpelah Cemetery , also spelled as '' Macpelah Cemetery `` or '' Macphelah Cemetery `` , is a graveyard in Hudson County , New Jersey .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:25",
+    "kind": "positive",
+    "label": 1,
+    "left": "Winarsky is a member of the IEEE , Phi Beta Kappa , the ACM and Sigma Xi .",
+    "right": "Winarsky is a member of ACM , the IEEE , the Phi Beta Kappa and the Sigma Xi .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:26",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "In 1938 he became the government anthropologist of the anglo-Egyptian Sudan and led fieldwork with the Nuba .",
+    "right": "In 1938 he became the Government Anthropologist of the Egyptian-Anglo Sudan and conducted fieldwork with the Nuba .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:27",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Billy Billy Batson appeared in the first four issues of `` Black Adam '' , published between late 2008 and early 2009 .",
+    "right": "Black Adam appeared in the first four issues of `` Billy Batson '' , published between late 2008 and early 2009 .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:28",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Aamir Khan has agreed to play immediately after reading Mehra 's script in `` Rang De Basanti '' .",
+    "right": "Mehra agreed to act in `` Rang De Basanti '' immediately after reading Aamir Khan 's script .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:29",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The film had a limited release in Thailand cinemas on October 18 , 2007 , and released in Singapore on October 25 .",
+    "right": "The film had a limited publication in cinemas in Singapore on 18 October 2007 and was released in Thailand on 25 October .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:30",
+    "kind": "positive",
+    "label": 1,
+    "left": "Mandarin - Chinese has specific terms and racial euphemisms for different races and ethnicities , and some discriminatory attacks against representatives of certain governments and backgrounds .",
+    "right": "Mandarin Chinese has specific terms and racial euphemisms for different races and ethnicities , and some discriminatory slurs against representatives from certain governments and backgrounds .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:31",
+    "kind": "positive",
+    "label": 1,
+    "left": "The solar approach to this requirement is the use of solar panels in a conventional-powered aircraft .",
+    "right": "The solar approach to this requirement is the use of solar panels in a conventionally powered aircraft .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:32",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "In the reviews below will be the highest rating for the show in red , and the lowest evaluation for the show will be in blue episode .",
+    "right": "In the reviews below will be the lowest rating for the show in red , and the highest rating for the show will be in blue sequence .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:33",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Christopher Harris was the second son of William Harris . His elder brother , Harris , was MP for Okehampton .",
+    "right": "William Harris was the second son of William Harris , his elder brother Christopher Harris was MP for Okehampton .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:34",
+    "kind": "positive",
+    "label": 1,
+    "left": "The police also questioned singer Rimi Tomy and the actor Kavya Madhavan , both close friends of Siddique and his wife Dileep , as part of the ongoing investigation .",
+    "right": "The police also questioned singer Rimi Tomy and actor Kavya Madhavan , both close friends of Siddique and his wife Dileep , as part of the ongoing investigation .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:35",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "They are overlaid with sparse live orchestral music and consist of vague , almost deliberately colorless sounds .",
+    "right": "They are overlaid with colour-free , live played music and consist of vague , almost deliberately sparse orchestral sounds .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:36",
+    "kind": "positive",
+    "label": 1,
+    "left": "Its music critics included Julius Korngold ( 1864 -- 1904 ) and Eduard Hanslick ( 1904 -- 1934 ) .",
+    "right": "Its music critics included Julius Korngold ( 1864 -- 1904 ) and Eduard Hanslick ( 1904 -- 1934 ) .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:37",
+    "kind": "positive",
+    "label": 1,
+    "left": "Holly was musically influenced by Elton John .",
+    "right": "Holly Holly was influenced musically by Elton John .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:38",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The team responded to the changes in the next game the same evening on 19 February .",
+    "right": "The team responded to the changes in the same game that next February 19 evening .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:39",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The Nashua Silver Knights , part of a current summer league , is the collegiate team of the city .",
+    "right": "The Nashua Silver Knights , part of a summer collegiate league , is the current team of the city .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:40",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Somatherapy ( or Soma ) was created by the Wilhelm Reich in the 1970s as a group therapy , based on the research of the psychoanalyst Freire .",
+    "right": "Soma therapy ( or Soma ) was created in the 1970s by Freire as a group therapy based on the research of the psychoanalyst Wilhelm Reich .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:41",
+    "kind": "positive",
+    "label": 1,
+    "left": "It was that Easipower said ,",
+    "right": "It was Easipower that said :",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:42",
+    "kind": "positive",
+    "label": 1,
+    "left": "The Tabaci River is a tributary of the Leurda River in Romania .",
+    "right": "The river Tabaci is a tributary of the River Leurda in Romania .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:43",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Jacob Markell ( May 8 , 1770 -- November 26 , 1852 ) was a New York representative of Henry Markell 's father .",
+    "right": "Henry Markell ( May 8 , 1770 -- November 26 , 1852 ) was a U.S. Representative from New York , father of Jacob Markell .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:44",
+    "kind": "positive",
+    "label": 1,
+    "left": "Aamir Khan agreed to act immediately after reading Mehra 's screenplay in `` Rang De Basanti '' .",
+    "right": "Aamir Khan agreed to act in `` Rang De Basanti '' immediately after reading Mehra 's script .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:45",
+    "kind": "positive",
+    "label": 1,
+    "left": "Loyang 's team defeated Xinmin Secondary School in the opening round and Raffles Institution in the quarter-finals , before losing to Hwa Chong Institution in the semi-finals .",
+    "right": "The Loyang team defeated Xinmin Secondary School in the opening round and Raffles Institution in the quarterfinals before losing to the Hwa Chong Institution in the semi-finals .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:46",
+    "kind": "positive",
+    "label": 1,
+    "left": "Retzius was born in Stockholm , son of the anatomist Anders Jahan Retzius ( and grandson of the naturalist and chemist Anders Retzius ) .",
+    "right": "Retzius was born in Stockholm , the son of anatomist Anders Jahan Retzius ( and grandson of the naturalist and chemist Anders Retzius ) .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:47",
+    "kind": "positive",
+    "label": 1,
+    "left": "The `` Fallbeil '' was used for the last time in West Germany in 1949 , in East Germany in 1966 .",
+    "right": "The `` Fall Beil '' was used for the last time in West Germany in 1949 , in 1966 in East Germany .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:48",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The tracks were produced by Tommy Lee , and feature Michael Beinhorn on drums .",
+    "right": "The tracks were produced by Michael Beinhorn and have Tommy Lee on drums .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:49",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "When Jack Nitzsche first heard `` Stubborn Kind of Fellow '' he was so excited he lost control of his car while driving down Sunset Boulevard with Phil Spector .",
+    "right": "When Phil Spector first listened to `` Stubborn Kind of Fellow '' , he was so excited that he lost control of his car while driving down the Sunset Boulevard with Jack Nitzsche .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:50",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The canal is one of the oldest navigable canals in Europe and in Belgium .",
+    "right": "The canal is one of the oldest navigable canals in Belgium and indeed in Europe .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:51",
+    "kind": "positive",
+    "label": 1,
+    "left": "In 2009 he moved back to Philadelphia and lives in New York City today .",
+    "right": "He moved back to Philadelphia in 2009 and now lives in New York City .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:52",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "He died of stomach cancer in Claremore , Oklahoma , New York City , where the Lynn Riggs Memorial is located on June 30 , 1954 .",
+    "right": "He died on June 30 , 1954 , of stomach cancer in New York City . Claremore , Oklahoma is home to the Lynn Riggs Memorial .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:53",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Jeff Francisco managed the custom installation business and retail store where he studied product development and developed custom systems for the company .",
+    "right": "Jeff Francisco developed the Custom Installation Business and Retail Store , where he studied product development and headed custom systems for the company .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:54",
+    "kind": "positive",
+    "label": 1,
+    "left": "Stipsits was born in Korneuburg , Germany and spent his childhood in Stammersdorf , Vienna .",
+    "right": "Stipsits was born in Korneuburg , and spent his childhood in Stammersdorf , Vienna .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:55",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "A multiverse is a collection of alternative universes with a similar nature and universal hierarchy .",
+    "right": "A multiverse is a collection of alternative universes with universal nature and a similar hierarchy .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:56",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The station was established in 1947 by the British Falkland Islands Dependencies Survey as Station F or `` Winter Island '' in the Argentine islands .",
+    "right": "The station was founded in 1947 by the British Falkland Islands Dependencies Survey as Station F or `` Argentine Island '' on Winter Island .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:57",
+    "kind": "positive",
+    "label": 1,
+    "left": "Daudkhali is a village in Barisal Division in the Pirojpur district in southwestern Bangladesh .",
+    "right": "Daudkhali is a village in Pirojpur District in the Barisal Division of southwestern Bangladesh .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:58",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Slough High School was a girls selective grammar school in Slough , Buckinghamshire , now Berkshire .",
+    "right": "Slough High School was a selective girls ' school in Berkshire , now Slough , Buckinghamshire .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:59",
+    "kind": "positive",
+    "label": 1,
+    "left": "The temple serves as the cultural and religious center for Korean Hindus and immigrants from South Asian countries .",
+    "right": "The temple serves as a cultural and religious centre for Korean Hindus and immigrants from the South Asian countries .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:60",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "In the new TV-series '' Dead Gorgeous '' , Alexandra Coppinger played the role of the youngest sister Hazel .",
+    "right": "Hazel played the role of Alexandra Coppinger , the youngest sister , in the new TV series `` Dead Gorgeous '' .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:61",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Lucas Dumbrell Motorsport replaced Aaren Russell with Alex Davison for this event and the following .",
+    "right": "Lucas Dumbrell Motorsport replaced Alex Davison with Aaren Russell for this and the following event .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:62",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "His large sculptures can be seen in public spaces in New Zealand , from Kaitaia to Wanaka and many localities in between .",
+    "right": "His large sculptures can be seen in public spaces in Wanaka , from New Zealand to Kaitaia and many places in between .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:63",
+    "kind": "positive",
+    "label": 1,
+    "left": "When a surface has a constant zero developable curvature , then it is a Euclidean surface and the geometry of the surface is Gaussian geometry .",
+    "right": "If a surface has a constant developable curvature of zero , then it is an euclidean surface and the geometry of the surface is a Gaussian geometry .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:64",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Was born Martins Pena in Rio de Janeiro , Jo\u00e3o Martins Pena and Francisca de Paula Julieta Pena .",
+    "right": "Jo\u00e3o Martins Pena and Francisca de Paula Julieta Pena was born in Rio de Janeiro , to Martins Pena .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:65",
+    "kind": "positive",
+    "label": 1,
+    "left": "The following is a list of fouls established by the states that regulate MMA , as outlined by the Nevada State Athletic Commission .",
+    "right": "The following is a list of fouls defined by the states that regulate MMA as outlined by the Nevada State Athletic Commission .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:66",
+    "kind": "positive",
+    "label": 1,
+    "left": "The Keita dynasty ruled pre-imperial and imperial Mali from the 12th century into the early 17th century .",
+    "right": "The Keita dynasty ruled Mali from the 12th to the early 17th century , pre-imperial and imperial .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:67",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "`` Angel Eyes '' is a 1946 popular song composed by Matt Dennis , with lyrics by Earl Brent .",
+    "right": "`` Angel Eyes '' is a popular song composed by Earl Brent in 1946 , with texts by Matt Dennis .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:68",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Jonathan Erlich and Andy Ram won the title and defeated Mark Knowles and Daniel Nestor 5 -- 3 , 5 -- 4 in the final .",
+    "right": "Mark Knowles and Daniel Nestor won the title , defeating Jonathan Erlich and Andy Ram in the final with 5 : 3 , 5 : 4 .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:69",
+    "kind": "positive",
+    "label": 1,
+    "left": "The compound was patented by Dr. Patrick Page and his team and was invented by Genkyotex in 2007 .",
+    "right": "The compound was patented by Dr. Patrick Page and his team , and was invented in 2007 by Genkyotex .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:70",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Example milestones are beating a World Series champion team , beating historical teams and playing other players head to head .",
+    "right": "Example milestones are beating a World Series Champion team , playing historic teams and beating other players head to head .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:71",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The magazine was published by Paul Cassirer in 1910 , revived by his Pan-Presse .",
+    "right": "The magazine was revived in 1910 by Paul Cassirer , published by his pan-press .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:72",
+    "kind": "positive",
+    "label": 1,
+    "left": "When Phil Spector heard `` Stubborn Kind of Fellow '' for the first time , he was so excited that he lost control of his car while driving down the Sunset Boulevard with Jack Nitzsche .",
+    "right": "When Phil Spector first heard `` Stubborn Kind of Fellow '' he was so excited he lost control of his car while driving down Sunset Boulevard with Jack Nitzsche .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:73",
+    "kind": "positive",
+    "label": 1,
+    "left": "This genus is presently in the family of lizards known as Iguanidae , subfamily Polychrotinae , and is no longer classified in the now invalid family , Polychrotidae .",
+    "right": "This genus is currently classified in the family of lizards , known as Iguanidae , subfamily Polychrotinae , and is no longer classified in the now invalid family , polychrotidae .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:74",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The first section , from Hokitika to Ruatapu , was completed on 9 November 1906 , and on 1 April 1909 the complete line was opened for Ross .",
+    "right": "The first section , from Hokitika to Ruatapu , was opened on 9 November 1906 , and the full line to Ross was completed on 1 April 1909 .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:75",
+    "kind": "positive",
+    "label": 1,
+    "left": "Iyer next appeared in the Kannada film `` Darshan '' with actor Jaggu Dada .",
+    "right": "Next appeared Iyer in Kannada - Film `` Darshan '' with actor Jaggu Dada .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:76",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The racial Rubber Bowl was used by the National Guard of the United States as a base during the historical Wooster Avenue Riots of 1968 .",
+    "right": "The historic Rubber Bowl was used by the National Guard of the United States as the base during the racist Wooster Avenue Riots of 1968 .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:77",
+    "kind": "positive",
+    "label": 1,
+    "left": "Born in South Korea , he lived in Brazil for 9 years since 2002 and played football there for 5 years . He started his professional career in 2007 .",
+    "right": "Born in South Korea , he lived since 2002 for 9 years in Brazil , played there 5 years of football and started his career in 2007 .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:78",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Their music is considered by many as an industrial metal with rap metal and alternative metal influences , according to previous interviews they consider themselves '' murder - rock `` .",
+    "right": "Their music is considered by many as alternative metal with rap metal and industrial metal influences . According to previous interviews , they consider themselves `` murder rock '' .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:79",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "In 1915 , bus service began between Overlea and Belair called `` jitney buses . '' These operated for several years .",
+    "right": "In 1915 bus service began between Overlea and Belair `` Jitney buses '' , which operated for several years .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:80",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Sepahua is a district in southern Peru in the province of Atalaya .",
+    "right": "Sepahua is a district in the southern province of Atalaya in Peru .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:81",
+    "kind": "positive",
+    "label": 1,
+    "left": "On May 8 , 2015 , Michel Soro lost to Tapia .",
+    "right": "On 8 May 2015 , Michel Soro lost Tapia .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:82",
+    "kind": "positive",
+    "label": 1,
+    "left": "The music was written by Shyam and lyrics was composed by Sreekumaran Thampi and Sathyan Anthikkad .",
+    "right": "The music was written by Shyam and the lyrics by Sreekumaran Thampi and Sathyan Anthikkad composed .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:83",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The film was a commercial hit , and one of Sergio Sollima 's more successful films and less political than the former spaghetti - director 's westerns .",
+    "right": "The film was a commercial hit , and one of Sergio Sollima 's more political films , and less successful than the former spaghetti - director 's westerns .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:84",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The plantation spanned and grew both cotton and tobacco .",
+    "right": "The plantation grew about and spanned both cotton and tobacco .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:85",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The episode was written by Chuck Tatham and led by Fred Savage .",
+    "right": "The episode was written by Fred Savage and directed by Chuck Tatham .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:86",
+    "kind": "positive",
+    "label": 1,
+    "left": "In 2012 , Ned Evett released `` Treehouse '' , his sixth solo record , produced in Nashville Tennessee by musician Adrian Belew .",
+    "right": "In 2012 , Ned Evett `` Treehouse '' released his sixth solo record , produced in Nashville Tennessee by musician Adrian Belew .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:87",
+    "kind": "positive",
+    "label": 1,
+    "left": "North Northamptonshire was a county constituency in Northamptonshire , represented in the House of Commons of the Parliament of the United Kingdom .",
+    "right": "Northamptonshire was a county constituency in Northamptonshire , represented in the House of Commons of the United Kingdom Parliament .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:88",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Premalignant lesions are apparently a typical tissue , which appears abnormal in microscopic examinations and in which cancer is more likely than its morphologically normal counterpart .",
+    "right": "Premalignant lesions are morphologically atypical tissue that appears abnormal in microscopic examination and in which cancer is more likely than its apparently normal counterpart .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:89",
+    "kind": "positive",
+    "label": 1,
+    "left": "In February 2014 , Network Ten announced that Hugh Riminton would replace Danielle Isdale as presenter , and Victoria Murphy would become the sports presenter .",
+    "right": "In February 2014 , Network Ten announced that Hugh Riminton would replace Danielle Isdale as presenter and Victoria Murphy as sports presenter .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:90",
+    "kind": "positive",
+    "label": 1,
+    "left": "The crash of Aerosucre Flight 4544 was the second aviation incident involving Aerosucre , the first being the crash of another Boeing 727 on November 18 , 2006 .",
+    "right": "The crash of Aerosucre Flight 4544 was the second aviation incident with Aerosucre , the first being the crash of another Boeing 727 on November 18 , 2006 .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:91",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Sikhism is a religion that began in India in the first century with the mid-fifteenth Guru , known as Guru Nanak Dev Ji ( 1469-1539 C.E . ) .",
+    "right": "Sikhism is a religion that began with the first guru in India in the mid-15th century , known as Guru Nanak Dev Ji ( 1469-1539 C.E . ) .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:92",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The Cross Bronx Westbound serves south of Tremont Park , junction 3 , which serves Third Avenue .",
+    "right": "Passing south of Tremont Park , the Cross Bronx westbound serves exit 3 , which serves Third Avenue .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:93",
+    "kind": "positive",
+    "label": 1,
+    "left": "Among them are Marie Teresa Rios , a composer of Boleros , Julita Ross , author , and Sylvia Rexach , a singer .",
+    "right": "Among them are Marie Teresa Rios , a composer of boleros , Julita Ross , an author , and Sylvia Rexach , a singer .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:94",
+    "kind": "positive",
+    "label": 1,
+    "left": "Kabir asks Sarika to reveal his plan to end Ranvir 's game .",
+    "right": "Kabir asks Sarika to reveal his plan to end Ranvir 's game to him .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:95",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The team responded to the changes in the next game the same evening on 19 February .",
+    "right": "The team responded to the changes in the same game that took place next February evening .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:96",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "When it opened , the Director of BBC television was David Nixon , and the first programme broadcast was `` First Night '' with Gerald Beadle in Studio Three .",
+    "right": "When it was opened was the director of the BBC - TV Gerald Beadle , and the first broadcast was '' First Night `` with David Nixon in Studio Three .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:97",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Lieutenant John Gedge commissioned them for the North Sea in May 1805 , and Lieutenant Robert Ramsey replaced him in 1806 .",
+    "right": "Lieutenant Robert Ramsey commissioned her to the North Sea in May 1805 , and Lieutenant John Gedge replaced him in 1806 .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:98",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "While the exclusion of African players was not a written rule , no black-American had played in the National Football League since 1933 .",
+    "right": "While the exclusion of black players was not a written rule , since 1933 no Afro-American had played in the National Football League .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  },
+  {
+    "id": "paws-validation:99",
+    "kind": "positive",
+    "label": 1,
+    "left": "`` Trust in Me '' is a song written by Ned Wever , Milton Ager , and Jean Schwartz .",
+    "right": "`` Trust in Me '' is a song by Jean Schwartz , Milton Ager and Ned Wever written .",
+    "provenance": "PAWS labeled_final validation 0..99; upstream unrestricted-use permission (PAWS_LICENSE.txt); final heldout for this project, not used for calibration"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "document_id": "07_policy_rewording.docx",
+  "total_integrity_risk": "MEDIUM",
+  "scores": {
+    "peer_similarity_percentage": 0.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": 65.8
+  },
+  "peer_matches": [],
+  "multimodal_matches": [],
+  "explanations": "Peer similarity: 0.0% across 0 listed source(s) (no substantive peer overlap). External: 0.0% (none). AI: AI_LIKELY at 65.8%. Overlap types: 0 cross-modal, 0 exact-copy, 0 paraphrase, 0 discounted common-source.",
+  "status": "ok",
+  "modality": "docx",
+  "warnings": [],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": 65.8,
+    "label": "AI_LIKELY",
+    "p_classifier": 0.9996,
+    "p_perplexity": 0.0,
+    "p_burstiness": 0.5867,
+    "perplexity": 429.654,
+    "burstiness": 0.1303,
+    "length_gate_triggered": false,
+    "ai_detector_source": "model",
+    "caveat": "Note: AI detectors are unreliable on non-native-English and polished human text (Stanford 2023: up to 61% false-positive rate on ESL essays); treat this as a lead for human review, not proof."
+  },
+  "template_registry_hits": [],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {},
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 36736,
+    "sha256": "c92fc1e70651fdb48b825011ca22a6eb17350a8c07ba2d06a44c37bdf1a441a2",
+    "page_count": null,
+    "duration_s": null,
+    "asr_model": null,
+    "asr_language": null,
+    "chunk_count": 1,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T12:57:56Z"
+}

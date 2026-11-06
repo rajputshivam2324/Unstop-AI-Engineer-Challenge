@@ -68,6 +68,10 @@ def _build_parser() -> argparse.ArgumentParser:
                              "--input_dir, then exit")
     parser.add_argument("--skip-web", action="store_true",
                         help="disable the optional DuckDuckGo tier (local KB still runs)")
+    parser.add_argument("--matching-mode", default=None,
+                        choices=["baseline", "boundary", "semantic_sts",
+                                 "semantic_nli", "semantic_hybrid"],
+                        help="override matching mode; original baseline remains available")
     parser.add_argument("--log-level", default="INFO",
                         choices=["DEBUG", "INFO", "WARNING", "ERROR"])
     parser.add_argument("--seed", type=int, default=42,
@@ -221,7 +225,12 @@ def run_pipeline(input_dir: Path, output_dir: Path, cfg: Config,
                                           verify=gate)
     # S4b sentence-level evidence: candidate pairs from the chunk sieve + a sentence
     # FAISS index, scored by aligned-evidence coverage (A1)
-    aligner = DocumentAligner(embedder, registry, cfg, all_chunks)
+    if cfg.matching.mode == "baseline":
+        aligner = DocumentAligner(embedder, registry, cfg, all_chunks)
+    else:
+        from integrity_engine.enhanced_alignment import EnhancedDocumentAligner
+
+        aligner = EnhancedDocumentAligner(embedder, registry, cfg, all_chunks)
     pairs = evidence_pair_scores([d for d in docs if d.status == "ok"], aligner,
                                  chunk_pairs, duplicates, cfg.pairwise.chunk_query_topk)
     pairs_by_query: dict[str, list[Any]] = {}
@@ -236,6 +245,8 @@ def run_pipeline(input_dir: Path, output_dir: Path, cfg: Config,
             doc, pairs_by_query.get(doc.document_id, []), all_chunks, chunks_by_id,
             by_id, embedder, registry, cfg, align_pair, aligner)
     t = mark("alignment", t)
+    if hasattr(aligner, "release"):
+        aligner.release()  # verifier must not remain resident during AI detection
 
     # S5b external check (local KB always; web tier optional)
     kb = LocalReferenceKB(embedder, cfg, skip_web=skip_web)
@@ -401,6 +412,17 @@ def precache_models(cfg: Config) -> int:
         except Exception as exc:  # noqa: BLE001
             logger.error("model %s could not be cached: %s", repo, exc)
             status = 1
+    if cfg.matching.mode.startswith("semantic_"):
+        from integrity_engine.semantic import build_verifier
+
+        verifier = build_verifier(cfg.matching.mode.removeprefix("semantic_"), str(CACHE_DIR))
+        try:
+            verifier.load()
+        except RuntimeError as exc:
+            logger.error("%s", exc)
+            status = 1
+        finally:
+            verifier.release()
     return status
 
 
@@ -418,6 +440,13 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         cfg = load_config(Path(args.config) if args.config else None)
+        if args.matching_mode:
+            from dataclasses import replace
+
+            cfg = replace(cfg, matching=replace(cfg.matching, mode=args.matching_mode))
+        if cfg.matching.mode not in ("baseline", "boundary", "semantic_sts",
+                                     "semantic_nli", "semantic_hybrid"):
+            raise ValueError(f"unknown matching mode: {cfg.matching.mode}")
     except Exception as exc:  # noqa: BLE001 - parse error => exit 1
         logger.error("config could not be loaded: %s", exc)
         return 1

@@ -1,0 +1,267 @@
+{
+  "split": "development",
+  "mode": "semantic_nli",
+  "config": {
+    "mode": "semantic_nli",
+    "asr_max_gap_s": 1.5,
+    "boundary_max_units": 3,
+    "window_max_tokens": 120,
+    "retrieval_min_cos": 0.35,
+    "retrieval_topk": 5,
+    "verifier_topk": 3,
+    "max_verifications_per_pair": 48,
+    "nli_entailment_min": 0.7,
+    "nli_contradiction_max": 0.1,
+    "sts_min": 0.5
+  },
+  "metrics": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 6,
+    "tn": 10,
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "f1": 0.5
+  },
+  "timing": {
+    "embedding_load_s": 9.697082796001268,
+    "verifier_load_s": 1.4640304620006646,
+    "cases_total_s": 22.231053425995924,
+    "median_case_s": 0.3367840030005027,
+    "p95_case_s": 13.960101290000239,
+    "wall_s": 33.3944171080002
+  },
+  "peak_rss_mb": 1263.24609375,
+  "verifier_pairs_scored": 93,
+  "truncated_pairs": 0,
+  "cases": [
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 1.0806273550006154,
+      "passages": [],
+      "id": "d01",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.6554168129987374,
+      "passages": [],
+      "id": "d02",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 0.5454545454545454,
+      "seconds": 0.8361970790010673,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.5964,
+          "query_passage": "The farmer stored seeds in sealed metal drums to keep out moisture.",
+          "matched_passage": "A grower protected planting grain from damp weather using airtight steel containers.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.5964
+          ],
+          "note": "nli verified candidate: score=0.9833, contradiction=0.0001; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.0,
+          "token_lcs_ratio": 0.0
+        }
+      ],
+      "id": "d03",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.8550860729992564,
+      "passages": [],
+      "id": "d04",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.5849866139997175,
+      "passages": [],
+      "id": "d05",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.598191119999683,
+      "passages": [],
+      "id": "d06",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.3023707909997029,
+      "passages": [],
+      "id": "d07",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.24034865199973865,
+      "passages": [],
+      "id": "d08",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.25388863700027287,
+      "passages": [],
+      "id": "d09",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.2867730219986697,
+      "passages": [],
+      "id": "d10",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.29397970200079726,
+      "passages": [],
+      "id": "d11",
+      "kind": "contradiction",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.2778837099995144,
+      "passages": [],
+      "id": "d12",
+      "kind": "contradiction",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.3013262169988593,
+      "passages": [],
+      "id": "d13",
+      "kind": "contradiction",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.2946393439997337,
+      "passages": [],
+      "id": "d14",
+      "kind": "contradiction",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.27466833899961784,
+      "passages": [],
+      "id": "d15",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.3991489529998944,
+      "passages": [],
+      "id": "d16",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.3986357119993045,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.7444,
+          "query_passage": "The school delayed the examination until the flooded bridge reopened. Students on the far bank otherwise could not reach the classroom.",
+          "matched_passage": "Pupils across the river were unable to attend while floodwater closed the crossing. Their test was postponed until access was restored.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.7444
+          ],
+          "note": "nli verified candidate: score=0.9808, contradiction=0.0004; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.0588,
+          "token_lcs_ratio": 0.1429
+        }
+      ],
+      "id": "d17",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.3367840030005027,
+      "passages": [],
+      "id": "d18",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 13.960101290000239,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.6626,
+          "query_passage": "After a city removes library fines, the outstanding debt disappears, so apparent improvement in account balances says nothing about whether books come back sooner. Measure days overdue among loans issued after the change instead. Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+          "matched_passage": "The useful outcome is how late newly borrowed volumes are returned. An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.6626
+          ],
+          "note": "nli verified candidate: score=0.7187, contradiction=0.0244; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.0561,
+          "token_lcs_ratio": 0.0361
+        }
+      ],
+      "id": "confirmed_docx",
+      "kind": "positive",
+      "label": 1
+    }
+  ]
+}

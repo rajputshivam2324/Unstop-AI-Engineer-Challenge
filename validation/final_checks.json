@@ -1,0 +1,12 @@
+{
+  "all_local_report_links_resolve": true,
+  "git_tracked_changes": [],
+  "primary_counts_verified": true,
+  "reported_exact_evidence_verified": true,
+  "report_sha256": {
+    "ASSIGNMENT_VALIDATION.md": "1b2c117dbb99a3cc687702c78af26a0e35a223c0356512276e6f7b9bc34cdfb5",
+    "INDEPENDENT_EVALUATION.md": "3b5791fddbaa61f9567b6d1ce507d52c6bd85caae4cfdd131860b6a6d6fd7abd",
+    "OVERFITTING_ANALYSIS.md": "926afd8b90e5b3d3266b21c10a41aa98c54348cfb6643886f8a1b3d97e4305f0",
+    "VALIDATION_ISSUES.md": "2e2fd21a1d59c665e1b1b25aa309680553c667321fd0147cb01838aa7640564c"
+  }
+}

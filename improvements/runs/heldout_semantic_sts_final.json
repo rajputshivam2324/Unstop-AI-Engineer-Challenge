@@ -1,0 +1,2537 @@
+{
+  "split": "heldout",
+  "mode": "semantic_sts",
+  "config": {
+    "mode": "semantic_sts",
+    "asr_max_gap_s": 1.5,
+    "boundary_max_units": 3,
+    "window_max_tokens": 120,
+    "retrieval_min_cos": 0.35,
+    "retrieval_topk": 5,
+    "verifier_topk": 3,
+    "max_verifications_per_pair": 48,
+    "nli_entailment_min": 0.7,
+    "nli_contradiction_max": 0.1,
+    "sts_min": 0.5
+  },
+  "metrics": {
+    "tp": 41,
+    "fp": 51,
+    "fn": 6,
+    "tn": 2,
+    "precision": 0.44565217391304346,
+    "recall": 0.8723404255319149,
+    "f1": 0.5899280575539568
+  },
+  "timing": {
+    "embedding_load_s": 5.781234247999237,
+    "verifier_load_s": 0.518175858000177,
+    "cases_total_s": 18.639874770979077,
+    "median_case_s": 0.18848779399922932,
+    "p95_case_s": 0.23862217699934263,
+    "wall_s": 24.947780408001563
+  },
+  "peak_rss_mb": 806.34375,
+  "verifier_pairs_scored": 108,
+  "truncated_pairs": 0,
+  "cases": [
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.37866797499737004,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9773,
+          "query_passage": "Bradd Crellin represented BARLA Cumbria on a tour of Australia with 6 other players representing Britain , also on a tour of Australia .",
+          "matched_passage": "Bradd Crellin also represented BARLA Great Britain on a tour through Australia on a tour through Australia with 6 other players representing Cumbria .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9892, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8421,
+          "token_lcs_ratio": 0.5652
+        }
+      ],
+      "id": "paws-validation:0",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.1852918000004138,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9597,
+          "query_passage": "They were there to enjoy us and they were there to pray for us .",
+          "matched_passage": "They were there for us to enjoy and they were there for us to pray .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9791, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.7333
+        }
+      ],
+      "id": "paws-validation:1",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.2463556700022309,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9763,
+          "query_passage": "After the end of the war in June 1902 , Higgins left Southampton in the `` SSBavarian '' in August , returning to Cape Town the following month .",
+          "matched_passage": "In August , after the end of the war in June 1902 , Higgins Southampton left the `` SSBavarian '' and returned to Cape Town the following month .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9910, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8571,
+          "token_lcs_ratio": 0.7917
+        }
+      ],
+      "id": "paws-validation:2",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19707404599830625,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9059,
+          "query_passage": "From the merger of the Four Rivers Council and the Audubon Council , the Shawnee Trails Council was born .",
+          "matched_passage": "Shawnee Trails Council was formed from the merger of the Four Rivers Council and the Audubon Council .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9809, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8571,
+          "token_lcs_ratio": 0.6667
+        }
+      ],
+      "id": "paws-validation:3",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.1823695819985005,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9936,
+          "query_passage": "The group toured extensively and became famous in Israel , and even played in New York City in 2007 .",
+          "matched_passage": "The group toured extensively and was famous in Israel and even played in New York City in 2007 .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.9936
+          ],
+          "note": "verbatim copy (lexical Jaccard 0.88, token-LCS 0.94)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 0.875,
+          "token_lcs_ratio": 0.9444
+        }
+      ],
+      "id": "paws-validation:4",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.07322647099863389,
+      "passages": [],
+      "id": "paws-validation:5",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.2317070800017973,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.7785,
+          "query_passage": "Timora diarhoda is a species of moth of the Noctuidae family . It is found in Africa , including South Africa .",
+          "matched_passage": "Diarhoda is a kind of moth of the Noctuidae family . It is found in South Africa including Africa .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.8024, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8235,
+          "token_lcs_ratio": 0.8421
+        }
+      ],
+      "id": "paws-validation:6",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19581593000111752,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.8351,
+          "query_passage": "Most of these hotels were built along Biddle Avenue from Oak Street to Pine Street .",
+          "matched_passage": "Most of these homes were built along Biddle Avenue from Oak Street to Pine Street .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.8351
+          ],
+          "note": "verbatim copy (lexical Jaccard 0.87, token-LCS 0.93)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 0.8667,
+          "token_lcs_ratio": 0.9333
+        }
+      ],
+      "id": "paws-validation:7",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.6185821399994893,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9076,
+          "query_passage": "Joe R. Campa Jr. is a former sailor of the United States Navy , who served as the eleventh Master Chief Petty Officer of the U.S. Navy .",
+          "matched_passage": "Joe R. Campa Jr. is a former U.S. Navy Matrose who served as the 11th Master Chief Petty Officer of the United States Navy .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9224, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.84,
+          "token_lcs_ratio": 0.7037
+        }
+      ],
+      "id": "paws-validation:8",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.2183049410014064,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.998,
+          "query_passage": "The exception was between late 2005 and 2009 when he played in Sweden with Carlstad United BK , Serbia with FK Borac \u010ca\u010dak and Russian FC Terek Grozny .",
+          "matched_passage": "The exception was between late 2005 and 2009 , when he played in Sweden with Carlstad United BK , Serbia with FK Borac \u010ca\u010dak and the Russian FC Terek Grozny .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.998
+          ],
+          "note": "verbatim copy (lexical Jaccard 1.00, token-LCS 0.96)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.9643
+        }
+      ],
+      "id": "paws-validation:9",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.1987875949998852,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9682,
+          "query_passage": "The river Valea Sterminoas\u0103 is a tributary of the River Boia Mic\u0103a in Romania .",
+          "matched_passage": "The River Boia Mic\u0103 is a tributary of the River Valea Sterminoas\u0103 in Romania .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9907, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8462,
+          "token_lcs_ratio": 0.7143
+        }
+      ],
+      "id": "paws-validation:10",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18608470399703947,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9805,
+          "query_passage": "The Tabaci River is a tributary of the River Leurda in Romania .",
+          "matched_passage": "The Leurda River is a tributary of the River Tabaci in Romania .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9899, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.8333
+        }
+      ],
+      "id": "paws-validation:11",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.2029952359989693,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9531,
+          "query_passage": "Cook Pond , also known as the South Watuppa Pond , is located south east of Laurel Lake and west of the Taunton River .",
+          "matched_passage": "Cook Pond , also formerly known as Laurel Lake , is located south east of the Taunton River and west of the South Watuppa Pond .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9900, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.9474,
+          "token_lcs_ratio": 0.6087
+        }
+      ],
+      "id": "paws-validation:12",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19618497000192292,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9861,
+          "query_passage": "`` Taunton Castle '' was on August 1 in Rio de Janeiro and on October 31 in Penang .",
+          "matched_passage": "`` Taunton Castle '' was at Penang on 1 August and Rio de Janeiro on 31 October .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9727, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8667,
+          "token_lcs_ratio": 0.625
+        }
+      ],
+      "id": "paws-validation:13",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18705325999690103,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9827,
+          "query_passage": "The family moved to Camp Hill in 1972 , where he attended Trinity High School in Harrisburg , Pennsylvania .",
+          "matched_passage": "In 1972 , the family moved to Camp Hill , where he visited the Trinity High School in Harrisburg , Pennsylvania .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9908, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8824,
+          "token_lcs_ratio": 0.7778
+        }
+      ],
+      "id": "paws-validation:14",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18576392600152758,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9954,
+          "query_passage": "A recording of folk songs done for the Columbia society in 1942 was largely arranged by Pjet\u00ebr Dungu .",
+          "matched_passage": "A recording of folk songs made for the Columbia society in 1942 was largely arranged by Pjet\u00ebr Dungu .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.9954
+          ],
+          "note": "verbatim copy (lexical Jaccard 0.89, token-LCS 0.94)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 0.8947,
+          "token_lcs_ratio": 0.9444
+        }
+      ],
+      "id": "paws-validation:15",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.05914722400120809,
+      "passages": [],
+      "id": "paws-validation:16",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.15883239799950388,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9969,
+          "query_passage": "Components of elastic potential systems store mechanical energy if they are deformed when forces are applied to the system .",
+          "matched_passage": "Components of elastic potential systems store mechanical energy if they are deformed to the system when applied to forces .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9893, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.7895
+        }
+      ],
+      "id": "paws-validation:17",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.15118529800020042,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9734,
+          "query_passage": "Earl St Vincent was a British ship that was captured in 1803 and became a French trade man .",
+          "matched_passage": "Earl St Vincent was a British ship that was captured and became a French merchantman in 1803 .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9841, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8235,
+          "token_lcs_ratio": 0.7778
+        }
+      ],
+      "id": "paws-validation:18",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.15127455399851897,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9894,
+          "query_passage": "He played with the A-level Kane County Cougars in 1993 and the AA Portland Sea Dogs .",
+          "matched_passage": "He played in 1993 with the A - Level Portland Sea Dogs and the AA Kane County Cougars .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9909, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.5294
+        }
+      ],
+      "id": "paws-validation:19",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.07770739999978105,
+      "passages": [],
+      "id": "paws-validation:20",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.15777493600035086,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9772,
+          "query_passage": "They are overlaid with sparse live orchestral music and consist of vague , almost deliberately colorless sounds .",
+          "matched_passage": "They are overlaid with colourless , live played music and consist of vague , almost consciously sparse orchestral sounds .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9906, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.7368,
+          "token_lcs_ratio": 0.7059
+        }
+      ],
+      "id": "paws-validation:21",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.17490811999959988,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.993,
+          "query_passage": "In mathematical astronomy , his fame is due to the introduction of the astronomical globe , and his early contributions to understanding the movement of the planets .",
+          "matched_passage": "His fame is due in mathematical astronomy to the introduction of the astronomical globe and to his early contributions to the understanding of the movement of the planets .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9897, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.7857
+        }
+      ],
+      "id": "paws-validation:22",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.15774923500066507,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9744,
+          "query_passage": "She was only a few months in French service when she met some British frigates in 1809 .",
+          "matched_passage": "She was only in British service for a few months , when in 1809 , she encountered some French frigates .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9892, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8235,
+          "token_lcs_ratio": 0.5556
+        }
+      ],
+      "id": "paws-validation:23",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.2085199389985064,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.984,
+          "query_passage": "The Hudson County , New Jersey , also spelled as `` Macpelah Cemetery '' , or `` Macphelah Cemetery '' , is a cemetery in Machpelah Cemetery .",
+          "matched_passage": "The Machpelah Cemetery , also spelled as '' Macpelah Cemetery `` or '' Macphelah Cemetery `` , is a graveyard in Hudson County , New Jersey .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9904, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.9412,
+          "token_lcs_ratio": 0.6316
+        }
+      ],
+      "id": "paws-validation:24",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.1732128690018726,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9798,
+          "query_passage": "Winarsky is a member of the IEEE , Phi Beta Kappa , the ACM and Sigma Xi .",
+          "matched_passage": "Winarsky is a member of ACM , the IEEE , the Phi Beta Kappa and the Sigma Xi .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9892, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.8125
+        }
+      ],
+      "id": "paws-validation:25",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.1756230820028577,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9888,
+          "query_passage": "In 1938 he became the government anthropologist of the anglo-Egyptian Sudan and led fieldwork with the Nuba .",
+          "matched_passage": "In 1938 he became the Government Anthropologist of the Egyptian-Anglo Sudan and conducted fieldwork with the Nuba .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9843, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8824,
+          "token_lcs_ratio": 0.8889
+        }
+      ],
+      "id": "paws-validation:26",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.17034107700237655,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9744,
+          "query_passage": "Billy Billy Batson appeared in the first four issues of `` Black Adam '' , published between late 2008 and early 2009 .",
+          "matched_passage": "Black Adam appeared in the first four issues of `` Billy Batson '' , published between late 2008 and early 2009 .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9915, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.7368
+        }
+      ],
+      "id": "paws-validation:27",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.1721243969986972,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.8882,
+          "query_passage": "Aamir Khan has agreed to play immediately after reading Mehra 's script in `` Rang De Basanti '' .",
+          "matched_passage": "Mehra agreed to act in `` Rang De Basanti '' immediately after reading Aamir Khan 's script .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9175, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8235,
+          "token_lcs_ratio": 0.4375
+        }
+      ],
+      "id": "paws-validation:28",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.16910531100074877,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9711,
+          "query_passage": "The film had a limited release in Thailand cinemas on October 18 , 2007 , and released in Singapore on October 25 .",
+          "matched_passage": "The film had a limited publication in cinemas in Singapore on 18 October 2007 and was released in Thailand on 25 October .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9819, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8421,
+          "token_lcs_ratio": 0.6818
+        }
+      ],
+      "id": "paws-validation:29",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.20095783400029177,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9596,
+          "query_passage": "Mandarin - Chinese has specific terms and racial euphemisms for different races and ethnicities , and some discriminatory attacks against representatives of certain governments and backgrounds .",
+          "matched_passage": "Mandarin Chinese has specific terms and racial euphemisms for different races and ethnicities , and some discriminatory slurs against representatives from certain governments and backgrounds .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.9596
+          ],
+          "note": "verbatim copy (lexical Jaccard 0.83, token-LCS 0.92)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 0.8261,
+          "token_lcs_ratio": 0.9167
+        }
+      ],
+      "id": "paws-validation:30",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.15304656100124703,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9977,
+          "query_passage": "The solar approach to this requirement is the use of solar panels in a conventional-powered aircraft .",
+          "matched_passage": "The solar approach to this requirement is the use of solar panels in a conventionally powered aircraft .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.9977
+          ],
+          "note": "verbatim copy (lexical Jaccard 0.88, token-LCS 0.94)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 0.875,
+          "token_lcs_ratio": 0.9412
+        }
+      ],
+      "id": "paws-validation:31",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.17573943800016423,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9444,
+          "query_passage": "In the reviews below will be the highest rating for the show in red , and the lowest evaluation for the show will be in blue episode .",
+          "matched_passage": "In the reviews below will be the lowest rating for the show in red , and the highest rating for the show will be in blue sequence .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9672, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8235,
+          "token_lcs_ratio": 0.8462
+        }
+      ],
+      "id": "paws-validation:32",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.14725171300233342,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9878,
+          "query_passage": "Christopher Harris was the second son of William Harris . His elder brother , Harris , was MP for Okehampton .",
+          "matched_passage": "William Harris was the second son of William Harris , his elder brother Christopher Harris was MP for Okehampton .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9904, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.8889
+        }
+      ],
+      "id": "paws-validation:33",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.1980486770007701,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9988,
+          "query_passage": "The police also questioned singer Rimi Tomy and the actor Kavya Madhavan , both close friends of Siddique and his wife Dileep , as part of the ongoing investigation .",
+          "matched_passage": "The police also questioned singer Rimi Tomy and actor Kavya Madhavan , both close friends of Siddique and his wife Dileep , as part of the ongoing investigation .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.9988
+          ],
+          "note": "verbatim copy (lexical Jaccard 1.00, token-LCS 0.96)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.963
+        }
+      ],
+      "id": "paws-validation:34",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.1650015240011271,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9652,
+          "query_passage": "They are overlaid with sparse live orchestral music and consist of vague , almost deliberately colorless sounds .",
+          "matched_passage": "They are overlaid with colour-free , live played music and consist of vague , almost deliberately sparse orchestral sounds .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9861, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.7895,
+          "token_lcs_ratio": 0.7222
+        }
+      ],
+      "id": "paws-validation:35",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.16414652999810642,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 1.0,
+          "query_passage": "Its music critics included Julius Korngold ( 1864 -- 1904 ) and Eduard Hanslick ( 1904 -- 1934 ) .",
+          "matched_passage": "Its music critics included Julius Korngold ( 1864 -- 1904 ) and Eduard Hanslick ( 1904 -- 1934 ) .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            1.0
+          ],
+          "note": "verbatim copy (lexical Jaccard 1.00, token-LCS 1.00)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 1.0
+        }
+      ],
+      "id": "paws-validation:36",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.0570677079995221,
+      "passages": [],
+      "id": "paws-validation:37",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.15959408399794484,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9863,
+          "query_passage": "The team responded to the changes in the next game the same evening on 19 February .",
+          "matched_passage": "The team responded to the changes in the same game that next February 19 evening .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9911, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8571,
+          "token_lcs_ratio": 0.625
+        }
+      ],
+      "id": "paws-validation:38",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.15888352099864278,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9932,
+          "query_passage": "The Nashua Silver Knights , part of a current summer league , is the collegiate team of the city .",
+          "matched_passage": "The Nashua Silver Knights , part of a summer collegiate league , is the current team of the city .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9905, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.8824
+        }
+      ],
+      "id": "paws-validation:39",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19015832099830732,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.8906,
+          "query_passage": "Somatherapy ( or Soma ) was created by the Wilhelm Reich in the 1970s as a group therapy , based on the research of the psychoanalyst Freire .",
+          "matched_passage": "Soma therapy ( or Soma ) was created in the 1970s by Freire as a group therapy based on the research of the psychoanalyst Wilhelm Reich .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9521, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.9524,
+          "token_lcs_ratio": 0.75
+        }
+      ],
+      "id": "paws-validation:40",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.05317232699962915,
+      "passages": [],
+      "id": "paws-validation:41",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.14903957199931028,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9962,
+          "query_passage": "The Tabaci River is a tributary of the Leurda River in Romania .",
+          "matched_passage": "The river Tabaci is a tributary of the River Leurda in Romania .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9903, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.8333
+        }
+      ],
+      "id": "paws-validation:42",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19273203199918498,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9574,
+          "query_passage": "Jacob Markell ( May 8 , 1770 -- November 26 , 1852 ) was a New York representative of Henry Markell 's father .",
+          "matched_passage": "Henry Markell ( May 8 , 1770 -- November 26 , 1852 ) was a U.S. Representative from New York , father of Jacob Markell .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9905, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8947,
+          "token_lcs_ratio": 0.65
+        }
+      ],
+      "id": "paws-validation:43",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.16393889200116973,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9653,
+          "query_passage": "Aamir Khan agreed to act immediately after reading Mehra 's screenplay in `` Rang De Basanti '' .",
+          "matched_passage": "Aamir Khan agreed to act in `` Rang De Basanti '' immediately after reading Mehra 's script .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9911, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.875,
+          "token_lcs_ratio": 0.6667
+        }
+      ],
+      "id": "paws-validation:44",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18848779399922932,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9901,
+          "query_passage": "Loyang 's team defeated Xinmin Secondary School in the opening round and Raffles Institution in the quarter-finals , before losing to Hwa Chong Institution in the semi-finals .",
+          "matched_passage": "The Loyang team defeated Xinmin Secondary School in the opening round and Raffles Institution in the quarterfinals before losing to the Hwa Chong Institution in the semi-finals .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9889, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8696,
+          "token_lcs_ratio": 0.8929
+        }
+      ],
+      "id": "paws-validation:45",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.2190432300012617,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9994,
+          "query_passage": "Retzius was born in Stockholm , son of the anatomist Anders Jahan Retzius ( and grandson of the naturalist and chemist Anders Retzius ) .",
+          "matched_passage": "Retzius was born in Stockholm , the son of anatomist Anders Jahan Retzius ( and grandson of the naturalist and chemist Anders Retzius ) .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.9994
+          ],
+          "note": "verbatim copy (lexical Jaccard 1.00, token-LCS 0.95)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.9524
+        }
+      ],
+      "id": "paws-validation:46",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19638080499862554,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.8856,
+          "query_passage": "The `` Fallbeil '' was used for the last time in West Germany in 1949 , in East Germany in 1966 .",
+          "matched_passage": "The `` Fall Beil '' was used for the last time in West Germany in 1949 , in 1966 in East Germany .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9910, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8,
+          "token_lcs_ratio": 0.7895
+        }
+      ],
+      "id": "paws-validation:47",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.17608033099895692,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9817,
+          "query_passage": "The tracks were produced by Tommy Lee , and feature Michael Beinhorn on drums .",
+          "matched_passage": "The tracks were produced by Michael Beinhorn and have Tommy Lee on drums .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9901, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8571,
+          "token_lcs_ratio": 0.6923
+        }
+      ],
+      "id": "paws-validation:48",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.22502134000023943,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9551,
+          "query_passage": "When Jack Nitzsche first heard `` Stubborn Kind of Fellow '' he was so excited he lost control of his car while driving down Sunset Boulevard with Phil Spector .",
+          "matched_passage": "When Phil Spector first listened to `` Stubborn Kind of Fellow '' , he was so excited that he lost control of his car while driving down the Sunset Boulevard with Jack Nitzsche .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9897, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8276,
+          "token_lcs_ratio": 0.7333
+        }
+      ],
+      "id": "paws-validation:49",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18089468000107445,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.983,
+          "query_passage": "The canal is one of the oldest navigable canals in Europe and in Belgium .",
+          "matched_passage": "The canal is one of the oldest navigable canals in Belgium and indeed in Europe .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9872, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.9231,
+          "token_lcs_ratio": 0.8
+        }
+      ],
+      "id": "paws-validation:50",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.17368890600118903,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9827,
+          "query_passage": "In 2009 he moved back to Philadelphia and lives in New York City today .",
+          "matched_passage": "He moved back to Philadelphia in 2009 and now lives in New York City .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9897, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8571,
+          "token_lcs_ratio": 0.7857
+        }
+      ],
+      "id": "paws-validation:51",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.20088408200172125,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9365,
+          "query_passage": "He died of stomach cancer in Claremore , Oklahoma , New York City , where the Lynn Riggs Memorial is located on June 30 , 1954 .",
+          "matched_passage": "He died on June 30 , 1954 , of stomach cancer in New York City . Claremore , Oklahoma is home to the Lynn Riggs Memorial .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9821, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8333,
+          "token_lcs_ratio": 0.5909
+        }
+      ],
+      "id": "paws-validation:52",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19264410200048587,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.984,
+          "query_passage": "Jeff Francisco managed the custom installation business and retail store where he studied product development and developed custom systems for the company .",
+          "matched_passage": "Jeff Francisco developed the Custom Installation Business and Retail Store , where he studied product development and headed custom systems for the company .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.984
+          ],
+          "note": "verbatim copy (lexical Jaccard 0.90, token-LCS 0.91)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 0.9,
+          "token_lcs_ratio": 0.9091
+        }
+      ],
+      "id": "paws-validation:53",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19099306099815294,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9858,
+          "query_passage": "Stipsits was born in Korneuburg , Germany and spent his childhood in Stammersdorf , Vienna .",
+          "matched_passage": "Stipsits was born in Korneuburg , and spent his childhood in Stammersdorf , Vienna .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.9858
+          ],
+          "note": "verbatim copy (lexical Jaccard 0.92, token-LCS 0.92)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 0.9167,
+          "token_lcs_ratio": 0.9231
+        }
+      ],
+      "id": "paws-validation:54",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18407202700109337,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9957,
+          "query_passage": "A multiverse is a collection of alternative universes with a similar nature and universal hierarchy .",
+          "matched_passage": "A multiverse is a collection of alternative universes with universal nature and a similar hierarchy .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9906, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.8
+        }
+      ],
+      "id": "paws-validation:55",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19274390400096308,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9837,
+          "query_passage": "The station was established in 1947 by the British Falkland Islands Dependencies Survey as Station F or `` Winter Island '' in the Argentine islands .",
+          "matched_passage": "The station was founded in 1947 by the British Falkland Islands Dependencies Survey as Station F or `` Argentine Island '' on Winter Island .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9896, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.85,
+          "token_lcs_ratio": 0.7826
+        }
+      ],
+      "id": "paws-validation:56",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19337729200196918,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.995,
+          "query_passage": "Daudkhali is a village in Barisal Division in the Pirojpur district in southwestern Bangladesh .",
+          "matched_passage": "Daudkhali is a village in Pirojpur District in the Barisal Division of southwestern Bangladesh .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9910, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.9231,
+          "token_lcs_ratio": 0.7143
+        }
+      ],
+      "id": "paws-validation:57",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18060302499725367,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9422,
+          "query_passage": "Slough High School was a girls selective grammar school in Slough , Buckinghamshire , now Berkshire .",
+          "matched_passage": "Slough High School was a selective girls ' school in Berkshire , now Slough , Buckinghamshire .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9758, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.9167,
+          "token_lcs_ratio": 0.7143
+        }
+      ],
+      "id": "paws-validation:58",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18558729799769935,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9947,
+          "query_passage": "The temple serves as the cultural and religious center for Korean Hindus and immigrants from South Asian countries .",
+          "matched_passage": "The temple serves as a cultural and religious centre for Korean Hindus and immigrants from the South Asian countries .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9907, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8333,
+          "token_lcs_ratio": 0.8421
+        }
+      ],
+      "id": "paws-validation:59",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19681717100320384,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9829,
+          "query_passage": "In the new TV-series '' Dead Gorgeous '' , Alexandra Coppinger played the role of the youngest sister Hazel .",
+          "matched_passage": "Hazel played the role of Alexandra Coppinger , the youngest sister , in the new TV series `` Dead Gorgeous '' .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9912, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.4118
+        }
+      ],
+      "id": "paws-validation:60",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18321053899853723,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9962,
+          "query_passage": "Lucas Dumbrell Motorsport replaced Aaren Russell with Alex Davison for this event and the following .",
+          "matched_passage": "Lucas Dumbrell Motorsport replaced Alex Davison with Aaren Russell for this and the following event .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9895, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.7333
+        }
+      ],
+      "id": "paws-validation:61",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.192017837001913,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.984,
+          "query_passage": "His large sculptures can be seen in public spaces in New Zealand , from Kaitaia to Wanaka and many localities in between .",
+          "matched_passage": "His large sculptures can be seen in public spaces in Wanaka , from New Zealand to Kaitaia and many places in between .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9883, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.9,
+          "token_lcs_ratio": 0.8095
+        }
+      ],
+      "id": "paws-validation:62",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.21490403400093783,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9941,
+          "query_passage": "When a surface has a constant zero developable curvature , then it is a Euclidean surface and the geometry of the surface is Gaussian geometry .",
+          "matched_passage": "If a surface has a constant developable curvature of zero , then it is an euclidean surface and the geometry of the surface is a Gaussian geometry .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9830, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8421,
+          "token_lcs_ratio": 0.8077
+        }
+      ],
+      "id": "paws-validation:63",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19418262900217087,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9597,
+          "query_passage": "Was born Martins Pena in Rio de Janeiro , Jo\u00e3o Martins Pena and Francisca de Paula Julieta Pena .",
+          "matched_passage": "Jo\u00e3o Martins Pena and Francisca de Paula Julieta Pena was born in Rio de Janeiro , to Martins Pena .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9784, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.9286,
+          "token_lcs_ratio": 0.5
+        }
+      ],
+      "id": "paws-validation:64",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19032125999729033,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9894,
+          "query_passage": "The following is a list of fouls established by the states that regulate MMA , as outlined by the Nevada State Athletic Commission .",
+          "matched_passage": "The following is a list of fouls defined by the states that regulate MMA as outlined by the Nevada State Athletic Commission .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.9894
+          ],
+          "note": "verbatim copy (lexical Jaccard 0.90, token-LCS 0.95)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 0.9,
+          "token_lcs_ratio": 0.9545
+        }
+      ],
+      "id": "paws-validation:65",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18964966799831018,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9878,
+          "query_passage": "The Keita dynasty ruled pre-imperial and imperial Mali from the 12th century into the early 17th century .",
+          "matched_passage": "The Keita dynasty ruled Mali from the 12th to the early 17th century , pre-imperial and imperial .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9886, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8667,
+          "token_lcs_ratio": 0.6667
+        }
+      ],
+      "id": "paws-validation:66",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18130527599714696,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9677,
+          "query_passage": "`` Angel Eyes '' is a 1946 popular song composed by Matt Dennis , with lyrics by Earl Brent .",
+          "matched_passage": "`` Angel Eyes '' is a popular song composed by Earl Brent in 1946 , with texts by Matt Dennis .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.8784, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8235,
+          "token_lcs_ratio": 0.5882
+        }
+      ],
+      "id": "paws-validation:67",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.1998810949990002,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9513,
+          "query_passage": "Jonathan Erlich and Andy Ram won the title and defeated Mark Knowles and Daniel Nestor 5 -- 3 , 5 -- 4 in the final .",
+          "matched_passage": "Mark Knowles and Daniel Nestor won the title , defeating Jonathan Erlich and Andy Ram in the final with 5 : 3 , 5 : 4 .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9795, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.85,
+          "token_lcs_ratio": 0.4545
+        }
+      ],
+      "id": "paws-validation:68",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18225713799984078,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9924,
+          "query_passage": "The compound was patented by Dr. Patrick Page and his team and was invented by Genkyotex in 2007 .",
+          "matched_passage": "The compound was patented by Dr. Patrick Page and his team , and was invented in 2007 by Genkyotex .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9900, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.8889
+        }
+      ],
+      "id": "paws-validation:69",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.17773772800137522,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9948,
+          "query_passage": "Example milestones are beating a World Series champion team , beating historical teams and playing other players head to head .",
+          "matched_passage": "Example milestones are beating a World Series Champion team , playing historic teams and beating other players head to head .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9911, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8889,
+          "token_lcs_ratio": 0.8421
+        }
+      ],
+      "id": "paws-validation:70",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.1762193840004329,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9783,
+          "query_passage": "The magazine was published by Paul Cassirer in 1910 , revived by his Pan-Presse .",
+          "matched_passage": "The magazine was revived in 1910 by Paul Cassirer , published by his pan-press .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9020, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8571,
+          "token_lcs_ratio": 0.6429
+        }
+      ],
+      "id": "paws-validation:71",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.21730020899849478,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9913,
+          "query_passage": "When Phil Spector heard `` Stubborn Kind of Fellow '' for the first time , he was so excited that he lost control of his car while driving down the Sunset Boulevard with Jack Nitzsche .",
+          "matched_passage": "When Phil Spector first heard `` Stubborn Kind of Fellow '' he was so excited he lost control of his car while driving down Sunset Boulevard with Jack Nitzsche .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9909, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8621,
+          "token_lcs_ratio": 0.8125
+        }
+      ],
+      "id": "paws-validation:72",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.22447455499786884,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9922,
+          "query_passage": "This genus is presently in the family of lizards known as Iguanidae , subfamily Polychrotinae , and is no longer classified in the now invalid family , Polychrotidae .",
+          "matched_passage": "This genus is currently classified in the family of lizards , known as Iguanidae , subfamily Polychrotinae , and is no longer classified in the now invalid family , polychrotidae .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.9922
+          ],
+          "note": "verbatim copy (lexical Jaccard 0.91, token-LCS 0.92)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 0.9091,
+          "token_lcs_ratio": 0.9231
+        }
+      ],
+      "id": "paws-validation:73",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.2059206659978372,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9821,
+          "query_passage": "The first section , from Hokitika to Ruatapu , was completed on 9 November 1906 , and on 1 April 1909 the complete line was opened for Ross .",
+          "matched_passage": "The first section , from Hokitika to Ruatapu , was opened on 9 November 1906 , and the full line to Ross was completed on 1 April 1909 .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9900, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8696,
+          "token_lcs_ratio": 0.68
+        }
+      ],
+      "id": "paws-validation:74",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.10181553399888799,
+      "passages": [],
+      "id": "paws-validation:75",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19318564800050808,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.983,
+          "query_passage": "The racial Rubber Bowl was used by the National Guard of the United States as a base during the historical Wooster Avenue Riots of 1968 .",
+          "matched_passage": "The historic Rubber Bowl was used by the National Guard of the United States as the base during the racist Wooster Avenue Riots of 1968 .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9840, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.7826,
+          "token_lcs_ratio": 0.88
+        }
+      ],
+      "id": "paws-validation:76",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.23245340100038447,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9817,
+          "query_passage": "Born in South Korea , he lived in Brazil for 9 years since 2002 and played football there for 5 years . He started his professional career in 2007 .",
+          "matched_passage": "Born in South Korea , he lived since 2002 for 9 years in Brazil , played there 5 years of football and started his career in 2007 .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9421, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.913,
+          "token_lcs_ratio": 0.6667
+        }
+      ],
+      "id": "paws-validation:77",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19998592699994333,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9616,
+          "query_passage": "Their music is considered by many as an industrial metal with rap metal and alternative metal influences , according to previous interviews they consider themselves '' murder - rock `` .",
+          "matched_passage": "Their music is considered by many as alternative metal with rap metal and industrial metal influences . According to previous interviews , they consider themselves `` murder rock '' .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9911, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.9583,
+          "token_lcs_ratio": 0.8846
+        }
+      ],
+      "id": "paws-validation:78",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.2526366109996161,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9824,
+          "query_passage": "In 1915 , bus service began between Overlea and Belair called `` jitney buses . '' These operated for several years .",
+          "matched_passage": "In 1915 bus service began between Overlea and Belair `` Jitney buses '' , which operated for several years .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9871, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8333,
+          "token_lcs_ratio": 0.8824
+        }
+      ],
+      "id": "paws-validation:79",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18037499299680348,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9981,
+          "query_passage": "Sepahua is a district in southern Peru in the province of Atalaya .",
+          "matched_passage": "Sepahua is a district in the southern province of Atalaya in Peru .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9906, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.75
+        }
+      ],
+      "id": "paws-validation:80",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.06814337299874751,
+      "passages": [],
+      "id": "paws-validation:81",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.20376369599762256,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9948,
+          "query_passage": "The music was written by Shyam and lyrics was composed by Sreekumaran Thampi and Sathyan Anthikkad .",
+          "matched_passage": "The music was written by Shyam and the lyrics by Sreekumaran Thampi and Sathyan Anthikkad composed .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9867, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.875
+        }
+      ],
+      "id": "paws-validation:82",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.21404331399753573,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9924,
+          "query_passage": "The film was a commercial hit , and one of Sergio Sollima 's more successful films and less political than the former spaghetti - director 's westerns .",
+          "matched_passage": "The film was a commercial hit , and one of Sergio Sollima 's more political films , and less successful than the former spaghetti - director 's westerns .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.9924
+          ],
+          "note": "verbatim copy (lexical Jaccard 1.00, token-LCS 0.92)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.92
+        }
+      ],
+      "id": "paws-validation:83",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.07242742000016733,
+      "passages": [],
+      "id": "paws-validation:84",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.17070138700000825,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9601,
+          "query_passage": "The episode was written by Chuck Tatham and led by Fred Savage .",
+          "matched_passage": "The episode was written by Fred Savage and directed by Chuck Tatham .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9272, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8333,
+          "token_lcs_ratio": 0.5833
+        }
+      ],
+      "id": "paws-validation:85",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.20130047400016338,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9922,
+          "query_passage": "In 2012 , Ned Evett released `` Treehouse '' , his sixth solo record , produced in Nashville Tennessee by musician Adrian Belew .",
+          "matched_passage": "In 2012 , Ned Evett `` Treehouse '' released his sixth solo record , produced in Nashville Tennessee by musician Adrian Belew .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.9922
+          ],
+          "note": "verbatim copy (lexical Jaccard 1.00, token-LCS 0.94)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.9444
+        }
+      ],
+      "id": "paws-validation:86",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19950660800168407,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9564,
+          "query_passage": "North Northamptonshire was a county constituency in Northamptonshire , represented in the House of Commons of the Parliament of the United Kingdom .",
+          "matched_passage": "Northamptonshire was a county constituency in Northamptonshire , represented in the House of Commons of the United Kingdom Parliament .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9898, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.9333,
+          "token_lcs_ratio": 0.8095
+        }
+      ],
+      "id": "paws-validation:87",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.19997167899782653,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9688,
+          "query_passage": "Premalignant lesions are apparently a typical tissue , which appears abnormal in microscopic examinations and in which cancer is more likely than its morphologically normal counterpart .",
+          "matched_passage": "Premalignant lesions are morphologically atypical tissue that appears abnormal in microscopic examination and in which cancer is more likely than its apparently normal counterpart .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.8127, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.7692,
+          "token_lcs_ratio": 0.76
+        }
+      ],
+      "id": "paws-validation:88",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.1945543229994655,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9913,
+          "query_passage": "In February 2014 , Network Ten announced that Hugh Riminton would replace Danielle Isdale as presenter , and Victoria Murphy would become the sports presenter .",
+          "matched_passage": "In February 2014 , Network Ten announced that Hugh Riminton would replace Danielle Isdale as presenter and Victoria Murphy as sports presenter .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9912, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.9048,
+          "token_lcs_ratio": 0.8696
+        }
+      ],
+      "id": "paws-validation:89",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.21186839599977247,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9987,
+          "query_passage": "The crash of Aerosucre Flight 4544 was the second aviation incident involving Aerosucre , the first being the crash of another Boeing 727 on November 18 , 2006 .",
+          "matched_passage": "The crash of Aerosucre Flight 4544 was the second aviation incident with Aerosucre , the first being the crash of another Boeing 727 on November 18 , 2006 .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.9987
+          ],
+          "note": "verbatim copy (lexical Jaccard 0.90, token-LCS 0.96)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 0.9048,
+          "token_lcs_ratio": 0.9615
+        }
+      ],
+      "id": "paws-validation:90",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.23862217699934263,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9846,
+          "query_passage": "Sikhism is a religion that began in India in the first century with the mid-fifteenth Guru , known as Guru Nanak Dev Ji ( 1469-1539 C.E . ) .",
+          "matched_passage": "Sikhism is a religion that began with the first guru in India in the mid-15th century , known as Guru Nanak Dev Ji ( 1469-1539 C.E . ) .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9806, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.92,
+          "token_lcs_ratio": 0.7778
+        }
+      ],
+      "id": "paws-validation:91",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.182827950000501,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9393,
+          "query_passage": "The Cross Bronx Westbound serves south of Tremont Park , junction 3 , which serves Third Avenue .",
+          "matched_passage": "Passing south of Tremont Park , the Cross Bronx westbound serves exit 3 , which serves Third Avenue .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9812, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8125,
+          "token_lcs_ratio": 0.625
+        }
+      ],
+      "id": "paws-validation:92",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.2010155930001929,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9992,
+          "query_passage": "Among them are Marie Teresa Rios , a composer of Boleros , Julita Ross , author , and Sylvia Rexach , a singer .",
+          "matched_passage": "Among them are Marie Teresa Rios , a composer of boleros , Julita Ross , an author , and Sylvia Rexach , a singer .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.9992
+          ],
+          "note": "verbatim copy (lexical Jaccard 0.94, token-LCS 0.95)",
+          "overlap_kind": "verbatim",
+          "lexical_jaccard": 0.9444,
+          "token_lcs_ratio": 0.9474
+        }
+      ],
+      "id": "paws-validation:93",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18304403799993452,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9965,
+          "query_passage": "Kabir asks Sarika to reveal his plan to end Ranvir 's game .",
+          "matched_passage": "Kabir asks Sarika to reveal his plan to end Ranvir 's game to him .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9682, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.9167,
+          "token_lcs_ratio": 0.8571
+        }
+      ],
+      "id": "paws-validation:94",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.17936111200106097,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9549,
+          "query_passage": "The team responded to the changes in the next game the same evening on 19 February .",
+          "matched_passage": "The team responded to the changes in the same game that took place next February evening .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.7484, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.6875,
+          "token_lcs_ratio": 0.625
+        }
+      ],
+      "id": "paws-validation:95",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.2181056859990349,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9831,
+          "query_passage": "When it opened , the Director of BBC television was David Nixon , and the first programme broadcast was `` First Night '' with Gerald Beadle in Studio Three .",
+          "matched_passage": "When it was opened was the director of the BBC - TV Gerald Beadle , and the first broadcast was '' First Night `` with David Nixon in Studio Three .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9911, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8696,
+          "token_lcs_ratio": 0.6923
+        }
+      ],
+      "id": "paws-validation:96",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18922692199703306,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9228,
+          "query_passage": "Lieutenant John Gedge commissioned them for the North Sea in May 1805 , and Lieutenant Robert Ramsey replaced him in 1806 .",
+          "matched_passage": "Lieutenant Robert Ramsey commissioned her to the North Sea in May 1805 , and Lieutenant John Gedge replaced him in 1806 .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9301, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.8,
+          "token_lcs_ratio": 0.7
+        }
+      ],
+      "id": "paws-validation:97",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18943665299957502,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9729,
+          "query_passage": "While the exclusion of African players was not a written rule , no black-American had played in the National Football League since 1933 .",
+          "matched_passage": "While the exclusion of black players was not a written rule , since 1933 no Afro-American had played in the National Football League .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9774, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.913,
+          "token_lcs_ratio": 0.8261
+        }
+      ],
+      "id": "paws-validation:98",
+      "kind": "adversarial_negative",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.18425089000083972,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9877,
+          "query_passage": "`` Trust in Me '' is a song written by Ned Wever , Milton Ager , and Jean Schwartz .",
+          "matched_passage": "`` Trust in Me '' is a song by Jean Schwartz , Milton Ager and Ned Wever written .",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [],
+          "note": "sts verified candidate: score=0.9896, contradiction=0.0000; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.6667
+        }
+      ],
+      "id": "paws-validation:99",
+      "kind": "positive",
+      "label": 1
+    }
+  ]
+}

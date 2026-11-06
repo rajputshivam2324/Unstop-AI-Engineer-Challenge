@@ -1,0 +1,8 @@
+..................................                                       [100%]
+=============================== warnings summary ===============================
+tests/test_scenarios.py::test_s1_cross_modal_duplication
+  /home/shivam/assignment/unstopchallenge/.venv/lib64/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+34 passed, 1 warning in 107.61s (0:01:47)

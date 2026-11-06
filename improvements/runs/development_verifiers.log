@@ -1,0 +1,42 @@
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights:  86%|████████▌ | 90/105 [00:00<00:00, 848.46it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 954.26it/s]
+sts {'id': 'd01', 'kind': 'positive', 'label': 1, 'similarity': 0.5830853581428528, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd02', 'kind': 'positive', 'label': 1, 'similarity': 0.46018022298812866, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd03', 'kind': 'positive', 'label': 1, 'similarity': 0.588790774345398, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd04', 'kind': 'positive', 'label': 1, 'similarity': 0.6195072531700134, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd05', 'kind': 'positive', 'label': 1, 'similarity': 0.6848452687263489, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd06', 'kind': 'positive', 'label': 1, 'similarity': 0.5397910475730896, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd07', 'kind': 'same_topic', 'label': 0, 'similarity': 0.3245544135570526, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd08', 'kind': 'same_topic', 'label': 0, 'similarity': 0.18859905004501343, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd09', 'kind': 'same_topic', 'label': 0, 'similarity': 0.3614168167114258, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd10', 'kind': 'same_topic', 'label': 0, 'similarity': 0.3534674346446991, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd11', 'kind': 'contradiction', 'label': 0, 'similarity': 0.39843207597732544, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd12', 'kind': 'contradiction', 'label': 0, 'similarity': 0.4324279725551605, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd13', 'kind': 'contradiction', 'label': 0, 'similarity': 0.3124074637889862, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd14', 'kind': 'contradiction', 'label': 0, 'similarity': 0.9796159267425537, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd15', 'kind': 'same_topic', 'label': 0, 'similarity': 0.3930559456348419, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd16', 'kind': 'positive', 'label': 1, 'similarity': 0.5970131158828735, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd17', 'kind': 'positive', 'label': 1, 'similarity': 0.39806067943573, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'd18', 'kind': 'same_topic', 'label': 0, 'similarity': 0.46517398953437805, 'contradiction': 0.0, 'truncated': False}
+sts {'id': 'confirmed_docx', 'kind': 'positive', 'label': 1, 'similarity': 0.49487102031707764, 'contradiction': 0.0, 'truncated': False}
+/home/shivam/assignment/unstopchallenge/.venv/lib64/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+Loading weights:   0%|          | 0/106 [00:00<?, ?it/s]Loading weights:  47%|████▋     | 50/106 [00:00<00:00, 483.72it/s]Loading weights:  93%|█████████▎| 99/106 [00:00<00:00, 294.02it/s]Loading weights: 100%|██████████| 106/106 [00:00<00:00, 332.39it/s]
+nli {'id': 'd01', 'kind': 'positive', 'label': 1, 'similarity': 0.07916414737701416, 'contradiction': 0.0026325457729399204, 'truncated': False}
+nli {'id': 'd02', 'kind': 'positive', 'label': 1, 'similarity': 0.0012198706390336156, 'contradiction': 0.0032133287750184536, 'truncated': False}
+nli {'id': 'd03', 'kind': 'positive', 'label': 1, 'similarity': 0.04352230951189995, 'contradiction': 0.0008727334206923842, 'truncated': False}
+nli {'id': 'd04', 'kind': 'positive', 'label': 1, 'similarity': 0.002687478670850396, 'contradiction': 0.00012056958075845614, 'truncated': False}
+nli {'id': 'd05', 'kind': 'positive', 'label': 1, 'similarity': 0.004182844888418913, 'contradiction': 0.008198002353310585, 'truncated': False}
+nli {'id': 'd06', 'kind': 'positive', 'label': 1, 'similarity': 0.03741171956062317, 'contradiction': 0.00037981747300364077, 'truncated': False}
+nli {'id': 'd07', 'kind': 'same_topic', 'label': 0, 'similarity': 0.0001289612118853256, 'contradiction': 0.15769876539707184, 'truncated': False}
+nli {'id': 'd08', 'kind': 'same_topic', 'label': 0, 'similarity': 0.0001396953157382086, 'contradiction': 0.9981414079666138, 'truncated': False}
+nli {'id': 'd09', 'kind': 'same_topic', 'label': 0, 'similarity': 8.067230373853818e-05, 'contradiction': 0.001148412236943841, 'truncated': False}
+nli {'id': 'd10', 'kind': 'same_topic', 'label': 0, 'similarity': 0.0002501281560398638, 'contradiction': 0.013786510564386845, 'truncated': False}
+nli {'id': 'd11', 'kind': 'contradiction', 'label': 0, 'similarity': 9.415040403837338e-05, 'contradiction': 0.9997983574867249, 'truncated': False}
+nli {'id': 'd12', 'kind': 'contradiction', 'label': 0, 'similarity': 9.952358959708363e-05, 'contradiction': 0.9997794032096863, 'truncated': False}
+nli {'id': 'd13', 'kind': 'contradiction', 'label': 0, 'similarity': 6.662219675490633e-05, 'contradiction': 0.9998258948326111, 'truncated': False}
+nli {'id': 'd14', 'kind': 'contradiction', 'label': 0, 'similarity': 0.0008427751017734408, 'contradiction': 0.9988784193992615, 'truncated': False}
+nli {'id': 'd15', 'kind': 'same_topic', 'label': 0, 'similarity': 0.00012919899018015712, 'contradiction': 0.004481813404709101, 'truncated': False}
+nli {'id': 'd16', 'kind': 'positive', 'label': 1, 'similarity': 0.0012699458748102188, 'contradiction': 0.975913941860199, 'truncated': False}
+nli {'id': 'd17', 'kind': 'positive', 'label': 1, 'similarity': 0.9807761907577515, 'contradiction': 0.0004169367894064635, 'truncated': False}
+nli {'id': 'd18', 'kind': 'same_topic', 'label': 0, 'similarity': 1.8464794266037643e-05, 'contradiction': 0.9993671774864197, 'truncated': False}
+nli {'id': 'confirmed_docx', 'kind': 'positive', 'label': 1, 'similarity': 0.24860940873622894, 'contradiction': 0.5999690890312195, 'truncated': False}

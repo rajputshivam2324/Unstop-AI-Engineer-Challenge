@@ -1,0 +1,45 @@
+{
+  "document_id": "09_third_pitch_video.mp4",
+  "total_integrity_risk": "LOW",
+  "scores": {
+    "peer_similarity_percentage": 0.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": 17.9
+  },
+  "peer_matches": [],
+  "multimodal_matches": [],
+  "explanations": "Peer similarity: 0.0% across 0 listed source(s) (no substantive peer overlap). External: 0.0% (none). AI: HUMAN at 17.9%. Overlap types: 0 cross-modal, 0 exact-copy, 0 paraphrase, 0 discounted common-source.",
+  "status": "ok",
+  "modality": "mp4",
+  "warnings": [],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": 17.9,
+    "label": "HUMAN",
+    "p_classifier": 0.1971,
+    "p_perplexity": 0.0,
+    "p_burstiness": 0.6107,
+    "perplexity": 293.123,
+    "burstiness": 0.1055,
+    "length_gate_triggered": false,
+    "ai_detector_source": "model",
+    "caveat": ""
+  },
+  "template_registry_hits": [],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {},
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 274286,
+    "sha256": "dadeecd08da015b3a9afa47d2f9408d47bcf635b22b52488371437e690aba42b",
+    "page_count": null,
+    "duration_s": 26.145,
+    "asr_model": "tiny",
+    "asr_language": "en",
+    "chunk_count": 1,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T13:54:52Z"
+}

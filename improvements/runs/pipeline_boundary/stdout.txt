@@ -1,0 +1,1 @@
+{"summary_path": "/home/shivam/assignment/unstopchallenge/improvements/runs/pipeline_boundary/summary/report_20261106_135815.json", "documents_evaluated": 13, "warnings": 0, "elapsed_s": 41.6, "peak_rss_mb": 2062.5}

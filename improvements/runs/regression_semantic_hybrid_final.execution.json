@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/shivam/assignment/unstopchallenge/.venv/bin/python",
+    "/home/shivam/assignment/unstopchallenge/improvements/scripts/benchmark_matching.py",
+    "--split",
+    "regression",
+    "--mode",
+    "semantic_hybrid",
+    "--out",
+    "/home/shivam/assignment/unstopchallenge/improvements/runs/regression_semantic_hybrid_final.json"
+  ],
+  "start_utc": "2026-11-06T13:56:28.984831+00:00",
+  "wall_s": 24.648189992998596,
+  "exit_code": 0
+}

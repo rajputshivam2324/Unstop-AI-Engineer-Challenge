@@ -1,0 +1,15 @@
+{
+  "sweep_identical": true,
+  "auc_original": 0.999985417711992,
+  "auc_reproduced": 0.999985417711992,
+  "reproduced_timing": {
+    "chunk+template_s": 2.24,
+    "model_load_s": 4.79,
+    "embed_s": 28.53,
+    "chunks_per_s": 33.0,
+    "faiss_search_s": 0.08,
+    "chunk_evidence_gate_s": 16.24,
+    "sentence_index+alignment_s": 94.46
+  },
+  "method": "Original benchmark main() with only RESULTS redirected to validation/runs/retrieval_reproduction; no thresholds/embeddings changed."
+}

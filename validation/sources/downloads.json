@@ -1,0 +1,35 @@
+{
+  "retrieved_utc": "2026-11-06T12:53:45.990967+00:00",
+  "files": [
+    {
+      "file": "jfk.ogg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/JFK_inaugural_address.ogg?download=1",
+      "sha256": "a257580da6eda796ed1c703e545865005753f7cb20cc042e0db3c44de82274fc",
+      "bytes": 5978784
+    },
+    {
+      "file": "jfk.txt",
+      "url": "https://www.gutenberg.org/cache/epub/3/pg3.txt",
+      "sha256": "b87eb8787607d9a14e2e20f02e71b7f1cf6dbae9a278c0bfaf05e4c878550a5a",
+      "bytes": 27601
+    },
+    {
+      "file": "alice.txt",
+      "url": "https://www.gutenberg.org/cache/epub/11/pg11.txt",
+      "sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+      "bytes": 174311
+    },
+    {
+      "file": "time_machine.txt",
+      "url": "https://www.gutenberg.org/cache/epub/35/pg35.txt",
+      "sha256": "2892e919000e17c83e1dac51b30f4675db50536b644d7579fe8a89bb399a9bdc",
+      "bytes": 204384
+    },
+    {
+      "file": "jfk_license.html",
+      "url": "https://commons.wikimedia.org/wiki/File:JFK_inaugural_address.ogg",
+      "sha256": "af4303434787f4d68ad34d309f3807118ce16d6fc86a87d20c7cedb6051d27e6",
+      "bytes": 101744
+    }
+  ]
+}

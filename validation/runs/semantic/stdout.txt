@@ -1,0 +1,1 @@
+{"summary_path": "/home/shivam/assignment/unstopchallenge/validation/runs/semantic/summary/report_20261106_125818.json", "documents_evaluated": 2, "warnings": 0, "elapsed_s": 6.3, "peak_rss_mb": 605.7}

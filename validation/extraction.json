@@ -1,0 +1,312 @@
+{
+  "01_human_speech.pdf": {
+    "full_text": "Archive extract for a source location check\nThis cover identifies an archival speech excerpt. The recording was delivered by John F Kennedy\non 20 January 1961. Page two contains the selected passage. This fixture uses an existing\nhuman recording, rather than a synthesized narration. No claim about academic misconduct\nfollows from its intentional reuse in an evaluation.\n\nJohn F Kennedy inaugural address excerpt\nThe world is very different now, for man holds in his mortal hands the power to abolish all forms of\nhuman poverty and all forms of human life.",
+    "pages": [
+      {
+        "page": 1,
+        "text": "Archive extract for a source location check\nThis cover identifies an archival speech excerpt. The recording was delivered by John F Kennedy\non 20 January 1961. Page two contains the selected passage. This fixture uses an existing\nhuman recording, rather than a synthesized narration. No claim about academic misconduct\nfollows from its intentional reuse in an evaluation.",
+        "char_start": 0,
+        "char_end": 371
+      },
+      {
+        "page": 2,
+        "text": "John F Kennedy inaugural address excerpt\nThe world is very different now, for man holds in his mortal hands the power to abolish all forms of\nhuman poverty and all forms of human life.",
+        "char_start": 373,
+        "char_end": 557
+      }
+    ],
+    "metadata": {
+      "page_count": 2,
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 0.0035285619997011963
+  },
+  "02_alice_source.pdf": {
+    "full_text": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+    "pages": [
+      {
+        "page": 1,
+        "text": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+        "char_start": 0,
+        "char_end": 592
+      }
+    ],
+    "metadata": {
+      "page_count": 1,
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 0.0014137149992166087
+  },
+  "03_alice_copy.pdf": {
+    "full_text": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+    "pages": [
+      {
+        "page": 1,
+        "text": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+        "char_start": 0,
+        "char_end": 592
+      }
+    ],
+    "metadata": {
+      "page_count": 1,
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 0.0013150310005585197
+  },
+  "04_library_hours.pdf": {
+    "full_text": "Northbridge Public Library asks the university review panel to compare proposals for improving\naccess across three neighbourhood branches. Each candidate should submit an independent\nrecommendation grounded in the fictional facts here. The annual budget is fixed, the buildings\nremain publicly owned, and the council must publish its reasoning before the next funding\nmeeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation\nobstacle, and name an observation that could change your decision. Do not invent survey\nfindings or treat an illustrative calculation as measured evidence. Keep any quotations separate\nfrom your own analysis and explain uncertainty in language. The panel welcomes disagreement\nwhen the argument follows from stated assumptions. Your response should be understandable to\nresidents without specialist training. Include a practical first step, a responsible team, and a\nreview date. This shared institutional prompt is provided for context and should not be assessed\nas original analysis.\nExtending evening opening should begin at the branch beside the bus interchange. Shift workers\ncan reach that site after the last industrial shift, whereas an extra morning hour mainly serves\nexisting visitors. A four week trial needs a named duty manager and a transport timetable posted\nat the entrance. Count entries in the additional hour rather than asking everyone whether they\nsupport libraries. Stop the extension if staffing costs displace the children's reading sessions. The\nargument concerns timing of access, not the total number of registered borrowers.",
+    "pages": [
+      {
+        "page": 1,
+        "text": "Northbridge Public Library asks the university review panel to compare proposals for improving\naccess across three neighbourhood branches. Each candidate should submit an independent\nrecommendation grounded in the fictional facts here. The annual budget is fixed, the buildings\nremain publicly owned, and the council must publish its reasoning before the next funding\nmeeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation\nobstacle, and name an observation that could change your decision. Do not invent survey\nfindings or treat an illustrative calculation as measured evidence. Keep any quotations separate\nfrom your own analysis and explain uncertainty in language. The panel welcomes disagreement\nwhen the argument follows from stated assumptions. Your response should be understandable to\nresidents without specialist training. Include a practical first step, a responsible team, and a\nreview date. This shared institutional prompt is provided for context and should not be assessed\nas original analysis.\nExtending evening opening should begin at the branch beside the bus interchange. Shift workers\ncan reach that site after the last industrial shift, whereas an extra morning hour mainly serves\nexisting visitors. A four week trial needs a named duty manager and a transport timetable posted\nat the entrance. Count entries in the additional hour rather than asking everyone whether they\nsupport libraries. Stop the extension if staffing costs displace the children's reading sessions. The\nargument concerns timing of access, not the total number of registered borrowers.",
+        "char_start": 0,
+        "char_end": 1618
+      }
+    ],
+    "metadata": {
+      "page_count": 1,
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 0.002564480999353691
+  },
+  "05_library_storage.pdf": {
+    "full_text": "Northbridge Public Library asks the university review panel to compare proposals for improving\naccess across three neighbourhood branches. Each candidate should submit an independent\nrecommendation grounded in the fictional facts here. The annual budget is fixed, the buildings\nremain publicly owned, and the council must publish its reasoning before the next funding\nmeeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation\nobstacle, and name an observation that could change your decision. Do not invent survey\nfindings or treat an illustrative calculation as measured evidence. Keep any quotations separate\nfrom your own analysis and explain uncertainty in language. The panel welcomes disagreement\nwhen the argument follows from stated assumptions. Your response should be understandable to\nresidents without specialist training. Include a practical first step, a responsible team, and a\nreview date. This shared institutional prompt is provided for context and should not be assessed\nas original analysis.\nThe first expenditure should replace damaged shelving in the archive room. A box inventory\nshows what needs safe storage before anyone promises a larger collection. Moving fragile\nmaterial twice creates avoidable handling work, so the caretaker should plan repairs while the\nroom is closed for its normal cleaning day. Suppliers should quote for removable units that fit the\nexisting door. I would reconsider if the conservation officer found that humidity, rather than\nfurniture, was responsible for the damage. Public evening hours have little bearing on this\nphysical storage problem.",
+    "pages": [
+      {
+        "page": 1,
+        "text": "Northbridge Public Library asks the university review panel to compare proposals for improving\naccess across three neighbourhood branches. Each candidate should submit an independent\nrecommendation grounded in the fictional facts here. The annual budget is fixed, the buildings\nremain publicly owned, and the council must publish its reasoning before the next funding\nmeeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation\nobstacle, and name an observation that could change your decision. Do not invent survey\nfindings or treat an illustrative calculation as measured evidence. Keep any quotations separate\nfrom your own analysis and explain uncertainty in language. The panel welcomes disagreement\nwhen the argument follows from stated assumptions. Your response should be understandable to\nresidents without specialist training. Include a practical first step, a responsible team, and a\nreview date. This shared institutional prompt is provided for context and should not be assessed\nas original analysis.\nThe first expenditure should replace damaged shelving in the archive room. A box inventory\nshows what needs safe storage before anyone promises a larger collection. Moving fragile\nmaterial twice creates avoidable handling work, so the caretaker should plan repairs while the\nroom is closed for its normal cleaning day. Suppliers should quote for removable units that fit the\nexisting door. I would reconsider if the conservation officer found that humidity, rather than\nfurniture, was responsible for the damage. Public evening hours have little bearing on this\nphysical storage problem.",
+        "char_start": 0,
+        "char_end": 1638
+      }
+    ],
+    "metadata": {
+      "page_count": 1,
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 0.002540943998610601
+  },
+  "06_policy_argument.docx": {
+    "full_text": "After a city removes library fines, the outstanding debt disappears, so apparent improvement in account balances says nothing about whether books come back sooner. Measure days overdue among loans issued after the change instead. Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+    "pages": [
+      {
+        "page": null,
+        "text": "After a city removes library fines, the outstanding debt disappears, so apparent improvement in account balances says nothing about whether books come back sooner. Measure days overdue among loans issued after the change instead. Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+        "char_start": 0,
+        "char_end": 566
+      }
+    ],
+    "metadata": {
+      "paragraph_count": 1,
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 0.012355517999822041
+  },
+  "07_policy_rewording.docx": {
+    "full_text": "Cancelling penalties wipes the ledger clean by definition; that accounting result cannot establish that borrowers have become more punctual. The useful outcome is how late newly borrowed volumes are returned. An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested. Support the reform if materials arrive back faster and people formerly carrying debts continue using the service.",
+    "pages": [
+      {
+        "page": null,
+        "text": "Cancelling penalties wipes the ledger clean by definition; that accounting result cannot establish that borrowers have become more punctual. The useful outcome is how late newly borrowed volumes are returned. An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested. Support the reform if materials arrive back faster and people formerly carrying debts continue using the service.",
+        "char_start": 0,
+        "char_end": 548
+      }
+    ],
+    "metadata": {
+      "paragraph_count": 1,
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 0.011176047000844846
+  },
+  "08_library_transport.docx": {
+    "full_text": "Northbridge Public Library asks the university review panel to compare proposals for improving access across three neighbourhood branches. Each candidate should submit an independent recommendation grounded in the fictional facts here. The annual budget is fixed, the buildings remain publicly owned, and the council must publish its reasoning before the next funding meeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation obstacle, and name an observation that could change your decision. Do not invent survey findings or treat an illustrative calculation as measured evidence. Keep any quotations separate from your own analysis and explain uncertainty in language. The panel welcomes disagreement when the argument follows from stated assumptions. Your response should be understandable to residents without specialist training. Include a practical first step, a responsible team, and a review date. This shared institutional prompt is provided for context and should not be assessed as original analysis.\nA mobile return service would help residents who already borrow books but cannot carry them back. Use the existing council van on its quiet route day and let carers reserve a collection by telephone. Staff must separate returned volumes from parcels carrying food. The transport supervisor can log missed pickups and journey distance for six weeks. Low demand would justify replacing the route with collection lockers at the clinic. This proposal addresses the burden of returning heavy books rather than buying more copies.",
+    "pages": [
+      {
+        "page": null,
+        "text": "Northbridge Public Library asks the university review panel to compare proposals for improving access across three neighbourhood branches. Each candidate should submit an independent recommendation grounded in the fictional facts here. The annual budget is fixed, the buildings remain publicly owned, and the council must publish its reasoning before the next funding meeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation obstacle, and name an observation that could change your decision. Do not invent survey findings or treat an illustrative calculation as measured evidence. Keep any quotations separate from your own analysis and explain uncertainty in language. The panel welcomes disagreement when the argument follows from stated assumptions. Your response should be understandable to residents without specialist training. Include a practical first step, a responsible team, and a review date. This shared institutional prompt is provided for context and should not be assessed as original analysis.\nA mobile return service would help residents who already borrow books but cannot carry them back. Use the existing council van on its quiet route day and let carers reserve a collection by telephone. Staff must separate returned volumes from parcels carrying food. The transport supervisor can log missed pickups and journey distance for six weeks. Low demand would justify replacing the route with collection lockers at the clinic. This proposal addresses the burden of returning heavy books rather than buying more copies.",
+        "char_start": 0,
+        "char_end": 1575
+      }
+    ],
+    "metadata": {
+      "paragraph_count": 2,
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 0.014983483000833075
+  },
+  "09_library_privacy.docx": {
+    "full_text": "Northbridge Public Library asks the university review panel to compare proposals for improving access across three neighbourhood branches. Each candidate should submit an independent recommendation grounded in the fictional facts here. The annual budget is fixed, the buildings remain publicly owned, and the council must publish its reasoning before the next funding meeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation obstacle, and name an observation that could change your decision. Do not invent survey findings or treat an illustrative calculation as measured evidence. Keep any quotations separate from your own analysis and explain uncertainty in language. The panel welcomes disagreement when the argument follows from stated assumptions. Your response should be understandable to residents without specialist training. Include a practical first step, a responsible team, and a review date. This shared institutional prompt is provided for context and should not be assessed as original analysis.\nBorrower privacy deserves attention before a new recommendation screen is purchased. The catalogue should retain the active loan record and erase a completed transaction when its administrative purpose ends. A resident ought to search for sensitive health information without building a permanent profile at the council. Ask the information officer to document deletion behaviour using a test account. If a statutory retention obligation applies, publish its scope before changing the software. Aggregate circulation totals can support planning without exposing a person's reading history.",
+    "pages": [
+      {
+        "page": null,
+        "text": "Northbridge Public Library asks the university review panel to compare proposals for improving access across three neighbourhood branches. Each candidate should submit an independent recommendation grounded in the fictional facts here. The annual budget is fixed, the buildings remain publicly owned, and the council must publish its reasoning before the next funding meeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation obstacle, and name an observation that could change your decision. Do not invent survey findings or treat an illustrative calculation as measured evidence. Keep any quotations separate from your own analysis and explain uncertainty in language. The panel welcomes disagreement when the argument follows from stated assumptions. Your response should be understandable to residents without specialist training. Include a practical first step, a responsible team, and a review date. This shared institutional prompt is provided for context and should not be assessed as original analysis.\nBorrower privacy deserves attention before a new recommendation screen is purchased. The catalogue should retain the active loan record and erase a completed transaction when its administrative purpose ends. A resident ought to search for sensitive health information without building a permanent profile at the council. Ask the information officer to document deletion behaviour using a test account. If a statutory retention obligation applies, publish its scope before changing the software. Aggregate circulation totals can support planning without exposing a person's reading history.",
+        "char_start": 0,
+        "char_end": 1640
+      }
+    ],
+    "metadata": {
+      "paragraph_count": 2,
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 0.00959597200017015
+  },
+  "10_library_access.docx": {
+    "full_text": "Northbridge Public Library asks the university review panel to compare proposals for improving access across three neighbourhood branches. Each candidate should submit an independent recommendation grounded in the fictional facts here. The annual budget is fixed, the buildings remain publicly owned, and the council must publish its reasoning before the next funding meeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation obstacle, and name an observation that could change your decision. Do not invent survey findings or treat an illustrative calculation as measured evidence. Keep any quotations separate from your own analysis and explain uncertainty in language. The panel welcomes disagreement when the argument follows from stated assumptions. Your response should be understandable to residents without specialist training. Include a practical first step, a responsible team, and a review date. This shared institutional prompt is provided for context and should not be assessed as original analysis.\nWheelchair access depends on the route between the pavement and the reading desk. A ramp is insufficient when a heavy inner door cannot be opened without assistance. Invite an access group to inspect that route with the facilities team and rank the barriers by the effort they impose. Start with the door closer and a clear turning space near the entrance. Repeat the visit after installation rather than accepting a supplier photograph as proof. A lift upgrade should wait for an engineering survey of the upper floor.",
+    "pages": [
+      {
+        "page": null,
+        "text": "Northbridge Public Library asks the university review panel to compare proposals for improving access across three neighbourhood branches. Each candidate should submit an independent recommendation grounded in the fictional facts here. The annual budget is fixed, the buildings remain publicly owned, and the council must publish its reasoning before the next funding meeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation obstacle, and name an observation that could change your decision. Do not invent survey findings or treat an illustrative calculation as measured evidence. Keep any quotations separate from your own analysis and explain uncertainty in language. The panel welcomes disagreement when the argument follows from stated assumptions. Your response should be understandable to residents without specialist training. Include a practical first step, a responsible team, and a review date. This shared institutional prompt is provided for context and should not be assessed as original analysis.\nWheelchair access depends on the route between the pavement and the reading desk. A ramp is insufficient when a heavy inner door cannot be opened without assistance. Invite an access group to inspect that route with the facilities team and rank the barriers by the effort they impose. Start with the door closer and a clear turning space near the entrance. Repeat the visit after installation rather than accepting a supplier photograph as proof. A lift upgrade should wait for an engineering survey of the upper floor.",
+        "char_start": 0,
+        "char_end": 1570
+      }
+    ],
+    "metadata": {
+      "paragraph_count": 2,
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 0.009513769000477623
+  },
+  "11_human_crossmodal.mp4": {
+    "full_text": "The world is very different now for man holds it is mortal hands the power to abolish all forms of human poverty and all forms of human life",
+    "pages": [
+      {
+        "page": null,
+        "text": "The world is very different now for man holds it is mortal hands",
+        "char_start": 0,
+        "char_end": 64
+      },
+      {
+        "page": null,
+        "text": "the power to abolish all forms of human poverty and all forms of human life",
+        "char_start": 65,
+        "char_end": 140
+      }
+    ],
+    "metadata": {
+      "duration_s": 15.0,
+      "asr_language": "en",
+      "asr_model": "tiny",
+      "segments": [
+        [
+          0.18,
+          6.02
+        ],
+        [
+          6.78,
+          14.86
+        ]
+      ],
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 2.8782797170006234
+  },
+  "12_human_allies.mp4": {
+    "full_text": "To those all allies whose cultural and spiritual origins we share, we pledge the loyalty of faithful friends.",
+    "pages": [
+      {
+        "page": null,
+        "text": "To those all allies whose cultural and spiritual origins we share, we pledge the loyalty of faithful friends.",
+        "char_start": 0,
+        "char_end": 109
+      }
+    ],
+    "metadata": {
+      "duration_s": 12.0,
+      "asr_language": "en",
+      "asr_model": "tiny",
+      "segments": [
+        [
+          0.0,
+          11.38
+        ]
+      ],
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 1.401637604998541
+  },
+  "13_human_revolution.mp4": {
+    "full_text": "And yet the same revolutionary belief for which our four bears for it are still an issue around the globe.",
+    "pages": [
+      {
+        "page": null,
+        "text": "And yet the same revolutionary belief for which our four bears for it are still an issue around the globe.",
+        "char_start": 0,
+        "char_end": 106
+      }
+    ],
+    "metadata": {
+      "duration_s": 10.5,
+      "asr_language": "en",
+      "asr_model": "tiny",
+      "segments": [
+        [
+          0.46,
+          10.39
+        ]
+      ],
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 1.3308428849995835
+  },
+  "30_assertion.pdf": {
+    "full_text": "The blue filter removed arsenic from the river water during the controlled trial. The treatment\nreduced contamination below the laboratory reporting limit. Investigators recommended deploying\nthe filter in every village before the rainy season.",
+    "pages": [
+      {
+        "page": 1,
+        "text": "The blue filter removed arsenic from the river water during the controlled trial. The treatment\nreduced contamination below the laboratory reporting limit. Investigators recommended deploying\nthe filter in every village before the rainy season.",
+        "char_start": 0,
+        "char_end": 244
+      }
+    ],
+    "metadata": {
+      "page_count": 1,
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 0.00124351399972511
+  },
+  "31_negation.pdf": {
+    "full_text": "The blue filter did not remove arsenic from the river water during the controlled trial. The\ntreatment did not reduce contamination below the laboratory reporting limit. Investigators did not\nrecommend deploying the filter in every village before the rainy season.",
+    "pages": [
+      {
+        "page": 1,
+        "text": "The blue filter did not remove arsenic from the river water during the controlled trial. The\ntreatment did not reduce contamination below the laboratory reporting limit. Investigators did not\nrecommend deploying the filter in every village before the rainy season.",
+        "char_start": 0,
+        "char_end": 264
+      }
+    ],
+    "metadata": {
+      "page_count": 1,
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 0.0010249820006720256
+  }
+}

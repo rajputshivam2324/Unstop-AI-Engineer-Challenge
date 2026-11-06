@@ -1,0 +1,14 @@
+regression baseline 0
+regression boundary 0
+regression semantic_sts 0
+regression semantic_nli 0
+regression semantic_hybrid 0
+baseline 0
+boundary 0
+semantic_nli 0
+semantic_hybrid 0
+heldout baseline 0
+heldout boundary 0
+heldout semantic_sts 0
+heldout semantic_nli 0
+heldout semantic_hybrid 0

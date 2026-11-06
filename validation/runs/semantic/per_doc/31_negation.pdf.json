@@ -1,0 +1,68 @@
+{
+  "document_id": "31_negation.pdf",
+  "total_integrity_risk": "HIGH",
+  "scores": {
+    "peer_similarity_percentage": 100.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": null
+  },
+  "peer_matches": [
+    {
+      "matched_file": "30_assertion.pdf",
+      "similarity_score": 0.9624,
+      "query_passage": "The blue filter did not remove arsenic from the river water during the controlled trial. The\ntreatment did not reduce contamination below the laboratory reporting limit. Investigators did not\nrecommend deploying the filter in every village before the rainy season.",
+      "matched_passage": "The blue filter removed arsenic from the river water during the controlled trial. The treatment\nreduced contamination below the laboratory reporting limit. Investigators recommended deploying\nthe filter in every village before the rainy season.",
+      "location": {
+        "query_page": 1,
+        "matched_page": 1
+      },
+      "match_type": "overlap",
+      "overlap_kind": "paraphrase",
+      "evidence_sentence_scores": [
+        0.8909,
+        0.8464,
+        0.7218
+      ],
+      "lexical_jaccard": 0.75,
+      "token_lcs_ratio": 0.775,
+      "note": "semantic paraphrase paraphrase-band (>0.80): meaning matches while wording differs (lexical Jaccard 0.75, token-LCS 0.78)"
+    }
+  ],
+  "multimodal_matches": [],
+  "explanations": "Peer similarity: 100.0% across 1 listed source(s) (top: 30_assertion.pdf @ 0.96; overlap). External: 0.0% (none). AI: INSUFFICIENT_TEXT. Overlap types: 0 cross-modal, 0 exact-copy, 1 paraphrase, 0 discounted common-source.",
+  "status": "ok",
+  "modality": "pdf",
+  "warnings": [],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": null,
+    "label": "INSUFFICIENT_TEXT",
+    "p_classifier": null,
+    "p_perplexity": null,
+    "p_burstiness": null,
+    "perplexity": null,
+    "burstiness": null,
+    "length_gate_triggered": true,
+    "ai_detector_source": "model",
+    "caveat": ""
+  },
+  "template_registry_hits": [],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {
+    "30_assertion.pdf": 1.0
+  },
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 1160,
+    "sha256": "d0b409d0023a1d8aec1614053b8703139811c50a4fc58e798f03bfbf4b089173",
+    "page_count": 1,
+    "duration_s": null,
+    "asr_model": null,
+    "asr_language": null,
+    "chunk_count": 1,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T12:58:18Z"
+}

@@ -1,0 +1,217 @@
+{
+  "01_human_speech.pdf + 11_human_crossmodal.mp4": {
+    "left_sentences": [
+      "Archive extract for a source location check\nThis cover identifies an archival speech excerpt.",
+      "The recording was delivered by John F Kennedy\non 20 January 1961.",
+      "Page two contains the selected passage.",
+      "This fixture uses an existing\nhuman recording, rather than a synthesized narration.",
+      "No claim about academic misconduct\nfollows from its intentional reuse in an evaluation.",
+      "John F Kennedy inaugural address excerpt\nThe world is very different now, for man holds in his mortal hands the power to abolish all forms of\nhuman poverty and all forms of human life."
+    ],
+    "right_sentences": [
+      "The world is very different now for man holds it is mortal hands",
+      "the power to abolish all forms of human poverty and all forms of human life"
+    ],
+    "cosine_matrix": [
+      [
+        -0.000669245608150959,
+        0.12027308344841003
+      ],
+      [
+        0.046411871910095215,
+        0.009206167422235012
+      ],
+      [
+        0.03349192440509796,
+        0.0918845534324646
+      ],
+      [
+        0.07807715237140656,
+        0.07729263603687286
+      ],
+      [
+        -0.06343457847833633,
+        0.10625125467777252
+      ],
+      [
+        0.4942319393157959,
+        0.6003698110580444
+      ]
+    ],
+    "accepted_runs": [],
+    "rejected_runs": 0,
+    "raw_document_cosine": 0.46451282501220703,
+    "document_jaccard": 0.2876712328767123,
+    "forward_coverage": 0.0,
+    "reverse_coverage": 0.0
+  },
+  "06_policy_argument.docx + 07_policy_rewording.docx": {
+    "left_sentences": [
+      "After a city removes library fines, the outstanding debt disappears, so apparent improvement in account balances says nothing about whether books come back sooner.",
+      "Measure days overdue among loans issued after the change instead.",
+      "Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing.",
+      "Keep replacement charges unchanged during the experiment so the policy contrast is interpretable.",
+      "Success means shorter delays in returning books without fewer loans to residents who previously owed money."
+    ],
+    "right_sentences": [
+      "Cancelling penalties wipes the ledger clean by definition; that accounting result cannot establish that borrowers have become more punctual.",
+      "The useful outcome is how late newly borrowed volumes are returned.",
+      "An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures.",
+      "Liability for lost items should stay constant while overdue fees are tested.",
+      "Support the reform if materials arrive back faster and people formerly carrying debts continue using the service."
+    ],
+    "cosine_matrix": [
+      [
+        0.523823618888855,
+        0.3924832046031952,
+        0.36996084451675415,
+        0.38445425033569336,
+        0.35029086470603943
+      ],
+      [
+        0.36167049407958984,
+        0.4143632650375366,
+        0.3629538416862488,
+        0.3505634665489197,
+        0.31948021054267883
+      ],
+      [
+        0.275603711605072,
+        0.26960626244544983,
+        0.5628277063369751,
+        0.19434499740600586,
+        0.25181517004966736
+      ],
+      [
+        0.2787765860557556,
+        0.24046441912651062,
+        0.2460993528366089,
+        0.3607361912727356,
+        0.1988011598587036
+      ],
+      [
+        0.39262986183166504,
+        0.5421179533004761,
+        0.3199983835220337,
+        0.27737316489219666,
+        0.42005079984664917
+      ]
+    ],
+    "accepted_runs": [],
+    "rejected_runs": 0,
+    "raw_document_cosine": 0.6352121233940125,
+    "document_jaccard": 0.05925925925925926,
+    "forward_coverage": 0.0,
+    "reverse_coverage": 0.0
+  },
+  "exploratory_three_copy": {
+    "expected": "all three unordered pairs share deliberately borrowed distinctive analysis; not an authorised prompt",
+    "documents": {
+      "40_borrowed.docx": "The council should reserve the abandoned railway cutting as a flood basin. Storm water would enter through the old maintenance tunnel and spread across the gravel bed. A raised footpath would let residents cross the site without stepping into the overflow channel. A surveyor must inspect the northern abutment.",
+      "41_borrowed.docx": "The council should reserve the abandoned railway cutting as a flood basin. Storm water would enter through the old maintenance tunnel and spread across the gravel bed. A raised footpath would let residents cross the site without stepping into the overflow channel. The park manager will count nesting birds.",
+      "42_borrowed.docx": "The council should reserve the abandoned railway cutting as a flood basin. Storm water would enter through the old maintenance tunnel and spread across the gravel bed. A raised footpath would let residents cross the site without stepping into the overflow channel. An electrician should isolate the platform lights."
+    },
+    "template_sentence_count": 3,
+    "template_chunks": 3,
+    "pair_coverages": {
+      "40_borrowed.docx + 41_borrowed.docx": [
+        0.0,
+        0.0
+      ],
+      "40_borrowed.docx + 42_borrowed.docx": [
+        0.0,
+        0.0
+      ],
+      "41_borrowed.docx + 42_borrowed.docx": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "local_kb_positive_control": {
+    "expected_source": "kb::0",
+    "query": "Solar power in India: India is one of the largest producers of solar energy in the world. The country's installed solar capacity has expanded rapidly since 2015, supported by large-scale auctions, falling photovoltaic module prices, and government targets for renewable capacity. Utility-scale parks dominate the market, although rooftop installations are growing faster in percentage terms. Solar generation follows strong seasonal patterns, peaking during the summer months when daylight hours are longest. Grid integration remains a challenge, because solar output varies with weather and time of day and requires storage or flexible backup. Analysts note that domestic manufacturing of solar modules has increased, reducing dependence on imported panels. Land acquisition and transmission bottlenecks continue to slow some projects, particularly in densely populated states. India's solar program also supports rural electrification through off-grid installations and solar-powered irrigation pumps, which reduce diesel consumption for farmers.",
+    "result": {
+      "score_pct": 100.0,
+      "hits": [
+        {
+          "source_title": "kb::0",
+          "source_url": null,
+          "similarity": 1.0000001192092896,
+          "query_passage": "Solar power in India: India is one of the largest producers of solar energy in the world.",
+          "matched_passage": "Solar power in India: India is one of the largest producers of solar energy in the world.",
+          "source": "local_kb",
+          "aligned_tokens": 17
+        },
+        {
+          "source_title": "kb::0",
+          "source_url": null,
+          "similarity": 1.0000001192092896,
+          "query_passage": "The country's installed solar capacity has expanded rapidly since 2015, supported by large-scale auctions, falling photovoltaic module prices, and government targets for renewable capacity.",
+          "matched_passage": "The country's installed solar capacity has expanded rapidly since 2015, supported by large-scale auctions, falling photovoltaic module prices, and government targets for renewable capacity.",
+          "source": "local_kb",
+          "aligned_tokens": 26
+        },
+        {
+          "source_title": "kb::0",
+          "source_url": null,
+          "similarity": 1.0,
+          "query_passage": "Utility-scale parks dominate the market, although rooftop installations are growing faster in percentage terms.",
+          "matched_passage": "Utility-scale parks dominate the market, although rooftop installations are growing faster in percentage terms.",
+          "source": "local_kb",
+          "aligned_tokens": 15
+        },
+        {
+          "source_title": "kb::0",
+          "source_url": null,
+          "similarity": 1.000000238418579,
+          "query_passage": "Solar generation follows strong seasonal patterns, peaking during the summer months when daylight hours are longest.",
+          "matched_passage": "Solar generation follows strong seasonal patterns, peaking during the summer months when daylight hours are longest.",
+          "source": "local_kb",
+          "aligned_tokens": 16
+        },
+        {
+          "source_title": "kb::0",
+          "source_url": null,
+          "similarity": 1.0,
+          "query_passage": "Grid integration remains a challenge, because solar output varies with weather and time of day and requires storage or flexible backup.",
+          "matched_passage": "Grid integration remains a challenge, because solar output varies with weather and time of day and requires storage or flexible backup.",
+          "source": "local_kb",
+          "aligned_tokens": 21
+        },
+        {
+          "source_title": "kb::0",
+          "source_url": null,
+          "similarity": 1.000000238418579,
+          "query_passage": "Analysts note that domestic manufacturing of solar modules has increased, reducing dependence on imported panels.",
+          "matched_passage": "Analysts note that domestic manufacturing of solar modules has increased, reducing dependence on imported panels.",
+          "source": "local_kb",
+          "aligned_tokens": 15
+        },
+        {
+          "source_title": "kb::0",
+          "source_url": null,
+          "similarity": 1.0000001192092896,
+          "query_passage": "Land acquisition and transmission bottlenecks continue to slow some projects, particularly in densely populated states.",
+          "matched_passage": "Land acquisition and transmission bottlenecks continue to slow some projects, particularly in densely populated states.",
+          "source": "local_kb",
+          "aligned_tokens": 15
+        },
+        {
+          "source_title": "kb::0",
+          "source_url": null,
+          "similarity": 0.9999999403953552,
+          "query_passage": "India's solar program also supports rural electrification through off-grid installations and solar-powered irrigation pumps, which reduce diesel consumption for farmers.",
+          "matched_passage": "India's solar program also supports rural electrification through off-grid installations and solar-powered irrigation pumps, which reduce diesel consumption for farmers.",
+          "source": "local_kb",
+          "aligned_tokens": 23
+        }
+      ],
+      "tier_used": "local_kb"
+    }
+  },
+  "web_failure_control": {
+    "hit_count": 0,
+    "mock_engaged": true
+  }
+}

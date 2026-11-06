@@ -72,6 +72,38 @@ class AlignmentConfig:
 
 
 @dataclass(frozen=True)
+class MatchingConfig:
+    """Opt-in alternatives; baseline preserves the original engine exactly."""
+
+    mode: str = "baseline"
+    asr_max_gap_s: float = 1.5
+    boundary_max_units: int = 3
+    window_max_tokens: int = 120
+    retrieval_min_cos: float = 0.35  # candidate generation ONLY, never acceptance
+    retrieval_topk: int = 5
+    verifier_topk: int = 3
+    max_verifications_per_pair: int = 48
+    nli_entailment_min: float = 0.70
+    nli_contradiction_max: float = 0.10
+    sts_min: float = 0.50  # development-only STS comparator calibration; not cosine
+
+    def __post_init__(self) -> None:
+        if self.mode not in ("baseline", "boundary", "semantic_sts",
+                              "semantic_nli", "semantic_hybrid"):
+            raise ValueError(f"unknown matching mode: {self.mode}")
+        for name in ("boundary_max_units", "window_max_tokens", "retrieval_topk",
+                     "verifier_topk", "max_verifications_per_pair"):
+            if getattr(self, name) < 1:
+                raise ValueError(f"matching.{name} must be positive")
+        for name in ("retrieval_min_cos", "nli_entailment_min",
+                     "nli_contradiction_max", "sts_min"):
+            if not 0 <= getattr(self, name) <= 1:
+                raise ValueError(f"matching.{name} must be in [0, 1]")
+        if self.asr_max_gap_s < 0:
+            raise ValueError("matching.asr_max_gap_s must be nonnegative")
+
+
+@dataclass(frozen=True)
 class AIDetectionConfig:
     """2-component ensemble detector constants (§4.6, de-scope rule R3)."""
 
@@ -140,6 +172,7 @@ class Config:
     embedding: EmbeddingConfig = field(default_factory=EmbeddingConfig)
     pairwise: PairwiseConfig = field(default_factory=PairwiseConfig)
     alignment: AlignmentConfig = field(default_factory=AlignmentConfig)
+    matching: MatchingConfig = field(default_factory=MatchingConfig)
     ai: AIDetectionConfig = field(default_factory=AIDetectionConfig)
     external: ExternalCheckConfig = field(default_factory=ExternalCheckConfig)
     scoring: ScoringConfig = field(default_factory=ScoringConfig)
@@ -151,6 +184,7 @@ _SECTIONS: dict[str, type] = {
     "embedding": EmbeddingConfig,
     "pairwise": PairwiseConfig,
     "alignment": AlignmentConfig,
+    "matching": MatchingConfig,
     "ai": AIDetectionConfig,
     "external": ExternalCheckConfig,
     "scoring": ScoringConfig,

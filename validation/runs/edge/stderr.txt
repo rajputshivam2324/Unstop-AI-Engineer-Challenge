@@ -1,0 +1,16 @@
+INFO integrity_engine.cli: ingested 05_valid_control.pdf               status=ok           chars= 1638 (0.0s)
+WARNING integrity_engine.ingestion.pdf: file is empty (0 bytes); nothing to analyze: 20_empty.pdf
+INFO integrity_engine.cli: ingested 20_empty.pdf                       status=error        chars=    0 (0.0s)
+WARNING integrity_engine.ingestion.pdf: pdf: unreadable pdf container: 21_corrupt.pdf (PdfReadError: startxref not found)
+INFO integrity_engine.cli: ingested 21_corrupt.pdf                     status=error        chars=    0 (0.0s)
+WARNING integrity_engine.ingestion.mp4: mp4: no audio stream in MP4: 22_silent.mp4
+INFO integrity_engine.cli: ingested 22_silent.mp4                      status=silent_video chars=    0 (0.3s)
+INFO integrity_engine.cli: only one document in corpus; peer comparisons are vacuous
+INFO integrity_engine.cli: chunking: 2 chunks from 1 analyzable documents
+INFO integrity_engine.embeddings: embeddings: loading sentence-transformers/all-MiniLM-L6-v2 on cpu (HF_HOME=/home/shivam/assignment/unstopchallenge/cache/hf)
+Could not reach the Hub (Cannot reach https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.). Using cached commit hash for 'sentence-transformers/all-MiniLM-L6-v2'.
+INFO integrity_engine.embeddings: embeddings: sentence-transformers/all-MiniLM-L6-v2 warm (33 ms, dim=384, max_seq=256)
+INFO integrity_engine.external_check: external: local KB built (34 source sentences from 6 passages)
+/home/shivam/assignment/unstopchallenge/.venv/lib64/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+INFO integrity_engine.reporting: summary written: /home/shivam/assignment/unstopchallenge/validation/runs/edge/summary/report_20261106_125811.json

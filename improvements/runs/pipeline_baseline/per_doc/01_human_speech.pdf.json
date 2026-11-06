@@ -1,0 +1,45 @@
+{
+  "document_id": "01_human_speech.pdf",
+  "total_integrity_risk": "LOW",
+  "scores": {
+    "peer_similarity_percentage": 0.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": 64.6
+  },
+  "peer_matches": [],
+  "multimodal_matches": [],
+  "explanations": "Peer similarity: 0.0% across 0 listed source(s) (no substantive peer overlap). External: 0.0% (none). AI: UNSURE at 64.6%. Overlap types: 0 cross-modal, 0 exact-copy, 0 paraphrase, 0 discounted common-source.",
+  "status": "ok",
+  "modality": "pdf",
+  "warnings": [],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": 64.6,
+    "label": "UNSURE",
+    "p_classifier": 0.9929,
+    "p_perplexity": 0.0,
+    "p_burstiness": 0.5034,
+    "perplexity": 105.014,
+    "burstiness": 0.214,
+    "length_gate_triggered": false,
+    "ai_detector_source": "model",
+    "caveat": "Note: AI detectors are unreliable on non-native-English and polished human text (Stanford 2023: up to 61% false-positive rate on ESL essays); treat this as a lead for human review, not proof."
+  },
+  "template_registry_hits": [],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {},
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 1789,
+    "sha256": "5f365b232f84cabc470c65b6e98467f4c8b3eb713f64da5987760cdb8a18f70e",
+    "page_count": 2,
+    "duration_s": null,
+    "asr_model": null,
+    "asr_language": null,
+    "chunk_count": 1,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T13:57:32Z"
+}

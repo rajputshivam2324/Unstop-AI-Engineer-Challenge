@@ -1,0 +1,47 @@
+{
+  "generated_at_utc": "2026-11-06T13:52:50Z",
+  "elapsed_s": 0.7,
+  "engine_version": "1.0.0",
+  "documents": [
+    {
+      "document_id": "zero.pdf",
+      "modality": "pdf",
+      "status": "error",
+      "risk": "LOW",
+      "peer": 0.0,
+      "external": 0.0,
+      "ai_label": "INSUFFICIENT_TEXT",
+      "ai": null,
+      "ai_detector_source": "model",
+      "top_match": null,
+      "warnings": 1
+    }
+  ],
+  "aggregate": {
+    "n_docs": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 1,
+    "degraded": 1
+  },
+  "peer_similarity_matrix": {
+    "zero.pdf": {}
+  },
+  "runtime": {
+    "elapsed_s": 0.66,
+    "stage_seconds": {
+      "ingestion": 0.0,
+      "chunking_and_templates": 0.0,
+      "embedding_and_search": 0.1,
+      "pair_scoring": 0.0,
+      "alignment": 0.0,
+      "external_check": 0.37,
+      "ai_detection": 0.19,
+      "scoring_and_reports": 0.0
+    },
+    "peak_rss_mb": 640.6,
+    "n_chunks": 0,
+    "cpu_count": 12,
+    "ai_detector_missing_models": []
+  }
+}

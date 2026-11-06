@@ -1,0 +1,45 @@
+{
+  "document_id": "13_human_revolution.mp4",
+  "total_integrity_risk": "LOW",
+  "scores": {
+    "peer_similarity_percentage": 0.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": null
+  },
+  "peer_matches": [],
+  "multimodal_matches": [],
+  "explanations": "Peer similarity: 0.0% across 0 listed source(s) (no substantive peer overlap). External: 0.0% (none). AI: INSUFFICIENT_TEXT. Overlap types: 0 cross-modal, 0 exact-copy, 0 paraphrase, 0 discounted common-source.",
+  "status": "ok",
+  "modality": "mp4",
+  "warnings": [],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": null,
+    "label": "INSUFFICIENT_TEXT",
+    "p_classifier": null,
+    "p_perplexity": null,
+    "p_burstiness": null,
+    "perplexity": null,
+    "burstiness": null,
+    "length_gate_triggered": true,
+    "ai_detector_source": "model",
+    "caveat": ""
+  },
+  "template_registry_hits": [],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {},
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 104186,
+    "sha256": "cae788a1a6fc798ea5db90767cd29dea31018053d4b8f50aad8a3646dcf0e67d",
+    "page_count": null,
+    "duration_s": 10.5,
+    "asr_model": "tiny",
+    "asr_language": "en",
+    "chunk_count": 1,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T14:01:10Z"
+}

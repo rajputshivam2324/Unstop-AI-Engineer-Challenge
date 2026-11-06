@@ -1,0 +1,136 @@
+{
+  "generated_at_utc": "2026-11-06T13:53:03Z",
+  "elapsed_s": 13.4,
+  "engine_version": "1.0.0",
+  "documents": [
+    {
+      "document_id": "07_pitch_crossmodal.pdf",
+      "modality": "pdf",
+      "status": "ok",
+      "risk": "HIGH",
+      "peer": 100.0,
+      "external": 0.0,
+      "ai_label": "HUMAN",
+      "ai": 25.0,
+      "ai_detector_source": "heuristic_fallback",
+      "top_match": {
+        "matched_file": "08_pitch_crossmodal_video.mp4",
+        "pair_score": 1.0
+      },
+      "warnings": 0
+    },
+    {
+      "document_id": "08_pitch_crossmodal_video.mp4",
+      "modality": "mp4",
+      "status": "ok",
+      "risk": "HIGH",
+      "peer": 100.0,
+      "external": 0.0,
+      "ai_label": "HUMAN",
+      "ai": 25.0,
+      "ai_detector_source": "heuristic_fallback",
+      "top_match": {
+        "matched_file": "07_pitch_crossmodal.pdf",
+        "pair_score": 1.0
+      },
+      "warnings": 0
+    },
+    {
+      "document_id": "12_case_template_A.docx",
+      "modality": "docx",
+      "status": "ok",
+      "risk": "LOW",
+      "peer": 0.0,
+      "external": 0.0,
+      "ai_label": "HUMAN",
+      "ai": 25.0,
+      "ai_detector_source": "heuristic_fallback",
+      "top_match": null,
+      "warnings": 0
+    },
+    {
+      "document_id": "13_case_template_B.docx",
+      "modality": "docx",
+      "status": "ok",
+      "risk": "LOW",
+      "peer": 0.0,
+      "external": 0.0,
+      "ai_label": "HUMAN",
+      "ai": 25.0,
+      "ai_detector_source": "heuristic_fallback",
+      "top_match": null,
+      "warnings": 0
+    },
+    {
+      "document_id": "14_case_template_C.docx",
+      "modality": "docx",
+      "status": "ok",
+      "risk": "LOW",
+      "peer": 0.0,
+      "external": 0.0,
+      "ai_label": "HUMAN",
+      "ai": 25.0,
+      "ai_detector_source": "heuristic_fallback",
+      "top_match": null,
+      "warnings": 0
+    }
+  ],
+  "aggregate": {
+    "n_docs": 5,
+    "high": 2,
+    "medium": 0,
+    "low": 3,
+    "degraded": 0
+  },
+  "peer_similarity_matrix": {
+    "07_pitch_crossmodal.pdf": {
+      "08_pitch_crossmodal_video.mp4": 1.0,
+      "12_case_template_A.docx": 0.0,
+      "13_case_template_B.docx": 0.0,
+      "14_case_template_C.docx": 0.0
+    },
+    "08_pitch_crossmodal_video.mp4": {
+      "07_pitch_crossmodal.pdf": 1.0,
+      "12_case_template_A.docx": 0.0,
+      "13_case_template_B.docx": 0.0,
+      "14_case_template_C.docx": 0.0
+    },
+    "12_case_template_A.docx": {
+      "07_pitch_crossmodal.pdf": 0.0,
+      "08_pitch_crossmodal_video.mp4": 0.0,
+      "13_case_template_B.docx": 0.0,
+      "14_case_template_C.docx": 0.0
+    },
+    "13_case_template_B.docx": {
+      "07_pitch_crossmodal.pdf": 0.0,
+      "08_pitch_crossmodal_video.mp4": 0.0,
+      "12_case_template_A.docx": 0.0,
+      "14_case_template_C.docx": 0.0
+    },
+    "14_case_template_C.docx": {
+      "07_pitch_crossmodal.pdf": 0.0,
+      "08_pitch_crossmodal_video.mp4": 0.0,
+      "12_case_template_A.docx": 0.0,
+      "13_case_template_B.docx": 0.0
+    }
+  },
+  "runtime": {
+    "elapsed_s": 13.39,
+    "stage_seconds": {
+      "ingestion": 3.87,
+      "chunking_and_templates": 0.02,
+      "embedding_and_search": 0.59,
+      "pair_scoring": 0.7,
+      "alignment": 1.38,
+      "external_check": 0.98,
+      "ai_detection": 5.85,
+      "scoring_and_reports": 0.0
+    },
+    "peak_rss_mb": 1423.5,
+    "n_chunks": 9,
+    "cpu_count": 12,
+    "ai_detector_missing_models": [
+      "/nonexistent/detector"
+    ]
+  }
+}

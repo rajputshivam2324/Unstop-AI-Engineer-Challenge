@@ -1,0 +1,162 @@
+{
+  "document_id": "10_library_access.docx",
+  "total_integrity_risk": "MEDIUM",
+  "scores": {
+    "peer_similarity_percentage": 0.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": 66.0
+  },
+  "peer_matches": [
+    {
+      "matched_file": "04_library_hours.pdf",
+      "similarity_score": 0.8868,
+      "query_passage": "Northbridge Public Library asks the university review panel to compare proposals for improving access across three neighbourhood branches. Each candidate should submit an independent recommendation grounded in the fictional facts here. The annual budget is fixed, the buildings remain publicly owned, and the council must publish its reasoning before the next funding meeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation obstacle, and name an observation that could change your decision. Do not invent survey findings or treat an illustrative calculation as measured evidence. Keep any quotations separate from your own analysis and explain uncertainty in language. The panel welcomes disagreement when the argument follows from stated assumptions. Your response should be understandable to residents without specialist training. Include a practical first step, a responsible team, and a review date. This shared institutional prompt is provided for context and should not be assessed as original analysis.",
+      "matched_passage": "Northbridge Public Library asks the university review panel to compare proposals for improving\naccess across three neighbourhood branches. Each candidate should submit an independent\nrecommendation grounded in the fictional facts here. The annual budget is fixed, the buildings\nremain publicly owned, and the council must publish its reasoning before the next funding\nmeeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation\nobstacle, and name an observation that could change your decision. Do not invent survey\nfindings or treat an illustrative calculation as measured evidence. Keep any quotations separate\nfrom your own analysis and explain uncertainty in language. The panel welcomes disagreement\nwhen the argument follows from stated assumptions. Your response should be understandable to\nresidents without specialist training. Include a practical first step, a responsible team, and a\nreview date. This shared institutional prompt is provided for context and should not be assessed\nas original analysis.",
+      "location": {
+        "query_page": null,
+        "matched_page": 1
+      },
+      "match_type": "common_source",
+      "overlap_kind": "common_source",
+      "evidence_sentence_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lexical_jaccard": 1.0,
+      "token_lcs_ratio": 1.0,
+      "note": "shared institutional text (discounted)"
+    },
+    {
+      "matched_file": "05_library_storage.pdf",
+      "similarity_score": 0.8458,
+      "query_passage": "Northbridge Public Library asks the university review panel to compare proposals for improving access across three neighbourhood branches. Each candidate should submit an independent recommendation grounded in the fictional facts here. The annual budget is fixed, the buildings remain publicly owned, and the council must publish its reasoning before the next funding meeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation obstacle, and name an observation that could change your decision. Do not invent survey findings or treat an illustrative calculation as measured evidence. Keep any quotations separate from your own analysis and explain uncertainty in language. The panel welcomes disagreement when the argument follows from stated assumptions. Your response should be understandable to residents without specialist training. Include a practical first step, a responsible team, and a review date. This shared institutional prompt is provided for context and should not be assessed as original analysis.",
+      "matched_passage": "Northbridge Public Library asks the university review panel to compare proposals for improving\naccess across three neighbourhood branches. Each candidate should submit an independent\nrecommendation grounded in the fictional facts here. The annual budget is fixed, the buildings\nremain publicly owned, and the council must publish its reasoning before the next funding\nmeeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation\nobstacle, and name an observation that could change your decision. Do not invent survey\nfindings or treat an illustrative calculation as measured evidence. Keep any quotations separate\nfrom your own analysis and explain uncertainty in language. The panel welcomes disagreement\nwhen the argument follows from stated assumptions. Your response should be understandable to\nresidents without specialist training. Include a practical first step, a responsible team, and a\nreview date. This shared institutional prompt is provided for context and should not be assessed\nas original analysis.",
+      "location": {
+        "query_page": null,
+        "matched_page": 1
+      },
+      "match_type": "common_source",
+      "overlap_kind": "common_source",
+      "evidence_sentence_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lexical_jaccard": 1.0,
+      "token_lcs_ratio": 1.0,
+      "note": "shared institutional text (discounted)"
+    },
+    {
+      "matched_file": "08_library_transport.docx",
+      "similarity_score": 0.8831,
+      "query_passage": "Northbridge Public Library asks the university review panel to compare proposals for improving access across three neighbourhood branches. Each candidate should submit an independent recommendation grounded in the fictional facts here. The annual budget is fixed, the buildings remain publicly owned, and the council must publish its reasoning before the next funding meeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation obstacle, and name an observation that could change your decision. Do not invent survey findings or treat an illustrative calculation as measured evidence. Keep any quotations separate from your own analysis and explain uncertainty in language. The panel welcomes disagreement when the argument follows from stated assumptions. Your response should be understandable to residents without specialist training. Include a practical first step, a responsible team, and a review date. This shared institutional prompt is provided for context and should not be assessed as original analysis.",
+      "matched_passage": "Northbridge Public Library asks the university review panel to compare proposals for improving access across three neighbourhood branches. Each candidate should submit an independent recommendation grounded in the fictional facts here. The annual budget is fixed, the buildings remain publicly owned, and the council must publish its reasoning before the next funding meeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation obstacle, and name an observation that could change your decision. Do not invent survey findings or treat an illustrative calculation as measured evidence. Keep any quotations separate from your own analysis and explain uncertainty in language. The panel welcomes disagreement when the argument follows from stated assumptions. Your response should be understandable to residents without specialist training. Include a practical first step, a responsible team, and a review date. This shared institutional prompt is provided for context and should not be assessed as original analysis.",
+      "location": {
+        "query_page": null,
+        "matched_page": null
+      },
+      "match_type": "common_source",
+      "overlap_kind": "common_source",
+      "evidence_sentence_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lexical_jaccard": 1.0,
+      "token_lcs_ratio": 1.0,
+      "note": "shared institutional text (discounted)"
+    },
+    {
+      "matched_file": "09_library_privacy.docx",
+      "similarity_score": 0.8428,
+      "query_passage": "Northbridge Public Library asks the university review panel to compare proposals for improving access across three neighbourhood branches. Each candidate should submit an independent recommendation grounded in the fictional facts here. The annual budget is fixed, the buildings remain publicly owned, and the council must publish its reasoning before the next funding meeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation obstacle, and name an observation that could change your decision. Do not invent survey findings or treat an illustrative calculation as measured evidence. Keep any quotations separate from your own analysis and explain uncertainty in language. The panel welcomes disagreement when the argument follows from stated assumptions. Your response should be understandable to residents without specialist training. Include a practical first step, a responsible team, and a review date. This shared institutional prompt is provided for context and should not be assessed as original analysis.",
+      "matched_passage": "Northbridge Public Library asks the university review panel to compare proposals for improving access across three neighbourhood branches. Each candidate should submit an independent recommendation grounded in the fictional facts here. The annual budget is fixed, the buildings remain publicly owned, and the council must publish its reasoning before the next funding meeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation obstacle, and name an observation that could change your decision. Do not invent survey findings or treat an illustrative calculation as measured evidence. Keep any quotations separate from your own analysis and explain uncertainty in language. The panel welcomes disagreement when the argument follows from stated assumptions. Your response should be understandable to residents without specialist training. Include a practical first step, a responsible team, and a review date. This shared institutional prompt is provided for context and should not be assessed as original analysis.",
+      "location": {
+        "query_page": null,
+        "matched_page": null
+      },
+      "match_type": "common_source",
+      "overlap_kind": "common_source",
+      "evidence_sentence_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lexical_jaccard": 1.0,
+      "token_lcs_ratio": 1.0,
+      "note": "shared institutional text (discounted)"
+    }
+  ],
+  "multimodal_matches": [],
+  "explanations": "Peer similarity: 0.0% across 4 listed source(s) (top: 04_library_hours.pdf @ 0.89; common-source, discounted). External: 0.0% (none). AI: AI_LIKELY at 66.0%. Overlap types: 0 cross-modal, 0 exact-copy, 0 paraphrase, 4 discounted common-source.",
+  "status": "ok",
+  "modality": "docx",
+  "warnings": [],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": 66.0,
+    "label": "AI_LIKELY",
+    "p_classifier": 1.0,
+    "p_perplexity": 0.0,
+    "p_burstiness": 0.6007,
+    "perplexity": 113.581,
+    "burstiness": 0.1158,
+    "length_gate_triggered": false,
+    "ai_detector_source": "model",
+    "caveat": "Note: AI detectors are unreliable on non-native-English and polished human text (Stanford 2023: up to 61% false-positive rate on ESL essays); treat this as a lead for human review, not proof."
+  },
+  "template_registry_hits": [
+    {
+      "template_cluster_id": "tmpl_sentences",
+      "chunk_ids": [
+        "10:000"
+      ],
+      "note": "repeated block in >=3 documents (discounted)"
+    }
+  ],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {},
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 37252,
+    "sha256": "859dec70d46f6c416e1820ec6cf559f6daa6b13a52738b7b23cbfc179458f742",
+    "page_count": null,
+    "duration_s": null,
+    "asr_model": null,
+    "asr_language": null,
+    "chunk_count": 2,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T13:58:15Z"
+}

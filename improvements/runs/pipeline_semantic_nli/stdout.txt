@@ -1,0 +1,1 @@
+{"summary_path": "/home/shivam/assignment/unstopchallenge/improvements/runs/pipeline_semantic_nli/summary/report_20261106_135932.json", "documents_evaluated": 13, "warnings": 0, "elapsed_s": 75.7, "peak_rss_mb": 2022.8}

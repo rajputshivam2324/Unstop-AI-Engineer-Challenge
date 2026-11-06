@@ -1,0 +1,89 @@
+# Default configuration for the integrity engine.
+# Every tunable threshold in the codebase resolves from this file (spec §4.12);
+# CLI --config may override any key. Unknown keys are ignored with a warning.
+# NOTE: fixed constants only — corpus-relative sigma calibration was removed
+# by spec de-scope rule R2.
+
+[chunking]
+max_chunk_tokens = 200
+min_chunk_tokens = 40
+overlap_sentences = 2
+mp4_target_tokens = 120
+mp4_max_seconds = 45
+
+[embedding]
+model_name = "sentence-transformers/all-MiniLM-L6-v2"
+device = "cpu"
+batch_size = 32
+
+[pairwise]
+chunk_query_topk = 10
+chunk_min_cos = 0.55
+doc_flag_threshold = 0.70
+doc_report_floor = 0.40           # legacy (chunk-level era); evidence pairs >= min_pair_score_floor are reported
+min_pair_score_floor = 0.05      # small-source exclusion floor (below: listed only)
+duplicate_similarity = 1.0       # byte-identical duplicate pair score (E11)
+
+[alignment]
+template_min_docs = 3            # simhash cluster spanning >=3 docs => boilerplate
+template_hamming_max = 3
+template_min_tokens = 40
+verbatim_template_min_tokens = 20
+min_evidence_chars = 60          # noise floor: below => counted, not reported
+sentence_align_cos_floor = 0.65
+sentence_lcs_token_ratio = 0.60
+min_run_sentences = 2            # evidence run: >= 2 consecutive aligned sentences ...
+single_sentence_cos = 0.85       # ... or ONE sentence this similar (or token-LCS >= 0.80)
+single_sentence_min_tokens = 12  #     and at least this long
+mp4_template_voice_a = "en+f2"   # doc 08 TTS voice (dataset generation only)
+mp4_template_voice_b = "en+M2"   # doc 09 TTS voice (dataset generation only)
+
+[ai]
+classifier_model = "/nonexistent/detector"
+gpt2_model = "openai-community/gpt2"
+# perplexity / burstiness logistic constants: fitted by maximum likelihood on the
+# HC3 CALIBRATION split (45 questions, 90 texts) by benchmarks/bench_ai_detection.py,
+# evaluated on 105 held-out questions. Spec a-priori values were 22.0/9.5 and 0.55/0.14.
+# HC3 medians: perplexity human 27.2 vs ChatGPT 9.2. Burstiness is anti-informative on
+# HC3 (AUC 0.29); the fit flattens it (see EVALUATION.md).
+perplexity_mu = 13.69
+perplexity_k = 0.86
+burst_mu = 0.2174
+burst_k = 0.2486
+p_text_perp_weight = 0.75        # p_text = 0.75*p_perp + 0.25*p_burst
+p_final_model_weight = 0.60      # p_ai = 0.60*p_cls + 0.40*p_text
+band_human_max = 35.0
+band_unsure_max = 65.0
+min_length_tokens = 50           # below => INSUFFICIENT_TEXT (Copyleaks-style gate)
+max_chars = 20000
+max_tokens_per_window = 1024
+
+[external]
+local_kb_min_cos = 0.70    # sentence-to-sentence vs KB source sentences (measured separation: doc-04 verbatim quotes 0.65-1.00; next doc 0.674)
+web_budget_per_doc = 2
+query_topk = 3
+request_timeout_s = 6
+allow_external_web = true
+web_sleep_s = 0.6
+web_min_query_words = 12
+web_jaccard_min = 0.35
+ddg_backend = "duckduckgo_fallback"
+
+[scoring]
+# Risk rule (peer dominant -> external -> AI). HIGH: peer >= 70, or peer >= 40 with
+# external >= 30 (or with AI_LIKELY on a cross-modal pair). MEDIUM: peer >= 20, or
+# peer >= 10 with external >= 25, or AI_LIKELY alone (a review lead, never proof).
+# peer_medium_pct = 20 (spec said 40) is measured: on the 400-doc retrieval benchmark
+# peer >= 20% gives precision 0.96 / recall 0.94 for injected 1/3-document copies.
+peer_high_pct = 70.0
+peer_high_with_external_pct = 40.0
+external_high_pct = 30.0
+peer_medium_pct = 20.0
+peer_medium_with_external_pct = 10.0
+external_medium_pct = 25.0
+ai_medium_pct = 65.0
+
+[runtime]
+log_level = "INFO"
+seed = 42
+max_ingest_seconds_per_file = 120

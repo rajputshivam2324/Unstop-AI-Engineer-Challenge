@@ -1,0 +1,98 @@
+{
+  "01_human_speech.pdf": {
+    "full_text": "Archive extract for a source location check\nThis cover identifies an archival speech excerpt. The recording was delivered by John F Kennedy\non 20 January 1961. Page two contains the selected passage. This fixture uses an existing\nhuman recording, rather than a synthesized narration. No claim about academic misconduct\nfollows from its intentional reuse in an evaluation.\n\nJohn F Kennedy inaugural address excerpt\nThe world is very different now, for man holds in his mortal hands the power to abolish all forms of\nhuman poverty and all forms of human life.",
+    "pages": [
+      {
+        "page": 1,
+        "text": "Archive extract for a source location check\nThis cover identifies an archival speech excerpt. The recording was delivered by John F Kennedy\non 20 January 1961. Page two contains the selected passage. This fixture uses an existing\nhuman recording, rather than a synthesized narration. No claim about academic misconduct\nfollows from its intentional reuse in an evaluation.",
+        "char_start": 0,
+        "char_end": 371
+      },
+      {
+        "page": 2,
+        "text": "John F Kennedy inaugural address excerpt\nThe world is very different now, for man holds in his mortal hands the power to abolish all forms of\nhuman poverty and all forms of human life.",
+        "char_start": 373,
+        "char_end": 557
+      }
+    ],
+    "metadata": {
+      "page_count": 2,
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 0.0035285619997011963
+  },
+  "11_human_crossmodal.mp4": {
+    "full_text": "The world is very different now for man holds it is mortal hands the power to abolish all forms of human poverty and all forms of human life",
+    "pages": [
+      {
+        "page": null,
+        "text": "The world is very different now for man holds it is mortal hands",
+        "char_start": 0,
+        "char_end": 64
+      },
+      {
+        "page": null,
+        "text": "the power to abolish all forms of human poverty and all forms of human life",
+        "char_start": 65,
+        "char_end": 140
+      }
+    ],
+    "metadata": {
+      "duration_s": 15.0,
+      "asr_language": "en",
+      "asr_model": "tiny",
+      "segments": [
+        [
+          0.18,
+          6.02
+        ],
+        [
+          6.78,
+          14.86
+        ]
+      ],
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 2.8782797170006234
+  },
+  "06_policy_argument.docx": {
+    "full_text": "After a city removes library fines, the outstanding debt disappears, so apparent improvement in account balances says nothing about whether books come back sooner. Measure days overdue among loans issued after the change instead. Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+    "pages": [
+      {
+        "page": null,
+        "text": "After a city removes library fines, the outstanding debt disappears, so apparent improvement in account balances says nothing about whether books come back sooner. Measure days overdue among loans issued after the change instead. Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+        "char_start": 0,
+        "char_end": 566
+      }
+    ],
+    "metadata": {
+      "paragraph_count": 1,
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 0.012355517999822041
+  },
+  "07_policy_rewording.docx": {
+    "full_text": "Cancelling penalties wipes the ledger clean by definition; that accounting result cannot establish that borrowers have become more punctual. The useful outcome is how late newly borrowed volumes are returned. An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested. Support the reform if materials arrive back faster and people formerly carrying debts continue using the service.",
+    "pages": [
+      {
+        "page": null,
+        "text": "Cancelling penalties wipes the ledger clean by definition; that accounting result cannot establish that borrowers have become more punctual. The useful outcome is how late newly borrowed volumes are returned. An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested. Support the reform if materials arrive back faster and people formerly carrying debts continue using the service.",
+        "char_start": 0,
+        "char_end": 548
+      }
+    ],
+    "metadata": {
+      "paragraph_count": 1,
+      "warning_count": 0
+    },
+    "status": "ok",
+    "warnings": [],
+    "diagnostic_extract_seconds": 0.011176047000844846
+  }
+}

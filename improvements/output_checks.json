@@ -1,0 +1,266 @@
+{
+  "files_checked": 52,
+  "checks": [
+    {
+      "mode": "baseline",
+      "file": "01_human_speech.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "baseline",
+      "file": "02_alice_source.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "baseline",
+      "file": "03_alice_copy.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "baseline",
+      "file": "04_library_hours.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "baseline",
+      "file": "05_library_storage.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "baseline",
+      "file": "06_policy_argument.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "baseline",
+      "file": "07_policy_rewording.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "baseline",
+      "file": "08_library_transport.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "baseline",
+      "file": "09_library_privacy.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "baseline",
+      "file": "10_library_access.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "baseline",
+      "file": "11_human_crossmodal.mp4",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "baseline",
+      "file": "12_human_allies.mp4",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "baseline",
+      "file": "13_human_revolution.mp4",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "boundary",
+      "file": "01_human_speech.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "boundary",
+      "file": "02_alice_source.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "boundary",
+      "file": "03_alice_copy.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "boundary",
+      "file": "04_library_hours.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "boundary",
+      "file": "05_library_storage.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "boundary",
+      "file": "06_policy_argument.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "boundary",
+      "file": "07_policy_rewording.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "boundary",
+      "file": "08_library_transport.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "boundary",
+      "file": "09_library_privacy.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "boundary",
+      "file": "10_library_access.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "boundary",
+      "file": "11_human_crossmodal.mp4",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "boundary",
+      "file": "12_human_allies.mp4",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "boundary",
+      "file": "13_human_revolution.mp4",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_nli",
+      "file": "01_human_speech.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_nli",
+      "file": "02_alice_source.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_nli",
+      "file": "03_alice_copy.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_nli",
+      "file": "04_library_hours.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_nli",
+      "file": "05_library_storage.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_nli",
+      "file": "06_policy_argument.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_nli",
+      "file": "07_policy_rewording.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_nli",
+      "file": "08_library_transport.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_nli",
+      "file": "09_library_privacy.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_nli",
+      "file": "10_library_access.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_nli",
+      "file": "11_human_crossmodal.mp4",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_nli",
+      "file": "12_human_allies.mp4",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_nli",
+      "file": "13_human_revolution.mp4",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_hybrid",
+      "file": "01_human_speech.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_hybrid",
+      "file": "02_alice_source.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_hybrid",
+      "file": "03_alice_copy.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_hybrid",
+      "file": "04_library_hours.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_hybrid",
+      "file": "05_library_storage.pdf",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_hybrid",
+      "file": "06_policy_argument.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_hybrid",
+      "file": "07_policy_rewording.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_hybrid",
+      "file": "08_library_transport.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_hybrid",
+      "file": "09_library_privacy.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_hybrid",
+      "file": "10_library_access.docx",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_hybrid",
+      "file": "11_human_crossmodal.mp4",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_hybrid",
+      "file": "12_human_allies.mp4",
+      "schema_and_exact_passages": true
+    },
+    {
+      "mode": "semantic_hybrid",
+      "file": "13_human_revolution.mp4",
+      "schema_and_exact_passages": true
+    }
+  ],
+  "crossmodal_page_timestamp_correct": true
+}

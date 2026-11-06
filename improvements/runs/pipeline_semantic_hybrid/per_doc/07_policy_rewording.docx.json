@@ -1,0 +1,80 @@
+{
+  "document_id": "07_policy_rewording.docx",
+  "total_integrity_risk": "HIGH",
+  "scores": {
+    "peer_similarity_percentage": 100.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": 65.8
+  },
+  "peer_matches": [
+    {
+      "matched_file": "06_policy_argument.docx",
+      "similarity_score": 0.6626,
+      "query_passage": "The useful outcome is how late newly borrowed volumes are returned. An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested.",
+      "matched_passage": "After a city removes library fines, the outstanding debt disappears, so apparent improvement in account balances says nothing about whether books come back sooner. Measure days overdue among loans issued after the change instead. Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+      "location": {
+        "query_page": null,
+        "matched_page": null
+      },
+      "match_type": "overlap",
+      "overlap_kind": "paraphrase",
+      "evidence_sentence_scores": [],
+      "lexical_jaccard": 0.0561,
+      "token_lcs_ratio": 0.0361,
+      "note": "hybrid verified candidate: score=0.5169, contradiction=0.0244; bidirectional_entailment=0.7187; reported similarity is MiniLM cosine; human review required"
+    },
+    {
+      "matched_file": "06_policy_argument.docx",
+      "similarity_score": 0.6077,
+      "query_passage": "An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested. Support the reform if materials arrive back faster and people formerly carrying debts continue using the service.",
+      "matched_passage": "Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+      "location": {
+        "query_page": null,
+        "matched_page": null
+      },
+      "match_type": "overlap",
+      "overlap_kind": "paraphrase",
+      "evidence_sentence_scores": [],
+      "lexical_jaccard": 0.0455,
+      "token_lcs_ratio": 0.0816,
+      "note": "hybrid verified candidate: score=0.5931, contradiction=0.0256; bidirectional_entailment=0.6758; reported similarity is MiniLM cosine; human review required"
+    }
+  ],
+  "multimodal_matches": [],
+  "explanations": "Peer similarity: 100.0% across 1 listed source(s) (top: 06_policy_argument.docx @ 0.66; overlap). External: 0.0% (none). AI: AI_LIKELY at 65.8%. Overlap types: 0 cross-modal, 0 exact-copy, 2 paraphrase, 0 discounted common-source.",
+  "status": "ok",
+  "modality": "docx",
+  "warnings": [],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": 65.8,
+    "label": "AI_LIKELY",
+    "p_classifier": 0.9996,
+    "p_perplexity": 0.0,
+    "p_burstiness": 0.5867,
+    "perplexity": 429.654,
+    "burstiness": 0.1303,
+    "length_gate_triggered": false,
+    "ai_detector_source": "model",
+    "caveat": "Note: AI detectors are unreliable on non-native-English and polished human text (Stanford 2023: up to 61% false-positive rate on ESL essays); treat this as a lead for human review, not proof."
+  },
+  "template_registry_hits": [],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {
+    "06_policy_argument.docx": 1.0
+  },
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 36736,
+    "sha256": "c92fc1e70651fdb48b825011ca22a6eb17350a8c07ba2d06a44c37bdf1a441a2",
+    "page_count": null,
+    "duration_s": null,
+    "asr_model": null,
+    "asr_language": null,
+    "chunk_count": 1,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T14:01:10Z"
+}

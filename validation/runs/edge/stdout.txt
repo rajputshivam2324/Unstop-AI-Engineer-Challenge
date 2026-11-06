@@ -1,0 +1,1 @@
+{"summary_path": "/home/shivam/assignment/unstopchallenge/validation/runs/edge/summary/report_20261106_125811.json", "documents_evaluated": 4, "warnings": 3, "elapsed_s": 13.5, "peak_rss_mb": 1909.5}

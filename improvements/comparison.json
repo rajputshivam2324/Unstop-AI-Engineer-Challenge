@@ -1,0 +1,1151 @@
+{
+  "utc": "2026-11-06T14:05:50.739114+00:00",
+  "pipeline_metrics": {
+    "baseline": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 2,
+      "tn": 75,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "runtime": {
+        "elapsed_s": 38.17,
+        "stage_seconds": {
+          "ingestion": 6.66,
+          "chunking_and_templates": 0.03,
+          "embedding_and_search": 5.55,
+          "pair_scoring": 0.33,
+          "alignment": 2.16,
+          "external_check": 0.73,
+          "ai_detection": 22.71,
+          "scoring_and_reports": 0.01
+        },
+        "peak_rss_mb": 2026.8,
+        "n_chunks": 18,
+        "cpu_count": 12,
+        "ai_detector_missing_models": []
+      },
+      "output_count_json": 13,
+      "output_count_md": 13,
+      "schema_issues": []
+    },
+    "boundary": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 1,
+      "tn": 75,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "runtime": {
+        "elapsed_s": 41.58,
+        "stage_seconds": {
+          "ingestion": 7.56,
+          "chunking_and_templates": 0.03,
+          "embedding_and_search": 9.82,
+          "pair_scoring": 1.42,
+          "alignment": 2.31,
+          "external_check": 0.75,
+          "ai_detection": 19.69,
+          "scoring_and_reports": 0.01
+        },
+        "peak_rss_mb": 2062.5,
+        "n_chunks": 18,
+        "cpu_count": 12,
+        "ai_detector_missing_models": []
+      },
+      "output_count_json": 13,
+      "output_count_md": 13,
+      "schema_issues": []
+    },
+    "semantic_nli": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 75,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "runtime": {
+        "elapsed_s": 75.71,
+        "stage_seconds": {
+          "ingestion": 7.43,
+          "chunking_and_templates": 0.03,
+          "embedding_and_search": 9.4,
+          "pair_scoring": 35.14,
+          "alignment": 2.6,
+          "external_check": 0.97,
+          "ai_detection": 20.14,
+          "scoring_and_reports": 0.01
+        },
+        "peak_rss_mb": 2022.8,
+        "n_chunks": 18,
+        "cpu_count": 12,
+        "ai_detector_missing_models": []
+      },
+      "output_count_json": 13,
+      "output_count_md": 13,
+      "schema_issues": []
+    },
+    "semantic_hybrid": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 75,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "runtime": {
+        "elapsed_s": 96.37,
+        "stage_seconds": {
+          "ingestion": 7.05,
+          "chunking_and_templates": 0.03,
+          "embedding_and_search": 10.1,
+          "pair_scoring": 50.33,
+          "alignment": 4.24,
+          "external_check": 1.34,
+          "ai_detection": 23.27,
+          "scoring_and_reports": 0.01
+        },
+        "peak_rss_mb": 1936.3,
+        "n_chunks": 18,
+        "cpu_count": 12,
+        "ai_detector_missing_models": []
+      },
+      "output_count_json": 13,
+      "output_count_md": 13,
+      "schema_issues": []
+    }
+  },
+  "pipeline_details": {
+    "baseline": {
+      "positive_pairs": [
+        {
+          "pair": [
+            "01_human_speech.pdf",
+            "11_human_crossmodal.mp4"
+          ],
+          "expected": "cross_modal",
+          "detected": false,
+          "evidence": []
+        },
+        {
+          "pair": [
+            "02_alice_source.pdf",
+            "03_alice_copy.pdf"
+          ],
+          "expected": "exact_copy",
+          "detected": true,
+          "evidence": [
+            {
+              "query_file": "02_alice_source.pdf",
+              "matched_file": "03_alice_copy.pdf",
+              "similarity_score": 1.0,
+              "query_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "matched_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "location": {
+                "query_page": 1,
+                "matched_page": 1
+              },
+              "match_type": "overlap",
+              "overlap_kind": "verbatim",
+              "evidence_sentence_scores": [
+                1.0
+              ],
+              "lexical_jaccard": 1.0,
+              "token_lcs_ratio": 1.0,
+              "note": "byte-identical duplicate file"
+            },
+            {
+              "query_file": "03_alice_copy.pdf",
+              "matched_file": "02_alice_source.pdf",
+              "similarity_score": 1.0,
+              "query_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "matched_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "location": {
+                "query_page": 1,
+                "matched_page": 1
+              },
+              "match_type": "overlap",
+              "overlap_kind": "verbatim",
+              "evidence_sentence_scores": [
+                1.0
+              ],
+              "lexical_jaccard": 1.0,
+              "token_lcs_ratio": 1.0,
+              "note": "byte-identical duplicate file"
+            }
+          ]
+        },
+        {
+          "pair": [
+            "06_policy_argument.docx",
+            "07_policy_rewording.docx"
+          ],
+          "expected": "paraphrase",
+          "detected": false,
+          "evidence": []
+        }
+      ],
+      "false_positives": [],
+      "per_file": [
+        {
+          "file": "01_human_speech.pdf",
+          "risk": "LOW",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 64.6
+          },
+          "warnings": []
+        },
+        {
+          "file": "02_alice_source.pdf",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 5.3
+          },
+          "warnings": []
+        },
+        {
+          "file": "03_alice_copy.pdf",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 5.3
+          },
+          "warnings": []
+        },
+        {
+          "file": "04_library_hours.pdf",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.7
+          },
+          "warnings": []
+        },
+        {
+          "file": "05_library_storage.pdf",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.6
+          },
+          "warnings": []
+        },
+        {
+          "file": "06_policy_argument.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.9
+          },
+          "warnings": []
+        },
+        {
+          "file": "07_policy_rewording.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.8
+          },
+          "warnings": []
+        },
+        {
+          "file": "08_library_transport.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.7
+          },
+          "warnings": []
+        },
+        {
+          "file": "09_library_privacy.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 66.0
+          },
+          "warnings": []
+        },
+        {
+          "file": "10_library_access.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 66.0
+          },
+          "warnings": []
+        },
+        {
+          "file": "11_human_crossmodal.mp4",
+          "risk": "LOW",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": null
+          },
+          "warnings": []
+        },
+        {
+          "file": "12_human_allies.mp4",
+          "risk": "LOW",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": null
+          },
+          "warnings": []
+        },
+        {
+          "file": "13_human_revolution.mp4",
+          "risk": "LOW",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": null
+          },
+          "warnings": []
+        }
+      ]
+    },
+    "boundary": {
+      "positive_pairs": [
+        {
+          "pair": [
+            "01_human_speech.pdf",
+            "11_human_crossmodal.mp4"
+          ],
+          "expected": "cross_modal",
+          "detected": true,
+          "evidence": [
+            {
+              "query_file": "01_human_speech.pdf",
+              "matched_file": "11_human_crossmodal.mp4",
+              "similarity_score": 0.9805,
+              "query_passage": "The world is very different now, for man holds in his mortal hands the power to abolish all forms of\nhuman poverty and all forms of human life.",
+              "matched_passage": "The world is very different now for man holds it is mortal hands the power to abolish all forms of human poverty and all forms of human life",
+              "location": {
+                "query_page": 2,
+                "matched_timestamp": "00:00:00 - 00:00:15"
+              },
+              "match_type": "overlap",
+              "overlap_kind": "cross_modal",
+              "evidence_sentence_scores": [
+                0.9805
+              ],
+              "lexical_jaccard": 0.875,
+              "token_lcs_ratio": 0.9286,
+              "note": "spoken/written cross-modal match (lexical Jaccard 0.88, token-LCS 0.93; ASR noise expected)"
+            },
+            {
+              "query_file": "11_human_crossmodal.mp4",
+              "matched_file": "01_human_speech.pdf",
+              "similarity_score": 0.9805,
+              "query_passage": "The world is very different now for man holds it is mortal hands the power to abolish all forms of human poverty and all forms of human life",
+              "matched_passage": "The world is very different now, for man holds in his mortal hands the power to abolish all forms of\nhuman poverty and all forms of human life.",
+              "location": {
+                "query_timestamp": "00:00:00 - 00:00:15",
+                "matched_page": 2
+              },
+              "match_type": "overlap",
+              "overlap_kind": "cross_modal",
+              "evidence_sentence_scores": [
+                0.9805
+              ],
+              "lexical_jaccard": 0.875,
+              "token_lcs_ratio": 0.9286,
+              "note": "spoken/written cross-modal match (lexical Jaccard 0.88, token-LCS 0.93; ASR noise expected)"
+            }
+          ]
+        },
+        {
+          "pair": [
+            "02_alice_source.pdf",
+            "03_alice_copy.pdf"
+          ],
+          "expected": "exact_copy",
+          "detected": true,
+          "evidence": [
+            {
+              "query_file": "02_alice_source.pdf",
+              "matched_file": "03_alice_copy.pdf",
+              "similarity_score": 1.0,
+              "query_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "matched_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "location": {
+                "query_page": 1,
+                "matched_page": 1
+              },
+              "match_type": "overlap",
+              "overlap_kind": "verbatim",
+              "evidence_sentence_scores": [
+                1.0
+              ],
+              "lexical_jaccard": 1.0,
+              "token_lcs_ratio": 1.0,
+              "note": "byte-identical duplicate file"
+            },
+            {
+              "query_file": "03_alice_copy.pdf",
+              "matched_file": "02_alice_source.pdf",
+              "similarity_score": 1.0,
+              "query_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "matched_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "location": {
+                "query_page": 1,
+                "matched_page": 1
+              },
+              "match_type": "overlap",
+              "overlap_kind": "verbatim",
+              "evidence_sentence_scores": [
+                1.0
+              ],
+              "lexical_jaccard": 1.0,
+              "token_lcs_ratio": 1.0,
+              "note": "byte-identical duplicate file"
+            }
+          ]
+        },
+        {
+          "pair": [
+            "06_policy_argument.docx",
+            "07_policy_rewording.docx"
+          ],
+          "expected": "paraphrase",
+          "detected": false,
+          "evidence": []
+        }
+      ],
+      "false_positives": [],
+      "per_file": [
+        {
+          "file": "01_human_speech.pdf",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 64.6
+          },
+          "warnings": []
+        },
+        {
+          "file": "02_alice_source.pdf",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 5.3
+          },
+          "warnings": []
+        },
+        {
+          "file": "03_alice_copy.pdf",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 5.3
+          },
+          "warnings": []
+        },
+        {
+          "file": "04_library_hours.pdf",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.7
+          },
+          "warnings": []
+        },
+        {
+          "file": "05_library_storage.pdf",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.6
+          },
+          "warnings": []
+        },
+        {
+          "file": "06_policy_argument.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.9
+          },
+          "warnings": []
+        },
+        {
+          "file": "07_policy_rewording.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.8
+          },
+          "warnings": []
+        },
+        {
+          "file": "08_library_transport.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.7
+          },
+          "warnings": []
+        },
+        {
+          "file": "09_library_privacy.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 66.0
+          },
+          "warnings": []
+        },
+        {
+          "file": "10_library_access.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 66.0
+          },
+          "warnings": []
+        },
+        {
+          "file": "11_human_crossmodal.mp4",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": null
+          },
+          "warnings": []
+        },
+        {
+          "file": "12_human_allies.mp4",
+          "risk": "LOW",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": null
+          },
+          "warnings": []
+        },
+        {
+          "file": "13_human_revolution.mp4",
+          "risk": "LOW",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": null
+          },
+          "warnings": []
+        }
+      ]
+    },
+    "semantic_nli": {
+      "positive_pairs": [
+        {
+          "pair": [
+            "01_human_speech.pdf",
+            "11_human_crossmodal.mp4"
+          ],
+          "expected": "cross_modal",
+          "detected": true,
+          "evidence": [
+            {
+              "query_file": "01_human_speech.pdf",
+              "matched_file": "11_human_crossmodal.mp4",
+              "similarity_score": 0.6897,
+              "query_passage": "John F Kennedy inaugural address excerpt\nThe world is very different now, for man holds in his mortal hands the power to abolish all forms of\nhuman poverty and all forms of human life.",
+              "matched_passage": "The world is very different now for man holds it is mortal hands the power to abolish all forms of human poverty and all forms of human life",
+              "location": {
+                "query_page": 2,
+                "matched_timestamp": "00:00:00 - 00:00:15"
+              },
+              "match_type": "overlap",
+              "overlap_kind": "cross_modal",
+              "evidence_sentence_scores": [],
+              "lexical_jaccard": 0.7,
+              "token_lcs_ratio": 0.7647,
+              "note": "nli verified candidate: score=0.9918, contradiction=0.0004; reported similarity is MiniLM cosine; human review required"
+            },
+            {
+              "query_file": "11_human_crossmodal.mp4",
+              "matched_file": "01_human_speech.pdf",
+              "similarity_score": 0.6897,
+              "query_passage": "The world is very different now for man holds it is mortal hands the power to abolish all forms of human poverty and all forms of human life",
+              "matched_passage": "John F Kennedy inaugural address excerpt\nThe world is very different now, for man holds in his mortal hands the power to abolish all forms of\nhuman poverty and all forms of human life.",
+              "location": {
+                "query_timestamp": "00:00:00 - 00:00:15",
+                "matched_page": 2
+              },
+              "match_type": "overlap",
+              "overlap_kind": "cross_modal",
+              "evidence_sentence_scores": [],
+              "lexical_jaccard": 0.7,
+              "token_lcs_ratio": 0.7647,
+              "note": "nli verified candidate: score=0.9918, contradiction=0.0004; reported similarity is MiniLM cosine; human review required"
+            }
+          ]
+        },
+        {
+          "pair": [
+            "02_alice_source.pdf",
+            "03_alice_copy.pdf"
+          ],
+          "expected": "exact_copy",
+          "detected": true,
+          "evidence": [
+            {
+              "query_file": "02_alice_source.pdf",
+              "matched_file": "03_alice_copy.pdf",
+              "similarity_score": 1.0,
+              "query_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "matched_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "location": {
+                "query_page": 1,
+                "matched_page": 1
+              },
+              "match_type": "overlap",
+              "overlap_kind": "verbatim",
+              "evidence_sentence_scores": [
+                1.0
+              ],
+              "lexical_jaccard": 1.0,
+              "token_lcs_ratio": 1.0,
+              "note": "byte-identical duplicate file"
+            },
+            {
+              "query_file": "03_alice_copy.pdf",
+              "matched_file": "02_alice_source.pdf",
+              "similarity_score": 1.0,
+              "query_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "matched_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "location": {
+                "query_page": 1,
+                "matched_page": 1
+              },
+              "match_type": "overlap",
+              "overlap_kind": "verbatim",
+              "evidence_sentence_scores": [
+                1.0
+              ],
+              "lexical_jaccard": 1.0,
+              "token_lcs_ratio": 1.0,
+              "note": "byte-identical duplicate file"
+            }
+          ]
+        },
+        {
+          "pair": [
+            "06_policy_argument.docx",
+            "07_policy_rewording.docx"
+          ],
+          "expected": "paraphrase",
+          "detected": true,
+          "evidence": [
+            {
+              "query_file": "06_policy_argument.docx",
+              "matched_file": "07_policy_rewording.docx",
+              "similarity_score": 0.6626,
+              "query_passage": "After a city removes library fines, the outstanding debt disappears, so apparent improvement in account balances says nothing about whether books come back sooner. Measure days overdue among loans issued after the change instead. Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+              "matched_passage": "The useful outcome is how late newly borrowed volumes are returned. An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested.",
+              "location": {
+                "query_page": null,
+                "matched_page": null
+              },
+              "match_type": "overlap",
+              "overlap_kind": "paraphrase",
+              "evidence_sentence_scores": [],
+              "lexical_jaccard": 0.0561,
+              "token_lcs_ratio": 0.0361,
+              "note": "nli verified candidate: score=0.7187, contradiction=0.0244; reported similarity is MiniLM cosine; human review required"
+            },
+            {
+              "query_file": "07_policy_rewording.docx",
+              "matched_file": "06_policy_argument.docx",
+              "similarity_score": 0.6626,
+              "query_passage": "The useful outcome is how late newly borrowed volumes are returned. An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested.",
+              "matched_passage": "After a city removes library fines, the outstanding debt disappears, so apparent improvement in account balances says nothing about whether books come back sooner. Measure days overdue among loans issued after the change instead. Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+              "location": {
+                "query_page": null,
+                "matched_page": null
+              },
+              "match_type": "overlap",
+              "overlap_kind": "paraphrase",
+              "evidence_sentence_scores": [],
+              "lexical_jaccard": 0.0561,
+              "token_lcs_ratio": 0.0361,
+              "note": "nli verified candidate: score=0.7187, contradiction=0.0244; reported similarity is MiniLM cosine; human review required"
+            }
+          ]
+        }
+      ],
+      "false_positives": [],
+      "per_file": [
+        {
+          "file": "01_human_speech.pdf",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 64.6
+          },
+          "warnings": []
+        },
+        {
+          "file": "02_alice_source.pdf",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 5.3
+          },
+          "warnings": []
+        },
+        {
+          "file": "03_alice_copy.pdf",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 5.3
+          },
+          "warnings": []
+        },
+        {
+          "file": "04_library_hours.pdf",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.7
+          },
+          "warnings": []
+        },
+        {
+          "file": "05_library_storage.pdf",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.6
+          },
+          "warnings": []
+        },
+        {
+          "file": "06_policy_argument.docx",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.9
+          },
+          "warnings": []
+        },
+        {
+          "file": "07_policy_rewording.docx",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.8
+          },
+          "warnings": []
+        },
+        {
+          "file": "08_library_transport.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.7
+          },
+          "warnings": []
+        },
+        {
+          "file": "09_library_privacy.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 66.0
+          },
+          "warnings": []
+        },
+        {
+          "file": "10_library_access.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 66.0
+          },
+          "warnings": []
+        },
+        {
+          "file": "11_human_crossmodal.mp4",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": null
+          },
+          "warnings": []
+        },
+        {
+          "file": "12_human_allies.mp4",
+          "risk": "LOW",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": null
+          },
+          "warnings": []
+        },
+        {
+          "file": "13_human_revolution.mp4",
+          "risk": "LOW",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": null
+          },
+          "warnings": []
+        }
+      ]
+    },
+    "semantic_hybrid": {
+      "positive_pairs": [
+        {
+          "pair": [
+            "01_human_speech.pdf",
+            "11_human_crossmodal.mp4"
+          ],
+          "expected": "cross_modal",
+          "detected": true,
+          "evidence": [
+            {
+              "query_file": "01_human_speech.pdf",
+              "matched_file": "11_human_crossmodal.mp4",
+              "similarity_score": 0.6897,
+              "query_passage": "John F Kennedy inaugural address excerpt\nThe world is very different now, for man holds in his mortal hands the power to abolish all forms of\nhuman poverty and all forms of human life.",
+              "matched_passage": "The world is very different now for man holds it is mortal hands the power to abolish all forms of human poverty and all forms of human life",
+              "location": {
+                "query_page": 2,
+                "matched_timestamp": "00:00:00 - 00:00:15"
+              },
+              "match_type": "overlap",
+              "overlap_kind": "cross_modal",
+              "evidence_sentence_scores": [],
+              "lexical_jaccard": 0.7,
+              "token_lcs_ratio": 0.7647,
+              "note": "hybrid verified candidate: score=0.6958, contradiction=0.0004; bidirectional_entailment=0.9918; reported similarity is MiniLM cosine; human review required"
+            },
+            {
+              "query_file": "11_human_crossmodal.mp4",
+              "matched_file": "01_human_speech.pdf",
+              "similarity_score": 0.6897,
+              "query_passage": "The world is very different now for man holds it is mortal hands the power to abolish all forms of human poverty and all forms of human life",
+              "matched_passage": "John F Kennedy inaugural address excerpt\nThe world is very different now, for man holds in his mortal hands the power to abolish all forms of\nhuman poverty and all forms of human life.",
+              "location": {
+                "query_timestamp": "00:00:00 - 00:00:15",
+                "matched_page": 2
+              },
+              "match_type": "overlap",
+              "overlap_kind": "cross_modal",
+              "evidence_sentence_scores": [],
+              "lexical_jaccard": 0.7,
+              "token_lcs_ratio": 0.7647,
+              "note": "hybrid verified candidate: score=0.6958, contradiction=0.0004; bidirectional_entailment=0.9918; reported similarity is MiniLM cosine; human review required"
+            }
+          ]
+        },
+        {
+          "pair": [
+            "02_alice_source.pdf",
+            "03_alice_copy.pdf"
+          ],
+          "expected": "exact_copy",
+          "detected": true,
+          "evidence": [
+            {
+              "query_file": "02_alice_source.pdf",
+              "matched_file": "03_alice_copy.pdf",
+              "similarity_score": 1.0,
+              "query_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "matched_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "location": {
+                "query_page": 1,
+                "matched_page": 1
+              },
+              "match_type": "overlap",
+              "overlap_kind": "verbatim",
+              "evidence_sentence_scores": [
+                1.0
+              ],
+              "lexical_jaccard": 1.0,
+              "token_lcs_ratio": 1.0,
+              "note": "byte-identical duplicate file"
+            },
+            {
+              "query_file": "03_alice_copy.pdf",
+              "matched_file": "02_alice_source.pdf",
+              "similarity_score": 1.0,
+              "query_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "matched_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+              "location": {
+                "query_page": 1,
+                "matched_page": 1
+              },
+              "match_type": "overlap",
+              "overlap_kind": "verbatim",
+              "evidence_sentence_scores": [
+                1.0
+              ],
+              "lexical_jaccard": 1.0,
+              "token_lcs_ratio": 1.0,
+              "note": "byte-identical duplicate file"
+            }
+          ]
+        },
+        {
+          "pair": [
+            "06_policy_argument.docx",
+            "07_policy_rewording.docx"
+          ],
+          "expected": "paraphrase",
+          "detected": true,
+          "evidence": [
+            {
+              "query_file": "06_policy_argument.docx",
+              "matched_file": "07_policy_rewording.docx",
+              "similarity_score": 0.6626,
+              "query_passage": "After a city removes library fines, the outstanding debt disappears, so apparent improvement in account balances says nothing about whether books come back sooner. Measure days overdue among loans issued after the change instead. Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+              "matched_passage": "The useful outcome is how late newly borrowed volumes are returned. An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested.",
+              "location": {
+                "query_page": null,
+                "matched_page": null
+              },
+              "match_type": "overlap",
+              "overlap_kind": "paraphrase",
+              "evidence_sentence_scores": [],
+              "lexical_jaccard": 0.0561,
+              "token_lcs_ratio": 0.0361,
+              "note": "hybrid verified candidate: score=0.5169, contradiction=0.0244; bidirectional_entailment=0.7187; reported similarity is MiniLM cosine; human review required"
+            },
+            {
+              "query_file": "06_policy_argument.docx",
+              "matched_file": "07_policy_rewording.docx",
+              "similarity_score": 0.6077,
+              "query_passage": "Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+              "matched_passage": "An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested. Support the reform if materials arrive back faster and people formerly carrying debts continue using the service.",
+              "location": {
+                "query_page": null,
+                "matched_page": null
+              },
+              "match_type": "overlap",
+              "overlap_kind": "paraphrase",
+              "evidence_sentence_scores": [],
+              "lexical_jaccard": 0.0455,
+              "token_lcs_ratio": 0.0816,
+              "note": "hybrid verified candidate: score=0.5931, contradiction=0.0256; bidirectional_entailment=0.6758; reported similarity is MiniLM cosine; human review required"
+            },
+            {
+              "query_file": "07_policy_rewording.docx",
+              "matched_file": "06_policy_argument.docx",
+              "similarity_score": 0.6626,
+              "query_passage": "The useful outcome is how late newly borrowed volumes are returned. An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested.",
+              "matched_passage": "After a city removes library fines, the outstanding debt disappears, so apparent improvement in account balances says nothing about whether books come back sooner. Measure days overdue among loans issued after the change instead. Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+              "location": {
+                "query_page": null,
+                "matched_page": null
+              },
+              "match_type": "overlap",
+              "overlap_kind": "paraphrase",
+              "evidence_sentence_scores": [],
+              "lexical_jaccard": 0.0561,
+              "token_lcs_ratio": 0.0361,
+              "note": "hybrid verified candidate: score=0.5169, contradiction=0.0244; bidirectional_entailment=0.7187; reported similarity is MiniLM cosine; human review required"
+            },
+            {
+              "query_file": "07_policy_rewording.docx",
+              "matched_file": "06_policy_argument.docx",
+              "similarity_score": 0.6077,
+              "query_passage": "An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested. Support the reform if materials arrive back faster and people formerly carrying debts continue using the service.",
+              "matched_passage": "Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+              "location": {
+                "query_page": null,
+                "matched_page": null
+              },
+              "match_type": "overlap",
+              "overlap_kind": "paraphrase",
+              "evidence_sentence_scores": [],
+              "lexical_jaccard": 0.0455,
+              "token_lcs_ratio": 0.0816,
+              "note": "hybrid verified candidate: score=0.5931, contradiction=0.0256; bidirectional_entailment=0.6758; reported similarity is MiniLM cosine; human review required"
+            }
+          ]
+        }
+      ],
+      "false_positives": [],
+      "per_file": [
+        {
+          "file": "01_human_speech.pdf",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 64.6
+          },
+          "warnings": []
+        },
+        {
+          "file": "02_alice_source.pdf",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 5.3
+          },
+          "warnings": []
+        },
+        {
+          "file": "03_alice_copy.pdf",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 5.3
+          },
+          "warnings": []
+        },
+        {
+          "file": "04_library_hours.pdf",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.7
+          },
+          "warnings": []
+        },
+        {
+          "file": "05_library_storage.pdf",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.6
+          },
+          "warnings": []
+        },
+        {
+          "file": "06_policy_argument.docx",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.9
+          },
+          "warnings": []
+        },
+        {
+          "file": "07_policy_rewording.docx",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.8
+          },
+          "warnings": []
+        },
+        {
+          "file": "08_library_transport.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 65.7
+          },
+          "warnings": []
+        },
+        {
+          "file": "09_library_privacy.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 66.0
+          },
+          "warnings": []
+        },
+        {
+          "file": "10_library_access.docx",
+          "risk": "MEDIUM",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": 66.0
+          },
+          "warnings": []
+        },
+        {
+          "file": "11_human_crossmodal.mp4",
+          "risk": "HIGH",
+          "scores": {
+            "peer_similarity_percentage": 100.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": null
+          },
+          "warnings": []
+        },
+        {
+          "file": "12_human_allies.mp4",
+          "risk": "LOW",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": null
+          },
+          "warnings": []
+        },
+        {
+          "file": "13_human_revolution.mp4",
+          "risk": "LOW",
+          "scores": {
+            "peer_similarity_percentage": 0.0,
+            "external_similarity_percentage": 0.0,
+            "ai_generated_probability": null
+          },
+          "warnings": []
+        }
+      ]
+    }
+  },
+  "baseline_substantive_report_mismatches": [],
+  "changed_prior_result_files": [],
+  "changed_final_method_files": []
+}

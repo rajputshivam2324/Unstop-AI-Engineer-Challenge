@@ -1,0 +1,380 @@
+{
+  "split": "development",
+  "mode": "semantic_hybrid",
+  "config": {
+    "mode": "semantic_hybrid",
+    "asr_max_gap_s": 1.5,
+    "boundary_max_units": 3,
+    "window_max_tokens": 120,
+    "retrieval_min_cos": 0.35,
+    "retrieval_topk": 5,
+    "verifier_topk": 3,
+    "max_verifications_per_pair": 48,
+    "nli_entailment_min": 0.7,
+    "nli_contradiction_max": 0.1,
+    "sts_min": 0.5
+  },
+  "metrics": {
+    "tp": 8,
+    "fp": 0,
+    "fn": 1,
+    "tn": 10,
+    "precision": 1.0,
+    "recall": 0.8888888888888888,
+    "f1": 0.9411764705882353
+  },
+  "timing": {
+    "embedding_load_s": 8.541733867999938,
+    "verifier_load_s": 1.4598476999999548,
+    "cases_total_s": 29.788048727003115,
+    "median_case_s": 0.41256921800049895,
+    "p95_case_s": 19.06064787899959,
+    "wall_s": 39.79165539300084
+  },
+  "peak_rss_mb": 1509.9453125,
+  "verifier_pairs_scored": 186,
+  "truncated_pairs": 0,
+  "cases": [
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 1.3660659350007336,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.6093,
+          "query_passage": "The coastal clinic replaced paper appointment slips with numbered telephone reservations. Missed visits fell because patients could change their booking without travelling to the reception desk.",
+          "matched_passage": "A seaside health centre introduced call based scheduling in place of handwritten tickets. Allowing people to rearrange a visit remotely reduced the number who failed to attend.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.6093
+          ],
+          "note": "hybrid verified candidate: score=0.5831, contradiction=0.0026; bidirectional_entailment=0.0792; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.0417,
+          "token_lcs_ratio": 0.0741
+        }
+      ],
+      "id": "d01",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 0.6153846153846154,
+      "seconds": 0.863465845999599,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.5111,
+          "query_passage": "The evaluation compared identical weeks on an untreated route to separate the change from school holidays.",
+          "matched_passage": "Analysts used a route without the intervention over corresponding dates to account for seasonal school closures.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.5111
+          ],
+          "note": "hybrid verified candidate: score=0.5664, contradiction=0.0924; bidirectional_entailment=0.6788; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.1481,
+          "token_lcs_ratio": 0.1875
+        }
+      ],
+      "id": "d02",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 1.0217755360008596,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.6086,
+          "query_passage": "The farmer stored seeds in sealed metal drums to keep out moisture. Germination improved because the contents stayed dry throughout the monsoon.",
+          "matched_passage": "A grower protected planting grain from damp weather using airtight steel containers. Keeping the grain dry during the rainy season increased the proportion that sprouted.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.6086
+          ],
+          "note": "hybrid verified candidate: score=0.5888, contradiction=0.0009; bidirectional_entailment=0.0435; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.05,
+          "token_lcs_ratio": 0.12
+        }
+      ],
+      "id": "d03",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 1.1536646200001996,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.6058,
+          "query_passage": "The museum lets visitors reserve a quiet hour before the main doors open. This arrangement gives people sensitive to noise a chance to see exhibits without a crowd.",
+          "matched_passage": "An early session at the gallery can be booked by guests who find loud environments difficult. They can inspect the collection peacefully before general admission begins.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.6058
+          ],
+          "note": "hybrid verified candidate: score=0.6195, contradiction=0.0001; bidirectional_entailment=0.0027; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.0435,
+          "token_lcs_ratio": 0.0714
+        }
+      ],
+      "id": "d04",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.7131522549989313,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.7006,
+          "query_passage": "The accountant excluded donated equipment from cash expenditure. Counting the gift as a payment would exaggerate the amount the charity spent.",
+          "matched_passage": "The charity received machinery without paying for it. Its financial reviewer therefore left that donation out of the total money disbursed, preventing an inflated spending figure.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.7006
+          ],
+          "note": "hybrid verified candidate: score=0.6848, contradiction=0.0082; bidirectional_entailment=0.0042; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.0488,
+          "token_lcs_ratio": 0.0769
+        }
+      ],
+      "id": "d05",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.8267892179992486,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.5794,
+          "query_passage": "The council repairs leaks before installing larger water tanks. Extra storage cannot solve a shortage when much of the stored supply escapes through broken pipes.",
+          "matched_passage": "Officials plan to mend damaged mains ahead of expanding reservoir capacity. Building more holding space is ineffective if the water continues to drain away through faults in the network.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.5794
+          ],
+          "note": "hybrid verified candidate: score=0.5398, contradiction=0.0004; bidirectional_entailment=0.0374; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.0851,
+          "token_lcs_ratio": 0.1034
+        }
+      ],
+      "id": "d06",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.41256921800049895,
+      "passages": [],
+      "id": "d07",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.32402163300139364,
+      "passages": [],
+      "id": "d08",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.30273902699991595,
+      "passages": [],
+      "id": "d09",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.340950909001549,
+      "passages": [],
+      "id": "d10",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.4011705560005794,
+      "passages": [],
+      "id": "d11",
+      "kind": "contradiction",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.38912831699963135,
+      "passages": [],
+      "id": "d12",
+      "kind": "contradiction",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.39830484300000535,
+      "passages": [],
+      "id": "d13",
+      "kind": "contradiction",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.394522169000993,
+      "passages": [],
+      "id": "d14",
+      "kind": "contradiction",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.3873220539990143,
+      "passages": [],
+      "id": "d15",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.5726778370008105,
+      "passages": [],
+      "id": "d16",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.4829231429994252,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.7444,
+          "query_passage": "The school delayed the examination until the flooded bridge reopened. Students on the far bank otherwise could not reach the classroom.",
+          "matched_passage": "Pupils across the river were unable to attend while floodwater closed the crossing. Their test was postponed until access was restored.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.7444
+          ],
+          "note": "hybrid verified candidate: score=0.3981, contradiction=0.0004; bidirectional_entailment=0.9808; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.0588,
+          "token_lcs_ratio": 0.1429
+        }
+      ],
+      "id": "d17",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.3761577320001379,
+      "passages": [],
+      "id": "d18",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 19.06064787899959,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.6626,
+          "query_passage": "After a city removes library fines, the outstanding debt disappears, so apparent improvement in account balances says nothing about whether books come back sooner. Measure days overdue among loans issued after the change instead. Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+          "matched_passage": "The useful outcome is how late newly borrowed volumes are returned. An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.6626
+          ],
+          "note": "hybrid verified candidate: score=0.5169, contradiction=0.0244; bidirectional_entailment=0.7187; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.0561,
+          "token_lcs_ratio": 0.0361
+        },
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.6077,
+          "query_passage": "Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+          "matched_passage": "An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested. Support the reform if materials arrive back faster and people formerly carrying debts continue using the service.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.6077
+          ],
+          "note": "hybrid verified candidate: score=0.5931, contradiction=0.0256; bidirectional_entailment=0.6758; reported similarity is MiniLM cosine; human review required",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.0455,
+          "token_lcs_ratio": 0.0816
+        }
+      ],
+      "id": "confirmed_docx",
+      "kind": "positive",
+      "label": 1
+    }
+  ]
+}

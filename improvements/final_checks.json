@@ -1,0 +1,22 @@
+{
+  "utc": "2026-11-06T14:06:46.149313+00:00",
+  "broken_links": [],
+  "changed_frozen_method_files": [],
+  "changed_prior_results": [],
+  "report_hashes": {
+    "MATCHING_IMPROVEMENTS.md": "aa3d53b2db36b2b5df48dd9c3ef8d0983adcceb31f7cbc1aa4f1011cf554aae3",
+    "improvements/README.md": "2dc8c35f666cc31c2d27a9b86b0edaa5b95b7be79682e2016267159d33ad5260"
+  },
+  "full_suite": "43 passed",
+  "post_freeze_regressions": "9 passed",
+  "output_checks": "52 reports verified",
+  "frozen_heldout_metrics": {
+    "tp": 39,
+    "fp": 27,
+    "fn": 8,
+    "tn": 26,
+    "precision": 0.5909090909090909,
+    "recall": 0.8297872340425532,
+    "f1": 0.6902654867256637
+  }
+}

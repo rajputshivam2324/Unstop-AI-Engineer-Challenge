@@ -1,0 +1,157 @@
+{
+  "created_utc": "2026-11-06T12:57:01.802489+00:00",
+  "protocol": "Labels frozen before engine execution. No thresholds or models modified. Main pair detection: any non-template report passage (engine floor 0.05). Secondary comparison: document-pair score >=0.20 fixed from shipped risk threshold.",
+  "positive_pairs": [
+    {
+      "files": [
+        "01_human_speech.pdf",
+        "11_human_crossmodal.mp4"
+      ],
+      "relation": "cross_modal",
+      "pdf_page": 2,
+      "video_interval_s": [
+        0,
+        15
+      ]
+    },
+    {
+      "files": [
+        "02_alice_source.pdf",
+        "03_alice_copy.pdf"
+      ],
+      "relation": "exact_copy"
+    },
+    {
+      "files": [
+        "06_policy_argument.docx",
+        "07_policy_rewording.docx"
+      ],
+      "relation": "paraphrase"
+    }
+  ],
+  "negative_pairs": "All remaining unordered pairs in main corpus; authorised shared prompt is excluded from positive labels.",
+  "template_files": [
+    "04_library_hours.pdf",
+    "05_library_storage.pdf",
+    "08_library_transport.docx",
+    "09_library_privacy.docx",
+    "10_library_access.docx"
+  ],
+  "template_prompt": "Northbridge Public Library asks the university review panel to compare proposals for improving access across three neighbourhood branches. Each candidate should submit an independent recommendation grounded in the fictional facts here. The annual budget is fixed, the buildings remain publicly owned, and the council must publish its reasoning before the next funding meeting. Discuss the proposal assigned to you, identify who benefits, describe an implementation obstacle, and name an observation that could change your decision. Do not invent survey findings or treat an illustrative calculation as measured evidence. Keep any quotations separate from your own analysis and explain uncertainty in language. The panel welcomes disagreement when the argument follows from stated assumptions. Your response should be understandable to residents without specialist training. Include a practical first step, a responsible team, and a review date. This shared institutional prompt is provided for context and should not be assessed as original analysis.",
+  "template_words": 150,
+  "clip_sources": [
+    {
+      "file": "11_human_crossmodal.mp4",
+      "source": "jfk.ogg",
+      "offset_s": 51.0,
+      "duration_s": 15.0,
+      "reference_transcript": "The world is very different now, for man holds in his mortal hands the power to abolish all forms of human poverty and all forms of human life."
+    },
+    {
+      "file": "12_human_allies.mp4",
+      "source": "jfk.ogg",
+      "offset_s": 180.5,
+      "duration_s": 12.0,
+      "reference_transcript": "To those old allies whose cultural and spiritual origins we share, we pledge the loyalty of faithful friends."
+    },
+    {
+      "file": "13_human_revolution.mp4",
+      "source": "jfk.ogg",
+      "offset_s": 66.8,
+      "duration_s": 10.5,
+      "reference_transcript": "And yet the same revolutionary beliefs for which our forebears fought are still at issue around the globe."
+    }
+  ],
+  "provenance": {
+    "01_human_speech.pdf": "Human 1961 speech body; evaluator-authored cover and excerpt heading. Mixed authorship, excluded from document-level AI accuracy.",
+    "02_alice_source.pdf": "Human Lewis Carroll public-domain original excerpt.",
+    "03_alice_copy.pdf": "Identical human-authored excerpt; counted once for unique-human AI metrics.",
+    "04_05_06_07_08_09_10": "AI-authored by this evaluation assistant. Answers 04,05,08,09,10 independently composed with no reused answer passages; 07 intentionally rewords 06. These are synthetic coverage, not real student submissions.",
+    "videos": "Genuine human speech, single archival speaker; static colour video is synthetic packaging. No TTS."
+  },
+  "probe_truth": {
+    "30_assertion.pdf + 31_negation.pdf": {
+      "semantic_equivalent": false,
+      "textual_reuse": true,
+      "reason": "Controlled negation transformation. An overlap flag alone is not an FP for reuse, but a same-meaning paraphrase assertion is wrong."
+    }
+  },
+  "files": {
+    "corpus/01_human_speech.pdf": {
+      "sha256": "5f365b232f84cabc470c65b6e98467f4c8b3eb713f64da5987760cdb8a18f70e",
+      "bytes": 1789
+    },
+    "corpus/02_alice_source.pdf": {
+      "sha256": "80d205adb22055d434386cbab549fa469efe8d7138c5d98aeb0b46ede4f4c918",
+      "bytes": 1383
+    },
+    "corpus/03_alice_copy.pdf": {
+      "sha256": "80d205adb22055d434386cbab549fa469efe8d7138c5d98aeb0b46ede4f4c918",
+      "bytes": 1383
+    },
+    "corpus/04_library_hours.pdf": {
+      "sha256": "1eb8904f66ff7c5a7a40234fc138fc28c27d1fe43e612d91b83359a292057601",
+      "bytes": 2060
+    },
+    "corpus/05_library_storage.pdf": {
+      "sha256": "cb48a99aace8760890eb5d4288d2063065e617df4374c8ed540c2736591d3100",
+      "bytes": 2080
+    },
+    "corpus/06_policy_argument.docx": {
+      "sha256": "f1b64a2c330d1a497d2b059f7f755102c8199a0bbc8dcbea94aa5783a2ea470c",
+      "bytes": 36754
+    },
+    "corpus/07_policy_rewording.docx": {
+      "sha256": "c92fc1e70651fdb48b825011ca22a6eb17350a8c07ba2d06a44c37bdf1a441a2",
+      "bytes": 36736
+    },
+    "corpus/08_library_transport.docx": {
+      "sha256": "4ca1e3c0d4602a34530e90aeeaa77d79b78cfdc7d1d417b7d34fc689a5b1ae88",
+      "bytes": 37266
+    },
+    "corpus/09_library_privacy.docx": {
+      "sha256": "969749404652076a5dd11bcccad2fc9d985220b7add3252805d110095e82ccd5",
+      "bytes": 37272
+    },
+    "corpus/10_library_access.docx": {
+      "sha256": "859dec70d46f6c416e1820ec6cf559f6daa6b13a52738b7b23cbfc179458f742",
+      "bytes": 37252
+    },
+    "corpus/11_human_crossmodal.mp4": {
+      "sha256": "b20b84dca1b2fcc10d330c9bb36269adbc78a1920559399ce374e0fd191a26b2",
+      "bytes": 147278
+    },
+    "corpus/12_human_allies.mp4": {
+      "sha256": "75a2fe78bf72cb511de3814ef82ca8f22774f8c7a1c461930b2c3dcc4799d0fd",
+      "bytes": 118538
+    },
+    "corpus/13_human_revolution.mp4": {
+      "sha256": "cae788a1a6fc798ea5db90767cd29dea31018053d4b8f50aad8a3646dcf0e67d",
+      "bytes": 104186
+    },
+    "edge_corpus/05_valid_control.pdf": {
+      "sha256": "cb48a99aace8760890eb5d4288d2063065e617df4374c8ed540c2736591d3100",
+      "bytes": 2080
+    },
+    "edge_corpus/20_empty.pdf": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "edge_corpus/21_corrupt.pdf": {
+      "sha256": "8026af8497785cfe5d30e7a4ed05fd7ca73b4afc2b8266d4c23f7b287eccecb3",
+      "bytes": 47
+    },
+    "edge_corpus/22_silent.mp4": {
+      "sha256": "8d2efdf58043b20c7483f0d95a49d698192f62b2116ffa2ac3d5d3b75012fa4a",
+      "bytes": 10273
+    },
+    "probe_corpus/30_assertion.pdf": {
+      "sha256": "f3db5efe3387ac4f3279217410fb9dc69dcb2e4ca5e68c19c928e73865a891e1",
+      "bytes": 1156
+    },
+    "probe_corpus/31_negation.pdf": {
+      "sha256": "d0b409d0023a1d8aec1614053b8703139811c50a4fc58e798f03bfbf4b089173",
+      "bytes": 1160
+    }
+  }
+}

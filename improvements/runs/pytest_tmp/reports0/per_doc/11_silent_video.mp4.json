@@ -1,0 +1,47 @@
+{
+  "document_id": "11_silent_video.mp4",
+  "total_integrity_risk": "LOW",
+  "scores": {
+    "peer_similarity_percentage": 0.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": null
+  },
+  "peer_matches": [],
+  "multimodal_matches": [],
+  "explanations": "Document could not be analyzed (status=silent_video): audio track is effectively silent (mean volume < -45 dB). It is reported for reviewer follow-up, not scored as plagiarism. Peer similarity: 0.0% across 0 listed source(s) (no substantive peer overlap). External: 0.0% (none). AI: INSUFFICIENT_TEXT. Overlap types: 0 cross-modal, 0 exact-copy, 0 paraphrase, 0 discounted common-source.",
+  "status": "silent_video",
+  "modality": "mp4",
+  "warnings": [
+    "audio track is effectively silent (mean volume < -45 dB)"
+  ],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": null,
+    "label": "INSUFFICIENT_TEXT",
+    "p_classifier": null,
+    "p_perplexity": null,
+    "p_burstiness": null,
+    "perplexity": null,
+    "burstiness": null,
+    "length_gate_triggered": true,
+    "ai_detector_source": "model",
+    "caveat": ""
+  },
+  "template_registry_hits": [],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {},
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 9938,
+    "sha256": "b7d9a037ac7b97fb30f9744c871fa32e50bfe8d514d8b1f70111842cb054ab12",
+    "page_count": null,
+    "duration_s": 12.0,
+    "asr_model": null,
+    "asr_language": null,
+    "chunk_count": 0,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T13:54:52Z"
+}

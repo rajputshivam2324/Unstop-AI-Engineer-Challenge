@@ -1,0 +1,66 @@
+{
+  "document_id": "11_human_crossmodal.mp4",
+  "total_integrity_risk": "HIGH",
+  "scores": {
+    "peer_similarity_percentage": 100.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": null
+  },
+  "peer_matches": [],
+  "multimodal_matches": [
+    {
+      "matched_file": "01_human_speech.pdf",
+      "similarity_score": 0.9805,
+      "query_passage": "The world is very different now for man holds it is mortal hands the power to abolish all forms of human poverty and all forms of human life",
+      "matched_passage": "The world is very different now, for man holds in his mortal hands the power to abolish all forms of\nhuman poverty and all forms of human life.",
+      "location": {
+        "query_timestamp": "00:00:00 - 00:00:15",
+        "matched_page": 2
+      },
+      "match_type": "overlap",
+      "overlap_kind": "cross_modal",
+      "evidence_sentence_scores": [
+        0.9805
+      ],
+      "lexical_jaccard": 0.875,
+      "token_lcs_ratio": 0.9286,
+      "note": "spoken/written cross-modal match (lexical Jaccard 0.88, token-LCS 0.93; ASR noise expected)"
+    }
+  ],
+  "explanations": "Peer similarity: 100.0% across 1 listed source(s) (top: 01_human_speech.pdf @ 0.98; cross-modal). External: 0.0% (none). AI: INSUFFICIENT_TEXT. Overlap types: 1 cross-modal, 0 exact-copy, 0 paraphrase, 0 discounted common-source.",
+  "status": "ok",
+  "modality": "mp4",
+  "warnings": [],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": null,
+    "label": "INSUFFICIENT_TEXT",
+    "p_classifier": null,
+    "p_perplexity": null,
+    "p_burstiness": null,
+    "perplexity": null,
+    "burstiness": null,
+    "length_gate_triggered": true,
+    "ai_detector_source": "model",
+    "caveat": ""
+  },
+  "template_registry_hits": [],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {
+    "01_human_speech.pdf": 1.0
+  },
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 147278,
+    "sha256": "b20b84dca1b2fcc10d330c9bb36269adbc78a1920559399ce374e0fd191a26b2",
+    "page_count": null,
+    "duration_s": 15.0,
+    "asr_model": "tiny",
+    "asr_language": "en",
+    "chunk_count": 1,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T13:58:15Z"
+}

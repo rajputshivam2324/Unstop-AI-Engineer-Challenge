@@ -1,0 +1,141 @@
+{
+  "document_id": "02_retail_turnaround_copy.docx",
+  "total_integrity_risk": "HIGH",
+  "scores": {
+    "peer_similarity_percentage": 100.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": 65.7
+  },
+  "peer_matches": [
+    {
+      "matched_file": "01_retail_turnaround_report.pdf",
+      "similarity_score": 1.0,
+      "query_passage": "Findings and evidence\nThe turnaround hinges on restoring shrink discipline in fresh categories. Store clusters with dedicated replenishment owners cut waste by 38 percent within eleven weeks, while pharmacy-led traffic promotions lifted weekday footfall by 6.4 percent after launch. Weekly cycle counts replaced quarterly full counts, letting buyers act before stock spoiled and freeing 2.1 million of working capital in the first quarter. farmers' inspection came down to two failure modes: late deliveries and missing cold-chain telemetry, and both closed with dual-sourcing plus sensor retrofits.\nThe shrink result spread unevenly: cluster A and cluster B captured the full decline, cluster D lagged because its prime suppliers were already dual-sourced. The committee asked for a repeatable playbook, so the fare-freeze policy and the waste-scan cadence were standardized across all 18 stores.",
+      "matched_passage": "Findings and evidence\nThe turnaround hinges on restoring shrink discipline in fresh categories. Store clusters with dedicated\nreplenishment owners cut waste by 38 percent within eleven weeks, while pharmacy-led traffic promotions\nlifted weekday footfall by 6.4 percent after launch. Weekly cycle counts replaced quarterly full counts, letting\nbuyers act before stock spoiled and freeing 2.1 million of working capital in the first quarter. farmers'\ninspection came down to two failure modes: late deliveries and missing cold-chain telemetry, and both closed\nwith dual-sourcing plus sensor retrofits.\nThe shrink result spread unevenly: cluster A and cluster B captured the full decline, cluster D lagged because\nits prime suppliers were already dual-sourced. The committee asked for a repeatable playbook, so the\nfare-freeze policy and the waste-scan cadence were standardized across all 18 stores.",
+      "location": {
+        "query_page": null,
+        "matched_page": 2
+      },
+      "match_type": "overlap",
+      "overlap_kind": "verbatim",
+      "evidence_sentence_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lexical_jaccard": 1.0,
+      "token_lcs_ratio": 1.0,
+      "note": "verbatim copy (lexical Jaccard 1.00, token-LCS 1.00)"
+    },
+    {
+      "matched_file": "01_retail_turnaround_report.pdf",
+      "similarity_score": 1.0,
+      "query_passage": "Operating detail\nPricing. Price gaps against the nearest rival were closed on 210 head items, funded by a supplier rebate pool and the freed working capital. Gross margin fell 0.3 points in category funds but rose 0.9 points on waste reduction, netting a positive contribution by month five.\nLogistics. Consolidating two depots into one cross-dock removed 220 route miles per day. On-time delivery to stores improved from 87 percent to 96 percent, with the residue concentrated in the night-barking produce window at the two most remote clusters.\nPeople. Store cluster leads got a single page scorecard: shrink, on-shelf availability, safety incidents, and mystery-shop fronts. Bonus pools moved to cluster level, which quietly defused the corridor-versus-courtyard rivalry between store teams.",
+      "matched_passage": "Operating detail\nPricing. Price gaps against the nearest rival were closed on 210 head items, funded by a supplier rebate pool\nand the freed working capital. Gross margin fell 0.3 points in category funds but rose 0.9 points on waste\nreduction, netting a positive contribution by month five.\nLogistics. Consolidating two depots into one cross-dock removed 220 route miles per day. On-time delivery to\nstores improved from 87 percent to 96 percent, with the residue concentrated in the night-barking produce\nwindow at the two most remote clusters.\nPeople. Store cluster leads got a single page scorecard: shrink, on-shelf availability, safety incidents, and\nmystery-shop fronts. Bonus pools moved to cluster level, which quietly defused the corridor-versus-courtyard\nrivalry between store teams.",
+      "location": {
+        "query_page": null,
+        "matched_page": 3
+      },
+      "match_type": "overlap",
+      "overlap_kind": "verbatim",
+      "evidence_sentence_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lexical_jaccard": 1.0,
+      "token_lcs_ratio": 1.0,
+      "note": "verbatim copy (lexical Jaccard 1.00, token-LCS 1.00)"
+    },
+    {
+      "matched_file": "01_retail_turnaround_report.pdf",
+      "similarity_score": 1.0,
+      "query_passage": "Retail Turnaround: Monsoon Lane Grocers\nPrepared for the steering committee. This four-page report reviews the 14-month turnaround of an 18-store regional grocery chain losing money on perishables.\nBackground. Monsoon Lane Grocers entered the year with flat same-store sales, a shrink rate of 4.8 percent in fresh categories, and ceiling-high trade payables. The board approved a turnaround budget of 6.2 million spread across logistics, store operations, and pricing. This report documents what was tried, what worked, and what remains on the critical path.\nMethod. The team instrumented 42 processes across five clusters, ran weekly leadership reviews, and modeled margins at store level using point-of-sale and cradle-to-grave waste scans.",
+      "matched_passage": "Retail Turnaround: Monsoon Lane Grocers\nPrepared for the steering committee. This four-page report reviews the 14-month turnaround of an 18-store\nregional grocery chain losing money on perishables.\nBackground. Monsoon Lane Grocers entered the year with flat same-store sales, a shrink rate of 4.8 percent\nin fresh categories, and ceiling-high trade payables. The board approved a turnaround budget of 6.2 million\nspread across logistics, store operations, and pricing. This report documents what was tried, what worked,\nand what remains on the critical path.\nMethod. The team instrumented 42 processes across five clusters, ran weekly leadership reviews, and\nmodeled margins at store level using point-of-sale and cradle-to-grave waste scans.",
+      "location": {
+        "query_page": null,
+        "matched_page": 1
+      },
+      "match_type": "overlap",
+      "overlap_kind": "verbatim",
+      "evidence_sentence_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lexical_jaccard": 1.0,
+      "token_lcs_ratio": 1.0,
+      "note": "verbatim copy (lexical Jaccard 1.00, token-LCS 1.00)"
+    },
+    {
+      "matched_file": "01_retail_turnaround_report.pdf",
+      "similarity_score": 1.0,
+      "query_passage": "Risks and next quarter\nThree risks dominate: rebate dependence on a single anchor supplier, cold-chain sensor coverage still at 70 percent of stores, and supervisor attrition at 19 percent in cluster D. The committee's ask for next quarter is digitized supplier scorecards, a pay-banding review for floor leads, and a tightened night-slapping produce handoff at cluster D.\nWith shrink held below 2.6 percent and the new logistics stack at steady state, the plan projects an operating margin of 3.1 percent for the full year, with downside sensitivity dominated by bread-and-butter category inflation.",
+      "matched_passage": "Risks and next quarter\nThree risks dominate: rebate dependence on a single anchor supplier, cold-chain sensor coverage still at 70\npercent of stores, and supervisor attrition at 19 percent in cluster D. The committee's ask for next quarter is\ndigitized supplier scorecards, a pay-banding review for floor leads, and a tightened night-slapping produce\nhandoff at cluster D.\nWith shrink held below 2.6 percent and the new logistics stack at steady state, the plan projects an operating\nmargin of 3.1 percent for the full year, with downside sensitivity dominated by bread-and-butter category\ninflation.",
+      "location": {
+        "query_page": null,
+        "matched_page": 4
+      },
+      "match_type": "overlap",
+      "overlap_kind": "verbatim",
+      "evidence_sentence_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lexical_jaccard": 1.0,
+      "token_lcs_ratio": 1.0,
+      "note": "verbatim copy (lexical Jaccard 1.00, token-LCS 1.00)"
+    }
+  ],
+  "multimodal_matches": [],
+  "explanations": "Peer similarity: 100.0% across 1 listed source(s) (top: 01_retail_turnaround_report.pdf @ 1.00; overlap). External: 0.0% (none). AI: AI_LIKELY at 65.7%. Overlap types: 0 cross-modal, 4 exact-copy, 0 paraphrase, 0 discounted common-source.",
+  "status": "ok",
+  "modality": "docx",
+  "warnings": [],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": 65.7,
+    "label": "AI_LIKELY",
+    "p_classifier": 0.9985,
+    "p_perplexity": 0.0,
+    "p_burstiness": 0.5754,
+    "perplexity": 107.103,
+    "burstiness": 0.1419,
+    "length_gate_triggered": false,
+    "ai_detector_source": "model",
+    "caveat": "Note: AI detectors are unreliable on non-native-English and polished human text (Stanford 2023: up to 61% false-positive rate on ESL essays); treat this as a lead for human review, not proof."
+  },
+  "template_registry_hits": [],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {
+    "01_retail_turnaround_report.pdf": 1.0
+  },
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 37883,
+    "sha256": "c7cc04ccf11b3dfcec9cb11490000fb3988d524ddaff1bb61c5ba2f9d8ae58fb",
+    "page_count": null,
+    "duration_s": null,
+    "asr_model": null,
+    "asr_language": null,
+    "chunk_count": 3,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T13:54:52Z"
+}

@@ -1,0 +1,105 @@
+{
+  "generated_at_utc": "2026-11-06T12:54:06Z",
+  "elapsed_s": 12.5,
+  "engine_version": "1.0.0",
+  "documents": [
+    {
+      "document_id": "bad_0.pdf",
+      "modality": "pdf",
+      "status": "error",
+      "risk": "LOW",
+      "peer": 0.0,
+      "external": 0.0,
+      "ai_label": "INSUFFICIENT_TEXT",
+      "ai": null,
+      "ai_detector_source": "model",
+      "top_match": null,
+      "warnings": 1
+    },
+    {
+      "document_id": "bad_1.docx",
+      "modality": "docx",
+      "status": "error",
+      "risk": "LOW",
+      "peer": 0.0,
+      "external": 0.0,
+      "ai_label": "INSUFFICIENT_TEXT",
+      "ai": null,
+      "ai_detector_source": "model",
+      "top_match": null,
+      "warnings": 1
+    },
+    {
+      "document_id": "bad_2.mp4",
+      "modality": "mp4",
+      "status": "error",
+      "risk": "LOW",
+      "peer": 0.0,
+      "external": 0.0,
+      "ai_label": "INSUFFICIENT_TEXT",
+      "ai": null,
+      "ai_detector_source": "model",
+      "top_match": null,
+      "warnings": 1
+    },
+    {
+      "document_id": "bad_3.pdf",
+      "modality": "pdf",
+      "status": "error",
+      "risk": "LOW",
+      "peer": 0.0,
+      "external": 0.0,
+      "ai_label": "INSUFFICIENT_TEXT",
+      "ai": null,
+      "ai_detector_source": "model",
+      "top_match": null,
+      "warnings": 1
+    }
+  ],
+  "aggregate": {
+    "n_docs": 4,
+    "high": 0,
+    "medium": 0,
+    "low": 4,
+    "degraded": 4
+  },
+  "peer_similarity_matrix": {
+    "bad_0.pdf": {
+      "bad_1.docx": 0.0,
+      "bad_2.mp4": 0.0,
+      "bad_3.pdf": 0.0
+    },
+    "bad_1.docx": {
+      "bad_0.pdf": 0.0,
+      "bad_2.mp4": 0.0,
+      "bad_3.pdf": 0.0
+    },
+    "bad_2.mp4": {
+      "bad_0.pdf": 0.0,
+      "bad_1.docx": 0.0,
+      "bad_3.pdf": 0.0
+    },
+    "bad_3.pdf": {
+      "bad_0.pdf": 0.0,
+      "bad_1.docx": 0.0,
+      "bad_2.mp4": 0.0
+    }
+  },
+  "runtime": {
+    "elapsed_s": 12.51,
+    "stage_seconds": {
+      "ingestion": 0.13,
+      "chunking_and_templates": 0.0,
+      "embedding_and_search": 11.38,
+      "pair_scoring": 0.0,
+      "alignment": 0.0,
+      "external_check": 0.64,
+      "ai_detection": 0.36,
+      "scoring_and_reports": 0.0
+    },
+    "peak_rss_mb": 637.0,
+    "n_chunks": 0,
+    "cpu_count": 12,
+    "ai_detector_missing_models": []
+  }
+}

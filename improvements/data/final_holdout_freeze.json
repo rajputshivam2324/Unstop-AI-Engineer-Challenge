@@ -1,0 +1,12 @@
+{
+  "utc": "2026-11-06T13:53:50.380200+00:00",
+  "url": "https://datasets-server.huggingface.co/rows?dataset=google-research-datasets%2Fpaws&config=labeled_final&split=validation&offset=0&length=100",
+  "n_pairs": 100,
+  "exact_normalized_sentence_overlap_with_development_and_old_paws": 0,
+  "sha256": "5d16aa073cd563a8359a37d99d3f2682bed09b50a77509e9988959af1edc352a",
+  "reason_for_replacement": "Initial unscored test slice shared 76 sentence strings with previously evaluated PAWS test rows. No model outputs were inspected for either candidate when making this change.",
+  "scope": "Public human-labelled adversarial semantic-equivalence test. Not an externally blinded private test; pretraining/source-article overlap cannot be ruled out.",
+  "license_metadata_correction_utc": "2026-11-06T13:58:46.538674+00:00",
+  "original_sha256_before_license_metadata_only_correction": "c076c01329630b51f439b257d8fc368624ffe7b60342d266d4b6ac41b053279e",
+  "correction": "Only provenance license wording corrected before scoring; input texts, labels, rows and selected method unchanged. HF metadata says other; upstream LICENSE grants use for any purpose."
+}

@@ -1,0 +1,3 @@
+cross-encoder/nli-deberta-v3-base 6c749ce3425cd33b46d187e45b92bbf96ee12ec7
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 7 files:  29%|██▊       | 2/7 [00:00<00:00,  5.01it/s]Fetching 7 files:  43%|████▎     | 3/7 [00:00<00:00,  5.63it/s]Fetching 7 files:  86%|████████▌ | 6/7 [00:01<00:00,  5.60it/s]Fetching 7 files: 100%|██████████| 7/7 [04:52<00:00, 68.18s/it]Fetching 7 files: 100%|██████████| 7/7 [04:52<00:00, 41.72s/it]

@@ -1,0 +1,378 @@
+{
+  "n_reports": 14,
+  "missing_reports": [],
+  "pair_retrieval": {
+    "overall": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "per_relation": {
+      "exact_copy": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "paraphrase": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "cross_modal": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "false_positive_pairs": [],
+    "false_negative_pairs": [],
+    "truth_pair_scores": [
+      {
+        "pair": [
+          "01_retail_turnaround_report.pdf",
+          "02_retail_turnaround_copy.docx"
+        ],
+        "relation": "exact_copy",
+        "doc_pair_score": 1.0,
+        "expected_min": 0.9,
+        "pass": true,
+        "engine_relation": "exact_copy"
+      },
+      {
+        "pair": [
+          "03_paraphrased_strategy.docx",
+          "04_original_strategy.docx"
+        ],
+        "relation": "paraphrase",
+        "doc_pair_score": 0.623,
+        "expected_min": 0.6,
+        "pass": true,
+        "engine_relation": "paraphrase"
+      },
+      {
+        "pair": [
+          "07_pitch_crossmodal.pdf",
+          "08_pitch_crossmodal_video.mp4"
+        ],
+        "relation": "cross_modal",
+        "doc_pair_score": 1.0,
+        "expected_min": 0.7,
+        "pass": true,
+        "engine_relation": "cross_modal"
+      }
+    ]
+  },
+  "fpr_originals": 0.0,
+  "originals_overlap_matches": {
+    "05_original_market_pdf.pdf": [],
+    "09_third_pitch_video.mp4": [],
+    "12_case_template_A.docx": [],
+    "13_case_template_B.docx": [],
+    "14_case_template_C.docx": []
+  },
+  "risk_confusion_as_shipped": {
+    "matrix": {
+      "LOW->LOW": 6,
+      "LOW->MEDIUM": 1,
+      "LOW->HIGH": 0,
+      "MEDIUM->LOW": 0,
+      "MEDIUM->MEDIUM": 1,
+      "MEDIUM->HIGH": 0,
+      "HIGH->LOW": 0,
+      "HIGH->MEDIUM": 1,
+      "HIGH->HIGH": 5
+    },
+    "accuracy": 0.8571428571428571,
+    "balanced_accuracy": 0.8968253968253969,
+    "mislabeled": [
+      {
+        "document_id": "03_paraphrased_strategy.docx",
+        "truth": "HIGH",
+        "predicted": "MEDIUM"
+      },
+      {
+        "document_id": "05_original_market_pdf.pdf",
+        "truth": "LOW",
+        "predicted": "MEDIUM"
+      }
+    ]
+  },
+  "risk_confusion_plagiarism_signals_only": {
+    "matrix": {
+      "LOW->LOW": 7,
+      "LOW->MEDIUM": 0,
+      "LOW->HIGH": 0,
+      "MEDIUM->LOW": 1,
+      "MEDIUM->MEDIUM": 0,
+      "MEDIUM->HIGH": 0,
+      "HIGH->LOW": 0,
+      "HIGH->MEDIUM": 1,
+      "HIGH->HIGH": 5
+    },
+    "accuracy": 0.8571428571428571,
+    "balanced_accuracy": 0.6111111111111112,
+    "mislabeled": [
+      {
+        "document_id": "03_paraphrased_strategy.docx",
+        "truth": "HIGH",
+        "predicted": "MEDIUM"
+      },
+      {
+        "document_id": "06_llm_generated_summary.pdf",
+        "truth": "MEDIUM",
+        "predicted": "LOW"
+      }
+    ]
+  },
+  "ai_rows": [
+    {
+      "document_id": "01_retail_turnaround_report.pdf",
+      "manifest_ai_flag": false,
+      "p_classifier": 0.9985,
+      "perplexity": 119.5,
+      "p_perp": 0.0,
+      "burstiness": 0.1363,
+      "p_burst": 0.5809,
+      "fused": 65.7,
+      "label": "AI_LIKELY",
+      "ai_detector_source": "model"
+    },
+    {
+      "document_id": "02_retail_turnaround_copy.docx",
+      "manifest_ai_flag": false,
+      "p_classifier": 0.9985,
+      "perplexity": 107.103,
+      "p_perp": 0.0,
+      "burstiness": 0.1419,
+      "p_burst": 0.5754,
+      "fused": 65.7,
+      "label": "AI_LIKELY",
+      "ai_detector_source": "model"
+    },
+    {
+      "document_id": "03_paraphrased_strategy.docx",
+      "manifest_ai_flag": false,
+      "p_classifier": 0.9917,
+      "perplexity": 147.623,
+      "p_perp": 0.0,
+      "burstiness": 0.1424,
+      "p_burst": 0.5749,
+      "fused": 65.3,
+      "label": "AI_LIKELY",
+      "ai_detector_source": "model"
+    },
+    {
+      "document_id": "04_original_strategy.docx",
+      "manifest_ai_flag": false,
+      "p_classifier": 0.9995,
+      "perplexity": 99.878,
+      "p_perp": 0.0,
+      "burstiness": 0.131,
+      "p_burst": 0.5861,
+      "fused": 65.8,
+      "label": "AI_LIKELY",
+      "ai_detector_source": "model"
+    },
+    {
+      "document_id": "05_original_market_pdf.pdf",
+      "manifest_ai_flag": false,
+      "p_classifier": 0.9999,
+      "perplexity": 167.628,
+      "p_perp": 0.0,
+      "burstiness": 0.0944,
+      "p_burst": 0.6213,
+      "fused": 66.2,
+      "label": "AI_LIKELY",
+      "ai_detector_source": "model"
+    },
+    {
+      "document_id": "06_llm_generated_summary.pdf",
+      "manifest_ai_flag": true,
+      "p_classifier": 1.0,
+      "perplexity": 33.226,
+      "p_perp": 0.0,
+      "burstiness": 0.1852,
+      "p_burst": 0.5324,
+      "fused": 65.3,
+      "label": "AI_LIKELY",
+      "ai_detector_source": "model"
+    },
+    {
+      "document_id": "07_pitch_crossmodal.pdf",
+      "manifest_ai_flag": false,
+      "p_classifier": 0.9999,
+      "perplexity": 85.497,
+      "p_perp": 0.0,
+      "burstiness": 0.2076,
+      "p_burst": 0.5098,
+      "fused": 65.1,
+      "label": "AI_LIKELY",
+      "ai_detector_source": "model"
+    },
+    {
+      "document_id": "08_pitch_crossmodal_video.mp4",
+      "manifest_ai_flag": false,
+      "p_classifier": 0.997,
+      "perplexity": 162.418,
+      "p_perp": 0.0,
+      "burstiness": 0.169,
+      "p_burst": 0.5485,
+      "fused": 65.3,
+      "label": "AI_LIKELY",
+      "ai_detector_source": "model"
+    },
+    {
+      "document_id": "12_case_template_A.docx",
+      "manifest_ai_flag": false,
+      "p_classifier": 0.9999,
+      "perplexity": 101.873,
+      "p_perp": 0.0,
+      "burstiness": 0.2383,
+      "p_burst": 0.479,
+      "fused": 64.8,
+      "label": "UNSURE",
+      "ai_detector_source": "model"
+    },
+    {
+      "document_id": "13_case_template_B.docx",
+      "manifest_ai_flag": false,
+      "p_classifier": 0.9999,
+      "perplexity": 100.762,
+      "p_perp": 0.0,
+      "burstiness": 0.2413,
+      "p_burst": 0.476,
+      "fused": 64.8,
+      "label": "UNSURE",
+      "ai_detector_source": "model"
+    },
+    {
+      "document_id": "14_case_template_C.docx",
+      "manifest_ai_flag": false,
+      "p_classifier": 1.0,
+      "perplexity": 97.952,
+      "p_perp": 0.0,
+      "burstiness": 0.2423,
+      "p_burst": 0.475,
+      "fused": 64.7,
+      "label": "UNSURE",
+      "ai_detector_source": "model"
+    }
+  ],
+  "ai_detector_fallback_count": 0,
+  "flag_checks": [
+    {
+      "document_id": "03_paraphrased_strategy.docx",
+      "check": "external >= 20.0",
+      "value": 0.0,
+      "pass": false
+    },
+    {
+      "document_id": "04_original_strategy.docx",
+      "check": "external >= 20.0",
+      "value": 32.4,
+      "pass": true
+    },
+    {
+      "document_id": "06_llm_generated_summary.pdf",
+      "check": "ai >= 55.0",
+      "value": 65.3,
+      "pass": true
+    },
+    {
+      "document_id": "05_original_market_pdf.pdf",
+      "check": "overlap peer matches == 0",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "document_id": "10_corrupted_empty.pdf",
+      "check": "status == error",
+      "value": "error",
+      "pass": true
+    },
+    {
+      "document_id": "11_silent_video.mp4",
+      "check": "status == silent_video",
+      "value": "silent_video",
+      "pass": true
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario": "S1 cross-modal duplication (07 PDF <-> 08 MP4)",
+      "pass": true,
+      "evidence": "per_doc/07_pitch_crossmodal.pdf.json multimodal_matches[0]: page 2 <-> 00:00:00 - 00:00:25, cos 0.9036"
+    },
+    {
+      "scenario": "S2 paraphrase (03 <-> 04): cosine > 0.80 with Jaccard < 0.35",
+      "pass": true,
+      "evidence": "2 paraphrase passages; 1 with cos>0.80 & Jaccard<0.35; best: cos 0.848"
+    },
+    {
+      "scenario": "S3 corrupted / empty (10 zero-byte PDF, 11 silent MP4)",
+      "pass": true,
+      "evidence": "10 status=error, 11 status=silent_video; all 14 reports written, exit 0"
+    },
+    {
+      "scenario": "S4 shared case prompt (12/13/14) not flagged",
+      "pass": true,
+      "evidence": "risk {'12_case_template_A.docx': 'LOW', '13_case_template_B.docx': 'LOW', '14_case_template_C.docx': 'LOW'}; peer% {'12_case_template_A.docx': 0.0, '13_case_template_B.docx': 0.0, '14_case_template_C.docx': 0.0}; common_source matches {'12_case_template_A.docx': 2, '13_case_template_B.docx': 2, '14_case_template_C.docx': 2}"
+    },
+    {
+      "scenario": "S5 batch run: per-doc JSON+MD + aggregate matrix",
+      "pass": true,
+      "evidence": "summary/latest.json n_docs=14, 14-row matrix, summary/SUMMARY.md"
+    }
+  ],
+  "runtime": {
+    "elapsed_s": 87.02,
+    "stage_seconds": {
+      "ingestion": 7.33,
+      "chunking_and_templates": 0.06,
+      "embedding_and_search": 9.02,
+      "pair_scoring": 3.87,
+      "alignment": 1.6,
+      "external_check": 1.73,
+      "ai_detection": 63.4,
+      "scoring_and_reports": 0.01
+    },
+    "peak_rss_mb": 2050.3,
+    "n_chunks": 29,
+    "cpu_count": 12,
+    "ai_detector_missing_models": []
+  },
+  "thresholds": {
+    "chunk_min_cos": 0.55,
+    "doc_report_floor": 0.4,
+    "peer_high_pct": 70.0,
+    "peer_medium_pct": 20.0,
+    "sentence_align_cos_floor": 0.65,
+    "sentence_lcs_token_ratio": 0.6,
+    "template_min_docs": 3,
+    "local_kb_min_cos": 0.7,
+    "ai_bands": [
+      35.0,
+      65.0
+    ],
+    "ai_perplexity_mu_k": [
+      13.69,
+      0.86
+    ],
+    "ai_burst_mu_k": [
+      0.2174,
+      0.2486
+    ]
+  }
+}

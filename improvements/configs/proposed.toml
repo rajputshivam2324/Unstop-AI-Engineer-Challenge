@@ -1,0 +1,13 @@
+# All unlisted settings use the unchanged original defaults.
+[matching]
+mode = "semantic_hybrid"
+asr_max_gap_s = 1.5
+boundary_max_units = 3
+window_max_tokens = 120
+retrieval_min_cos = 0.35
+retrieval_topk = 5
+verifier_topk = 3
+max_verifications_per_pair = 48
+nli_entailment_min = 0.70
+nli_contradiction_max = 0.10
+sts_min = 0.50

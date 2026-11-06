@@ -1,0 +1,71 @@
+{
+  "generated_at_utc": "2026-11-06T12:58:18Z",
+  "elapsed_s": 6.3,
+  "engine_version": "1.0.0",
+  "documents": [
+    {
+      "document_id": "30_assertion.pdf",
+      "modality": "pdf",
+      "status": "ok",
+      "risk": "HIGH",
+      "peer": 100.0,
+      "external": 0.0,
+      "ai_label": "INSUFFICIENT_TEXT",
+      "ai": null,
+      "ai_detector_source": "model",
+      "top_match": {
+        "matched_file": "31_negation.pdf",
+        "pair_score": 1.0
+      },
+      "warnings": 0
+    },
+    {
+      "document_id": "31_negation.pdf",
+      "modality": "pdf",
+      "status": "ok",
+      "risk": "HIGH",
+      "peer": 100.0,
+      "external": 0.0,
+      "ai_label": "INSUFFICIENT_TEXT",
+      "ai": null,
+      "ai_detector_source": "model",
+      "top_match": {
+        "matched_file": "30_assertion.pdf",
+        "pair_score": 1.0
+      },
+      "warnings": 0
+    }
+  ],
+  "aggregate": {
+    "n_docs": 2,
+    "high": 2,
+    "medium": 0,
+    "low": 0,
+    "degraded": 0
+  },
+  "peer_similarity_matrix": {
+    "30_assertion.pdf": {
+      "31_negation.pdf": 1.0
+    },
+    "31_negation.pdf": {
+      "30_assertion.pdf": 1.0
+    }
+  },
+  "runtime": {
+    "elapsed_s": 6.31,
+    "stage_seconds": {
+      "ingestion": 0.0,
+      "chunking_and_templates": 0.0,
+      "embedding_and_search": 5.68,
+      "pair_scoring": 0.07,
+      "alignment": 0.04,
+      "external_check": 0.38,
+      "ai_detection": 0.13,
+      "scoring_and_reports": 0.0
+    },
+    "peak_rss_mb": 605.7,
+    "n_chunks": 2,
+    "cpu_count": 12,
+    "ai_detector_missing_models": []
+  }
+}

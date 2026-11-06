@@ -1,0 +1,68 @@
+{
+  "document_id": "08_pitch_crossmodal_video.mp4",
+  "total_integrity_risk": "HIGH",
+  "scores": {
+    "peer_similarity_percentage": 100.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": 25.0
+  },
+  "peer_matches": [],
+  "multimodal_matches": [
+    {
+      "matched_file": "07_pitch_crossmodal.pdf",
+      "similarity_score": 0.9036,
+      "query_passage": "Operating margins contracted by 4.2% over Q3 because inbound freight per carton rose 19% and the prepaid fuel surcharge stuck at $9. We held list prices flat through the quarter, so the squeeze showed up almost entirely in gross margin rather than in demand. Two countermeasures shipped in October, the regional carriers up on the western lanes cuts per carton freight by a projected 11% and volume tier surcharge caps lock our effective rate through peak season.",
+      "matched_passage": "Margin bridge and countermeasures\nOperating margins contracted by 4.2% over Q3 because inbound freight per carton rose nineteen percent\nand the prepaid fuel surcharge stuck at 9 dollars. We held list prices flat through the quarter, so the squeeze\nshowed up almost entirely in gross margin rather than in demand. Two countermeasures shipped in October:\na regional carrier swap on the western lanes cuts per-carton freight by a projected 11 percent, and\nvolume-tier surcharge caps lock our effective rate through peak season.",
+      "location": {
+        "query_timestamp": "00:00:00 - 00:00:25",
+        "matched_page": 2
+      },
+      "match_type": "overlap",
+      "overlap_kind": "cross_modal",
+      "evidence_sentence_scores": [
+        0.9064,
+        1.0,
+        0.9636
+      ],
+      "lexical_jaccard": 0.8857,
+      "token_lcs_ratio": 0.8706,
+      "note": "spoken/written cross-modal match (lexical Jaccard 0.89, token-LCS 0.87; ASR noise expected)"
+    }
+  ],
+  "explanations": "Peer similarity: 100.0% across 1 listed source(s) (top: 07_pitch_crossmodal.pdf @ 0.90; cross-modal). External: 0.0% (none). AI: HUMAN at 25.0%. Overlap types: 1 cross-modal, 0 exact-copy, 0 paraphrase, 0 discounted common-source. AI detector ran as a documented rule-based heuristic fallback (lower confidence).",
+  "status": "ok",
+  "modality": "mp4",
+  "warnings": [],
+  "external_matches": [],
+  "external_tier_used": "none",
+  "ai_analysis": {
+    "ai_generated_probability": 25.0,
+    "label": "HUMAN",
+    "p_classifier": null,
+    "p_perplexity": null,
+    "p_burstiness": null,
+    "perplexity": null,
+    "burstiness": null,
+    "length_gate_triggered": false,
+    "ai_detector_source": "heuristic_fallback",
+    "caveat": ""
+  },
+  "template_registry_hits": [],
+  "minor_peer_overlaps": [],
+  "doc_pair_scores": {
+    "07_pitch_crossmodal.pdf": 1.0
+  },
+  "discounted_noise_matches": 0,
+  "provenance": {
+    "size_bytes": 258810,
+    "sha256": "8d8468c275129c467bb98bbab068264dba2b599e5d6f6b573ebe6668227bbff9",
+    "page_count": null,
+    "duration_s": 25.09,
+    "asr_model": "tiny",
+    "asr_language": "en",
+    "chunk_count": 1,
+    "duplicate_of": null
+  },
+  "engine_version": "1.0.0",
+  "generated_at_utc": "2026-11-06T13:53:15Z"
+}

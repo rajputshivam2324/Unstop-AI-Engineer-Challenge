@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/home/shivam/assignment/unstopchallenge/.venv/bin/python",
+    "/home/shivam/assignment/unstopchallenge/run_integrity_check.py",
+    "--input_dir",
+    "/home/shivam/assignment/unstopchallenge/validation/edge_corpus",
+    "--output_dir",
+    "/home/shivam/assignment/unstopchallenge/validation/runs/edge",
+    "--skip-web"
+  ],
+  "environment_overrides": {
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "TOKENIZERS_PARALLELISM": "false"
+  },
+  "start_utc": "2026-11-06T12:57:57.131536+00:00",
+  "exit_code": 0,
+  "subprocess_wall_s": 14.81860651200077
+}

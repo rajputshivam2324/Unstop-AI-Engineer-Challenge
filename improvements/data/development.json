@@ -1,0 +1,154 @@
+[
+  {
+    "id": "d01",
+    "kind": "positive",
+    "label": 1,
+    "left": "The coastal clinic replaced paper appointment slips with numbered telephone reservations. Missed visits fell because patients could change their booking without travelling to the reception desk.",
+    "right": "A seaside health centre introduced call based scheduling in place of handwritten tickets. Allowing people to rearrange a visit remotely reduced the number who failed to attend.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d02",
+    "kind": "positive",
+    "label": 1,
+    "left": "The experimental bus lane cut journey times during the morning peak. The evaluation compared identical weeks on an untreated route to separate the change from school holidays.",
+    "right": "Commuters reached their destinations faster after a dedicated lane opened. Analysts used a route without the intervention over corresponding dates to account for seasonal school closures.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d03",
+    "kind": "positive",
+    "label": 1,
+    "left": "The farmer stored seeds in sealed metal drums to keep out moisture. Germination improved because the contents stayed dry throughout the monsoon.",
+    "right": "A grower protected planting grain from damp weather using airtight steel containers. Keeping the grain dry during the rainy season increased the proportion that sprouted.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d04",
+    "kind": "positive",
+    "label": 1,
+    "left": "The museum lets visitors reserve a quiet hour before the main doors open. This arrangement gives people sensitive to noise a chance to see exhibits without a crowd.",
+    "right": "An early session at the gallery can be booked by guests who find loud environments difficult. They can inspect the collection peacefully before general admission begins.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d05",
+    "kind": "positive",
+    "label": 1,
+    "left": "The accountant excluded donated equipment from cash expenditure. Counting the gift as a payment would exaggerate the amount the charity spent.",
+    "right": "The charity received machinery without paying for it. Its financial reviewer therefore left that donation out of the total money disbursed, preventing an inflated spending figure.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d06",
+    "kind": "positive",
+    "label": 1,
+    "left": "The council repairs leaks before installing larger water tanks. Extra storage cannot solve a shortage when much of the stored supply escapes through broken pipes.",
+    "right": "Officials plan to mend damaged mains ahead of expanding reservoir capacity. Building more holding space is ineffective if the water continues to drain away through faults in the network.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d07",
+    "kind": "same_topic",
+    "label": 0,
+    "left": "The clinic uses telephone reservations to let patients rearrange appointments. This reduces missed visits.",
+    "right": "The clinic recorded the cost of telephone equipment during its annual budget review. The audit recommended replacing damaged handsets.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d08",
+    "kind": "same_topic",
+    "label": 0,
+    "left": "The museum offers early quiet sessions for people sensitive to noise. Visitors can explore without crowds.",
+    "right": "The museum rents its main hall for evening concerts. Ticket sales pay for the restoration of its roof.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d09",
+    "kind": "same_topic",
+    "label": 0,
+    "left": "The farmer keeps seeds dry inside sealed metal drums. This improves germination during the monsoon.",
+    "right": "The farmer sells surplus steel drums to a neighbouring workshop. Buyers pay more for containers without dents.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d10",
+    "kind": "same_topic",
+    "label": 0,
+    "left": "The accountant excludes donated machinery from cash spending. This prevents expenditure being overstated.",
+    "right": "The accountant values donated machinery for the insurance register. The charity needs enough cover if the workshop catches fire.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d11",
+    "kind": "contradiction",
+    "label": 0,
+    "left": "The new bus lane reduced travel time during the morning rush. The city should keep the lane open.",
+    "right": "The new bus lane increased travel time during the morning rush. The city should close the lane.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d12",
+    "kind": "contradiction",
+    "label": 0,
+    "left": "The filter removed arsenic from the water. Its output was safe to drink.",
+    "right": "The filter did not remove arsenic from the water. Its output was unsafe to drink.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d13",
+    "kind": "contradiction",
+    "label": 0,
+    "left": "Every patient in the trial recovered after taking the medicine. The researchers recommended its use.",
+    "right": "No patient in the trial recovered after taking the medicine. The researchers advised against its use.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d14",
+    "kind": "contradiction",
+    "label": 0,
+    "left": "The retailer acquired the supplier after the merger. The supplier is now owned by the retailer.",
+    "right": "The supplier acquired the retailer after the merger. The retailer is now owned by the supplier.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d15",
+    "kind": "same_topic",
+    "label": 0,
+    "left": "The council extended library opening hours to help shift workers. Staff counted visits after sunset.",
+    "right": "The council bought books about shift work for the library. Staff placed them on a display beside the entrance.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d16",
+    "kind": "positive",
+    "label": 1,
+    "left": "Charging households by the weight of unrecycled rubbish encourages sorting. A fixed monthly fee offers no financial reward for reducing waste.",
+    "right": "Residents save money by separating recyclables when disposal bills depend on the mass of residual trash. A flat subscription lacks that incentive.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d17",
+    "kind": "positive",
+    "label": 1,
+    "left": "The school delayed the examination until the flooded bridge reopened. Students on the far bank otherwise could not reach the classroom.",
+    "right": "Pupils across the river were unable to attend while floodwater closed the crossing. Their test was postponed until access was restored.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "d18",
+    "kind": "same_topic",
+    "label": 0,
+    "left": "The school postponed an examination because the bridge was flooded. Pupils could not get to the classroom.",
+    "right": "The school used an examination question about bridge construction. Pupils calculated how a flood would load the piers.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  },
+  {
+    "id": "confirmed_docx",
+    "kind": "positive",
+    "label": 1,
+    "left": "After a city removes library fines, the outstanding debt disappears, so apparent improvement in account balances says nothing about whether books come back sooner. Measure days overdue among loans issued after the change instead. Compare the same calendar weeks with a neighbouring council that keeps its old rules, because school holidays can alter borrowing. Keep replacement charges unchanged during the experiment so the policy contrast is interpretable. Success means shorter delays in returning books without fewer loans to residents who previously owed money.",
+    "right": "Cancelling penalties wipes the ledger clean by definition; that accounting result cannot establish that borrowers have become more punctual. The useful outcome is how late newly borrowed volumes are returned. An adjacent authority retaining penalties provides a comparison over corresponding weeks, helping separate the reform from seasonal school closures. Liability for lost items should stay constant while overdue fees are tested. Support the reform if materials arrive back faster and people formerly carrying debts continue using the service.",
+    "provenance": "AI-authored controlled development fixture; not human submissions"
+  }
+]

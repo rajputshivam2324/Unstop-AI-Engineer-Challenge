@@ -1,0 +1,22 @@
+INFO integrity_engine.cli: ingested 01_human_speech.pdf                status=ok           chars=  557 (0.0s)
+INFO integrity_engine.cli: ingested 02_alice_source.pdf                status=ok           chars=  592 (0.0s)
+INFO integrity_engine.cli: ingested 03_alice_copy.pdf                  status=ok           chars=  592 (0.0s)
+INFO integrity_engine.cli: ingested 04_library_hours.pdf               status=ok           chars= 1618 (0.0s)
+INFO integrity_engine.cli: ingested 05_library_storage.pdf             status=ok           chars= 1638 (0.0s)
+INFO integrity_engine.cli: ingested 06_policy_argument.docx            status=ok           chars=  566 (0.0s)
+INFO integrity_engine.cli: ingested 07_policy_rewording.docx           status=ok           chars=  548 (0.0s)
+INFO integrity_engine.cli: ingested 08_library_transport.docx          status=ok           chars= 1575 (0.0s)
+INFO integrity_engine.cli: ingested 09_library_privacy.docx            status=ok           chars= 1640 (0.0s)
+INFO integrity_engine.cli: ingested 10_library_access.docx             status=ok           chars= 1570 (0.0s)
+INFO integrity_engine.cli: ingested 11_human_crossmodal.mp4            status=ok           chars=  140 (4.0s)
+INFO integrity_engine.cli: ingested 12_human_allies.mp4                status=ok           chars=  109 (1.8s)
+INFO integrity_engine.cli: ingested 13_human_revolution.mp4            status=ok           chars=  106 (1.6s)
+INFO integrity_engine.cli: dedup: 03_alice_copy.pdf is byte-identical to 02_alice_source.pdf
+INFO integrity_engine.cli: chunking: 18 chunks from 13 analyzable documents
+INFO integrity_engine.embeddings: embeddings: loading sentence-transformers/all-MiniLM-L6-v2 on cpu (HF_HOME=/home/shivam/assignment/unstopchallenge/cache/hf)
+Could not reach the Hub (Cannot reach https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.). Using cached commit hash for 'sentence-transformers/all-MiniLM-L6-v2'.
+INFO integrity_engine.embeddings: embeddings: sentence-transformers/all-MiniLM-L6-v2 warm (33 ms, dim=384, max_seq=256)
+INFO integrity_engine.external_check: external: local KB built (34 source sentences from 6 passages)
+/home/shivam/assignment/unstopchallenge/.venv/lib64/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+INFO integrity_engine.reporting: summary written: /home/shivam/assignment/unstopchallenge/improvements/runs/pipeline_boundary/summary/report_20261106_135815.json

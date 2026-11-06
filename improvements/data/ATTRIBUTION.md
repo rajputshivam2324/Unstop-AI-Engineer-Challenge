@@ -1,0 +1,5 @@
+PAWS data source: Google LLC; Yuan Zhang, Jason Baldridge and Luheng He (2019), “PAWS: Paraphrase Adversaries from Word Scrambling”, NAACL. https://github.com/google-research-datasets/paws
+
+The project uses the PAWS-Wiki labeled_final distribution through Hugging Face. Human labels describe semantic equivalence, not plagiarism misconduct. Upstream repository permission is preserved verbatim in PAWS_LICENSE.txt; Hugging Face dataset metadata labels the license “other”. The frozen initial candidate incorrectly said CC BY 4.0; the upstream permission is authoritative. The final test provenance wording was corrected before inference, without changing any input or label. No PAWS-QQP data is included.
+
+The initial test slice (rows 2000–2099) was preserved but never scored because the pre-inference audit found 76 sentence strings shared with the original benchmark. The final held-out data is validation rows 0–99, zero exact normalized sentence overlap with that benchmark and our development fixtures. Source-article/pretraining overlap is not ruled out. It is held-out for this implementation, not an externally blinded private assessment.

@@ -1,0 +1,77 @@
+{
+  "method": "Recomputed from preserved cached component outputs and reconstructed test qids; no model inference rerun.",
+  "result": {
+    "n": 210,
+    "n_ai": 105,
+    "n_human": 105,
+    "auc": {
+      "classifier": 0.9996371882086168,
+      "perplexity_component": 0.9870294784580499,
+      "burstiness_component": 0.2889795918367347,
+      "text_statistics_component": 0.9771428571428571,
+      "fused": 0.9998185941043084
+    },
+    "fused_at_ai_likely_band": {
+      "threshold": 65.0,
+      "tp": 104,
+      "fp": 1,
+      "fn": 1,
+      "tn": 104,
+      "precision": 0.9904761904761905,
+      "recall": 0.9904761904761905,
+      "f1": 0.9904761904761905,
+      "fpr": 0.009523809523809525,
+      "accuracy": 0.9904761904761905
+    },
+    "classifier_at_0.5": {
+      "threshold": 0.5,
+      "tp": 105,
+      "fp": 3,
+      "fn": 0,
+      "tn": 102,
+      "precision": 0.9722222222222222,
+      "recall": 1.0,
+      "f1": 0.9859154929577464,
+      "fpr": 0.02857142857142857,
+      "accuracy": 0.9857142857142858
+    },
+    "fused_best_f1": {
+      "threshold": 64.97688837599262,
+      "tp": 105,
+      "fp": 1,
+      "fn": 0,
+      "tn": 104,
+      "precision": 0.9905660377358491,
+      "recall": 1.0,
+      "f1": 0.9952606635071091,
+      "fpr": 0.009523809523809525,
+      "accuracy": 0.9952380952380953
+    },
+    "band_counts": {
+      "HUMAN": {
+        "HUMAN": 101,
+        "UNSURE": 3,
+        "AI_LIKELY": 1
+      },
+      "AI": {
+        "HUMAN": 0,
+        "UNSURE": 1,
+        "AI_LIKELY": 104
+      }
+    },
+    "per_subset_fused_auc": {
+      "finance": 1.0,
+      "open_qa": 1.0,
+      "wiki_csai": 1.0
+    },
+    "median": {
+      "ppl_human": 27.212509391744664,
+      "ppl_ai": 9.155201603922563,
+      "burst_human": 0.16521364407830647,
+      "burst_ai": 0.22577800424050745,
+      "p_cls_human": 0.002048313617706299,
+      "p_cls_ai": 0.9999838791245566
+    }
+  },
+  "matches_saved": true
+}

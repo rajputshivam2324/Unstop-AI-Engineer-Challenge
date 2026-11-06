@@ -1,0 +1,290 @@
+{
+  "split": "development",
+  "mode": "baseline",
+  "config": {
+    "mode": "baseline",
+    "asr_max_gap_s": 1.5,
+    "boundary_max_units": 3,
+    "window_max_tokens": 120,
+    "retrieval_min_cos": 0.35,
+    "retrieval_topk": 5,
+    "verifier_topk": 3,
+    "max_verifications_per_pair": 48,
+    "nli_entailment_min": 0.7,
+    "nli_contradiction_max": 0.1,
+    "sts_min": 0.5
+  },
+  "metrics": {
+    "tp": 0,
+    "fp": 4,
+    "fn": 9,
+    "tn": 6,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "timing": {
+    "embedding_load_s": 7.902138137998918,
+    "verifier_load_s": 0.0,
+    "cases_total_s": 1.7374219610028376,
+    "median_case_s": 0.0891478459998325,
+    "p95_case_s": 0.16440104100001918,
+    "wall_s": 9.641677944999174
+  },
+  "peak_rss_mb": 545.85546875,
+  "verifier_pairs_scored": 0,
+  "truncated_pairs": 0,
+  "cases": [
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.09049528099967574,
+      "passages": [],
+      "id": "d01",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.09852695300105552,
+      "passages": [],
+      "id": "d02",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.09332298899971647,
+      "passages": [],
+      "id": "d03",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.08674965899990639,
+      "passages": [],
+      "id": "d04",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.09848972700092418,
+      "passages": [],
+      "id": "d05",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.0891478459998325,
+      "passages": [],
+      "id": "d06",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.05063926600087143,
+      "passages": [],
+      "id": "d07",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.0492114450007648,
+      "passages": [],
+      "id": "d08",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.04941824299930886,
+      "passages": [],
+      "id": "d09",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.08011319400065986,
+      "passages": [],
+      "id": "d10",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.11876620499970159,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9585,
+          "query_passage": "The new bus lane reduced travel time during the morning rush. The city should keep the lane open.",
+          "matched_passage": "The new bus lane increased travel time during the morning rush. The city should close the lane.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.8892,
+            0.9351
+          ],
+          "note": "semantic paraphrase paraphrase-band (>0.80): meaning matches while wording differs (lexical Jaccard 0.69, token-LCS 0.83)",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.6875,
+          "token_lcs_ratio": 0.8333
+        }
+      ],
+      "id": "d11",
+      "kind": "contradiction",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.11200549300156126,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9546,
+          "query_passage": "The filter removed arsenic from the water. Its output was safe to drink.",
+          "matched_passage": "The filter did not remove arsenic from the water. Its output was unsafe to drink.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.8921,
+            0.9611
+          ],
+          "note": "semantic paraphrase paraphrase-band (>0.80): meaning matches while wording differs (lexical Jaccard 0.62, token-LCS 0.73)",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.625,
+          "token_lcs_ratio": 0.7333
+        }
+      ],
+      "id": "d12",
+      "kind": "contradiction",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.11424884400003066,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.7629,
+          "query_passage": "Every patient in the trial recovered after taking the medicine. The researchers recommended its use.",
+          "matched_passage": "No patient in the trial recovered after taking the medicine. The researchers advised against its use.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.7025,
+            0.8132
+          ],
+          "note": "semantic paraphrase: meaning matches while wording differs (lexical Jaccard 0.69, token-LCS 0.81)",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 0.6875,
+          "token_lcs_ratio": 0.8125
+        }
+      ],
+      "id": "d13",
+      "kind": "contradiction",
+      "label": 0
+    },
+    {
+      "predicted": true,
+      "score": 1.0,
+      "seconds": 0.10988331599946832,
+      "passages": [
+        {
+          "matched_file": "02_right.docx",
+          "similarity_score": 0.9879,
+          "query_passage": "The retailer acquired the supplier after the merger. The supplier is now owned by the retailer.",
+          "matched_passage": "The supplier acquired the retailer after the merger. The retailer is now owned by the supplier.",
+          "query_page": null,
+          "matched_page": null,
+          "matched_timestamp": null,
+          "query_timestamp": null,
+          "match_type": "overlap",
+          "evidence_sentence_scores": [
+            0.9883,
+            0.9714
+          ],
+          "note": "semantic paraphrase paraphrase-band (>0.80): meaning matches while wording differs (lexical Jaccard 1.00, token-LCS 0.75)",
+          "overlap_kind": "paraphrase",
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 0.75
+        }
+      ],
+      "id": "d14",
+      "kind": "contradiction",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.08059774799949082,
+      "passages": [],
+      "id": "d15",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.08797208000032697,
+      "passages": [],
+      "id": "d16",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.08376236600088305,
+      "passages": [],
+      "id": "d17",
+      "kind": "positive",
+      "label": 1
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.07967026499864005,
+      "passages": [],
+      "id": "d18",
+      "kind": "same_topic",
+      "label": 0
+    },
+    {
+      "predicted": false,
+      "score": 0.0,
+      "seconds": 0.16440104100001918,
+      "passages": [],
+      "id": "confirmed_docx",
+      "kind": "positive",
+      "label": 1
+    }
+  ]
+}

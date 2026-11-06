@@ -1,0 +1,1714 @@
+{
+  "n_files": 13,
+  "n_pairs": 78,
+  "metrics_any_reported_evidence": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 2,
+    "tn": 75,
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "f1": 0.5,
+    "recall_wilson95": [
+      0.0614903152761605,
+      0.7923450448735121
+    ],
+    "precision_wilson95": [
+      0.20654329147389294,
+      1
+    ]
+  },
+  "metrics_score_at_0_20": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 2,
+    "tn": 75,
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "f1": 0.5
+  },
+  "document_pair_auc": 0.6666666666666666,
+  "ai_exploratory": {
+    "tp": 7,
+    "fn": 0,
+    "fp": 0,
+    "tn": 1,
+    "warning": "7 synthetic positives, 1 unique pure-human negative; human speech PDF mixes synthetic cover and is excluded, copy is not an additional independent human. No population accuracy claim."
+  },
+  "asr": [
+    {
+      "file": "11_human_crossmodal.mp4",
+      "duration_s": 15.0,
+      "reference": "The world is very different now, for man holds in his mortal hands the power to abolish all forms of human poverty and all forms of human life.",
+      "hypothesis": "The world is very different now for man holds it is mortal hands the power to abolish all forms of human poverty and all forms of human life",
+      "wer": 0.07142857142857142,
+      "segments": [
+        [
+          0.18,
+          6.02
+        ],
+        [
+          6.78,
+          14.86
+        ]
+      ],
+      "reference_interval_s": [
+        0,
+        15.0
+      ]
+    },
+    {
+      "file": "12_human_allies.mp4",
+      "duration_s": 12.0,
+      "reference": "To those old allies whose cultural and spiritual origins we share, we pledge the loyalty of faithful friends.",
+      "hypothesis": "To those all allies whose cultural and spiritual origins we share, we pledge the loyalty of faithful friends.",
+      "wer": 0.05555555555555555,
+      "segments": [
+        [
+          0.0,
+          11.38
+        ]
+      ],
+      "reference_interval_s": [
+        0,
+        12.0
+      ]
+    },
+    {
+      "file": "13_human_revolution.mp4",
+      "duration_s": 10.52,
+      "reference": "And yet the same revolutionary beliefs for which our forebears fought are still at issue around the globe.",
+      "hypothesis": "And yet the same revolutionary belief for which our four bears for it are still an issue around the globe.",
+      "wer": 0.3333333333333333,
+      "segments": [
+        [
+          0.46,
+          10.39
+        ]
+      ],
+      "reference_interval_s": [
+        0,
+        10.52
+      ]
+    }
+  ],
+  "checks": {
+    "report_count_json": 13,
+    "report_count_md": 13,
+    "matrix_rows": 13,
+    "matrix_offdiagonal_entries": 156,
+    "self_matches": 0,
+    "schema_ok": true,
+    "textual_evidence_checks": [
+      {
+        "query": "02_alice_source.pdf",
+        "source": "03_alice_copy.pdf",
+        "query_span_exact": true,
+        "source_span_exact": true,
+        "query_page_correct": true
+      },
+      {
+        "query": "03_alice_copy.pdf",
+        "source": "02_alice_source.pdf",
+        "query_span_exact": true,
+        "source_span_exact": true,
+        "query_page_correct": true
+      }
+    ]
+  },
+  "per_file": [
+    {
+      "file": "01_human_speech.pdf",
+      "status": "ok",
+      "peer_pct": 0.0,
+      "external_pct": 0.0,
+      "ai_pct": 64.6,
+      "ai_label": "UNSURE",
+      "risk": "LOW",
+      "warnings": [],
+      "ingestion_s_from_pipeline_log": 0.0
+    },
+    {
+      "file": "02_alice_source.pdf",
+      "status": "ok",
+      "peer_pct": 100.0,
+      "external_pct": 0.0,
+      "ai_pct": 5.3,
+      "ai_label": "HUMAN",
+      "risk": "HIGH",
+      "warnings": [],
+      "ingestion_s_from_pipeline_log": 0.0
+    },
+    {
+      "file": "03_alice_copy.pdf",
+      "status": "ok",
+      "peer_pct": 100.0,
+      "external_pct": 0.0,
+      "ai_pct": 5.3,
+      "ai_label": "HUMAN",
+      "risk": "HIGH",
+      "warnings": [],
+      "ingestion_s_from_pipeline_log": 0.0
+    },
+    {
+      "file": "04_library_hours.pdf",
+      "status": "ok",
+      "peer_pct": 0.0,
+      "external_pct": 0.0,
+      "ai_pct": 65.7,
+      "ai_label": "AI_LIKELY",
+      "risk": "MEDIUM",
+      "warnings": [],
+      "ingestion_s_from_pipeline_log": 0.0
+    },
+    {
+      "file": "05_library_storage.pdf",
+      "status": "ok",
+      "peer_pct": 0.0,
+      "external_pct": 0.0,
+      "ai_pct": 65.6,
+      "ai_label": "AI_LIKELY",
+      "risk": "MEDIUM",
+      "warnings": [],
+      "ingestion_s_from_pipeline_log": 0.0
+    },
+    {
+      "file": "06_policy_argument.docx",
+      "status": "ok",
+      "peer_pct": 0.0,
+      "external_pct": 0.0,
+      "ai_pct": 65.9,
+      "ai_label": "AI_LIKELY",
+      "risk": "MEDIUM",
+      "warnings": [],
+      "ingestion_s_from_pipeline_log": 0.0
+    },
+    {
+      "file": "07_policy_rewording.docx",
+      "status": "ok",
+      "peer_pct": 0.0,
+      "external_pct": 0.0,
+      "ai_pct": 65.8,
+      "ai_label": "AI_LIKELY",
+      "risk": "MEDIUM",
+      "warnings": [],
+      "ingestion_s_from_pipeline_log": 0.0
+    },
+    {
+      "file": "08_library_transport.docx",
+      "status": "ok",
+      "peer_pct": 0.0,
+      "external_pct": 0.0,
+      "ai_pct": 65.7,
+      "ai_label": "AI_LIKELY",
+      "risk": "MEDIUM",
+      "warnings": [],
+      "ingestion_s_from_pipeline_log": 0.0
+    },
+    {
+      "file": "09_library_privacy.docx",
+      "status": "ok",
+      "peer_pct": 0.0,
+      "external_pct": 0.0,
+      "ai_pct": 66.0,
+      "ai_label": "AI_LIKELY",
+      "risk": "MEDIUM",
+      "warnings": [],
+      "ingestion_s_from_pipeline_log": 0.0
+    },
+    {
+      "file": "10_library_access.docx",
+      "status": "ok",
+      "peer_pct": 0.0,
+      "external_pct": 0.0,
+      "ai_pct": 66.0,
+      "ai_label": "AI_LIKELY",
+      "risk": "MEDIUM",
+      "warnings": [],
+      "ingestion_s_from_pipeline_log": 0.0
+    },
+    {
+      "file": "11_human_crossmodal.mp4",
+      "status": "ok",
+      "peer_pct": 0.0,
+      "external_pct": 0.0,
+      "ai_pct": null,
+      "ai_label": "INSUFFICIENT_TEXT",
+      "risk": "LOW",
+      "warnings": [],
+      "ingestion_s_from_pipeline_log": 2.5
+    },
+    {
+      "file": "12_human_allies.mp4",
+      "status": "ok",
+      "peer_pct": 0.0,
+      "external_pct": 0.0,
+      "ai_pct": null,
+      "ai_label": "INSUFFICIENT_TEXT",
+      "risk": "LOW",
+      "warnings": [],
+      "ingestion_s_from_pipeline_log": 1.4
+    },
+    {
+      "file": "13_human_revolution.mp4",
+      "status": "ok",
+      "peer_pct": 0.0,
+      "external_pct": 0.0,
+      "ai_pct": null,
+      "ai_label": "INSUFFICIENT_TEXT",
+      "risk": "LOW",
+      "warnings": [],
+      "ingestion_s_from_pipeline_log": 1.4
+    }
+  ],
+  "pairs": [
+    {
+      "files": [
+        "01_human_speech.pdf",
+        "02_alice_source.pdf"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "LOW",
+        "HIGH"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "01_human_speech.pdf",
+        "03_alice_copy.pdf"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "LOW",
+        "HIGH"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "01_human_speech.pdf",
+        "04_library_hours.pdf"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "LOW",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "01_human_speech.pdf",
+        "05_library_storage.pdf"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "LOW",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "01_human_speech.pdf",
+        "06_policy_argument.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "LOW",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "01_human_speech.pdf",
+        "07_policy_rewording.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "LOW",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "01_human_speech.pdf",
+        "08_library_transport.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "LOW",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "01_human_speech.pdf",
+        "09_library_privacy.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "LOW",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "01_human_speech.pdf",
+        "10_library_access.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "LOW",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "01_human_speech.pdf",
+        "11_human_crossmodal.mp4"
+      ],
+      "expected_relationship": "cross_modal",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "FN",
+      "risks": [
+        "LOW",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "01_human_speech.pdf",
+        "12_human_allies.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "LOW",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "01_human_speech.pdf",
+        "13_human_revolution.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "LOW",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "02_alice_source.pdf",
+        "03_alice_copy.pdf"
+      ],
+      "expected_relationship": "exact_copy",
+      "detected_relationships": [
+        "verbatim"
+      ],
+      "doc_pair_score": 1.0,
+      "passage_cosines": [
+        1.0,
+        1.0
+      ],
+      "predicted_any_reported_evidence": true,
+      "predicted_at_0_20": true,
+      "status": "TP",
+      "risks": [
+        "HIGH",
+        "HIGH"
+      ],
+      "evidence": [
+        {
+          "query_file": "02_alice_source.pdf",
+          "matched_file": "03_alice_copy.pdf",
+          "similarity_score": 1.0,
+          "query_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+          "matched_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+          "location": {
+            "query_page": 1,
+            "matched_page": 1
+          },
+          "match_type": "overlap",
+          "overlap_kind": "verbatim",
+          "evidence_sentence_scores": [
+            1.0
+          ],
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 1.0,
+          "note": "byte-identical duplicate file"
+        },
+        {
+          "query_file": "03_alice_copy.pdf",
+          "matched_file": "02_alice_source.pdf",
+          "similarity_score": 1.0,
+          "query_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+          "matched_passage": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to\ndo: once or twice she had peeped into the book her sister was reading, but it had no pictures or\nconversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or\nconversations?\" So she was considering in her own mind (as well as she could, for the hot day\nmade her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be\nworth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink\neyes ran close by her.",
+          "location": {
+            "query_page": 1,
+            "matched_page": 1
+          },
+          "match_type": "overlap",
+          "overlap_kind": "verbatim",
+          "evidence_sentence_scores": [
+            1.0
+          ],
+          "lexical_jaccard": 1.0,
+          "token_lcs_ratio": 1.0,
+          "note": "byte-identical duplicate file"
+        }
+      ]
+    },
+    {
+      "files": [
+        "02_alice_source.pdf",
+        "04_library_hours.pdf"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "02_alice_source.pdf",
+        "05_library_storage.pdf"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "02_alice_source.pdf",
+        "06_policy_argument.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "02_alice_source.pdf",
+        "07_policy_rewording.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "02_alice_source.pdf",
+        "08_library_transport.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "02_alice_source.pdf",
+        "09_library_privacy.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "02_alice_source.pdf",
+        "10_library_access.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "02_alice_source.pdf",
+        "11_human_crossmodal.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "02_alice_source.pdf",
+        "12_human_allies.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "02_alice_source.pdf",
+        "13_human_revolution.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "03_alice_copy.pdf",
+        "04_library_hours.pdf"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "03_alice_copy.pdf",
+        "05_library_storage.pdf"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "03_alice_copy.pdf",
+        "06_policy_argument.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "03_alice_copy.pdf",
+        "07_policy_rewording.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "03_alice_copy.pdf",
+        "08_library_transport.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "03_alice_copy.pdf",
+        "09_library_privacy.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "03_alice_copy.pdf",
+        "10_library_access.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "03_alice_copy.pdf",
+        "11_human_crossmodal.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "03_alice_copy.pdf",
+        "12_human_allies.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "03_alice_copy.pdf",
+        "13_human_revolution.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "HIGH",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "04_library_hours.pdf",
+        "05_library_storage.pdf"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "04_library_hours.pdf",
+        "06_policy_argument.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "04_library_hours.pdf",
+        "07_policy_rewording.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "04_library_hours.pdf",
+        "08_library_transport.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "04_library_hours.pdf",
+        "09_library_privacy.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "04_library_hours.pdf",
+        "10_library_access.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "04_library_hours.pdf",
+        "11_human_crossmodal.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "04_library_hours.pdf",
+        "12_human_allies.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "04_library_hours.pdf",
+        "13_human_revolution.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "05_library_storage.pdf",
+        "06_policy_argument.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "05_library_storage.pdf",
+        "07_policy_rewording.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "05_library_storage.pdf",
+        "08_library_transport.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "05_library_storage.pdf",
+        "09_library_privacy.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "05_library_storage.pdf",
+        "10_library_access.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "05_library_storage.pdf",
+        "11_human_crossmodal.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "05_library_storage.pdf",
+        "12_human_allies.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "05_library_storage.pdf",
+        "13_human_revolution.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "06_policy_argument.docx",
+        "07_policy_rewording.docx"
+      ],
+      "expected_relationship": "paraphrase",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "FN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "06_policy_argument.docx",
+        "08_library_transport.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "06_policy_argument.docx",
+        "09_library_privacy.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "06_policy_argument.docx",
+        "10_library_access.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "06_policy_argument.docx",
+        "11_human_crossmodal.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "06_policy_argument.docx",
+        "12_human_allies.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "06_policy_argument.docx",
+        "13_human_revolution.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "07_policy_rewording.docx",
+        "08_library_transport.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "07_policy_rewording.docx",
+        "09_library_privacy.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "07_policy_rewording.docx",
+        "10_library_access.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "07_policy_rewording.docx",
+        "11_human_crossmodal.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "07_policy_rewording.docx",
+        "12_human_allies.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "07_policy_rewording.docx",
+        "13_human_revolution.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "08_library_transport.docx",
+        "09_library_privacy.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "08_library_transport.docx",
+        "10_library_access.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "08_library_transport.docx",
+        "11_human_crossmodal.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "08_library_transport.docx",
+        "12_human_allies.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "08_library_transport.docx",
+        "13_human_revolution.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "09_library_privacy.docx",
+        "10_library_access.docx"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "MEDIUM"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "09_library_privacy.docx",
+        "11_human_crossmodal.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "09_library_privacy.docx",
+        "12_human_allies.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "09_library_privacy.docx",
+        "13_human_revolution.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "10_library_access.docx",
+        "11_human_crossmodal.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "10_library_access.docx",
+        "12_human_allies.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "10_library_access.docx",
+        "13_human_revolution.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "MEDIUM",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "11_human_crossmodal.mp4",
+        "12_human_allies.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "LOW",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "11_human_crossmodal.mp4",
+        "13_human_revolution.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "LOW",
+        "LOW"
+      ],
+      "evidence": []
+    },
+    {
+      "files": [
+        "12_human_allies.mp4",
+        "13_human_revolution.mp4"
+      ],
+      "expected_relationship": "negative",
+      "detected_relationships": [],
+      "doc_pair_score": 0.0,
+      "passage_cosines": [],
+      "predicted_any_reported_evidence": false,
+      "predicted_at_0_20": false,
+      "status": "TN",
+      "risks": [
+        "LOW",
+        "LOW"
+      ],
+      "evidence": []
+    }
+  ]
+}

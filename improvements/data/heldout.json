@@ -1,0 +1,802 @@
+[
+  {
+    "id": "paws:2000",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "He also represented Turkey at the 2010 FIBA World Championship in New Zealand .",
+    "right": "He also represented New Zealand at the FIBA World Championships 2010 in Turkey .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2001",
+    "kind": "positive",
+    "label": 1,
+    "left": "The Los Angeles County Department of Health Services operates the Monrovia Health Center in Rosemead , serving Monrovia .",
+    "right": "The Los Angeles County Department of Health Services operates the Monrovia Health Center in Rosemead , which serves Monrovia .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2002",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The NRA has referred to NAGR leader Dudley Brown as `` the Al Sharpton of the gun movement . ''",
+    "right": "The NRA has referred to the NAGR - leader Al Sharpton as '' the Dudley Brown of the gun movement `` .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2003",
+    "kind": "positive",
+    "label": 1,
+    "left": "Both electromagnetic brakes and eddy current brakes use electromagnetic force , but magnetic brakes ultimately depend on friction and eddy current brakes use electromagnetic force directly .",
+    "right": "Both electromagnetic and eddy current brakes use electromagnetic force , but magnetic brakes ultimately depend on friction and eddy current brakes use electromagnetic force directly .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2004",
+    "kind": "positive",
+    "label": 1,
+    "left": "His some Marathi songs from other Films are :",
+    "right": "His marathi songs are from other films :",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2005",
+    "kind": "positive",
+    "label": 1,
+    "left": "The Inniskillings moved from India in 1922 to Shorncliffe , England , and returned to Iraq in 1925 .",
+    "right": "The Inniskillings moved from India to Shorncliffe , England in 1922 , returning to Iraq in 1925 .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2006",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Hans Bock ( October 5 , 1928 - January 21 , 2008 ) was a German chemist , born in Hamburg and died in K\u00f6nigstein , Taunus .",
+    "right": "Hans Bock ( 5 October 1928 -- 21 January 2008 ) was a German chemist born in K\u00f6nigstein im Taunus and died in Hamburg .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2007",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The Sunset Sunset Road comes from right and becomes Briscoe Mountain Road .",
+    "right": "The Briscoe Mountain Road comes from right and becomes Sunset Road .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2008",
+    "kind": "positive",
+    "label": 1,
+    "left": "The brothels gradually moved to Possession Street and withdrew to Shek Tong Tsui in 1903 .",
+    "right": "The brothels gradually moved to Possession Street and in 1903 to Shek Tong Tsui .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2009",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The film music department had a rare combination , sitar maestro Shailendra , with lyricist Pandit Ravi Shankar .",
+    "right": "The film music department had a rare combination , Sitar Maestro Pandit Ravi Shankar , with the lyrics Shailendra .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2010",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Although opponent Guillermo Valencia was also a member of the Liberal Party , he received support from the Conservative Party .",
+    "right": "Although his opponent , Guillermo Valencia , was also a member of the Conservative Party , he received support from the Liberal Party .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2011",
+    "kind": "positive",
+    "label": 1,
+    "left": "Robert Hrub\u00fd ( born 27 April 1994 ) is a professional Czech football midfielder currently playing for Ostrava in the Czech First League .",
+    "right": "Robert Hrub\u00fd ( born April 27 , 1994 ) is a professional Czech midfielder who is currently playing in the Czech first league for Ostrava .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2012",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Pianist was Paulena Carter , and Ben Gage was the singer and announcer .",
+    "right": "The pianist was Ben Ben Gage , and Paulena Carter was a singer and announcer .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2013",
+    "kind": "positive",
+    "label": 1,
+    "left": "Particularly strong erosion occurred in warmer melting periods during the ice ages , when the climate of the tundra reigned and the soil was not protected by a dense vegetation ceiling .",
+    "right": "Particularly strong erosion occurred in warmer melting periods during the ice ages , when tundra climate reigned and the soil was not protected by a dense cover of vegetation .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2014",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "They consist of nearly 30 expatriates , some members of the US Communist Party , while others are left-wing writers or English teachers .",
+    "right": "They consist of nearly 30 expatriates , some members of the US Communist Party while others are English writers or leftist teachers .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2015",
+    "kind": "positive",
+    "label": 1,
+    "left": "The Mavelikkara meeting constituency is part of Alappuzha ( constituency of Lok Sabha ) , the other constituency Lok Sabha of the district is Alappuzha .",
+    "right": "Mavelikkara assembly constituency is part of Alappuzha ( Lok Sabha constituency ) . The other Lok Sabha constituency of the district is Alappuzha .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2016",
+    "kind": "positive",
+    "label": 1,
+    "left": "Oenopota laticostulata is a kind of Marine snail , a small gastropod mollusk in the Mangeliidae family .",
+    "right": "Oenopota laticostulata is a species of marine sea snail , a small gastropod mollusk in the family Mangeliidae .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2017",
+    "kind": "positive",
+    "label": 1,
+    "left": "The 1990 South Australian National Football League season was the 110th season of the Australian - top rules football - competition in southern Australia .",
+    "right": "The 1990 South Australian National Football League season was the 110th season of the Australian-level top rules football competition in South Australia .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2018",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "She taught at Johns Hopkins University , at Goucher College , at the University of Maryland and at George Mason University .",
+    "right": "She taught at George Mason University , Goucher College , the University of Maryland and Johns Hopkins University .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2019",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Shozenji Dam is a dam in the Prefecture of Niigata , Japan , completed in 1984 .",
+    "right": "Niigata Prefecture , Japan is a dam in the Shozenji Dam , completed in 1984 .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2020",
+    "kind": "positive",
+    "label": 1,
+    "left": "Opened in 1863 , Woodlawn is located in the Hyde Park neighborhood south of the University of Chicago .",
+    "right": "Opened in 1863 , Woodlawn is located in the Hyde Park district south of the University of Chicago .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2021",
+    "kind": "positive",
+    "label": 1,
+    "left": "The Royal Danish Air Force Academy educates and commissions all officers for the Royal Danish Air Force .",
+    "right": "The Royal Danish Air Force Academy educates all officers for the Royal Danish Air Force .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2022",
+    "kind": "positive",
+    "label": 1,
+    "left": "In July 2011 SAP announced that SAP AG has officially joined the project OpenJDK .",
+    "right": "In July 2011 , SAP announced that SAP AG officially joined the OpenJDK project .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2023",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The new railway was used to carry ore from Libreville to the port of Owendo near Moanda .",
+    "right": "The new railway was used to transport ore from Moanda to the port of Owendo near Libreville .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2024",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Then the equalizer is again the entire domain `` X '' , since the universal quantification in the definition is vacuously true .",
+    "right": "Then the equalizer is again the entire domain `` X '' , since the universal quantification is vacuum-suitable in the definition .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2025",
+    "kind": "positive",
+    "label": 1,
+    "left": "The airfield is operated by Hokitika Airport Ltd . The airport company is owned by the Westland District Council .",
+    "right": "The aerodrome is operated by Hokitika Airport Ltd . The airport company is owned by the Westland District Council .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2026",
+    "kind": "positive",
+    "label": 1,
+    "left": "New Zealand 's first university , the University of Otago , was founded in 1869 as the provincial university in Dunedin .",
+    "right": "The first University of New Zealand , the University of Otago , was founded in 1869 as a provincial university in Dunedin .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2027",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Some of the pins are available for general purpose use and some can be set to predetermined alternate uses ( serial ports 1 and 4 ) .",
+    "right": "Some of the pins are available for general purposes , and some can be set to serial use ( predetermined alternate ports 1 and 4 ) .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2028",
+    "kind": "positive",
+    "label": 1,
+    "left": "Graham was Member of Parliament ( MP ) for Herefordshire from 1830 to 1832 , for Grantham from 1852 to 1857 , and for Dunbartonshire from 1858 to 1865 .",
+    "right": "Graham was a Member of Parliament for Herefordshire from 1830 to 1832 , for Grantham from 1852 to 1857 , and Dunbartonshire from 1858 to 1865 .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2029",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "In the following weeks on `` Raw '' Kane repeatedly began to attack Hardy and seduce Lita .",
+    "right": "In the following weeks on `` Raw '' Hardy repeatedly began to attack Lita and seduce Kane .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2030",
+    "kind": "positive",
+    "label": 1,
+    "left": "Philippe Maystadt was born in Belgium ( Verviers ) in 1948 .",
+    "right": "Philippe Maystadt was born in Belgium in 1948 ( Verviers ) .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2031",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The United States Geological Survey lists Arnold Guyot , Swiss geologist , as the man for whom the mountain was named , supposedly by famous scientist Joseph Le Conte .",
+    "right": "The United States Geological Survey lists Joseph Le Conte , famous geologist , as the man for whom the mountain was named , supposedly by Swiss explorer Arnold Guyot .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2032",
+    "kind": "positive",
+    "label": 1,
+    "left": "Independencia is a central department of the Chaco province in Argentina .",
+    "right": "Independencia is a central department of Chaco Province in Argentina .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2033",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Northumberland County Cricket Club is one of twenty smaller county clubs within the domestic cricket structure of England and Wales . It represents the historical county of Northumberland .",
+    "right": "Northumberland County Cricket Club represents one of twenty minor county clubs within the domestic cricket structure of England and Wales . It is the historic county of Northumberland .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2034",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The competition was continued under JLT Sport as a sponsor , which started last year .",
+    "right": "The competition started as a sponsor under JLT Sport , which was continued last year .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2035",
+    "kind": "positive",
+    "label": 1,
+    "left": "He graduated from Harvard Law School magna cum laude and was elected to Phi Beta Kappa .",
+    "right": "He graduated from the Harvard Law School Magna cum Laude and was elected in Phi Beta Kappa .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2036",
+    "kind": "positive",
+    "label": 1,
+    "left": "For the first time in league history , Gary Gait of Rochester played against his twin brother Paul Gait of Philadelphia .",
+    "right": "For the first time in the history of the league , Gary Gait von Rochester played against his twin brother Paul Gait of Philadelphia .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2037",
+    "kind": "positive",
+    "label": 1,
+    "left": "This last relation is the relativistic quantum mechanics , essential in useful relativistic quantum mechanics and relativistic field theory , all with applications for particle physics .",
+    "right": "This last relation is relativistic quantum mechanics , essential in useful relativistic quantum mechanics and relativistic field theory , all with applications to particle physics .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2038",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The family doctor , Handel , wrote several librettis used by Antonio Salvi for his opera .",
+    "right": "Antonio Salvi , the family doctor , wrote several librettos , used by Handel for his opera .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2039",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Other regions believed to be free of CSF include Ireland ( 1962 ) , Australia , Canada , New Zealand , and Scandinavia .",
+    "right": "Other regions believed free of CSF include Australia , Canada ( 1962 ) , Ireland , New Zealand , and Scandinavia .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2040",
+    "kind": "positive",
+    "label": 1,
+    "left": "Divya , who was called Vasundhara in her previous life , dies after this curse , and is reborn as Divya .",
+    "right": "Divya , who was called Vasundhara in her previous life , dies after this curse and is reborn like Divya .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2041",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "In February 2018 , the House of Representatives of Utah passed a bill to grow the `` right to try '' and marijuana - plants for incurably ill patients .",
+    "right": "In February 2018 , the House of Representatives of Utah adopted a bill to legalize the `` right to grow '' and try medical marijuana - plants for incurably ill patients .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2042",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Republican authors read in the Enlightenment period an abstract ideal of the classical government , which was based on hierarchical social orders of king , aristocracy and civil .",
+    "right": "The classical authors read an abstract ideal of the Republican government in the Enlightenment period , based on hierarchical social orders of king , aristocracy , and civil society .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2043",
+    "kind": "positive",
+    "label": 1,
+    "left": "This episode marked the return of Scotty Beckett , who was Spanky 's sidekick from 1934 to 1935 .",
+    "right": "This episode marks the return of Scotty Beckett , who from 1934 to 1935 was Spanky Sidekick .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2044",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The girls see Redcoat and follow her to Alison 's garden and she turns around and we discover that it 's Spencer and that she is not dead .",
+    "right": "The girls see Redcoat and follow her to Spencer 's garden and she turns around and we discover that it is Alison and that she is not dead .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2045",
+    "kind": "positive",
+    "label": 1,
+    "left": "Susan tries to get at Mike 's early to help him but Edie has arrived unexpectedly before her .",
+    "right": "Susan tries to be early at Mike to help him , but Edie has unexpectedly arrived before her .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2046",
+    "kind": "positive",
+    "label": 1,
+    "left": "Currency : Leu ( Romanian Lei ) ( since 1867 ) Symbol : L `` See also plural leu '' .",
+    "right": "Leu ( Romanian Lei ) ( since 1867 ) symbol : L `` See also Plural Leu '' .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2047",
+    "kind": "positive",
+    "label": 1,
+    "left": "Kalisch wrote before the publication of Julius Wellhausen 's works , and anticipated him in some important points .",
+    "right": "Kalisch wrote and anticipated important points before the publication of Julius Wellhausen 's works .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2048",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "On a scale of 0 ( highly corrupt ) to 10 ( very clean ) marked the corruption perception index Zimbabwe 2.0 .",
+    "right": "On a scale of 0 ( very clean ) to 10 ( highly corrupt ) , the Zimbabwe 2.0 corruption perception index marked .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2049",
+    "kind": "positive",
+    "label": 1,
+    "left": "About 1652 , Howard Lady married Anne Somerset , daughter of Edward Somerset , 2nd Marquess of Worcester , and Elizabeth Dormer , they had at least three children :",
+    "right": "About 1652 , Howard married Lady Anne Somerset , daughter of Edward Somerset , 2nd Marquess of Worcester , and Elizabeth Dormer . They had at least three children :",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2050",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "In 1994 won the beauty contest Nuestra Belleza Jalisco 1994 and participated the national beauty contest Nuestra Belleza M\u00e9xico 1994 and finished fifth place .",
+    "right": "In 1994 the beauty contest Nuestra Belleza Jalisco participated in 1994 and won the Nuestra Belleza M\u00e9xico National Beauty Contest in 1994 and took fifth place .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2051",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "In three seasons , white crashed for 739 yards and three touchdowns and received for 1,051 yards and seven touchdowns .",
+    "right": "In three seasons , white received 739 yards and three touchdowns and rushed for 1,051 yards and seven touchdowns .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2052",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Raubenheimer is regarded as a car enthusiast and has remained in South Africa the `` father of the Mini Marcos .",
+    "right": "Raubenheimer has remained a car enthusiast and is considered the `` father '' of the Mini Marcos in South Africa .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2053",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Christine Mikolajuk and Greta Levy were in 2002 and 2004 regional , provincial and national bilingual debating champions .",
+    "right": "Christine Mikolajuk and Greta Levy were Bilingual , Provincial and National Regional Debating Champions in 2002 and 2004 , respectively .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2054",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The Meads of Asphodel is a British black metal band with pronounced medieval influences , eastern , punk and progressive metal from Hertfordshire in the United Kingdom .",
+    "right": "The Meads of Asphodel are a medieval metal band with pronounced British black , Eastern , Punk , and Progressive Metal influences from Hertfordshire in the United Kingdom .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2055",
+    "kind": "positive",
+    "label": 1,
+    "left": "Fernando Miyares P\u00e9rez y Bernal ( sometimes , Fernando Miyares y Gonzales ) was a Cuban Captain General , born in Santiago de Cuba , in 1749 .",
+    "right": "Fernando Miyares P\u00e9rez y Bernal ( sometimes Fernando Miyares y Gonzales ) was a Cuban general captain who was born in 1749 in Santiago de Cuba .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2056",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Luciano Williames Dias ( born July 25 , 1970 ) is a former football coach and Brazilian player .",
+    "right": "Luciano Williames Dias ( born July 25 , 1970 ) is a Brazilian football coach and former player .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2057",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Henri Dobler was born in Marseille in 1863 , and his parents sold silk and textiles in Switzerland .",
+    "right": "Henri Dobler was born in 1863 in Switzerland , his parents sold silk and textiles in Marseilles .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2058",
+    "kind": "positive",
+    "label": 1,
+    "left": "An edited version of the song was published by Jerry Wexler in 1969 as a single on the Atlantic label , produced by Cher .",
+    "right": "An edited version of the song was released in 1969 , as a single on the Atlantic label by Jerry Wexler , produced by Cher .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2059",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Companies based in the larger rivium include Rockwell Automation , Royal Dutch Shell , Sodexho Nederland , Pfizer , Van Oord and many more .",
+    "right": "Companies based in the larger rivium are Rockwell Automation , Pfizer Nederland , Sodexho Nederland , Royal Dutch Shell , Van Oord and many more .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2060",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Kastner was born to a Jewish family in New York City . His father died when he was young and he was raised by his mother in Harlem .",
+    "right": "Kastner was born in a Jewish family in Harlem , his father died when he was young , and was raised in New York City by his mother .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2061",
+    "kind": "positive",
+    "label": 1,
+    "left": "Six decades later , a West End revival presented by Clifford Williams and directed by impresario Douglas Urbanski opened at the Haymarket Theatre in 1984 and transferred to Broadway .",
+    "right": "Six decades later , a West End revival presented by Clifford Williams and directed by Impresario Douglas Urbanski opened at Haymarket Theatre in 1984 and transferred to Broadway .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2062",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Born in Palermo , the son of the director and folk musician Emma Muzzi Loffredo , Amato moved to Rome following the high school where his mother lived .",
+    "right": "Born in Palermo , son of director and folk musician Amato , Emma Muzzi Loffredo moved to Rome where his mother lived after graduating from high school .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2063",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Six decades later , a West End revival presented by Clifford Williams and director Impresario Douglas Urbanski opened at the Haymarket Theatre in 1984 and transferred to Broadway .",
+    "right": "Six decades later , a West End revival directed by Clifford Williams and presented by impresario Douglas Urbanski opened at the Haymarket Theatre in 1984 and transferred to Broadway .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2064",
+    "kind": "positive",
+    "label": 1,
+    "left": "Windsor -- Tecumseh was created in 2003 from parts of Essex and the Windsor -- St. Clair gratings .",
+    "right": "Windsor -- Tecumseh was created in 2003 from parts of Essex and the Windsor -- St. Clair ridings .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2065",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "This work was later taken to the Louvre by Napoleon and restored in 1815 to Florence .",
+    "right": "This work was afterwards restored by Napoleon to the Louvre , and was taken to Florence in 1815 .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2066",
+    "kind": "positive",
+    "label": 1,
+    "left": "Jean Antoine retired in 1653 and was replaced by his sons Jean de Tournes and Samuel de Tournes in the family company .",
+    "right": "Jean Antoine retired in 1653 , and was succeeded in the family business by his sons Jean de Tournes and Samuel de Tournes .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2067",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "GAA is the national member federation for Grenada in the following international organisations :",
+    "right": "is the international member federation for Grenada in the following national organisations :",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2068",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The company continued to grow internationally and began subsidiaries in 1994 in Brazil and in Argentina in 1996 .",
+    "right": "The company continued to grow internationally , adding subsidiaries in Argentina in 1994 and in Brazil in 1996 .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2069",
+    "kind": "positive",
+    "label": 1,
+    "left": "It was dissolved when the Provisional Government was formed after the February revolution on 24 February 1848 .",
+    "right": "It was dissolved when the Provisional Government was formed on 24 February 1848 after the February Revolution .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2070",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "On 3 January 1874 , Spanish President Emilio Castelar was voted out of office and replaced by Francisco Serrano .",
+    "right": "On January 3 , 1874 , Spanish President Francisco Serrano was voted out of office and replaced by Emilio Castelar .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2071",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "In the 1999 NatWest Trophy , the Worcestershire Cricket Board was represented in a single List A game against the Kent Cricket Board .",
+    "right": "In the 1999 NatWest Trophy , the Kent Cricket Board was represented against the Worcestershire Cricket Board in a single List A game .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2072",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "`` Madang '' was built by Evans Deakin in Brisbane , Queensland , launched on August 10 , 1968 and commissioned on November 28 , 1968 .",
+    "right": "`` Madang '' was built by Evans Deakin at Brisbane , Queensland , commissioned on 10 August 1968 , and launched on 28 November 1968 .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2073",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Stockport , Greater Manchester Train Station serves Brinnington in the eastern part of Brinnington , England .",
+    "right": "Brinnington railway station serves Brinnington in the eastern part of Stockport , Greater Manchester , England .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2074",
+    "kind": "positive",
+    "label": 1,
+    "left": "A new system of CCE is also implemented at school for a comprehensive and continuous evaluation of the students .",
+    "right": "A new system Of CCE is also implemented in the school for a comprehensive and a continuous evaluation of students .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2075",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "This was the last Italian attempt to supply the oasis after the defeat of the 10th Army in Operation Compass and the withdrawal from Cyrenaica by land .",
+    "right": "This was the 10th attempt to supply the oasis by land , after the defeat of the last Italian Army in Operation Compass and the withdrawal from Cyrenaica .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2076",
+    "kind": "positive",
+    "label": 1,
+    "left": "Most of his songs were sung by the Muhammad Sadiq duo Ranjit Kaur .",
+    "right": "Most of his songs were sung by the duo Ranjit Kaur & Muhammad Sadiq .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2077",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Since January 2013 , Drew Springer , Jr. , a businessman from M\u00fcnster in Dickens County , has represented Cooke County in the Texas House of Representatives .",
+    "right": "Republican Drew Springer , Jr. , a businessman from Muenster in Cooke County , has since January 2013 represented Dickens County in the Texas House of Representatives .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2078",
+    "kind": "positive",
+    "label": 1,
+    "left": "It was elected at the 19th Yokohama Film Festival as the 7th best film .",
+    "right": "It was chosen as the 7th best film at the 19th Yokohama Film Festival .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2079",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The film was released in Spain on 6 August 1992 and was later published in Argentina .",
+    "right": "The film was released in Argentina on 6 August 1992 and was later published in Spain .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2080",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "No farthings were produced during the second reign of Henry VI and Edward IV or during the short rule of Edward V .",
+    "right": "No farthings were produced during the brief reigns of Henry VI and Edward IV , or during the second reign of Edward V .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2081",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "On June 16 , 1948 , he married Mary Heistand Underwood ( nee Scott ) and had three children : Scotty , Molly and Mary Kate .",
+    "right": "On June 16 , 1948 , he married Mary Kate ( born Mary Heistand Underwood ) and had three children : Scotty , Molly and Scott .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2082",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Umberto Mozzoni was born in Macerata , Italy , but his family later moved to Buenos Aires .",
+    "right": "Umberto Mozzoni was born in Buenos Aires , later his family moved to Macerata , Italy .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2083",
+    "kind": "positive",
+    "label": 1,
+    "left": "( Elkins Widener became Eleanor Elkins Rice in October 1915 , when she married Harvard Professor and Surgeon .",
+    "right": "( Eleanor Elkins Widener became Eleanor Elkins Rice when , in October 1915 , she married Harvard professor and surgeon",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2084",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "In addition , it carried suburban services ( London , Midland and Scottish Railway ) and ( Metropolitan Railway , later London Transport ) .",
+    "right": "In addition , it ran later services to ( London , Midland and Scottish Railway ) and ( Metropolitan Railway , suburban London Transport ) .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2085",
+    "kind": "positive",
+    "label": 1,
+    "left": "The king often named his own successor , who traditionally was his brother rather than his son . )",
+    "right": "The king often named his own successor , who was traditionally his brother rather than his son . )",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2086",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Henri Dobler was born in Marseille in 1863 , and his parents sold silk and textiles in Switzerland .",
+    "right": "Henri Dobler was born in Switzerland in 1863 , and his parents sold silk and textiles in Marseilles .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2087",
+    "kind": "positive",
+    "label": 1,
+    "left": "These pieces were created by Louis Le Vau during the reconstruction of the central pavilion of the castle for Abel Servien from 1655 to 1658 .",
+    "right": "These pieces were created during the reconstruction of the central pavilion of the castle , by Louis Le Vau , for Abel Servien , from 1655 to 1658 .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2088",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Arthur Charles Bannington ( born 1951 ) , sometimes known as Charlie Bannington , was a British political activist .",
+    "right": "Charlie Bannington ( died 1951 ) , sometimes known as Arthur Charles Bannington , was a British political activist .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2089",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The province with the lowest crime rate in 2006 for the third consecutive year was Quebec with 5,689 per 100,000 inhabitants , followed by Ontario with 5,909 per 100,000 .",
+    "right": "The province with the lowest crime rate for the third consecutive year in 2006 was Ontario with 5,689 per 100,000 inhabitants , followed by Quebec with 5,909 per 100,000 inhabitants .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2090",
+    "kind": "positive",
+    "label": 1,
+    "left": "After Polish victory , the Red Army pushed the Division out of northern Mazovia .",
+    "right": "After the Polish victory , the Red Army pushed the division out of northern Mazovia .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2091",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "ITSEC has been largely replaced by Common Criteria , which implements similarly defined evaluation levels and provides the objective of the evaluation concept and the security target document .",
+    "right": "The ITSEC has been largely replaced by Common Criteria , which provides similarly-defined evaluation levels and implements the target of evaluation concept and the Security Target document .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2092",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Judd comfortably won Bryce Gibbs ( 451 votes ) and Marc Murphy ( 415 votes ) .",
+    "right": "Judd won comfortably ahead of Marc Murphy ( 451 votes ) and Bryce Gibbs ( 415 votes ) .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2093",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "The first one has a tight 0 in the date , while the second and the third have a wide 0 in different positions .",
+    "right": "The first has a broad 0 in the date , while the second and the third have a narrow 0 in different positions .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2094",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "Ysterplaat is an air base of the South African Air Force and is located in Cape Town , on the southwestern coast of South Africa .",
+    "right": "Ysterplaat is an air base of the South African Air Force , located in South Africa , on the southwestern coast of Cape Town .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2095",
+    "kind": "positive",
+    "label": 1,
+    "left": "Nikki Hornsby was inspirational and to this day a friend of Joan Milke Flores .",
+    "right": "Inspiring and to this day a friend of Joan Milke Flores , Nikki Hornsby was .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2096",
+    "kind": "positive",
+    "label": 1,
+    "left": "Rosenthal was married to Jenny Bradley in Westcliff , Johannesburg on December 18 , 1934 , and settled in Fish Hoek near Cape Town .",
+    "right": "Rosenthal was married to Jenny Bradley on 18 December 1934 in Westcliff , Johannesburg . On retirement they settled in Fish Hoek near Cape Town .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2097",
+    "kind": "adversarial_negative",
+    "label": 0,
+    "left": "It is not known if standard myasthenia gravis will respond to seronegative therapies .",
+    "right": "It is not known whether seronegative myasthenia will respond gravis to standard therapies .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2098",
+    "kind": "positive",
+    "label": 1,
+    "left": "He married Lady Elizabeth Pope , daughter of Thomas Pope , 2nd Earl of Downe ( later third wife of Robert Bertie , 3rd Earl of Lindsey ) .",
+    "right": "Lee married Lady Elizabeth Pope , daughter of Thomas Pope , 2nd Earl of Downe ( later third wife of Robert Bertie , 3rd Earl of Lindsey ) .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  },
+  {
+    "id": "paws:2099",
+    "kind": "positive",
+    "label": 1,
+    "left": "In order to help Wilson , he first tries to get the hidden money from Carter 's moll , Peerless Pauline ( Eve Arden ) , but fails .",
+    "right": "In order to help Wilson , he first tries to get the hidden money from Carters Moll , Peerless Pauline ( Eve Arden ) , but fails .",
+    "provenance": "PAWS labeled_final test rows 2000..2099; CC BY 4.0; previously unused by this repo benchmark"
+  }
+]

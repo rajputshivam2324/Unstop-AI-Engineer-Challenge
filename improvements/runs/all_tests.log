@@ -1,0 +1,8 @@
+...........................................                              [100%]
+=============================== warnings summary ===============================
+tests/test_matching_improvements.py::test_confirmed_paraphrase_retrieved_and_verified_with_real_nli
+  /home/shivam/assignment/unstopchallenge/.venv/lib64/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+43 passed, 1 warning in 135.90s (0:02:15)
