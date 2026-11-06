@@ -1,0 +1,10 @@
+{
+ "split": "dev",
+ "method": "engine_hybrid",
+ "status": "stopped before completion; no scores were produced",
+ "elapsed_s_when_stopped": 13762,
+ "reason": "CPU budget. run_bench.py writes results only at the end, so no partial scores exist.",
+ "hardware": "AMD Ryzen 5 4600H, 12 threads, 7.1 GB RAM, no GPU; other methods ran 0.2-123 s on the same split",
+ "config": "improvements/configs/proposed.toml (semantic_hybrid: MiniLM retrieval + STS and NLI cross-encoders)",
+ "test_split": "not run"
+}

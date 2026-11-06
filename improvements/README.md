@@ -1,6 +1,6 @@
 # Reproduce the matching repair
 
-Read [MATCHING_IMPROVEMENTS.md](../MATCHING_IMPROVEMENTS.md) for measurements, error cases and limitations. All previous evaluation artifacts are preserved. Baseline is still the default; the new mode is opt-in.
+Read [MATCHING_IMPROVEMENTS.md](../docs/improvements/MATCHING_IMPROVEMENTS.md) for measurements, error cases and limitations. All previous evaluation artifacts are preserved. Baseline is still the default; the new mode is opt-in.
 
 ## Run the proposed pipeline
 

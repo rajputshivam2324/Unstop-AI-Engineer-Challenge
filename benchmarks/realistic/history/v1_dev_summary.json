@@ -1,0 +1,193 @@
+{
+ "split": "dev",
+ "n_pairs": 44850,
+ "n_positive": 80,
+ "n_same_topic": 40,
+ "n_template_pairs": 104,
+ "methods": {
+  "shingle_moss": {
+   "average_precision": 0.9995388719512196,
+   "wall_s": 0.35,
+   "peak_rss_mb": 58.9,
+   "dev_tuned": {
+    "threshold": 0.014409,
+    "tp": 80,
+    "fp": 2,
+    "fn": 0,
+    "precision": 0.975609756097561,
+    "recall": 1.0,
+    "f1": 0.9876543209876543,
+    "f1_ci95": [
+     0.9696969696969697,
+     1.0
+    ],
+    "recall_by_kind": {
+     "verbatim": 1.0,
+     "partial_copy": 1.0,
+     "tool_paraphrase": 1.0,
+     "llm_paraphrase": 1.0,
+     "human_paraphrase": 1.0
+    },
+    "fp_by_negative_type": {
+     "same_topic": 2,
+     "template": 0,
+     "other": 0
+    }
+   }
+  },
+  "tfidf_cosine": {
+   "average_precision": 0.9143373939679573,
+   "wall_s": 2.78,
+   "peak_rss_mb": 138.6,
+   "dev_tuned": {
+    "threshold": 0.109682,
+    "tp": 64,
+    "fp": 4,
+    "fn": 16,
+    "precision": 0.9411764705882353,
+    "recall": 0.8,
+    "f1": 0.8648648648648648,
+    "f1_ci95": [
+     0.8,
+     0.9161290322580645
+    ],
+    "recall_by_kind": {
+     "verbatim": 1.0,
+     "partial_copy": 0.4375,
+     "tool_paraphrase": 0.6875,
+     "llm_paraphrase": 1.0,
+     "human_paraphrase": 0.875
+    },
+    "fp_by_negative_type": {
+     "same_topic": 3,
+     "template": 1,
+     "other": 0
+    }
+   }
+  },
+  "embed_doc": {
+   "average_precision": 0.16055800960047223,
+   "wall_s": 39.72,
+   "peak_rss_mb": 767.7,
+   "dev_tuned": {
+    "threshold": 0.478503,
+    "tp": 14,
+    "fp": 14,
+    "fn": 66,
+    "precision": 0.5,
+    "recall": 0.175,
+    "f1": 0.25925925925925924,
+    "f1_ci95": [
+     0.14736842105263157,
+     0.3652173913043478
+    ],
+    "recall_by_kind": {
+     "verbatim": 0.4375,
+     "partial_copy": 0.0,
+     "tool_paraphrase": 0.375,
+     "llm_paraphrase": 0.0625,
+     "human_paraphrase": 0.0
+    },
+    "fp_by_negative_type": {
+     "same_topic": 4,
+     "template": 0,
+     "other": 10
+    }
+   }
+  },
+  "embed_maxchunk": {
+   "average_precision": 0.5094610054215343,
+   "wall_s": 40.96,
+   "peak_rss_mb": 790.9,
+   "dev_tuned": {
+    "threshold": 0.674962,
+    "tp": 30,
+    "fp": 6,
+    "fn": 50,
+    "precision": 0.8333333333333334,
+    "recall": 0.375,
+    "f1": 0.5172413793103448,
+    "f1_ci95": [
+     0.4035779816513761,
+     0.6229508196721311
+    ],
+    "recall_by_kind": {
+     "verbatim": 0.6875,
+     "partial_copy": 0.0625,
+     "tool_paraphrase": 0.5,
+     "llm_paraphrase": 0.625,
+     "human_paraphrase": 0.0
+    },
+    "fp_by_negative_type": {
+     "same_topic": 4,
+     "template": 0,
+     "other": 2
+    }
+   }
+  },
+  "engine_baseline": {
+   "average_precision": 0.963433457757412,
+   "wall_s": 115.86,
+   "peak_rss_mb": 808.0,
+   "dev_tuned": {
+    "threshold": 0.054545,
+    "tp": 78,
+    "fp": 7,
+    "fn": 2,
+    "precision": 0.9176470588235294,
+    "recall": 0.975,
+    "f1": 0.9454545454545454,
+    "f1_ci95": [
+     0.9080459770114943,
+     0.975609756097561
+    ],
+    "recall_by_kind": {
+     "verbatim": 1.0,
+     "partial_copy": 1.0,
+     "tool_paraphrase": 1.0,
+     "llm_paraphrase": 0.875,
+     "human_paraphrase": 1.0
+    },
+    "fp_by_negative_type": {
+     "same_topic": 4,
+     "template": 0,
+     "other": 3
+    }
+   },
+   "shipped": {
+    "threshold": 0.2,
+    "tp": 58,
+    "fp": 1,
+    "fn": 22,
+    "precision": 0.9830508474576272,
+    "recall": 0.725,
+    "f1": 0.8345323741007193,
+    "f1_ci95": [
+     0.763358778625954,
+     0.8934137931034479
+    ],
+    "recall_by_kind": {
+     "verbatim": 1.0,
+     "partial_copy": 0.0625,
+     "tool_paraphrase": 1.0,
+     "llm_paraphrase": 0.75,
+     "human_paraphrase": 0.8125
+    },
+    "fp_by_negative_type": {
+     "same_topic": 1,
+     "template": 0,
+     "other": 0
+    }
+   }
+  }
+ },
+ "best_competitor": "shingle_moss",
+ "engine_baseline_minus_best_competitor_f1": {
+  "point": -0.04219977553310883,
+  "ci95": [
+   -0.07571273908336351,
+   -0.012422360248447228
+  ],
+  "share_of_resamples_engine_better": 0.0
+ }
+}

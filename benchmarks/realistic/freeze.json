@@ -1,0 +1,33 @@
+{
+ "utc": "2026-11-06T17:41:35.235001+00:00",
+ "rule": "Methods, thresholds and configs were chosen on dev only. Test is scored once per method after this freeze; no change after seeing test results.",
+ "sha256": {
+  "benchmarks/realistic/data/test.json": "4e0b6f3571296cc661c208b5ad536f33f9045eed2e5731c82eeb1bd61c3e1524",
+  "benchmarks/realistic/run_bench.py": "512f624db1f7e9472206aa9becab38b5adb9dc7deac631de4f0f24f1a57d1476",
+  "benchmarks/realistic/evaluate.py": "076a49d29ea17e6767a11170002f08e9bac7de472e43cb93a4484d753e4e1a5b",
+  "config/default.toml": "5dba363dee003987edf8d5bb89e044712a1886c64fffde13e20602a93c277eb9",
+  "improvements/configs/proposed.toml": "8b8515710a95c289fc8b5b46ba31b07f31fd79d3f3300677f8cb375804499129",
+  "config/evidence_v2.toml": "db5dfc1e275b743dd7aad37565212f8fe0badd2302f42c1ddcd6c566630d6929",
+  "integrity_engine/__init__.py": "29b2d1887541608c9062b7aba8ec1ad021df93d4f17377f5a06a191ff1064802",
+  "integrity_engine/ai_detection.py": "5f42884e29f24b5d05b76d85978a30b6facceeae2bcdaeb9ee93a04ae988bea9",
+  "integrity_engine/alignment.py": "7eff369933271474d7140ebf4a22cd0afa3b5396a2bb641e059da59cbf91504a",
+  "integrity_engine/boundaries.py": "e3aac546e27f3e9e82398650ab3ec3c4c6013eda011cc2780cab7641d259ff57",
+  "integrity_engine/cli.py": "3e70ffba04a2b8aca116f8cfac03eac8f9fecf63456fa76b70be988fe76f3fc4",
+  "integrity_engine/common.py": "a8e54148b58c12dc9aa44f5d537a3280d304d7104007754938b1a73dc633beae",
+  "integrity_engine/config.py": "16ef8fdca9292c34df5ba28fb09d8de497c337662f071fd35d3a24ee1924f3bc",
+  "integrity_engine/corpus_content.py": "977dc429b5cc81c4c52af1ed3772915068fb0ee9a0518756a63c7b3f1d7f7f64",
+  "integrity_engine/dataset_generator.py": "e0580ee961a7c13befecc55a6d2926a6bc066f57001d99aacaaf90ce1a4d25a1",
+  "integrity_engine/embeddings.py": "bb96d4a1b74a181e415fd41c27cdc4795e1a98adf0f42543727236a40f4a00c3",
+  "integrity_engine/enhanced_alignment.py": "84075b23d21f3944b1ab1c00c03588ee4ed267301b93848c7f4d377d7a639017",
+  "integrity_engine/evaluation.py": "1484a093cafacb8e82f5863eda491b4de909bdac15625caf3f1e5f1f0b02546c",
+  "integrity_engine/evidence_v2.py": "6497063f23a527e051d8b560b0e32886d21ae49901520bbe6d45a25b210a8fb5",
+  "integrity_engine/external_check.py": "4ef8eeb7a35ea9a6fb255b88adc40cc4e45ef2a8eb8b7380ead15f462f73c066",
+  "integrity_engine/indexing.py": "f5d84078c3cfc66c07d96b95d6487ac94513ad9b8869648a0e754237a19d93d4",
+  "integrity_engine/metrics.py": "1946b839401b22a987468d7f2720b52b1166379f30824e05deb043323af88d64",
+  "integrity_engine/reporting.py": "33f491d4182ccc13fc7a0b55c0be63888a7f4926d13d2c57c02ed2785bf20ad4",
+  "integrity_engine/scoring.py": "063c9cea2f4ba770e21bccca980f021c155b2e6b995578e9366339bc9cfc042f",
+  "integrity_engine/semantic.py": "25ef56ebc81c3847e7bbb2a0e9146741bae1631387c0fc4ab9a74127ec950593",
+  "integrity_engine/text_processing.py": "6247ee683ac7213565318c842efd9e8dac8c2afd18d37803bde847b4df470b9c",
+  "integrity_engine/types.py": "6f994e886c4ca55aeb11c6ec822e35c9b06911cd861296ecf586eef82c47664e"
+ }
+}

@@ -1,0 +1,17 @@
+{
+  "image": "production_benchmark.png",
+  "source_sha256": {
+    "benchmarks/realistic/results/summary_test.json": "a6ec278f064f01910c44c8d29a0e4f7ae2d024d76bfa1a3ca62275b40f62ddbf",
+    "benchmarks/realistic/results/dev_engine_hybrid_incomplete.json": "f2f8a41d3019ba3c97285cf5f6c5dd80c212f0c24934cab4c384bcc4f7241a5d",
+    "improvements/runs/heldout_baseline_final.json": "20ffbf6a11771cf5eee3ac01d871376a976d4d3d3cdd896b20ce8a73a1b733c8",
+    "improvements/runs/heldout_semantic_hybrid_final.json": "9c20d9a7d4423324573b721c545ac00766be38e22e7ce4dd3ddef7cd8f1a437d",
+    "improvements/comparison.json": "7d8b8ed0e30c94e534eddabe5ddd6d78e763b4af9904938f9103d8aafd23cb8d",
+    "benchmarks/realistic/results/test_shingle_moss.json": "407bb8be24f4d632eded8f629f340f4248058148349b01468670d3743225ac1a",
+    "benchmarks/realistic/results/test_tfidf_cosine.json": "83f5bd31a5230a153ab15f8f2a479881fcd1f19cc1a270a5e3acb355d0fb60b6",
+    "benchmarks/realistic/results/test_embed_doc.json": "963b9b6fccea9816ca9c85df7238081ff8954318eb6b74a84f638514c0175042",
+    "benchmarks/realistic/results/test_embed_maxchunk.json": "c30d7c2bcc0e357eef84f367643000c3b3064c74fd11d83b8d7383758a7b4fb0",
+    "benchmarks/realistic/results/test_engine_baseline.json": "0e777cd8e9e7bc0244b5c55eca1eb26e2e1801151934b4ff176e59dc12ffa330",
+    "benchmarks/realistic/results/test_engine_v2.json": "c4e9c4b81b4b458cb5cba7cae42ecbbe77580cb6ff218c5d9a7466ab6cfbb4ca"
+  },
+  "matplotlib": "3.11.2"
+}

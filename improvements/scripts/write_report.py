@@ -101,5 +101,6 @@ The 43-test suite passed (34 original + 9 new, one upstream torch deprecation wa
 
 Model references: [STS model card](https://huggingface.co/cross-encoder/stsb-distilroberta-base), [NLI model card](https://huggingface.co/cross-encoder/nli-deberta-v3-small). The former is trained for textual similarity; the latter on SNLI/MultiNLI for entailment/neutral/contradiction. Both are Apache 2.0. Dataset acknowledgement: Google LLC, Yuan Zhang, Jason Baldridge and Luheng He, [PAWS (2019)](https://github.com/google-research-datasets/paws), upstream permission preserved in `improvements/data/PAWS_LICENSE.txt`. Newly authored development fixtures are synthetic and openly reusable under the project MIT license.
 '''
-(R/'MATCHING_IMPROVEMENTS.md').write_text(text)
-print('Wrote MATCHING_IMPROVEMENTS.md')
+import re  # report lives in docs/improvements/ since the docs restructure
+(R/'docs/improvements/MATCHING_IMPROVEMENTS.md').write_text(re.sub(r'\]\((validation/|improvements/|AI%20Engineer%20Assignment\.pdf|EVALUATION\.md|README\.md)',r'](../../\1',text))
+print('Wrote docs/improvements/MATCHING_IMPROVEMENTS.md')

@@ -22,3 +22,6 @@ cache/
 .scratch/
 benchmarks/data/
 benchmarks/results/*.npy
+
+# Realistic benchmark raw downloads + intermediate pair files (re-fetchable, ~470 MB)
+benchmarks/realistic/work/

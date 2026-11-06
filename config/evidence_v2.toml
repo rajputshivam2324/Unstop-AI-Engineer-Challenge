@@ -1,0 +1,7 @@
+# evidence_v2 matching mode (opt-in). All unlisted settings use config/default.toml values.
+# Chosen on the realistic benchmark DEV split only (benchmarks/realistic/README.md).
+[matching]
+mode = "evidence_v2"
+max_unit_chars = 300           # split sentences longer than this (baseline: 800)
+template_shingle_share = 0.5   # sentence is template if >= 50% of its 5-grams recur in >= 3 docs
+lexical_min_shared = 3         # a sentence sharing a 10-word exact run (3 x 8-grams) is evidence

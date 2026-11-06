@@ -89,15 +89,16 @@ def token_count(text: str) -> int:
     return len(_WORD_TOKEN_RE.findall(text))
 
 
-def split_sentences(text: str) -> list[Sentence]:
+def split_sentences(text: str, max_chars: int | None = None) -> list[Sentence]:
     """Deterministic, model-free sentence split with char spans into `text`.
 
     Boundary candidates: [.!?] + whitespace + capital/digit/quote. A candidate is
     rejected when the token ending at the punctuation is a whitelisted
     abbreviation, or when the sentence produced so far is < 20 chars and itself
-    ends in such an abbreviation (merge back). Sentences > 800 chars split at the
-    nearest ";" / "," midpoint (logged at DEBUG).
+    ends in such an abbreviation (merge back). Sentences > max_chars (default 800)
+    split at the nearest ";" / "," midpoint (logged at DEBUG).
     """
+    limit = _MAX_SENTENCE_CHARS if max_chars is None else max_chars
     if not text.strip():
         return []
     boundaries = [m.end(1) for m in _SENT_BOUNDARY_RE.finditer(text)]
@@ -120,7 +121,7 @@ def split_sentences(text: str) -> list[Sentence]:
     sentences: list[Sentence] = []
     for start, end in inside_trim(pieces, text):
         body = text[start:end]
-        for sub_start, sub_end in _split_long(body, start):
+        for sub_start, sub_end in _split_long(body, start, limit):
             sentences.append(Sentence(text=text[sub_start:sub_end],
                                       char_start=sub_start, char_end=sub_end))
     return sentences
@@ -139,16 +140,17 @@ def inside_trim(pieces: list[tuple[int, int]], text: str
     return out
 
 
-def _split_long(body: str, offset: int) -> list[tuple[int, int]]:
+def _split_long(body: str, offset: int,
+                max_chars: int = _MAX_SENTENCE_CHARS) -> list[tuple[int, int]]:
     """Split an over-long sentence at the nearest ';' / ',' midpoint (deterministic).
 
     `offset` is the absolute start of `body` within the owning text.
     """
     span = (offset, offset + len(body))
-    if len(body) <= _MAX_SENTENCE_CHARS:
+    if len(body) <= max_chars:
         return [span]
     mid_abs = offset + len(body) // 2
-    window = 200
+    window = min(200, max_chars // 2)
     cut = -1
     absolute_lo = max(offset + 1, mid_abs - window)
     absolute_hi = min(offset + len(body) - 1, mid_abs + window)
@@ -164,11 +166,12 @@ def _split_long(body: str, offset: int) -> list[tuple[int, int]]:
             return [span]
         cut = offset + tokens[len(tokens) // 2].start()
     left, right = body[:cut - offset], body[cut - offset:]
-    logger.debug("sentence over %d chars split at midpoint", _MAX_SENTENCE_CHARS)
-    return [*_split_long(left, offset), *_split_long(right, cut)]
+    logger.debug("sentence over %d chars split at midpoint", max_chars)
+    return [*_split_long(left, offset, max_chars), *_split_long(right, cut, max_chars)]
 
 
-def sentence_char_spans_by_pages(pages: list[Page]) -> list[Sentence]:
+def sentence_char_spans_by_pages(pages: list[Page],
+                                 max_chars: int | None = None) -> list[Sentence]:
     """Sentences of all pages with absolute char spans + page attribution.
 
     Uses each Page's own char_start (set by ingestion.base.finish_document) so
@@ -182,7 +185,7 @@ def sentence_char_spans_by_pages(pages: list[Page]) -> list[Sentence]:
     for page in pages:
         has_offsets = page.char_end - page.char_start == len(page.text)
         page_start = page.char_start if has_offsets else cursor
-        for sentence in split_sentences(page.text):
+        for sentence in split_sentences(page.text, max_chars):
             sentences.append(Sentence(
                 text=sentence.text,
                 char_start=page_start + sentence.char_start,

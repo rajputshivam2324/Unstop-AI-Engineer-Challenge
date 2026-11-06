@@ -4,7 +4,9 @@ import json
 V=Path(__file__).resolve().parents[1];R=V.parent
 x=json.loads((V/'results.json').read_text());f=json.loads((V/'freeze.json').read_text());d=json.loads((V/'diagnostics.json').read_text());m=json.loads((V/'manifest.json').read_text());split=json.loads((V/'split_audit.json').read_text())
 commit=f['commit'];met=x['metrics_any_reported_evidence'];summaries={k:json.loads((V/f'runs/{k}/summary/latest.json').read_text()) for k in ('main','edge','semantic')}
-def write(name,s): (R/name).write_text(s.strip()+'\n',encoding='utf-8')
+import re
+# Reports live in docs/validation/ since the docs restructure; repo-root links get ../../
+def write(name,s): (R/'docs/validation'/name).write_text(re.sub(r'\]\((validation/|improvements/|AI%20Engineer%20Assignment\.pdf|EVALUATION\.md|README\.md)',r'](../../\1',s.strip())+'\n',encoding='utf-8')
 write('ASSIGNMENT_VALIDATION.md',f'''# Assignment validation
 
 Validated commit `{commit}` on 2026-11-06. **Estimated score: 74/100; closest tier: Meets Expectations.** The prototype is modular, handles malformed inputs and reports real evidence, but two mandatory matching scenarios fail on the new corpus. The existing sample suite passes. This is an independent engineering estimate, not an official hiring decision.

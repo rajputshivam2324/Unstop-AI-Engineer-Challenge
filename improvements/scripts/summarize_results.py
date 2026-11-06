@@ -27,7 +27,8 @@ for p in (I/'runs/pipeline_baseline/per_doc').glob('*.json'):
  old=json.loads((R/'validation/runs/main/per_doc'/p.name).read_text());new=json.loads(p.read_text())
  old.pop('generated_at_utc',None);new.pop('generated_at_utc',None)
  if old!=new:baseline_mismatches.append(p.name)
-prior=json.loads((I/'prior_results_freeze.json').read_text());changed=[p for p,h in prior['sha256'].items() if hashlib.sha256((R/p).read_bytes()).hexdigest()!=h]
+prior=json.loads((I/'prior_results_freeze.json').read_text());MOVED={n:f'docs/validation/{n}' for n in ('ASSIGNMENT_VALIDATION.md','INDEPENDENT_EVALUATION.md','OVERFITTING_ANALYSIS.md','VALIDATION_ISSUES.md')}  # docs restructure; links were rewritten, so these now differ by design
+changed=[p for p,h in prior['sha256'].items() if hashlib.sha256((R/MOVED.get(p,p)).read_bytes()).hexdigest()!=h]
 freeze=json.loads((I/'final_method_freeze.json').read_text());code_changed=[p for p,h in freeze['sha256'].items() if hashlib.sha256((R/p).read_bytes()).hexdigest()!=h]
 x={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'pipeline_metrics':metrics,'pipeline_details':details,'baseline_substantive_report_mismatches':baseline_mismatches,'changed_prior_result_files':changed,'changed_final_method_files':code_changed}
 (I/'comparison.json').write_text(json.dumps(x,indent=2));print(json.dumps({k:v for k,v in x.items() if k!='pipeline_details'},indent=2));assert not changed and not code_changed

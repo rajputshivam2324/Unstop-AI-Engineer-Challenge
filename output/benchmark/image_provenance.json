@@ -1,0 +1,31 @@
+{
+  "image": "engine_benchmark.png",
+  "dimensions_px": [
+    3840,
+    2880
+  ],
+  "source_sha256": {
+    "improvements/runs/heldout_baseline_final.json": "20ffbf6a11771cf5eee3ac01d871376a976d4d3d3cdd896b20ce8a73a1b733c8",
+    "improvements/runs/heldout_boundary_final.json": "4422eb7d2b8712fb0b8660bf9cc16daa9dcb8cc92bcfbe8361624c724c295f42",
+    "improvements/runs/heldout_semantic_sts_final.json": "c62ad7987b0b420f762218c90269f287651654efee6f1c44b328fe62dc2af175",
+    "improvements/runs/heldout_semantic_nli_final.json": "990cf0945bb60d87e5fb04725ce2fd97068815e6cb792fa8d6b80ec9ae4a7eb5",
+    "improvements/runs/heldout_semantic_hybrid_final.json": "9c20d9a7d4423324573b721c545ac00766be38e22e7ce4dd3ddef7cd8f1a437d",
+    "improvements/comparison.json": "7d8b8ed0e30c94e534eddabe5ddd6d78e763b4af9904938f9103d8aafd23cb8d"
+  },
+  "matplotlib": "3.11.2",
+  "false_positive_waterfall": {
+    "baseline": 49,
+    "removed": 24,
+    "new": 2,
+    "hybrid": 27
+  },
+  "heldout_hybrid_metrics": {
+    "tp": 39,
+    "fp": 27,
+    "fn": 8,
+    "tn": 26,
+    "precision": 0.5909090909090909,
+    "recall": 0.8297872340425532,
+    "f1": 0.6902654867256637
+  }
+}

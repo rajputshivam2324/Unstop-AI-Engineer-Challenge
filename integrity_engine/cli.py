@@ -70,7 +70,7 @@ def _build_parser() -> argparse.ArgumentParser:
                         help="disable the optional DuckDuckGo tier (local KB still runs)")
     parser.add_argument("--matching-mode", default=None,
                         choices=["baseline", "boundary", "semantic_sts",
-                                 "semantic_nli", "semantic_hybrid"],
+                                 "semantic_nli", "semantic_hybrid", "evidence_v2"],
                         help="override matching mode; original baseline remains available")
     parser.add_argument("--log-level", default="INFO",
                         choices=["DEBUG", "INFO", "WARNING", "ERROR"])
@@ -227,6 +227,10 @@ def run_pipeline(input_dir: Path, output_dir: Path, cfg: Config,
     # FAISS index, scored by aligned-evidence coverage (A1)
     if cfg.matching.mode == "baseline":
         aligner = DocumentAligner(embedder, registry, cfg, all_chunks)
+    elif cfg.matching.mode == "evidence_v2":
+        from integrity_engine.evidence_v2 import EvidenceV2Aligner
+
+        aligner = EvidenceV2Aligner(embedder, registry, cfg, all_chunks)
     else:
         from integrity_engine.enhanced_alignment import EnhancedDocumentAligner
 
@@ -445,7 +449,7 @@ def main(argv: list[str] | None = None) -> int:
 
             cfg = replace(cfg, matching=replace(cfg.matching, mode=args.matching_mode))
         if cfg.matching.mode not in ("baseline", "boundary", "semantic_sts",
-                                     "semantic_nli", "semantic_hybrid"):
+                                     "semantic_nli", "semantic_hybrid", "evidence_v2"):
             raise ValueError(f"unknown matching mode: {cfg.matching.mode}")
     except Exception as exc:  # noqa: BLE001 - parse error => exit 1
         logger.error("config could not be loaded: %s", exc)

@@ -1,0 +1,4 @@
+[matching]
+mode = "evidence_v2"
+max_unit_chars = 300
+template_shingle_share = 0.7
