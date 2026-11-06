@@ -1,0 +1,266 @@
+{
+  "corpus": "400 docs from HC3 human answers + MRPC paraphrases (40 exact-copy pairs, 40 paraphrase pairs, 12 template docs)",
+  "n_chunks": 941,
+  "n_candidate_pairs": 79800,
+  "template_chunks": 12,
+  "auc_all_pairs": 0.999985417711992,
+  "auc_all_pairs_chunk_level_only": 0.6372579026593076,
+  "n_sentences_indexed": 6293,
+  "sweep": [
+    {
+      "threshold": 0.05,
+      "relation": "all",
+      "precision": 0.8333333333333334,
+      "recall": 1.0,
+      "f1": 0.9090909090909091,
+      "fp": 16
+    },
+    {
+      "threshold": 0.05,
+      "relation": "exact_copy",
+      "precision": 0.7142857142857143,
+      "recall": 1.0,
+      "f1": 0.8333333333333333,
+      "fp": 16
+    },
+    {
+      "threshold": 0.05,
+      "relation": "paraphrase",
+      "precision": 0.7142857142857143,
+      "recall": 1.0,
+      "f1": 0.8333333333333333,
+      "fp": 16
+    },
+    {
+      "threshold": 0.1,
+      "relation": "all",
+      "precision": 0.8791208791208791,
+      "recall": 1.0,
+      "f1": 0.935672514619883,
+      "fp": 11
+    },
+    {
+      "threshold": 0.1,
+      "relation": "exact_copy",
+      "precision": 0.7843137254901961,
+      "recall": 1.0,
+      "f1": 0.8791208791208792,
+      "fp": 11
+    },
+    {
+      "threshold": 0.1,
+      "relation": "paraphrase",
+      "precision": 0.7843137254901961,
+      "recall": 1.0,
+      "f1": 0.8791208791208792,
+      "fp": 11
+    },
+    {
+      "threshold": 0.2,
+      "relation": "all",
+      "precision": 0.9615384615384616,
+      "recall": 0.9375,
+      "f1": 0.9493670886075949,
+      "fp": 3
+    },
+    {
+      "threshold": 0.2,
+      "relation": "exact_copy",
+      "precision": 0.9285714285714286,
+      "recall": 0.975,
+      "f1": 0.951219512195122,
+      "fp": 3
+    },
+    {
+      "threshold": 0.2,
+      "relation": "paraphrase",
+      "precision": 0.9230769230769231,
+      "recall": 0.9,
+      "f1": 0.9113924050632911,
+      "fp": 3
+    },
+    {
+      "threshold": 0.3,
+      "relation": "all",
+      "precision": 0.9787234042553191,
+      "recall": 0.575,
+      "f1": 0.7244094488188976,
+      "fp": 1
+    },
+    {
+      "threshold": 0.3,
+      "relation": "exact_copy",
+      "precision": 0.9666666666666667,
+      "recall": 0.725,
+      "f1": 0.8285714285714285,
+      "fp": 1
+    },
+    {
+      "threshold": 0.3,
+      "relation": "paraphrase",
+      "precision": 0.9444444444444444,
+      "recall": 0.425,
+      "f1": 0.5862068965517241,
+      "fp": 1
+    },
+    {
+      "threshold": 0.4,
+      "relation": "all",
+      "precision": 1.0,
+      "recall": 0.3125,
+      "f1": 0.47619047619047616,
+      "fp": 0
+    },
+    {
+      "threshold": 0.4,
+      "relation": "exact_copy",
+      "precision": 1.0,
+      "recall": 0.475,
+      "f1": 0.6440677966101694,
+      "fp": 0
+    },
+    {
+      "threshold": 0.4,
+      "relation": "paraphrase",
+      "precision": 1.0,
+      "recall": 0.15,
+      "f1": 0.2608695652173913,
+      "fp": 0
+    },
+    {
+      "threshold": 0.7,
+      "relation": "all",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.7,
+      "relation": "exact_copy",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.7,
+      "relation": "paraphrase",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp": 0
+    }
+  ],
+  "truth_pair_scores": {
+    "exact_copy": [
+      0.19,
+      0.202,
+      0.207,
+      0.211,
+      0.222,
+      0.227,
+      0.26,
+      0.27,
+      0.277,
+      0.281,
+      0.293,
+      0.306,
+      0.318,
+      0.328,
+      0.331,
+      0.336,
+      0.357,
+      0.359,
+      0.367,
+      0.372,
+      0.386,
+      0.403,
+      0.411,
+      0.424,
+      0.425,
+      0.438,
+      0.444,
+      0.448,
+      0.461,
+      0.507,
+      0.539,
+      0.542,
+      0.563,
+      0.575,
+      0.58,
+      0.581,
+      0.584,
+      0.591,
+      0.603,
+      0.632
+    ],
+    "paraphrase": [
+      0.106,
+      0.139,
+      0.143,
+      0.143,
+      0.204,
+      0.205,
+      0.206,
+      0.21,
+      0.214,
+      0.217,
+      0.22,
+      0.229,
+      0.235,
+      0.241,
+      0.252,
+      0.269,
+      0.28,
+      0.281,
+      0.285,
+      0.292,
+      0.292,
+      0.298,
+      0.3,
+      0.307,
+      0.314,
+      0.324,
+      0.327,
+      0.338,
+      0.35,
+      0.351,
+      0.353,
+      0.356,
+      0.356,
+      0.36,
+      0.401,
+      0.415,
+      0.419,
+      0.426,
+      0.449,
+      0.45
+    ]
+  },
+  "top_negative_scores": [
+    0.33,
+    0.257,
+    0.214,
+    0.197,
+    0.179,
+    0.146,
+    0.146,
+    0.135,
+    0.111,
+    0.102
+  ],
+  "template": {
+    "n_docs": 12,
+    "max_pair_score": 0.0
+  },
+  "timing": {
+    "chunk+template_s": 2.29,
+    "model_load_s": 7.72,
+    "embed_s": 32.6,
+    "chunks_per_s": 28.9,
+    "faiss_search_s": 0.25,
+    "chunk_evidence_gate_s": 18.09,
+    "sentence_index+alignment_s": 106.56
+  }
+}

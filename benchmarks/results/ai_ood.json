@@ -1,0 +1,428 @@
+{
+  "n_human_wikipedia_2018": 30,
+  "n_ai_corpus_docs": 10,
+  "auc": {
+    "classifier": 0.98,
+    "perplexity(neg)": 0.006666666666666667,
+    "fused": 0.9866666666666667
+  },
+  "fused_at_ai_likely_band": {
+    "threshold": 65.0,
+    "tp": 7,
+    "fp": 0,
+    "fn": 3,
+    "tn": 30,
+    "precision": 1.0,
+    "recall": 0.7,
+    "f1": 0.8235294117647058,
+    "fpr": 0.0,
+    "accuracy": 0.925
+  },
+  "human_band_counts": {
+    "HUMAN": 19,
+    "UNSURE": 11,
+    "AI_LIKELY": 0
+  },
+  "rows": [
+    {
+      "id": "wiki:SWOT analysis",
+      "y": 0,
+      "p_cls": 0.8600406497716904,
+      "ppl": 25.917497515568062,
+      "burst": 0.18888161653076277,
+      "fused": 56.88893480986498,
+      "label": "UNSURE",
+      "words": 300
+    },
+    {
+      "id": "wiki:Break-even (economics)",
+      "y": 0,
+      "p_cls": 0.06857192516326904,
+      "ppl": 18.61243963467104,
+      "burst": 0.24372836388862784,
+      "fused": 8.94749852723051,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Supply chain management",
+      "y": 0,
+      "p_cls": 0.0653078556060791,
+      "ppl": 28.70625336004538,
+      "burst": 0.2553577221560847,
+      "fused": 8.53749714672403,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Gross margin",
+      "y": 0,
+      "p_cls": 0.5498114228248596,
+      "ppl": 17.58609136340896,
+      "burst": 0.24695866958782392,
+      "fused": 38.01164731745378,
+      "label": "UNSURE",
+      "words": 300
+    },
+    {
+      "id": "wiki:Inventory turnover",
+      "y": 0,
+      "p_cls": 0.27829861640930176,
+      "ppl": 25.1340917051684,
+      "burst": 0.14165449846411982,
+      "fused": 22.453848855555457,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Cash conversion cycle",
+      "y": 0,
+      "p_cls": 0.039410412311553955,
+      "ppl": 29.563277004018143,
+      "burst": 0.21876284830095538,
+      "fused": 7.350919829919913,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Contribution margin",
+      "y": 0,
+      "p_cls": 0.101523756980896,
+      "ppl": 24.503347626324306,
+      "burst": 0.1613541755623013,
+      "fused": 11.65276865531889,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Economies of scale",
+      "y": 0,
+      "p_cls": 0.013398349285125732,
+      "ppl": 36.075860209060274,
+      "burst": 0.19670168659520662,
+      "fused": 6.011929564568091,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Vertical integration",
+      "y": 0,
+      "p_cls": 0.07777076959609985,
+      "ppl": 20.000842125038528,
+      "burst": 0.3676285621602218,
+      "fused": 8.21934954882498,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Market segmentation",
+      "y": 0,
+      "p_cls": 0.13928109407424927,
+      "ppl": 22.331006359007723,
+      "burst": 0.20200667551214055,
+      "fused": 13.512914852285258,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Franchising",
+      "y": 0,
+      "p_cls": 0.1855536699295044,
+      "ppl": 21.97996480807422,
+      "burst": 0.23751287116712547,
+      "fused": 15.933022126780806,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Logistics",
+      "y": 0,
+      "p_cls": 0.9317310005426407,
+      "ppl": 24.31822716803029,
+      "burst": 0.21921783020511673,
+      "fused": 60.88570824523042,
+      "label": "UNSURE",
+      "words": 300
+    },
+    {
+      "id": "wiki:Just-in-time manufacturing",
+      "y": 0,
+      "p_cls": 0.016920804977416992,
+      "ppl": 35.76306093124264,
+      "burst": 0.19646644021079385,
+      "fused": 6.225638476203963,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Price elasticity of demand",
+      "y": 0,
+      "p_cls": 0.012294769287109375,
+      "ppl": 15.241928023535802,
+      "burst": 0.27141661580886284,
+      "fused": 9.43548452029999,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Working capital",
+      "y": 0,
+      "p_cls": 0.0064261555671691895,
+      "ppl": 20.065977800810106,
+      "burst": 0.3158297281996102,
+      "fused": 4.426533519338662,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Supermarket",
+      "y": 0,
+      "p_cls": 0.13631772994995117,
+      "ppl": 29.19140961257335,
+      "burst": 0.15566098693309763,
+      "fused": 13.796759731492445,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Retail",
+      "y": 0,
+      "p_cls": 0.897792249917984,
+      "ppl": 27.55263450754464,
+      "burst": 0.19500585670820353,
+      "fused": 59.09258839653943,
+      "label": "UNSURE",
+      "words": 300
+    },
+    {
+      "id": "wiki:Solar power in India",
+      "y": 0,
+      "p_cls": 0.18716096878051758,
+      "ppl": 21.217077563948326,
+      "burst": 0.1716069963061086,
+      "fused": 16.693610911205585,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Electronic invoicing",
+      "y": 0,
+      "p_cls": 0.9950927584432065,
+      "ppl": 24.28862477827761,
+      "burst": 0.2158659706248389,
+      "fused": 64.72112545667898,
+      "label": "UNSURE",
+      "words": 300
+    },
+    {
+      "id": "wiki:Porter's generic strategies",
+      "y": 0,
+      "p_cls": 0.998981992714107,
+      "ppl": 25.833316736038448,
+      "burst": 0.22958078973416812,
+      "fused": 64.81647232248994,
+      "label": "UNSURE",
+      "words": 300
+    },
+    {
+      "id": "wiki:Business model",
+      "y": 0,
+      "p_cls": 0.35007904514295285,
+      "ppl": 6.13556564390453,
+      "burst": 0.38963624591408813,
+      "fused": 54.33419929159853,
+      "label": "UNSURE",
+      "words": 300
+    },
+    {
+      "id": "wiki:Customer acquisition cost",
+      "y": 0,
+      "p_cls": 0.06215929985046387,
+      "ppl": 17.36340778650489,
+      "burst": 0.1549925675182361,
+      "fused": 9.766968723302913,
+      "label": "HUMAN",
+      "words": 295
+    },
+    {
+      "id": "wiki:Last mile (transportation)",
+      "y": 0,
+      "p_cls": 0.9983674802351743,
+      "ppl": 19.780332912787824,
+      "burst": 0.2347092463664131,
+      "fused": 64.75323891939502,
+      "label": "UNSURE",
+      "words": 300
+    },
+    {
+      "id": "wiki:Freight transport",
+      "y": 0,
+      "p_cls": 0.03471386432647705,
+      "ppl": 29.087489908290074,
+      "burst": 0.14718483616813144,
+      "fused": 7.784281285280674,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Operating margin",
+      "y": 0,
+      "p_cls": 0.5247734785079956,
+      "ppl": 20.109753476657282,
+      "burst": 0.2879452956318509,
+      "fused": 35.79888216164081,
+      "label": "UNSURE",
+      "words": 300
+    },
+    {
+      "id": "wiki:Fixed cost",
+      "y": 0,
+      "p_cls": 0.022607266902923584,
+      "ppl": 22.372535036069852,
+      "burst": 0.19103189763506612,
+      "fused": 6.622590962686916,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Shrinkage (accounting)",
+      "y": 0,
+      "p_cls": 0.016283154487609863,
+      "ppl": 22.20815540516701,
+      "burst": 0.23586182048330329,
+      "fused": 5.792914568826533,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Distribution (marketing)",
+      "y": 0,
+      "p_cls": 0.06998002529144287,
+      "ppl": 22.66514762959985,
+      "burst": 0.19582423148623956,
+      "fused": 9.416518633628378,
+      "label": "HUMAN",
+      "words": 300
+    },
+    {
+      "id": "wiki:Strategic management",
+      "y": 0,
+      "p_cls": 0.998233997146599,
+      "ppl": 19.281608085693986,
+      "burst": 0.4331046598518112,
+      "fused": 62.8963689678455,
+      "label": "UNSURE",
+      "words": 300
+    },
+    {
+      "id": "wiki:Competitive advantage",
+      "y": 0,
+      "p_cls": 0.9054522439837456,
+      "ppl": 23.581238429004873,
+      "burst": 0.2621528664346326,
+      "fused": 58.878600633623414,
+      "label": "UNSURE",
+      "words": 300
+    },
+    {
+      "id": "corpus:01_retail_turnaround_report.pdf",
+      "y": 1,
+      "p_cls": 0.9985219079056935,
+      "ppl": 119.49973774337788,
+      "burst": 0.13625404523252058,
+      "fused": 65.72017486348977,
+      "label": "AI_LIKELY",
+      "words": 448
+    },
+    {
+      "id": "corpus:02_retail_turnaround_copy.docx",
+      "y": 1,
+      "p_cls": 0.9985219079056935,
+      "ppl": 107.10263316725025,
+      "burst": 0.14189418292570152,
+      "fused": 65.66484103789094,
+      "label": "AI_LIKELY",
+      "words": 448
+    },
+    {
+      "id": "corpus:03_paraphrased_strategy.docx",
+      "y": 1,
+      "p_cls": 0.9917368872379528,
+      "ppl": 147.6228153953385,
+      "burst": 0.14239345782774668,
+      "fused": 65.25283222528694,
+      "label": "AI_LIKELY",
+      "words": 406
+    },
+    {
+      "id": "corpus:04_original_strategy.docx",
+      "y": 1,
+      "p_cls": 0.9994689693130218,
+      "ppl": 99.87797517572422,
+      "burst": 0.130952663501595,
+      "fused": 65.82882436108792,
+      "label": "AI_LIKELY",
+      "words": 469
+    },
+    {
+      "id": "corpus:05_original_market_pdf.pdf",
+      "y": 1,
+      "p_cls": 0.9999374905528384,
+      "ppl": 167.62810136868492,
+      "burst": 0.09436942638172978,
+      "fused": 66.20883526636948,
+      "label": "AI_LIKELY",
+      "words": 224
+    },
+    {
+      "id": "corpus:06_llm_generated_summary.pdf",
+      "y": 1,
+      "p_cls": 0.9999863879447184,
+      "ppl": 34.84316781253888,
+      "burst": 0.1930000655264585,
+      "fused": 65.2443599232014,
+      "label": "AI_LIKELY",
+      "words": 532
+    },
+    {
+      "id": "corpus:07_pitch_crossmodal.pdf",
+      "y": 1,
+      "p_cls": 0.9999126935872482,
+      "ppl": 90.43849166277015,
+      "burst": 0.20699593729867838,
+      "fused": 65.09937288263441,
+      "label": "AI_LIKELY",
+      "words": 217
+    },
+    {
+      "id": "corpus:12_case_template_A.docx",
+      "y": 1,
+      "p_cls": 0.9998660084675066,
+      "ppl": 101.8725961858079,
+      "burst": 0.23828293769495648,
+      "fused": 64.7820785032824,
+      "label": "UNSURE",
+      "words": 334
+    },
+    {
+      "id": "corpus:13_case_template_B.docx",
+      "y": 1,
+      "p_cls": 0.9998883667067275,
+      "ppl": 100.76171266444733,
+      "burst": 0.24125965167648641,
+      "fused": 64.75354583333424,
+      "label": "UNSURE",
+      "words": 300
+    },
+    {
+      "id": "corpus:14_case_template_C.docx",
+      "y": 1,
+      "p_cls": 0.9999503936924157,
+      "ppl": 97.95177869991528,
+      "burst": 0.24225378978768455,
+      "fused": 64.74729404277817,
+      "label": "UNSURE",
+      "words": 303
+    }
+  ]
+}

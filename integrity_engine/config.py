@@ -64,6 +64,9 @@ class AlignmentConfig:
     min_evidence_chars: int = 60
     sentence_align_cos_floor: float = 0.65
     sentence_lcs_token_ratio: float = 0.60
+    min_run_sentences: int = 2  # evidence = >= 2 consecutive aligned sentences ...
+    single_sentence_cos: float = 0.85  # ... or one near-verbatim sentence
+    single_sentence_min_tokens: int = 12
     mp4_template_voice_a: str = "en+f2"  # dataset-only voices live here too (§4.10)
     mp4_template_voice_b: str = "en+M2"
 
@@ -74,10 +77,12 @@ class AIDetectionConfig:
 
     classifier_model: str = "wasitaigeneratedcom/ai-text-detector-small"
     gpt2_model: str = "openai-community/gpt2"
-    perplexity_mu: float = 22.0  # p_perp = 1/(1+exp((perplexity - mu)/k))
-    perplexity_k: float = 9.5
-    burst_mu: float = 0.55  # p_burst = 1/(1+exp((burstiness - mu)/k))
-    burst_k: float = 0.14
+    # Fitted on the HC3 calibration split (benchmarks/bench_ai_detection.py);
+    # spec a-priori values were 22.0/9.5 and 0.55/0.14.
+    perplexity_mu: float = 13.69  # p_perp = 1/(1+exp((perplexity - mu)/k))
+    perplexity_k: float = 0.86
+    burst_mu: float = 0.2174  # p_burst = 1/(1+exp((burstiness - mu)/k))
+    burst_k: float = 0.2486
     p_text_perp_weight: float = 0.75  # p_text = w*p_perp + (1-w)*p_burst
     p_final_model_weight: float = 0.60  # p_ai = w*p_cls + (1-w)*p_text
     band_human_max: float = 35.0  # < 35 HUMAN

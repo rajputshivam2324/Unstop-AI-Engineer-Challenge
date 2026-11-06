@@ -170,7 +170,9 @@ class AIDetector:
             import torch
             from transformers import AutoModelForCausalLM, AutoTokenizer
 
-            torch.set_num_threads(max(1, os.cpu_count() or 1))
+            # physical cores only: SMT oversubscription measurably slowed the
+            # DeBERTa-large pass (and the box shares RAM with other processes)
+            torch.set_num_threads(max(1, (os.cpu_count() or 2) // 2))
             tok = AutoTokenizer.from_pretrained(self.cfg.gpt2_model, cache_dir=self.cache_dir)
             model = AutoModelForCausalLM.from_pretrained(
                 self.cfg.gpt2_model, cache_dir=self.cache_dir).eval()

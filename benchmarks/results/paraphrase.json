@@ -1,0 +1,139 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "mrpc_test": {
+    "n_pairs": 1725,
+    "positive_rate": 0.664927536231884,
+    "encode_seconds": 16.99,
+    "sentences_per_second": 203.0,
+    "auc": {
+      "minilm_cosine": 0.7362579679802584,
+      "token_jaccard": 0.7607577160819711,
+      "token_lcs_ratio": 0.7624870657017102
+    },
+    "cosine_at_0.80_assignment_band": {
+      "threshold": 0.8,
+      "tp": 744,
+      "fp": 182,
+      "fn": 403,
+      "tn": 396,
+      "precision": 0.8034557235421166,
+      "recall": 0.6486486486486487,
+      "f1": 0.7178002894356007,
+      "fpr": 0.314878892733564,
+      "accuracy": 0.6608695652173913
+    },
+    "cosine_at_0.65_engine_alignment_floor": {
+      "threshold": 0.65,
+      "tp": 1054,
+      "fp": 388,
+      "fn": 93,
+      "tn": 190,
+      "precision": 0.7309292649098474,
+      "recall": 0.918918918918919,
+      "f1": 0.8142139822325223,
+      "fpr": 0.671280276816609,
+      "accuracy": 0.721159420289855
+    },
+    "cosine_best_f1": {
+      "threshold": 0.6386294960975647,
+      "tp": 1068,
+      "fp": 395,
+      "fn": 79,
+      "tn": 183,
+      "precision": 0.7300068352699932,
+      "recall": 0.9311246730601569,
+      "f1": 0.8183908045977012,
+      "fpr": 0.6833910034602076,
+      "accuracy": 0.7252173913043478
+    },
+    "jaccard_best_f1": {
+      "threshold": 0.325,
+      "tp": 1085,
+      "fp": 407,
+      "fn": 62,
+      "tn": 171,
+      "precision": 0.7272117962466488,
+      "recall": 0.9459459459459459,
+      "f1": 0.8222811671087533,
+      "fpr": 0.7041522491349481,
+      "accuracy": 0.7281159420289856
+    },
+    "scenario2_cases": {
+      "desc": "true paraphrases with LOW lexical overlap (Jaccard < 0.35)",
+      "n": 100,
+      "caught_at_cos_0.65": 73,
+      "caught_at_cos_0.80": 30,
+      "non_paraphrases_with_jaccard_lt_0.35": 204,
+      "false_alarms_at_cos_0.65": 90,
+      "false_alarms_at_cos_0.80": 20
+    }
+  },
+  "paws_test_first2000": {
+    "n_pairs": 2000,
+    "positive_rate": 0.4445,
+    "encode_seconds": 21.81,
+    "sentences_per_second": 183.4,
+    "auc": {
+      "minilm_cosine": 0.6495212513377322,
+      "token_jaccard": 0.5041136847093033,
+      "token_lcs_ratio": 0.776623781613257
+    },
+    "cosine_at_0.80_assignment_band": {
+      "threshold": 0.8,
+      "tp": 878,
+      "fp": 1087,
+      "fn": 11,
+      "tn": 24,
+      "precision": 0.44681933842239185,
+      "recall": 0.9876265466816648,
+      "f1": 0.6152768044849335,
+      "fpr": 0.9783978397839784,
+      "accuracy": 0.451
+    },
+    "cosine_at_0.65_engine_alignment_floor": {
+      "threshold": 0.65,
+      "tp": 888,
+      "fp": 1111,
+      "fn": 1,
+      "tn": 0,
+      "precision": 0.4442221110555278,
+      "recall": 0.9988751406074241,
+      "f1": 0.6149584487534626,
+      "fpr": 1.0,
+      "accuracy": 0.444
+    },
+    "cosine_best_f1": {
+      "threshold": 0.9434064626693726,
+      "tp": 798,
+      "fp": 869,
+      "fn": 91,
+      "tn": 242,
+      "precision": 0.4787042591481704,
+      "recall": 0.8976377952755905,
+      "f1": 0.6244131455399061,
+      "fpr": 0.7821782178217822,
+      "accuracy": 0.52
+    },
+    "jaccard_best_f1": {
+      "threshold": 0.7692307692307693,
+      "tp": 887,
+      "fp": 1075,
+      "fn": 2,
+      "tn": 36,
+      "precision": 0.4520897043832824,
+      "recall": 0.9977502812148481,
+      "f1": 0.6222378112942827,
+      "fpr": 0.9675967596759676,
+      "accuracy": 0.4615
+    },
+    "scenario2_cases": {
+      "desc": "true paraphrases with LOW lexical overlap (Jaccard < 0.35)",
+      "n": 0,
+      "caught_at_cos_0.65": 0,
+      "caught_at_cos_0.80": 0,
+      "non_paraphrases_with_jaccard_lt_0.35": 0,
+      "false_alarms_at_cos_0.65": 0,
+      "false_alarms_at_cos_0.80": 0
+    }
+  }
+}

@@ -41,7 +41,9 @@ class Embedder:
     @property
     def dim(self) -> int:
         """Embedding dimensionality (384 for all-MiniLM-L6-v2)."""
-        return int(self._model.get_sentence_embedding_dimension())
+        getter = (getattr(self._model, "get_embedding_dimension", None)
+                  or self._model.get_sentence_embedding_dimension)
+        return int(getter())
 
     @property
     def max_seq_tokens(self) -> int:

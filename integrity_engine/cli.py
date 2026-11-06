@@ -125,7 +125,8 @@ def run_pipeline(input_dir: Path, output_dir: Path, cfg: Config,
     """Run S1-S7 and return the run summary dict (also written to disk)."""
     from integrity_engine.ai_detection import AIDetector
     from integrity_engine.alignment import (DocumentAligner, EvidenceGate,
-                                            TemplateRegistry, align_pair)
+                                            TemplateRegistry, align_pair,
+                                            evidence_pair_scores)
     from integrity_engine.embeddings import build_embedder
     from integrity_engine.external_check import LocalReferenceKB
     from integrity_engine.indexing import (SelfMatchExclusion, build_index,
@@ -201,14 +202,19 @@ def run_pipeline(input_dir: Path, output_dir: Path, cfg: Config,
 
     # S4 doc-pair aggregation
     gate = EvidenceGate(all_chunks, embedder, cfg)
-    pairs = pairwise_doc_similarity(all_chunks, chunk_sims, cfg.pairwise, duplicates,
-                                    verify=gate)
+    chunk_pairs = pairwise_doc_similarity(all_chunks, chunk_sims, cfg.pairwise, duplicates,
+                                          verify=gate)
+    # S4b sentence-level evidence: candidate pairs from the chunk sieve + a sentence
+    # FAISS index, scored by aligned-evidence coverage (A1)
+    aligner = DocumentAligner(embedder, registry, cfg, all_chunks)
+    pairs = evidence_pair_scores([d for d in docs if d.status == "ok"], aligner,
+                                 chunk_pairs, duplicates, cfg.pairwise.chunk_query_topk)
     pairs_by_query: dict[str, list[Any]] = {}
     for pair in pairs:
         pairs_by_query.setdefault(pair.query_document_id, []).append(pair)
+    t = mark("pair_scoring", t)
 
-    # S5a evidence alignment per document
-    aligner = DocumentAligner(embedder, registry, cfg, all_chunks)
+    # S5a evidence passages per document
     peer_results: dict[str, dict[str, Any]] = {}
     for doc in docs:
         peer_results[doc.document_id] = _peer_evidence(
@@ -296,7 +302,7 @@ def _peer_evidence(doc, pairs, all_chunks, chunks_by_id, by_id, embedder, regist
     if doc.status != "ok":
         return result
     floor = cfg.pairwise.min_pair_score_floor
-    report_floor = cfg.pairwise.doc_report_floor
+    report_floor = floor  # every pair with accepted sentence evidence is reported
     scored = [p for p in pairs if p.score >= floor]
     result["pair_scores"] = {p.match_document_id: round(p.score, 4) for p in pairs}
     if scored:

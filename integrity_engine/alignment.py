@@ -24,7 +24,8 @@ from integrity_engine.config import Config
 from integrity_engine.embeddings import Embedder
 from integrity_engine.text_processing import (normalize_text, split_sentences,
                                               token_count)
-from integrity_engine.types import Chunk, MatchedPassage, ProcessedDocument
+from integrity_engine.types import (Chunk, MatchedPassage, PairCandidate,
+                                    ProcessedDocument)
 
 logger = logging.getLogger("integrity_engine.alignment")
 
@@ -498,6 +499,7 @@ def _cos(a, b) -> float:
 # Document-level evidence: sentence alignment across the WHOLE pair of documents
 # --------------------------------------------------------------------------
 _RUN_MAX_GAP = 2  # aligned sentences within 2 positions on both sides form one passage
+VERBATIM_SINGLE_LCS = 0.80  # a lone sentence this close to verbatim is evidence on its own
 
 
 class DocumentAligner:
@@ -523,6 +525,8 @@ class DocumentAligner:
                 self._template_spans.setdefault(chunk.document_id, []).append(
                     (chunk.start_char, chunk.end_char))
         self._cache: dict[str, tuple[list, object]] = {}
+        self._runs_cache: dict[tuple[str, str], tuple[list, int]] = {}
+        self.n_sentences_indexed = 0
 
     def _doc_sentences(self, doc: ProcessedDocument) -> tuple[list, object]:
         if doc.document_id not in self._cache:
@@ -541,13 +545,26 @@ class DocumentAligner:
             self._cache[doc.document_id] = (kept, vecs)
         return self._cache[doc.document_id]
 
-    def align(self, query_doc: ProcessedDocument, match_doc: ProcessedDocument,
-              chunk_cosine: float) -> tuple[list[MatchedPassage], int]:
-        """Return (passages, discounted_noise_count) for one document pair."""
+    # ---------------------------------------------------------- run extraction
+    def accepted_runs(self, query_doc: ProcessedDocument, match_doc: ProcessedDocument) \
+            -> tuple[list[list[tuple[int, int, float]]], int]:
+        """Monotonic sentence alignment grouped into runs, filtered by the evidence rule.
+
+        A run (consecutive aligned sentences, gap <= 2 on both sides, same PDF page)
+        is evidence when it has >= min_run_sentences sentences, or is a single
+        sentence of >= single_sentence_min_tokens tokens that is near-verbatim
+        (cosine >= single_sentence_cos or token-LCS >= 0.80). Isolated topical
+        sentence matches are rejected: MRPC/PAWS benchmarks show single-sentence
+        MiniLM cosine has a high false-alarm rate. Returns (runs, rejected_count).
+        """
+        key = (query_doc.document_id, match_doc.document_id)
+        if key in self._runs_cache:
+            return self._runs_cache[key]
         q_sents, q_vecs = self._doc_sentences(query_doc)
         m_sents, m_vecs = self._doc_sentences(match_doc)
         if not q_sents or not m_sents:
-            return [], 0
+            self._runs_cache[key] = ([], 0)
+            return self._runs_cache[key]
         matrix = (q_vecs @ m_vecs.T).tolist()  # type: ignore[union-attr]
         aligned = sentence_lcs_alignment(
             [s.text for s in q_sents], [s.text for s in m_sents], matrix,
@@ -564,8 +581,78 @@ class DocumentAligner:
                     runs[-1].append(triple)
                     continue
             runs.append([triple])  # new passage: gap, or a PDF page boundary
+        a = self.cfg.alignment
+        kept, rejected = [], 0
+        for run in runs:
+            if len(run) >= a.min_run_sentences:
+                kept.append(run)
+                continue
+            qi, mi, cos = run[0]
+            q_text, m_text = q_sents[qi].text, m_sents[mi].text
+            if token_count(q_text) >= a.single_sentence_min_tokens and (
+                    cos >= a.single_sentence_cos or
+                    _lcs_token_ratio(q_text, m_text) >= VERBATIM_SINGLE_LCS):
+                kept.append(run)
+            else:
+                rejected += 1
+        self._runs_cache[key] = (kept, rejected)
+        return self._runs_cache[key]
+
+    def coverage(self, query_doc: ProcessedDocument, match_doc: ProcessedDocument) -> float:
+        """Share of the query's non-template tokens that sit in accepted evidence runs
+        against match_doc (0..1). "Peer similarity %" = 100 x this (assumption A1)."""
+        q_sents, _ = self._doc_sentences(query_doc)
+        total = sum(token_count(s.text) for s in q_sents)
+        if not total:
+            return 0.0
+        runs, _ = self.accepted_runs(query_doc, match_doc)
+        covered = sum(token_count(q_sents[qi].text) for run in runs for qi, _, _ in run)
+        return covered / total
+
+    def candidate_pairs(self, docs: list[ProcessedDocument], top_k: int) \
+            -> dict[frozenset, float]:
+        """Sentence-level FAISS retrieval: unordered doc pairs sharing >= 1 sentence
+        neighbour at cosine >= the alignment floor (self-matches excluded)."""
+        import faiss
+        import numpy as np
+
+        owners: list[str] = []
+        blocks = []
+        for doc in docs:
+            sents, vecs = self._doc_sentences(doc)
+            if sents:
+                owners.extend([doc.document_id] * len(sents))
+                blocks.append(vecs)
+        if not blocks:
+            return {}
+        matrix = np.ascontiguousarray(np.vstack(blocks), dtype=np.float32)
+        index = faiss.IndexFlatIP(matrix.shape[1])
+        index.add(matrix)
+        k = int(min(index.ntotal, top_k + 20))
+        sims, ids = index.search(matrix, k)
+        floor = self.cfg.alignment.sentence_align_cos_floor
+        best: dict[frozenset, float] = {}
+        for i, (row_s, row_i) in enumerate(zip(sims, ids)):
+            taken = 0
+            for sim, j in zip(row_s, row_i):
+                if j < 0 or owners[j] == owners[i]:
+                    continue  # self-match exclusion (same document)
+                if sim < floor or taken >= top_k:
+                    break
+                taken += 1
+                key = frozenset((owners[i], owners[int(j)]))
+                best[key] = max(best.get(key, 0.0), float(sim))
+        self.n_sentences_indexed = int(index.ntotal)
+        return best
+
+    def align(self, query_doc: ProcessedDocument, match_doc: ProcessedDocument,
+              chunk_cosine: float = 0.0) -> tuple[list[MatchedPassage], int]:
+        """Return (passages, discounted_noise_count) for one document pair."""
+        runs, rejected = self.accepted_runs(query_doc, match_doc)
+        q_sents, _ = self._doc_sentences(query_doc)
+        m_sents, _ = self._doc_sentences(match_doc)
         passages: list[MatchedPassage] = []
-        discounted = 0
+        discounted = rejected
         for run in runs:
             q_first, q_last = q_sents[run[0][0]], q_sents[run[-1][0]]
             m_first, m_last = m_sents[run[0][1]], m_sents[run[-1][1]]
@@ -616,3 +703,40 @@ def _doc_passage_note(kind: str, passage_cos: float, jaccard: float, lcs_ratio: 
         return f"spoken/written cross-modal match ({lexical}; ASR noise expected)"
     band = f" {_PARAPHRASE_BAND_LABEL}" if passage_cos >= 0.80 else ""
     return f"semantic paraphrase{band}: meaning matches while wording differs ({lexical})"
+
+
+def evidence_pair_scores(docs: list[ProcessedDocument], aligner: DocumentAligner,
+                         chunk_pairs: list[PairCandidate], duplicates: dict[str, str],
+                         sentence_top_k: int) -> list[PairCandidate]:
+    """Final document-pair scores (both directions) from sentence-level evidence.
+
+    Candidates = pairs surfaced by the chunk-level FAISS sieve UNION pairs sharing a
+    sentence-level FAISS neighbour. Score of (Q, M) = max(coverage(Q|M),
+    coverage(M|Q)) (spec §4.4 max-of-directions rule). Byte-identical duplicates
+    keep the 1.0 score (A2). Pairs with no accepted evidence are dropped.
+    """
+    by_id = {d.document_id: d for d in docs}
+    candidates = {frozenset((p.query_document_id, p.match_document_id))
+                  for p in chunk_pairs if p.score > 0}
+    candidates |= set(aligner.candidate_pairs(list(by_id.values()), sentence_top_k))
+    out: list[PairCandidate] = []
+    for key in sorted(candidates, key=sorted):
+        a, b = sorted(key)
+        if a not in by_id or b not in by_id:
+            continue
+        if duplicates.get(a) == b or duplicates.get(b) == a:
+            fwd = rev = 1.0
+        else:
+            fwd = aligner.coverage(by_id[a], by_id[b])
+            rev = aligner.coverage(by_id[b], by_id[a])
+        score = max(fwd, rev)
+        if score <= 0:
+            continue
+        cross = (by_id[a].modality == "mp4") != (by_id[b].modality == "mp4")
+        for q, m, f, r in ((a, b, fwd, rev), (b, a, rev, fwd)):
+            direction = "both" if abs(f - r) < 1e-9 else ("forward" if f > r else "reverse")
+            out.append(PairCandidate(query_document_id=q, match_document_id=m, score=score,
+                                     is_cross_modal=cross,
+                                     directionality=direction))  # type: ignore[arg-type]
+    out.sort(key=lambda p: (-p.score, p.query_document_id, p.match_document_id))
+    return out
